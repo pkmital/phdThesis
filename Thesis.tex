@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt,twoside]{ThesisStyle}
+
+
+\include{formatAndDefs}
+
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+
+\floatstyle{ruled}
+\newfloat{program}{thp}{lop}
+\floatname{program}{Program}
+
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage{fixltx2e}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{afterpage}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[authoryear,round]{natbib}
+
+\newenvironment{abstract}{\rightskip1in\itshape}{}
+\begin{document}
+\include{TitlePage}
+\dominitoc
+\pagenumbering{roman}
+ \cleardoublepage
+\section*{Acknowledgments}
+THANKS
+
+\tableofcontents
+\mainmatter
+
+\cleardoublepage
+\chapter*{Abstract}
+Collage is a process that assembles together fragments of existing media in order to develop new meanings.  This process has a history of at least 100 years in both sound and visual cultures.  Traditionally, this practice worked with analog forms of content, or physical media, such as tape or photos.  Picasso and Brecht are early examples of this in the visual domain, whereas Pierre Schafer is an example in sonic culture.  More recently, this practice has evolved into the digital domain, where files on hard disks representing sound files or photos are manipulated instead of their physical counterpart.  Artists such as Negativland, Emergency Broadcast Network, or Girl Talk are a few examples of these.  The majority of digital collage practitioners work with an existing archive of audio or visual media manually selecting what they believe to be interesting or relevant parts of an existing photo, video or sound file in order to create a new composition with that material.  However, as tools for production become smarter, the methods for composition will also become more automated.  This thesis investigates the development of an automated audiovisual collage process, where large amounts of digital audio and visual media such as from YouTube or Flickr may be collaged to produce entirely new content that is interesting and meaningful.
+
+However, as copyright law has also evolved over the last 100 years, this practice has seen a significant increase of law suits.  One reason is that the interpretation of copyright in the digital domain is much different than in the analog one.  Copies in the analog domain are protected by their production.  However, in the digital domain, a copy is produced whenever information is accessed from a hard disk, making the pure access of information a possible infringement.  This and many other peculiarities of copyright law and their influence on collage practice will be discussed in greater detail later.  
+
+
+Our experience of the world is a rich narrative fragmented in terms of objects, people, and places.  Yet, the multitude of physical signals which are used to create this experience, such as various light and sound sources and their reflections from what we understand as objects, are representational-less and concept-less in nature.  The fundamental question of how we perceive and represent our experiences is an important question in numerous fields.
+\\
+Digital media collections such as image, sound, or video libraries are growing at enormous rates.  Finding information within these collections often entails searching for tags such as its filename, the date it was taken, or some loose category that may describe it.  Alternatively, pattern recognition has started to offer methods for automatically clustering and describing patterns within the contents of large amounts of digital media.  Many methods, including ones presented in this thesis, are even designed in similar ways to how humans are thought to perceive.  This allows one to not only find something of interest based on similarities in their content, but also affords entirely new and interesting interactions with that media's content.  Broadly, this approach to understanding media is known as content-based information retrieval.  
+\\
+However, it forms only one piece of many to this thesis.  The other notable chunk lies in the motivation for how the patterns within the media are detected.  This is based on theory and techniques coming from multiple fields including information theory, auditory scene analysis, computer vision, computational photography, compression, psychology, and neuroscience, offering multiple perspectives for understanding concepts that will be explored later such as entropy, invariance, representations, encoding, and temporal incoherences.  
+\\
+The other significant chunk lies in the outputs produced by my arts practice, connecting human-computer interaction and sound and visual culture.  This practice often explores digital approaches to collage and media appropriation as well as issues of digital media ownership presented by copyright and digital rights management.  This will be discussed in greater detail when discussing the numerous copyright violations I've received after running a project essential to this thesis, YouTube SmashUp, for 5 weeks.  My practice also often involves experiencing aspects of the pattern recognition machinery in real-time, creating novel forms of information retrieval browsers which are created as simulations of hallucination, or a 3D file-browser visualization that double as an instrument and a tool for understanding large audio corpora.  
+\\
+{\large\textbf{Keywords:}}
+synthesis, scene analysis, encoding, decoding
+
+\include{Chapter1}
+\include{Chapter2}
+\include{Chapter3}
+\include{Chapter4}
+\include{Chapter5}
+\include{Chapter6}
+\appendix
+\include{Appendix1}
+\bibliographystyle{ThesisStyle}
+\bibliography{libary}
+%\printnomenclature
+\end{document}
