@@ -2,13 +2,52 @@
 \label{chap:intro}
 \minitoc
 
+\epigraph{
+These fragments I have shored against my ruins. \\
+-- T.S. Eliot, \textit{The Waste Land}
+}
+
 \section{Motivation}
-The first-half of the 20th century saw an explosion of collage practices spanning visual, textual, and sonic mediums.  In the early 20th-century in Paris, Picasso and Braque were experimenting with gluing visual fragments of culture represented by stamps, newspaper clippings, and photos onto the canvas of their paintings.  At a Dadaist rally in the 1920's, Tristan Tzara created a poem by taking cut-up fragments of existing texts such as newspapers or brochures out of a hat and verbalizing them\footnote{leading to a riot destroying the theatre on location and the expulsion of Tzara from the movement by Andre Breton.}.  At about the same time in 1925, the Russian film director Sergei Eisenstein demonstrated the power of film montage in \textit{Battleship Potemkin} as he juxtaposed image sequences such as a crowds flight down a staircase with the image sequence of a baby carriage for 7 minutes, creating viscerally new experiences and emotions than either sequence alone could have.  And by the end of 1940's, Pierre Schaffer and Pierre Henry were experimenting with splicing and recombining magnetic tape recordings of sound in a practice they called musique concrete.  
 
-Since then, collage practices have only evolved, becoming more ubiquitous and easier to do.  As media has moved into the digital domain, the possibilities for collage have allowed for large corpora of media that would have taken years or even lifetimes to edit if done through their analog counterparts.  However, the current state-of-art of software enabling digital collage practice has not allowed for for more intelligent parsing of content.  For instance, if I would like to collage an audio track or image, I still have to know which file and what part of the file I require for my collage.  
 
-This thesis investigates a computationally creative model for automating collage practice, allowing for transformational forms and experiences of collage.  
+Collage is a practice that uses existing fragments of media to create new meanings.  The juxtaposition of  appropriated cultural fragments such as words, photos, or sound clips, the situation of the content's reuse, and the collage's overall composition produces new meanings that the original fragments alone could not have provided.  Indeed, more than an artistic technique, it has also been described as a ``philosophical attitude'' that can be applied to virtually any medium.
+
+As collage practice has progressed over the last 100 years, media too has evolved, meaning the tools and technologies available for manipulating and accessing media have altered the practice.  This thesis looks at how developments in machine listening and machine vision can create new representations for the units of collage and automate the generation of collage in order to build interactive collage experiences that a participant can experience in real-time.  These experiences are meant to serve as mosaics of perceptual machinery, as the units of representations are based on models of early auditory and visual representations, and modeled through psychologically plausible implementations of attentional machinery.  
+
+\section{Background}
+
+The first-half of the 20th century saw an explosion of collage practices spanning visual, textual, and sonic mediums.  In the early 20th-century, Pablo Picasso and Georges Braque were experimenting with gluing visual fragments of culture represented by stamps, newspaper clippings, and photos onto the canvas of their paintings.  
+
+At a Dadaist rally in the 1920's, Tristan Tzara created a poem by taking cut-up fragments of existing texts such as newspapers or brochures out of a hat and verbalizing them leading to a riot destroying the theatre on location and the expulsion of Tzara from the movement by Andre Breton.  
+
+At about the same time in 1925, the Russian film director Sergei Eisenstein demonstrated the power of film montage in \textit{Battleship Potemkin} as he juxtaposed image sequences such as a crowds flight down a staircase with the image sequence of a baby carriage for 7 minutes, creating viscerally new experiences and emotions than either sequence alone could have.  
+
+By the end of the 1940's, Pierre Schaffer and Pierre Henry were experimenting with splicing and recombining magnetic tape recordings of sound in a practice they called musique concr\`ete.  -> real time with vinyl -> hip-hop -> digital . . .
+
+Since then, media has become increasingly digitized.  As a result the capabilities of editing software have afforded practitioners with faster methods of composition.  For instance, Adobe Photoshop and Adobe After Effects support the automatic parsing of an image or video into object regions that can be individually manipulated enabling artists to finely segment and compose visual media.  
+
+For sound-based collage, early digital samplers such as the Fairlight CMI or more recent non-linear editors such as Logic and Ableton Live have made multi-track and cut-and-paste operations trivial to accomplish, while visualizing sound waves has made finding relevant parts of an audio file relatively easier than listening to an entire tape reel.  
+
+Lee ``Scratch'' Perry.  King Tubby.  Public Enemy.  The artist Abstract, also known as Q-Tip, of the early 1990's hip-hop group ``A Tribe Called Quest'' remark on the influence of the previous generation's culture within their music in his lyrics: 
+\begin{quotation}
+Back in the days when I was a teenager \\
+Before I had status and before I had a pager \\
+You could find the Abstract listening to hip hop \\
+My pops used to say, it reminded him of Bebop \\
+I said, well daddy don't you know that things go in cycles \\
+Way that Bobby Brown is just amping like Michael \\
+\end{quotation}
+
+This thesis investigates a computational model for automating collage generation.  These parameters effect the two major modular components of the algorithm: attention modeling and representation.   Interaction is focused on the selection of material used in the collage, how the source content is parsed, stored, and for dynamic media, how the collage should be composited over time.  This system affords entirely new experiences around collage, such as the ability to aggregate source content in real-time or experience the collage through an augmented reality headset that mosaics the worlds as it is experienced.  
 
 \section{Goals}
+Encode only parts of a scene that are likely to attract attention... motivate attentional model for dynamic content... 
+
+Develop representation of audio and visual corpus that affords simple interaction to produce different styles...
+
+Fragments of a collage require precarious balance between what is identifiable, i.e. how discernible it is as the original source, and what can be composited, i.e. how it can fit within the greater context. 
 
 \section{Overview}
+Attention literature
+
+Representation literature
