@@ -50,6 +50,12 @@ Albert~S. Bregman.
   Sound}}.
 \newblock May 1990.
 
+\bibitem[Breton~]{BretonRemembers}
+Andre Breton.
+\newblock {\em {"Le Cadavre Exquis: Son Exaltation"}}.
+\newblock In Exhibition Catalog, pages 5--7, 9--11. La Dragonne, Galerie Nina
+  Dausset, Paris.
+
 \bibitem[Buswell~1935]{Buswell1935}
 GT~Buswell.
 \newblock {\em {How people look at pictures}}.
@@ -310,6 +316,11 @@ MF~McKinney.
 \newblock {\em {Features for audio and music classification}}.
 \newblock Proc. ISMIR, vol.~4, 2003.
 
+\bibitem[McL~2011]{McLeod2011}
+{Cutting Across Media: Appropriation Art, Interventionist Collage, and
+  Copyright Law}.
+\newblock Duke University Press Books, 2011.
+
 \bibitem[Meier~1996]{Meier1996}
 Barbara~J. Meier.
 \newblock {\em {Painterly rendering for animation}}.
@@ -379,6 +390,9 @@ Francesco Orabona and Giorgio Metta.
 Jeff Orchard and CS~Kaplan.
 \newblock {\em {Cut-out image mosaics}}.
 \newblock ACM Transactions on Graphics, vol.~1, no.~212, 2008.
+
+\bibitem[Osw~]{OswaldInterviews}
+{\em {Plunderphonics: Onterviews}}.
 
 \bibitem[Pampalk~2006]{Pampalk2006a}
 Elias Pampalk.
@@ -492,6 +506,11 @@ Tim Smith and Parag~Kumar Mital.
   motion during dynamic scene viewing}}.
 \newblock In Vision Sciences Society (abstract), 2011.
 
+\bibitem[Steenhuisen~2005]{Steenhuisen2005}
+Paul Steenhuisen.
+\newblock {Sonic Mosaics: Conversations with Composers}.
+\newblock University of Alberta Press, 2005.
+
 \bibitem[Su~2011]{Su2011}
 F~Su, L~Yang and Tong Lu.
 \newblock {\em {Environmental sound classification for scene recognition using
@@ -524,6 +543,10 @@ Andrey Temko, Robert Malkin, Christian Zieger, Dusan Macho, Climent Nadeu and
   systems}}.
 \newblock Multimodal Technologies for Perception of Humans, pages 311--322,
   2007.
+
+\bibitem[Tholl~]{Tholl}
+Andrew Tholl.
+\newblock {\em {Plunderphonics: A Literature Review}}.
 
 \bibitem[Torralba~2006]{Torralba2006}
 Antonio Torralba, Aude Oliva, Monica~S Castelhano and John~M Henderson.
