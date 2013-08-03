@@ -5,6 +5,8 @@
 
 \newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
 
+
+% FLOAT
 \floatstyle{ruled}
 \newfloat{program}{thp}{lop}
 \floatname{program}{Program}
@@ -22,6 +24,8 @@
 \usepackage[authoryear,round]{natbib}
 \usepackage{epigraph}
 
+% Remove line in epigraphs
+\setlength{\epigraphrule}{0pt}
 
 \newenvironment{abstract}{\rightskip1in\itshape}{}
 \begin{document}
@@ -32,15 +36,15 @@
 \section*{Acknowledgments}
 THANKS...
 
+\chapter*{Abstract}
+Abstract... 
+{\large\textbf{Keywords:}}
+synthesis, scene analysis, encoding, decoding
+
+\cleardoublepage
 \tableofcontents
 \mainmatter
 
-\cleardoublepage
-\chapter*{Abstract}
-Abstract... 
-
-{\large\textbf{Keywords:}}
-synthesis, scene analysis, encoding, decoding
 
 \include{Chapter1}
 \include{Chapter2}
@@ -48,6 +52,7 @@ synthesis, scene analysis, encoding, decoding
 \include{Chapter4}
 \include{Chapter5}
 \include{Chapter6}
+\include{Chapter7}
 \appendix
 \include{Appendix1}
 \bibliographystyle{ThesisStyle}
