@@ -1,0 +1,83 @@
+
+\chapter{Auditory Memory Mosaicing}
+
+\minitoc
+
+\section{Abstract}
+
+Memory Mosaicing is a real-time augmented sonic reality employing a perceptual listening model which relates the ongoing auditory world to previously learned ``sonic memories''.  Using a mobile platform, a user of the system wears earphones listening to an augmented sonic world which relates the incoming microphone stream to previously segmented sound clips, or sonic memories, creating a ongoing mosaic of sonic memories.  The system starts with an empty knowledge-base of sounds and continually stores only the segments of sounds which are determined salient and unclassified by a machine listening model.  The engine for synthesis is concatenative, matching the incoming segments to the learned ''sonic memories''.  The experience works in real-time on an iPhone 3 and above and has interactive parameters controlling the synthesis engine as well as the ability to learn from the user's own music library.  The experience of the iPhone app is multi-fold, creating a novel platform for investigating the role of memory in perception or as compositional or performance tool which grows its own expressive capabilities the more it hears.
+
+\section{Introduction}
+
+The juxtaposition of fragments of sound as a sonic application has roots at least as early as music concréte, a compositional technique assembling various natural found sounds in order to produce a montage of sound.  Digital Sampling came in the 1970's allowing sound segments to be triggered using an interface such as a keyboard or pad.  More recent techniques have focused on corpus-based concatenative synthesis, where a target sound is matched to a stored database of segments or sounds (for a comprehensive review, see \cite{Schwarz2006}).  Our technical framework most closely resembles SoundSpotter \cite{CaseyICMC2007}, as its framework provides the basis of our auditory feature transformation described in Section \ref{subsec:acoustic-scene-description}.  Though, of the previous techniques mentioned including those in the review article, none investigate corpus-based concatenative synthesis as a real-time experience in an augmented reality.
+
+
+%\subsection{Sonic Memory}
+%Motivation for implementing an augmented reality which stores ``sonic memories'' and resynthesizes them using the incoming input comes from literature investigating  
+
+\section{Machine Listening Model}
+\label{sec:machine-listening-model}
+
+The machine listening model employed in Memory Mosaic is motivated by evidence in  literature of auditory perception stressing the importance of temporal regularities of an acoustic scene in providing continuity for maintaining a cognitive model of an acoustic scene (see \cite{Winkler2009a} for a recent in-depth review).  Such research reinforces Bregman's theory of streaming \cite{Bregman1990}, where one phase consists of the formation of primitive based features, and another on the schema-based selection of streams.  Our model thus places emphasis on temporal discontinuities of the auditory stream using a description of the acoustic scene based on the well-known cepstral coefficients.  % All math operations, including FFT, addition, subtraction, and multiplication are performed using the Apple Accelerate framework in order to achieve real-time performance on an iPhone.  These libraries are made freely available by the authors here: \url{http://github.com/pkmital}.
+
+\subsection{Acoustic Scene Description}
+\label{subsec:acoustic-scene-description}
+
+% this needs expanding
+Numerous measures of an acoustic scenes have been investigated ...  We make use of one that has the benefit of describing as much of the structure of the acoustic space as possible in order to investigate the regularities at any spectral bandwidth.  
+
+Details of the Log Frequency Cepstral Coefficients (LFCC) feature transformation are described in \cite{CaseyICMC2007}, though is reiterated here for completeness.  The feature transformation begins with the Fast Fourier Transform (FFT) of an audio signal using a fixed frame-size.  For the purposes of real-time augmented reality on the iPhone, at a sample rate of 44100 Hz, a 4096-sample FFT provides high spectral resolution while still being fast enough to perform in real-time.  Following the real-FFT, the magnitudes undergo a Constant-Q Transform (CQT), a real log base-10 operation, and a Discrete Cosine Transform (DCT) in order to produce the 89-element LFCC feature vector.
+
+\subsection{Segmentation Model}
+
+Discontinuity of the spectral shape of an acoustic scene is determined using a statistical model employing the mean and variation of the differences on the distances to a low-pass signal of the features.  The model is described in the Figure \ref{fig:segmentation-model}.  Following the feature transformation, the model has two states of operation: segmenting or not.  When the model is not segmenting, the model of background is built up until a discontinuity appears.  Similarly, for the foreground model, a separate model of the foreground is built up from the start of the segment.  Aside from detecting the discontinuity within the foreground model, the model also detects if the current frame returns to the background model by computing distance to the background model.  Using a prior assumption of a normally distributed feature-space, <<GET A PLOT OF A BUSY STATION'S DISTRIBUTION OF FEATURE VALUES>> we compute deviations of the background and foreground model past 3 standard deviations.  As well, checking whether the currently observed audio frame returns to background, we check if its features are within 3 standard deviations of the background model and stop segmenting.  A parameter controlling the threshold of the standard deviation, between 0.1 and 3.0 standard deviations, is described in Section \ref{subsec:parameters}.
+
+Each new segment detected is written to disk using Apple's Extended Audio File Format.  Only the audio segment's first frame's 89-dimensional LFCC feature vector is retained in memory in order to form a matrix of vectors.  As our model is based on attentional shifts,
+
+% uhh...
+
+\section{Concatenative Synthesis Engine}
+
+The concatenative synthesis engine describes any input sound using a polyphonic reconstruction from its database of sound segments.  At each new onset determined by a temporal irregularity of the acoustic scene, a new set of matches are constructed to the current audio frame.  The onset detection for the synthesis engine is much like the one for the segmentation model; however, no foreground model is kept, and only the background model may deviate, creating new background models at each onset.  Thus, the model does not require knowing what is foreground or background, and only requires deviations in the continuous acoustic space.  
+
+% include graphic of the algorithm here.  
+
+\subsection{Matching}
+
+Matching can be formulated as a nearest neighbor algorithm which begins by creating a metric space $X$ of known points $P = p_1, p_2, ..., p_n$ for $n$ points.  These points are pre-processed in such a way that a neighbors to any query point, $q \in X$, are found quickly.  To pre-process the points, we use a distance metric to keep the 3 highest matches to any query point using a simple linear index.  Iterating linearly over the dataset of LFCC vectors, the 3 best matched vectors' indices are kept using cosine similarity, which measures the angle between two vectors $A$ and $B$ like so:
+
+\begin{math}
+\textnormal{similarity} = \cos(\theta) = {A \cdot B \over |A| |B|} = \frac{ \sum\limits_{i=1}^{n}{A_i \times B_i} }{ \\ \sqrt{\sum\limits_{i=1}^{n}{(A_i)^2}} \times \sqrt{\sum\limits_{i=1}^{n}{(B_i)^2}}} 
+\end{math}
+
+Using Apple's Accelerate framework, this metric can be computed using efficient vector operations that are optimized for the iPhone:
+\clearpage
+\begin{lstlisting}
+float cosineDistance(float *x, float *y, unsigned int length) {
+	float dotProd, magX, magY;
+	float *tmp = (float*)malloc(count * sizeof(float));
+	
+	vDSP\_dotpr(x, 1, y, 1, &dotProd, length);
+	
+	vDSP\_vsq(x, 1, tmp, 1, length);
+	vDSP\_sve(tmp, 1, &magX, length);
+	magX = sqrt(magX);
+	
+	vDSP\_vsq(y, 1, tmp, 1, length);
+	vDSP\_sve(tmp, 1, &magY, length);
+	magY = sqrt(magY);
+	
+	delete tmp;
+	
+	return 1.0 - (dotProd / (magX * magY));
+}
+\end{lstlisting}
+
+\section{Application}
+
+\subsection{Parameters}
+\label{subsec:parameters}
+
+\section{Discussion}
+
+John Oswald; Burrough's Cut-up-technique; Scrambled Hackz; Collins; Casey; Grierson; Schwarz...
