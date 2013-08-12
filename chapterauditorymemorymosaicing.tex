@@ -5,11 +5,58 @@
 
 \section{Abstract}
 
-Memory Mosaicing is a real-time augmented sonic reality employing a perceptual listening model which relates the ongoing auditory world to previously learned ``sonic memories''.  Using a mobile platform, a user of the system wears earphones listening to an augmented sonic world which relates the incoming microphone stream to previously segmented sound clips, or sonic memories, creating a ongoing mosaic of sonic memories.  The system starts with an empty knowledge-base of sounds and continually stores only the segments of sounds which are determined salient and unclassified by a machine listening model.  The engine for synthesis is concatenative, matching the incoming segments to the learned ''sonic memories''.  The experience works in real-time on an iPhone 3 and above and has interactive parameters controlling the synthesis engine as well as the ability to learn from the user's own music library.  The experience of the iPhone app is multi-fold, creating a novel platform for investigating the role of memory in perception or as compositional or performance tool which grows its own expressive capabilities the more it hears.
+%Memory Mosaicing is a real-time augmented sonic reality employing a perceptual listening model which relates the ongoing auditory world to previously learned ``sonic memories''.  Using a mobile platform, a user of the system wears earphones listening to an augmented sonic world which relates the incoming microphone stream to previously segmented sound clips, or sonic memories, creating a ongoing mosaic of sonic memories.  The system starts with an empty knowledge-base of sounds and continually stores only the segments of sounds which are determined salient and unclassified by a machine listening model.  The engine for synthesis is concatenative, matching the incoming segments to the learned ''sonic memories''.  The experience works in real-time on an iPhone 3 and above and has interactive parameters controlling the synthesis engine as well as the ability to learn from the user's own music library.  The experience of the iPhone app is multi-fold, creating a novel platform for investigating the role of memory in perception or as compositional or performance tool which grows its own expressive capabilities the more it hears.
 
 \section{Introduction}
 
-The juxtaposition of fragments of sound as a sonic application has roots at least as early as music concréte, a compositional technique assembling various natural found sounds in order to produce a montage of sound.  Digital Sampling came in the 1970's allowing sound segments to be triggered using an interface such as a keyboard or pad.  More recent techniques have focused on corpus-based concatenative synthesis, where a target sound is matched to a stored database of segments or sounds (for a comprehensive review, see \cite{Schwarz2006}).  Our technical framework most closely resembles SoundSpotter \cite{CaseyICMC2007}, as its framework provides the basis of our auditory feature transformation described in Section \ref{subsec:acoustic-scene-description}.  Though, of the previous techniques mentioned including those in the review article, none investigate corpus-based concatenative synthesis as a real-time experience in an augmented reality.
+This chapter focuses on describing practical outputs in developing auditory scene synthesis.  The culmination of this practice will lead to the development of an application, ``Memory Mosaic'', which delivers an automated sonic-collage to a single user wearing headphones.  This application will also later be used in combination with the developments in my visual-practice in Chapter 7.   Before developing this application, however, I will discuss a few outputs created along the way which focused on exploring the use of spatialization, cut-up, narrative, and memory within a sonic collage practice.  
+
+\section{Experiments}
+
+\subsection{Sonic Graffiti}
+
+The first practical output developed towards building an auditory scene synthesis is an application called ``Sonic Graffiti''.  The aim of this application was to create a soundscape based on a collage of sounds that had been recorded at different locations in 3-dimensional space.  A participant of the application could record sounds whenever they pressed a button and could do so in different locations in 3-dimensional space.  Then, when the participant would move in space, they would be able to hear the sounds they recorded as coming from the original location that they were recorded.  The interest in developing this application was (1) to synthesize an acoustic scene by replaying sound fragments based on their original location in space, and (2) to discover more about 3-dimensional sound perception.  My target platform at the time of development was the Apple iPhone 4, which includes a GPS sensor, digital compass, microphone, and audio output.  To begin with, I needed to discover how to record a set of sounds that could be re-positioned based on how a user moved around in 3-dimensional space.
+
+\subsubsection{Binauralization}
+
+To recreate the perception of a recorded sound as coming from a particular location in 3-dimensional space, one could record the sound using a binaural microphone.  These are a stereo pair of microphones (2-channels) which are placed in each ear and capture the sound as it would ideally enter your own ears.  When the captured sound is played back through headphones, they should sound fairly realistic creating the impression that a sound had originated in the same relative location to the user.  However, at the time of developing ``Sonic Graffiti'', the iPhone 4 did not support recording of more than one channel of sound without the support of an external device, meaning a binaural microphone would not work.  As a result, I investigated other methods for spatialization which could work with monaural sounds.
+
+One convincing feature of the perception of 3-dimension sound is the Interaural Time Lag, the lag in time of a sound reaching either ear.  If a sound reaches my left ear faster than my right ear, I perceive a sound coming from the left side of me.  Similarly, if it comes to my right ear faster than my left, then I perceive it as coming from the right of me.  But what about two sounds that are equally lagged?  For instance, a sound directly in front of me and directly behind me?  If you listen to a sound behind you, you may notice that higher frequencies are harder to hear.  This is due to the shape of your ear blocking direct waves from entering your earlobe.  Instead, they must travel around or through your ear, creating a low-pass filter, similarly to what a thin wall may do in effect.  
+
+One could model the perception of sound in 3-dimensions using a set of rules for creating time-lags and filtering sound based on its back-to-front position.  However, another method is to create a sampling of sounds from all directions around an actual head and use these recordings to understand how sound is filtered from any direction.  IRCAM's LISTEN database achieves this by providing a set of Head Related Impulse Responses.  This library has a large database of recordings that was built as follows: using an anechoic chamber, a space where acoustic foam is placed on the sides of the wall in an effort to minimize any reverberations of sounds, a user was sat in the middle of the space.  Within their ears, microphones were placed.  A speaker was moved at a spherical distance 1.95 meters away from the user and produced a ``click'': an instantaneous change in pressure perceived as a loud ``pop'' without any reverberations.  This click essentially delivers a sound wave reaching either ear with an interaural time lag and filtering based on the speakers relative location to the user's head.  
+
+The LISTEN database comes with 71 individual sets and a total of 187 recordings per individual.  The recordings are 8192 samples long at 44100 Hz sample rate.  Figure \ref{fig:ircam-listen} depicts the locations of all the ``clicks'' in relation to the user's head.  These 187 recordings give a reasonable sampling of the space around a user's head to create a nice set of ITL's with a known relative location.  Thus, any sound can be spatialized by using the nearest relative recording.  However, these are all spaced at 1.95 meters away from the user's head, meaning a sound that is closer or farther away must be attenuated.  Further, these discrete samples must be converted to a continuous sampling through the use of interpolation.  To achieve both of these, I use a k-Nearest Neighbor tree using the 3 closest neighbors to a point.  These three nearest points are then average to produce the final left and right ear filters.  The average distance to the nearest filters are then used to attenuate the final filter using a logarithmic relationship between distance and attenuation, simulating the logarithmic perception of sound (decibels).
+
+Any incoming sound may then be filtered using the final filter.  However, as the sound may be longer than 8192 samples, and even change to another filter, we must filter an incoming sound wave continuously.  To achieve continuous filtering, we use an overlap-add operation, which takes any resonance as a result of the filtering operation, and adds the overlapping parts to the next frame of filtering.  This ensures any energy in the system is continuously kept in the filtering procedure.
+
+\subsubsection{Location}
+
+A user's location is obtained using Apple's CoreLocation framework.  This provides a latitude, longitude, and altitude.  As this defines a point on a sphere, this location must be converted to a 3-dimensional cartesian point to be used with the filter tree in Figure \ref{fig:ircam-listen}.  For this purpose, a specific projection which flattens a sphere to a 2-dimensional landscape must be used.  The Universal Transverse Mercator (UTM) coordinate system maps latitude and longitude locations to a mercator projection, and is described in detail in the 330-page document, Bulletin 1532, by the United States Geological Survey.  Any new ``graffiti'' is then given the user's current UTM $x,y$ and altitude.  
+
+\subsubsection{Sonification}
+
+
+
+\subsection{Future Echoes}
+
+Next are two installation outputs developed as part of a course I led in a design school in India which explore the use of cut-up technique in delivering a spatialized sonic narrative and the use of sound input as a target for a video-based triptych collage.  
+
+\subsubsection{Ambisonics}
+
+
+\subsection{Infected Puppets}
+
+
+
+\section{Memory Mosaic}
+
+
+%The juxtaposition of fragments of sound as an arts practice has roots at least as early as music concrete, a compositional technique assembling various natural found sounds in order to produce a collage of sound.  Digital Sampling came in the 1970's allowing sound segments to be triggered using an interface such as a keyboard or pad.  More recent techniques have focused on corpus-based concatenative synthesis, where a target sound is matched to a stored database of segments or sounds (for a comprehensive review, see \cite{Schwarz2006}).  Our technical framework most closely resembles SoundSpotter \cite{CaseyICMC2007}, as its framework provides the basis of our auditory feature transformation described in Section \ref{subsec:acoustic-scene-description}.  Though, of the previous techniques mentioned including those in the review article, none investigate corpus-based concatenative synthesis as a real-time experience in an augmented reality.
+
+%Before reaching the culmination of my sound-based practice in ``Memory Mosaic'', an iOS application which automatically creates sound collages based on an aggregation of learned sounds, I will discuss a few practice-based outputs that led me to this application.  
+%The first application, ``Sonic Graffiti'', grew out of the desire to create a representation of sonic memories as a spatialized global sonic map.  
+
+
 
 
 %\subsection{Sonic Memory}
