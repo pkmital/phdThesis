@@ -6,6 +6,13 @@ Christopher Ahlberg and Erik Wistrand.
   Exploration Environment}}.
 \newblock Proceedings of IEEE Viz'95, 1995.
 
+\bibitem[Alain~2001]{Alain2001}
+C~Alain, SR~Arnott and TW~Picton.
+\newblock {\em {Bottom–up and top–down influences on auditory scene
+  analysis: Evidence from event-related brain potentials.}}
+\newblock Journal of Experimental Psychology: Human Perception and Performance,
+  vol.~27, no.~5, pages 1072--1089, 2001.
+
 \bibitem[Allamanche~2001]{Allamanche2001}
 Eric Allamanche, J~Herre and Oliver Hellmuth.
 \newblock {\em {Content-based identification of audio material using MPEG-7 low
@@ -79,11 +86,24 @@ GT~Buswell.
 \newblock {\em {How people look at pictures}}.
 \newblock 1935.
 
+\bibitem[Campbell~2007]{Campbell2007}
+Tom Campbell, Istv\'{a}n Winkler and Teija Kujala.
+\newblock {\em {N1 and the mismatch negativity are spatiotemporally distinct
+  ERP components: disruption of immediate memory by auditory distraction can be
+  related to N1.}}
+\newblock Psychophysiology, vol.~44, no.~4, pages 530--40, July 2007.
+
 \bibitem[Cartwright~]{Cartwright}
 Mark Cartwright, Zafar Rafii, Jinyu Han and Bryan Pardo.
 \newblock {\em {Making searchable melodies: Human vs. machine}}.
 \newblock In Proceedings of the 2011 AAAI Workshop on Human Computation, San
   Francisco, USA.
+
+\bibitem[Casey~]{CaseyICMC2007}
+Michael Casey and Mick Grierson.
+\newblock {\em {SOUNDSPOTTER / REMIX-TV : FAST APPROXIMATE MATCHING FOR AUDIO
+  AND VIDEO PERFORMANCE}}.
+\newblock Audio.
 
 \bibitem[Casey~2001]{Casey2001a}
 Michael Casey.
@@ -122,6 +142,11 @@ Selina Chu, Shrikanth Narayanan and C.C.J. Kuo.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~17, no.~6, pages 1142--1158, 2009.
 
+\bibitem[Davis~1939]{Davis1939}
+P.~A. Davis.
+\newblock {\em {EFFECTS OF ACOUSTIC STIMULI ON THE WAKING HUMAN BRAIN}}.
+\newblock Journal of Neurophysiology, vol.~2, November 1939.
+
 \bibitem[Davis~1980]{Davis1980}
 S~Davis and Paul Mermelstein.
 \newblock {\em {Comparison of parametric representations for monosyllabic word
@@ -158,10 +183,29 @@ AJ~Eronen, VT~Peltonen and JT~Tuomi.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~14, no.~1, pages 321--329, 2006.
 
+\bibitem[Fletcher~1940]{Fletcher1940}
+Harvey Fletcher.
+\newblock {\em {Auditory Patterns}}.
+\newblock Reviews of Modern Physics, vol.~12, no.~1, pages 47--65, January
+  1940.
+
 \bibitem[Forss\'{e}n~2007]{Forssen2007}
 Per-Erik Forss\'{e}n.
 \newblock {\em {Maximally stable colour regions for recognition and matching}}.
 \newblock Computer Vision and Pattern Recognition 2007, (CVPR07)., 2007.
+
+\bibitem[Gamble~2011]{Gamble2011}
+Marissa~L Gamble and Steven~J Luck.
+\newblock {\em {N2ac: an ERP component associated with the focusing of
+  attention within an auditory scene.}}
+\newblock Psychophysiology, vol.~48, no.~8, pages 1057--68, August 2011.
+
+\bibitem[Garrido~2009]{Garrido2009}
+Marta~I Garrido, James~M Kilner, Klaas~E Stephan and Karl~J Friston.
+\newblock {\em {The mismatch negativity: a review of underlying mechanisms.}}
+\newblock Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology, vol.~120, no.~3, pages 453--63, March
+  2009.
 
 \bibitem[Gooch~2002]{Gooch2002}
 Bruce Gooch, Greg Coombe and Peter Shirley.
@@ -169,6 +213,12 @@ Bruce Gooch, Greg Coombe and Peter Shirley.
   techniques}}.
 \newblock In NPAR '02 Proceedings of the 2nd international symposium on
   Non-photorealistic animation and rendering, page~83, 2002.
+
+\bibitem[Griffiths~2004]{Griffiths2004}
+Timothy~D Griffiths and Jason~D Warren.
+\newblock {\em {What is an auditory object?}}
+\newblock Nature reviews. Neuroscience, vol.~5, no.~11, pages 887--92, November
+  2004.
 
 \bibitem[Guo~2003]{Guo2003a}
 G~Guo and S~Z Li.
@@ -243,6 +293,17 @@ Aaron Hertzmann, Nuria Oliver, Brian Curless and Steven~M. Seitz.
 \newblock {\em {Curve analogies}}.
 \newblock In EGRW '02 Proceedings of the 13th Eurographics workshop on
   Rendering, pages 233--246, 2002.
+
+\bibitem[Hillyard~1973]{Hillyard1973}
+SA~Hillyard, RF~Hink, VL~Schwent and TW~Picton.
+\newblock {\em {Electrical signs of selective attention in the human brain}}.
+\newblock Science, vol.~182, no.~4108, pages 177--180, 1973.
+
+\bibitem[Hillyard~1983]{Hillyard1983}
+S~a Hillyard and M~Kutas.
+\newblock {\em {Electrophysiology of cognitive processing.}}
+\newblock Annual review of psychology, vol.~34, no.~Haber 1974, pages 33--61,
+  January 1983.
 
 \bibitem[Himmel~1998]{Himmel1998}
 Dave Himmel, Mark Greaves, Anne Kao and Steve Poteet.
@@ -380,6 +441,11 @@ David Marr.
   and Processing of Visual Information}.
 \newblock 1982.
 
+\bibitem[McDermott~2009]{McDermott2009}
+Josh~H McDermott.
+\newblock {\em {The cocktail party problem.}}
+\newblock Current biology : CB, vol.~19, no.~22, pages R1024--7, December 2009.
+
 \bibitem[McKinney~2003]{McKinney2003}
 MF~McKinney.
 \newblock {\em {Features for audio and music classification}}.
@@ -426,6 +492,26 @@ Parag~Kumar Mital and Mick Grierson.
   Component Relationships}}.
 \newblock In International Symposium on Music Information Retrieval 2012 (In
   Review), 2012.
+
+\bibitem[N\"{a}\"{a}t\"{a}nen~1978]{NaatanenAttention1978}
+R~N\"{a}\"{a}t\"{a}nen, AWK Gaillard and S~M\"{a}ntysalo.
+\newblock {\em {Early selective-attention effect on evoked potential
+  reinterpreted}}.
+\newblock Acta psychologica, vol.~42, pages 313--329, 1978.
+
+\bibitem[N\"{a}\"{a}t\"{a}nen~1987]{Naatanen1987}
+R~N\"{a}\"{a}t\"{a}nen and T~Picton.
+\newblock {\em {The N1 Wave of the Human Electric and Magnetic Response to
+  Sound: A Review and an Analysis of the Component Structure}}.
+\newblock Psychophysiology, vol.~24, no.~4, pages 375--425, 1987.
+
+\bibitem[N\"{a}\"{a}t\"{a}nen~2007]{Naatanen2007}
+R~N\"{a}\"{a}t\"{a}nen, P~Paavilainen, T~Rinne and K~Alho.
+\newblock {\em {The mismatch negativity (MMN) in basic research of central
+  auditory processing: a review.}}
+\newblock Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology, vol.~118, no.~12, pages 2544--90,
+  December 2007.
 
 \bibitem[Nam~2012]{Nam2012}
 Juhan Nam, Gautham Mysore and Paris Smaragdis.
@@ -522,6 +608,11 @@ Christophe Rhodes, Tim Crawford and Michael Casey.
   AudioDB}}.
 \newblock Journal of New Music, pages 1--19, 2010.
 
+\bibitem[Schwarz~2006]{Schwarz2006}
+D~Schwarz.
+\newblock {\em {Concatenative Sound Synthesis: The Early Years}}.
+\newblock J. New Music Research, vol.~35, no.~1, 2006.
+
 \bibitem[Schwarz~2008]{Schwarz2008}
 Diemo Schwarz, Roland Cahen and Sam Britton.
 \newblock {\em {Principles and applications of interactive corpus-based
@@ -587,10 +678,23 @@ Tim Smith and Parag~Kumar Mital.
   motion during dynamic scene viewing}}.
 \newblock In Vision Sciences Society (abstract), 2011.
 
+\bibitem[Snyder~1976]{Snyder1976}
+Elaine Snyder and Steven~A. Hillyard.
+\newblock {\em {Long-latency evoked potentials to irrelevant, deviant
+  stimuli}}.
+\newblock Behavioral Biology, vol.~16, no.~3, pages 319--331, March 1976.
+
 \bibitem[Steenhuisen~2005]{Steenhuisen2005}
 Paul Steenhuisen.
 \newblock {Sonic Mosaics: Conversations with Composers}.
 \newblock University of Alberta Press, 2005.
+
+\bibitem[Stefanics~2011]{Stefanics2011}
+G\'{a}bor Stefanics, Motohiro Kimura and Istv\'{a}n Czigler.
+\newblock {\em {Visual mismatch negativity reveals automatic detection of
+  sequential regularity violation.}}
+\newblock Frontiers in human neuroscience, vol.~5, no.~May, page~46, January
+  2011.
 
 \bibitem[Stewart~2008]{Stewart2008}
 R~Stewart and M~Levy.
@@ -602,6 +706,11 @@ F~Su, L~Yang and Tong Lu.
 \newblock {\em {Environmental sound classification for scene recognition using
   local discriminant bases and HMM}}.
 \newblock Proceedings of the 19th ACM international, pages 1389--1392, 2011.
+
+\bibitem[Sutton~1965]{Sutton1965}
+S~Sutton, M~Braren, Joseph Zubin and ER~John.
+\newblock {\em {Evoked-potential correlates of stimulus uncertainty}}.
+\newblock Science, 1965.
 
 \bibitem[Sziklai~1956]{Sziklai1956}
 George Sziklai.
@@ -650,6 +759,11 @@ Jan Uhde.
 \newblock {\em {Jan Svankmajer: The Prodigious Animator From Prague.}}
 \newblock Kinema: A Journal for Film and Audiovisual Media, vol.~Spring, 1994.
 
+\bibitem[van Noorden~1975]{Noorden1975}
+LPAS van Noorden.
+\newblock {\em {Temporal coherence in the perception of tone sequences}}.
+\newblock PhD thesis, 1975.
+
 \bibitem[Walther~2006]{Walther2006}
 Dirk Walther and Christof Koch.
 \newblock {\em {Modeling attention to salient proto-objects.}}
@@ -686,12 +800,25 @@ Ron~J. Weiss and Juan~Pablo Bello.
 \newblock IEEE Journal of Selected Topics in Signal Processing, vol.~5, no.~6,
   pages 1240--1251, October 2011.
 
+\bibitem[Wever~1927]{Wever1927}
+EG~Wever.
+\newblock {\em {Figure and ground in the visual perception of form}}.
+\newblock The American Journal of Psychology, vol.~38, no.~2, pages 194--226,
+  1927.
+
 \bibitem[Winkler~2009]{Winkler2009a}
 Istv\'{a}n Winkler, Susan~L Denham and Israel Nelken.
 \newblock {\em {Modeling the auditory scene: predictive regularity
   representations and perceptual objects.}}
 \newblock Trends in cognitive sciences, vol.~13, no.~12, pages 532--40,
   December 2009.
+
+\bibitem[Winkler~2010]{Ist2010}
+Istv\'{a}n Winkler.
+\newblock {\em {In search for auditory object representations}}.
+\newblock In Unconscious Memory Representations in Perception: Processes and
+  mechanisms in the brain (Advances in Consciousness Research), pages 71--106.
+  John Benjamins Publishing Company, 2010.
 
 \bibitem[Wolfe~1989]{Wolfe1989}
 J~M Wolfe, K~R Cave and S~L Franzel.
