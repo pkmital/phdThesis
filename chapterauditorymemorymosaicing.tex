@@ -32,6 +32,9 @@ One could model the perception of sound in 3-dimensions using a set of rules for
 	\caption{Locations of all 187 Head Related Impulse Responses relative to the user's head.}
 	\label{fig:ircam-listen}
 \end{figure}
+
+
+
                 
 \begin{figure}
         \centering
@@ -87,6 +90,8 @@ During initial tests, only 2 - 3 sounds could be binauralized at a time, before 
 \subsubsection{Vectorization}
 
 In order to increase the number of sounds that could be binauralized without CPU lags, we made use of vector-based acceleration.  This is a technique that takes advantage of large register sizes in CPU architecture, in this case 16-bytes.  Instead of performing an operation on a single byte, or in the case of floating-point data, 4 bytes, the same operation may be performed on 16-bytes using larger registers.  Further, if the amount of memory is fixed to a certain size, for-loops which require branching on each iteration may be sacrificed through the use of larger register operations, requiring far less branches.  These optimizations are cleverly implemented in the Apple Accelerate Framework, making many arithmetic operations very fast to perform.  After rewriting the binauralization routines in Accelerate language, I could binauralize 25-30 sound sources before clicks and buffer underruns occurred. 
+
+\subsection{GUI}
 
 \subsection{Discussion}
 
