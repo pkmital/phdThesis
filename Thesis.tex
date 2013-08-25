@@ -1,4 +1,5 @@
-\documentclass[a4paper,11pt,twoside]{ThesisStyle}
+\documentclass[a4paper,11pt,final]{ThesisStyle}
+%\documentclass[a4paper,11pt,draft]{ThesisStyle}
 
 \include{formatAndDefs}
 
@@ -30,6 +31,15 @@
 \pdfcompresslevel=9
 \pdfobjcompresslevel=9
 
+%\usepackage[raggedright]{titlesec}
+%\newlength\mylen
+%\setlength\mylen{\dimexpr\oddsidemargin+\hoffset\relax}
+%\titleformat{\section}
+%  {\normalfont\Large\bfseries}
+%  {\llap{\hspace*{-\mylen}\thesection\hfill}}{0em}{}
+%  [{\makebox[\linewidth][l]{%
+%      \hspace*{-\mylen}\rule{0.6\mylen}{1pt}}}]
+%    \hspace*{-\mylen}\rule{\dimexpr\textwidth+\mylen\relax}{1pt}}}]
 
 % More space between paragraphs
 \usepackage{lipsum}
@@ -38,11 +48,13 @@
  \allowdisplaybreaks
  \raggedbottom
 
+              
 % Remove line in epigraphs
 \setlength{\epigraphwidth}{0.6\textwidth}
 \setlength{\epigraphrule}{0pt}
 
 \setcounter{tocdepth}{4}
+\setcounter{minitocdepth}{4}
 
 \newenvironment{abstract}{\rightskip1in\itshape}{}
 \begin{document}
