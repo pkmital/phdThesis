@@ -1,10 +1,8 @@
 \documentclass[a4paper,11pt,twoside]{ThesisStyle}
 
-
 \include{formatAndDefs}
 
 \newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
-
 
 % FLOAT
 \floatstyle{ruled}
@@ -31,6 +29,14 @@
 \pdfminorversion=8
 \pdfcompresslevel=9
 \pdfobjcompresslevel=9
+
+
+% More space between paragraphs
+\usepackage{lipsum}
+\usepackage{setspace}
+ \setlength{\parskip}{6pt}
+ \allowdisplaybreaks
+ \raggedbottom
 
 % Remove line in epigraphs
 \setlength{\epigraphwidth}{0.6\textwidth}
