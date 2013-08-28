@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,final]{ThesisStyle}
+\documentclass[a4paper,10pt,final]{ThesisStyle}
 %\documentclass[a4paper,11pt,draft]{ThesisStyle}
 
 \include{formatAndDefs}
@@ -19,6 +19,53 @@
 \usepackage{subcaption}
 \usepackage{lipsum}
 \usepackage{setspace}
+\usepackage{framed}
+\usepackage{lipsum}
+
+\definecolor{light-gray}{gray}{0.95}
+\renewenvironment{leftbar}[1][\hsize]
+{%
+    \def\FrameCommand
+    {%
+        {\color{black}\vrule width 1pt}%
+        \hspace{0pt}%must no space.
+        \fboxsep=\colorbox{light-gray}%
+    }%
+    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}
+{\endMakeFramed}
+
+
+\newenvironment{quotationb}%
+{\begin{leftbar}\begin{quotation}}%
+{\end{quotation}\end{leftbar}}
+
+\newenvironment{verseb}%
+{\begin{leftbar}\begin{verse}}%
+{\end{verse}\end{leftbar}}
+
+
+\renewenvironment{leftbar}[1][\hsize]
+{%
+    \def\FrameCommand
+    {%
+        {\color{black}\vrule width 1pt}%
+        \hspace{0pt}%must no space.
+        \fboxsep=\FrameSep\colorbox{light-gray}%
+    }%
+    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}
+{\endMakeFramed}
+
+
+\newenvironment{equationb}%
+{\begin{leftbar}\begin{equation}}%
+{\end{equation}\end{leftbar}}
+
+\newenvironment{eqnarrayb}%
+{\begin{leftbar}\begin{eqnarray}}%
+{\end{eqnarray}\end{leftbar}}
+
 %\usepackage[raggedright]{titlesec}
 %\newlength\mylen
 %\setlength\mylen{\dimexpr\oddsidemargin+\hoffset\relax}
@@ -30,13 +77,13 @@
 %    \hspace*{-\mylen}\rule{\dimexpr\textwidth+\mylen\relax}{1pt}}}]
 % More space between paragraphs
  \setlength{\parskip}{6pt}
-% \allowdisplaybreaks
-% \raggedbottom
+\allowdisplaybreaks
+\raggedbottom
 % Remove line in epigraphs
 \setlength{\epigraphwidth}{0.6\textwidth}
 \setlength{\epigraphrule}{0pt}
-\setcounter{tocdepth}{4}
-\setcounter{minitocdepth}{4}
+\setcounter{tocdepth}{3}
+\setcounter{minitocdepth}{3}
 \newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
 % FLOAT
 \floatstyle{ruled}
@@ -91,7 +138,7 @@
 
 
 \section*{Acknowledgments}
-THANKS...
+\lipsum[1-3]
 
 
 
@@ -115,7 +162,8 @@ THANKS...
 
 
 \chapter*{Abstract}
-Abstract... 
+\lipsum[1-3]
+
 {\large\textbf{Keywords:}}
 synthesis, scene analysis, encoding, decoding
 
@@ -204,7 +252,7 @@ Collage is an arts-practice which appropriates cultural fragments for its raw ma
 
 %As collage-based practices have progressed over the last 100 years, media too has evolved.  As a result, the tools and technologies available for manipulating and accessing media have altered the practice.  
 
-This thesis attempts to build a computational framework for generating a particular type of collage I call a scene synthesis.  Scene synthesis places emphasis on using psychologically-motivated representations for the units of collage.  Across numerous literature these representations are known as clusters (Information Theory), gestalts (Gestalts), geons (Biederman), proto-objects (Rensink), indexical objects (Pylyshyn), or streams (Bregman) and are thought to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  
+This thesis attempts to build a computational framework for generating a particular type of collage I call a scene synthesis.  Scene synthesis places emphasis on using psychologically-motivated unconscious representations in perception for the units of collage.  Across numerous literature these representations are known as clusters (Information Theory), gestalts (Gestalts), geons (Biederman), proto-objects (Rensink), indexical objects (Pylyshyn), or streams (Bregman) and are thought to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  
 
 Once the units of collage have been built, scene synthesis requires a target scene to match to.  In the examples presented in this thesis, this can be either an existing sound, existing image or video, or a real-time live feed coming from a camera and microphone.   
 
@@ -231,9 +279,15 @@ Breton notably describes the practice of collage in the \textit{Manifeste du Sur
 
 In a similar vein to Exquisite Corpse, Tristan Tzara while at a Dadaist rally in the 1920's performed a poem by taking cut-up fragments of text-based media such as newspapers or brochures out of a hat and reading them aloud (eventually leading to a riot destroying the theatre on location and the expulsion of Tzara from the movement by Andre Breton).  The ``cut-up technique'', as it is now known, can be found in some of modern literatures greatest works, such as T. S. Eliot's \textit{The Waste Land} and James Joyce's \textit{Ulysses}, both published in 1922.  Cut-up is later rediscovered by Brion Gysin who supposedly accidentally rediscovered the technique and consequently shared the technique to William Burroughs in the 1950's.  Burroughs made extensive use of cut-up in his writings, most notably in \textit{Naked Lunch} where each chapter was to be read in any order, and in his collaboration with Gysin, \textit{The Third Mind}.  The technique would also eventually find its way into mainstream music in the lyrics of David Bowie, Kurt Cobain, and Radiohead.  %It is worth noting that with the exception of Tzara's performance of cut-up, these examples of text-based collage do not include the usual distinguishing markers of collage as the boundaries of the source material may not be immediately obvious \cite{McLeod2011}.
 
-Collage practices did not stop with static media, however.  In 1925, the Russian film director Sergei Eisenstein demonstrated the power of film montage in \textit{Battleship Potemkin} as he juxtaposed image sequences such as a crowd's flight down a staircase with the image sequence of a baby carriage for 7 minutes, creating viscerally new experiences and emotions than either sequence alone could have.  While not strictly collage as it had been, the technique of producing new meanings from the juxtaposition of individual fragments is a defining aspect of montage.
+Collage practices did not stop with static media, however.  In 1925, the Russian film director Sergei Eisenstein demonstrated the power of film montage in \textit{Battleship Potemkin} as he juxtaposed image sequences such as a crowd's flight down a staircase with the image sequence of a baby carriage for 7 minutes, creating viscerally new experiences and emotions than either sequence alone could have.  Walter Ruttmann would later explore the use of this practice with purely sound, in a composition in 1928 entitled, ``Wochenende'', German for weekend, in what would later be known as the first image-less film \cite{DouglasKahn1994}. Comprised of sounds of a moving train, the wind through the trees, voices of whispering lovers, and the sounds of a crowd, Ruttmann produced a montage through abstracting the fragments relating to the start of a weekend into what Hans Richter would describe as, ``a symphony of sound, speech-fragments and silence woven into a poem'' \cite{Ltd}.  Such practices, while not strictly collage as it had been known as, shared the technique of producing new meanings from the juxtaposition of individual fragments.  However, these fragments are temporally related, and thus the juxtaposition operates on an imposed temporal dimension rather than a spatial one to create a distinct image in the mind's eye.  
 
-By the end of the 1940's, radiophonic art, or the practice of producing sound for radio broadcast, had been well established.  Words, music, and noises were combined to produce radio productions of literary stories and news broadcasts.  It is no surprise then that in one studio in Paris, France, Pierre Schaffer was also experimenting with splicing and recombining magnetic tape recordings of sound in a practice later called musique concr\`ete \cite{}.   %Say something more about how it was later theorized in ``The Guide to the Sonic Object'' and how the practice differed from radiophonic art \ref{}.
+By the end of the 1940's, radiophonic art, or the practice of producing sound for radio broadcast, had been well established.  Words, music, and noises were combined to produce radio productions of literary stories and news broadcasts.  It is no surprise then that in one studio in Paris, France, Pierre Schaeffer was also experimenting with splicing and recombining magnetic tape recordings of sound in a practice later called musique concr\`ete \cite{}.  Schaeffer argued that classical music practice begins with a set of abstractions which are notated on sheet music and then later reproduced as audible music.  Musique concr\`ete on the other hand begins with recordings of the sound outputs themselves, attempting to work from the raw sonic outputs towards any abstraction that may describe them.  \cite{SonicExperience}
+
+Collage would also find its way into performance art.  Most notably, the works of choreographer Merce Cunningham were heavily influenced by collage-based practice.  In his 1964 work in Vienna, \textit{Events}, he takes ``splices'' of his existing works and recombines them to produce new configurations, further heavily influenced by the chance operations demonstrated in works by Marcel Duchamp and John Cage \cite{Copeland2002}.  One may also notice that Duchamp's notion of readymades (e.g., the urinal or bicycle wheel) is also apparent within his collage-based practice.  Copeland describes the influential nature context has on the interpretation of the individual fragments within \textit{Events}:
+\begin{quotationb}
+The Events though, demonstrate that "expressiveness" is by no means inherent in (or "natural" to) specific bodily movements. The "meaning" of movement- even Merce Cunningham's movement-is largely a function of the context in which that movement is performed. For example, when segments of \textit{Winterbranch} (1964) were incorporated into subsequent Events, the emotional tone of the work was no longer nightmarish or apocalyptic. Stripped of Robert Rauschenberg's disorienting lighting and LaMonte Young's aggressive, high-decibel-level sound score, what the audience saw was (merely) the act of dancers falling. Without other factors to color the emotional texture, this basic movement motif came to resemble a series of vaudevillian pratfalls; spectators tended to laugh rather than to recoil in horror.
+\end{quotationb}
+Nam June Paik as well explored collage within performance in \textit{Random Access/Paper TV} (1978-1981), which payed homage to both Cage and Cunningham through silk-screened images of their performances printed on two decks of playing cards.  Paik recombined and shuffle the playing cards, creating collages through dealing the cards out on a flat surface \cite{Copeland2002}.
 
 \subsection{Modern Collage-based Practices}
 Many developments in technology significantly altered collage-based practices, allowing it to explore entirely new processes for composition, new mediums and new methods of presentations, and new audiences. 
@@ -249,7 +303,13 @@ It is in the 'screen world' that a wealth of new technologies would be developed
 
 Various other software such as Adobe Director, Adobe Flash, VJamm, VDMX, Apple Quartz Composer, Cycling '74's Jitter, Resolume's Avenue, VVVV, Modul8, Algoriddim's VJay, or Processing created greater possibilities for video-based media than standard non-linear editors such as Adobe Premiere or Apple Final Cut Pro could offer \cite{Jaeger2006}.  These tools opened video-based practices to real-time and performative practices within Visual Music and VJ cultures.  Many Visual Music and VJ artists even created their own software, releasing them to the public such as Matt Black of Coldcut, who created VJamm, Netochka Nezvanova who wrote Nato.0+55, or Miller Puckette, author of pd \cite{Jaeger2006}.  %Though these practitioners did not employ collage solely, it was certainly common of VJ practice to use fragments of existing material in the form of found video footage and mix them; while in Visual Music, abstract representations very similar to the ones proposed in this thesis as psychologically motivated representations were in abundance.  Seminal artists such as Oskar Fischinger, Norman McLaren, and 
 
-% Scratch Video of the 80's
+Situationists detournment
+
+Culture Jamming
+
+William Burrough's Electronic Revolution
+
+Scratch Video of British 1980's 
 
 Collage-based video practitioners in the 1990's would often use clips of appropriated television footage such as the news footage of the motorcade leading to John F. Kennedy's assassination in Steinski's ``The Motorcade Sped On'', George H. W. Bush's news broadcasts on the Gulf War in EBN's ``We Will Rock You'', or Coldcut's use of nature videos.  However, these early examples as well as some recent artists such as Eclectic Method did not employ collage in the traditional spatial-sense, i.e. by juxtaposing fragments spatially across a single frame, and generally kept any source frames intact.  They did however experiment with the use of ``blending'', a technique with takes 2 or more images and blends the two together using a variety of functions such as: add, multiply, subtract, or difference.  
 
@@ -267,17 +327,16 @@ Two years later in 1989, John Oswald released an amalgamation of sampled music i
 Unfortunately for Oswald, the Canadian Recording Industry Association ordered him to cease-and-desist production and to destroy all remaining copies of ``Plunderphonics''.   In a similar fate as Oswald, sound collage artists Negativland in 1991 were sued by the pop band U2's label, Island Records, for their use of the trademark ``U2'' on the album cover and their sampling of U2's 1987 song, ``I Still Haven't Found What I'm Looking For''.   
 
 Perhaps the most pervasive and popular use of sampling, or creative plagiarism as Kembrew McLeod cites it \cite{McLeod2011}, however, came in the form of Hip-Hop music.  Public Enemy's song, ``Caught, Can I Get a Witness?'', released in 1988, remarks on the practice of digital sampling: 
-\begin{verse}
+\begin{verseb}
 Caught, now in court 'cause I stole a beat\\
 This is a sampling sport
-\end{verse}
+\end{verseb}
 
 %Stop Motion -> Jan Svankmajer -> Pink Freud: https://www.youtube.com/watch?v=5NPiOjFVQRc
 %Vinyl -> DJ'ing
 %VJ'ing (VDMX, Quartz Composer, Jitter, Resolume Avenue; VVVV; Modul8). EBN; Coldcut in the 90's who used nature videos such as monkeys jumping, beetles tapping, and plants opening and synchronized their motions to sound samples using VJamm. Eclectic Method using Algoriddim's VJay iPad app.
-%Scratch Video of British 1980's 
-%Situationists detournment
-%William Burrough's Electronic Revolution
+
+
 %Photo-silk-screen
 %Photo-litho
 %Real-time video 
@@ -286,7 +345,17 @@ This is a sampling sport
 
 \subsection{Computational Collage-based Practices}
 
-The notion of collage in the world of computer graphics may require pinning down, as a variety of new techniques can afford new kinds of compositions.  One theorist claims that collage will proliferate so long as ``cut'' and ``paste'' operations persist, as described by Taylor in ``Collage'' \cite{}.   As a result, generative processes within computer graphics may not be collage according to this definition.  However, Joseph Nechvatal's computer-robotic assisted paintings may be labeled as collage to those unaware of his process.  For instance, \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by a computational process.  The individual generative ``viruses'' create distinct boundaries that could easily have been pasted elements.  However, the portrait is dynamic due to the generative algorithms processing the image, and as a result, there is no clear time point to pin the notion of collage to.  Indeed, better than collage, the notion of generative or viral painting applies to Nechvatal's work. 
+The notion of collage in the world of computer graphics may require pinning down, as a variety of new techniques can afford new kinds of compositions.  One theorist claims that collage will proliferate so long as ``cut'' and ``paste'' operations persist, as described by Taylor in ``Collage'' \cite{Taylor2006b}.   As a result, generative processes within computer graphics may not be collage according to this definition.  However, Joseph Nechvatal's computer-robotic assisted paintings may be labeled as collage to those unaware of his process.  For instance, \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by a computational process.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements.  The portrait is dynamic due to the generative algorithms processing the image, and as a result, there is no clear time point to pin the notion of collage to.  Better than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the multiple processes are a collection of individual fragments themselves (i.e. the generative processes, or individual viruses), and so long as they were cut-and-pasted, perhaps through another virus or procedural process, one could frame Nechvatal's work within a line of collage-based practices according to Taylor's definition.  
+
+The idea of art or even fragments composing an artwork as a \textit{process} is certainly not a new one.  The art, philosophy and science of Cybernetics, first described in Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, evolved out of military experiments in the 1940's describing feedback processes which repositioned guns based on updated predictions from radar.  Cybernetics provided a vehicle for mathematicians and biologists in the coming years, even offering a method for investigating ecology.  It treated individual humans, animals, or in cybernetic speak, systems, as individual entities whose inner functions were not measured by themselves, but only in relation to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  By the 1950's, artists and composers would also engage with cybernetic approaches.  Ross Ashby's \textit{Homeostat} for instance created a ... Bruce Lacey ... Thus, it appeared with the advent of robotics and increasingly more prevalent control structures, most notably the computer, making art through collections or fragments of processes would become ...
+
+Systems theory, complex systems, cybernetics, technoetics, generative art... 
+
+Computational creativity, Boden, defining a successful work/evaluation... 
+
+Cut-and-paste, in the digital realm, implies an operation of copying from a source to a target.  For most computers, a copy operation is carried out whenever information is simply accessed.  Unlike a book, whose information is not copied whenever read, a digital piece of information is first kept stored in a permanent storage location, such as a hard disk.  When required for display, or decoding (e.g. from an MP3-file to one that can be played as -1 to +1 values through the speakers, or a JPEG-file to one that can be displayed as RGB values in a monitor), the permanent file is copied into a temporary high-speed memory storage, and used within the appropriate software making use of that information.  Even for lossless file formats, such as a WAVE audio file or RAW image file, most software will require the file to first be copied into high-speed memory to allow it to be manipulated, displayed (e.g. as a waveform or image), and possibly copied again in order to interface with hardware.  As a result of the pervasive use of copying within computing architecture, copyright laws have likened the pure access and interfacing of digitally stored information as falling within the domain of copyright, leading to several attempts to digitally manage content (e.g. Digital Rights Management, or DRM).  The implications of the interpretation of copyright within digital media will be explored more in Chapter \ref{ch:audiovisual}, when discussing YouTube Smash Up, a project that explores an audiovisual collage within short films through the use of existing copyrighted material hosted on YouTube.  
+
+Other cut-and-paste generative algorithms?
 
 Lev Manovich's Soft Cinema
 
@@ -315,7 +384,7 @@ Ben Bogart's Dreaming Machine
 
 \section{Goals}
 
-This thesis investigates a computational method for scene synthesis, an automated collage generation where the units of the collage are based on psychologically-motivated representations.  
+
 
 %A set of parameters effect the two major modular components of the algorithm: attention modeling and representation.   Interaction is focused on the selection of material used in the collage, how the source content is parsed, stored, and for dynamic media, how the collage should be composited over time.  This system affords entirely new experiences around collage, such as the ability to aggregate source content in real-time or experience the collage through an augmented reality headset that mosaics the worlds as it is experienced.  
 
@@ -330,6 +399,12 @@ Difficulty of evaluating something subjective; not impossible; can measure perfo
 Model is beyond scope; more of a framework that can be expanded.
 
 \section{Overview}
+
+This thesis investigates a computational method for audiovisual scene synthesis, an automated collage generation where the units of the collage are based on psychologically-motivated unconscious representations in perception.  Ideally, this experience is one that can replace the current stream of audiovisual information coming to a participant, such that they are unaware of any other information in the world.  As a result, two artistic mediums will be explored in the final practice chapter: an augmented reality and films, as both have the capability of requiring the full attention of a participant, thus minimizing extra sensorial influences on their experiences.
+
+To produce these outputs, this thesis will work through a modular approach.  This means the thesis will focus on developing scene synthesis for audio, without regard to vision, and then follow with developing another framework for vision.  Finally, the outputs of the two modalities will be combined, though still as separate modular frameworks, in the hopes that their deeper connections (e.g. cross-modal and multisensory influences) could be explored in the future.  
+
+To begin either module (i.e. audio and vision), a conceptual framework for unconscious representations in perception will be developed based on theory in behavioral psychology and electrophysiology (Chapter \ref{ch:conceptual-audio} and \ref{ch:conceptual-visual}).  This conceptual framework will then be modeled computationally (Chapter \ref{ch:analysis-audio} and \ref{ch:analysis-visual}) and developed into a scene synthesis framework for the purposes of developing automated collages (Chapter \ref{ch:synthesis-audio} and \ref{ch:synthesis-visual}).  The two modules will later be combined within an augmented reality and film (Chapter \ref{ch:audiovisual}).  Finally, concluding thoughts on the contribution of this work, limitations, and future will be discussed (Chapter \ref{ch:conclusion}).  
 
 Basics:
 	- Attention literature
@@ -376,15 +451,15 @@ Conclusion
 
 
 \chapter{Conceptual Framework for Building Unconscious Audio Representations}
-\label{chap:framework-audio}
+\label{ch:conceptual-audio}
 \minitoc
 
 \section{Introduction}
 
-%\begin{quotation}
+%\begin{quotationb}
 %Most of us are brought up to feel that what we see out in front of us is something that lies beyond our eyes, out there. That the colors and the shapes that you see in this room are out there. In fact, that is not so. In fact, all that you see is a state of affairs inside your head. All these colors, all these lights, are conditions of the optical nervous system. There are, outside the eyes, quanta, electronic phenomena, vibrations, but these are not light, they are not colors until they are translated into states of the human nervous system. So if you want to know how the inside of your head feels, open your eyes and look. That is how the inside of your head feels\\
 %\textsc{Alan Watts}
-%\end{quotation}
+%\end{quotationb}
 
 % What is the unit of perception that I can use across modalities and use in collage practice
 % Global vs. Local in audio/vision
@@ -523,6 +598,7 @@ Should I mention/talk about developmental studies, music perception, natural sce
 
 
 \chapter{Computational Auditory Scene Analysis}
+\label{ch:analysis-audio}
 \minitoc
 
 \begin{abstract}
@@ -572,28 +648,28 @@ PLSA instead describes a factorization in terms of a mixture of the latent compo
 
 Though \cite{Hofmann1999,Hofmann2001} did not describe the model in terms of audio, it was not long before it was applied to audio and demonstrated as a source separation algorithm \cite{SmaragdisRajShashanka}.  It was later greatly enhanced to include a number of extensions including shift-invariance and sparsity using an entropic prior \cite{Smaragdis2007}.  We simply make use of the basic formulation of a probabilistic latent semantic/component analysis described in \cite{Hofmann1999,SmaragdisRajShashanka} and describe it in terms of an input frequency versus time matrix $\mathbf{X}$ as:
 
-\begin{equation}\label{eq:plca}
+\begin{equationb}\label{eq:plca}
 X_{f,t} = p(f,t) \approx \sum\limits_{i}^{N}p(k_i)p(f|k_i)p(t|k_i)  
-\end{equation}
+\end{equationb}
 
 where $p(f,t)$ describes the frequency $f = {1,...,R}$ versus time $t = {1,...,C}$ matrix as a probabilistic function, $k_i$ is the $i^{\mathtt{th}}$ latent component up to $N$ components, $p(k_i)$ the probability of observing the latent component $k_i$, $p(f|k_i)$, the spectral basis vector, and $p(t|k_i)$, the vector of weights over time.  Thus, the spectral basis vectors and temporal weights are described as a multinomial distribution, where the actual density of the data describes the frequency and time marginals.  The spectral basis vector is intuitively understood as the distribution of frequencies describing a particular source and the temporal weights as the envelope of sound of the source across time.  When multiplied together with their mixing weight, $p(k_i)$, they produce a 2D matrix of the source over time, while adding all $N$ components produces the approximation to the original matrix $X$.  
 
 Formally discovering the marginals requires computing their maximum likelihood estimate (MLE).  This can be done iteratively through a variant of the Expectation-Maximization (EM) algorithm, a standard technique for estimating the MLE in latent variable models.  The E-step estimates the posterior contribution of the latent variable $k$:
 
-\begin{equation}
+\begin{equationb}
 p^{(t)}(k_i|f,t) = \frac{p(k_i)p(f|k_i)p(t|k_i)}{\sum_{j}^{N}p(k_j)p(f|k_j)p(t|k_j)}  
-\end{equation}
+\end{equationb}
 
 The M-step then re-estimates the marginals using the posterior distribution computed in the E-step:
 
-\begin{eqnarray}
+\begin{eqnarrayb}
 p^{(t+1)}(k_i) &=& \sum_{f,t}p(k_i,f,t)  \\
 &=& \sum_{f,t}\left(p^{(t)}(k_i|f,t)\frac{p(f,t)}{\sum_{f,t}p(f,t)}\right)  \\
 p^{(t+1)}(f|k_i) &=& \sum_{t}p(f,t|k_i)  \\
 &=& \frac{\sum_{t}p^{(t)}(k_i|f,t)p(f,t)}{p^{(t)}(k_i)}  \\
 p^{(t+1)}(t|k_i) &=& \sum_{f}p(f,t|k_i)  \\
 &=& \frac{\sum_{f}p^{(t)}(k_i|f,t)p(f,t)}{p^{(t)}(k_i)}  
-\end{eqnarray}
+\end{eqnarrayb}
 
 Practically, one can use a fixed number of iterations of EM and assume convergence, though testing for the change in performance avoids the risk of over-fitting \cite{Hofmann1999} (e.g. using Least-Squares or Kullback-Leibler Divergence).   
 
@@ -635,9 +711,9 @@ X = X ./ repmat( sum(X, 2), 1, size(X, 2) );
 \end{program}
 % The model was later extended to incorporate shift-invariance (denoted SI-PLCA) \cite{Smaragdis2007}.  Intuitively, shift-invariance is understood as allowing the onsets of frequency information to occur at any time through the use of a convolution with a kernel distribution, rather than the multiplication of marginals.  By the same formulation, shift-invariance can also be represented in the frequency dimension, describing the transposition of frequency information without affecting it's temporal alignment.  The former formulation is defined as:
 
-%\begin{equation}
+%\begin{equationb}
 %P(f,t) \approx \sum\limits_{k,\tau}P(k)P(f,\tau|k)P(t-\tau|k)
-%\end{equation}
+%\end{equationb}
 
 
 % Say more about Smaragdis's work here.  Denoising.  Humming paper.  Ron Bello's work on unsupervised structure using Chromas.  Maybe also Spencer's work in ISMIR last year.
@@ -669,32 +745,32 @@ The basic algorithm for computing MFCCs is summarized below:
 \begin{enumerate}
 \item Apply a Hanning window function to the input audio signal and take the discrete Fourier transform
 \item Warp the absolute power spectrum into $M$ triangular sub-bands, spaced equally on the Mel-frequency scale with 50\% overlap.   The following approximate formula describes a frequency on the Mel-frequency scale given an input linear frequency:
-\begin{equation}
+\begin{equationb}
 mel(f) = 2595*\log_{10}{1+\frac{f}{700}}
-\end{equation}
+\end{equationb}
 Use this mapping to warp the power spectrum to the Mel-scale and compute the energy in each sub-band as follows:
-\begin{equation}
+\begin{equationb}
 S_m = \log{\left(\sum_{k=0}^{N-1}|X[k]|^2H_m[k]\right)}
-\end{equation}
+\end{equationb}
 where $H_m$ are the filter-banks described by the Mel-frequency scale.
 \item Finally, after taking the $\log$ result, compute the discrete cosine transform to obtain the first $C$ MFCCs:
-\begin{equation}
+\begin{equationb}
 c_n = \sqrt{\frac{2}{M}}\sum_{m=1}^{M}(\log{S_m}\times\cos{[n(m-\frac{1}{2})]}\frac{\pi}{M}
-\end{equation}
+\end{equationb}
 and $n = 1,...,C$, where $C$ is the number of coefficients to return (discarding high-frequency coefficients), and $M$ is the number of triangular sub-bands.
 \end{enumerate}
  
 \paragraph{GMM}
 
 In order to describe our set of acoustic classes, we assumed the distribution of each class's MFCC vectors could be described by a multivariate Gaussian, i.e., for each class $k = {1...N}$, 
-\begin{equation}
+\begin{equationb}
 p(\mathbf{x}|k) \sim \mathcal{N}(\mu_{k}, \Sigma_{k})  
-\end{equation}
+\end{equationb}
 where $\mu_{k}$ is the mean vector of MFCCs, and $\Sigma_{k}$ is the full covariance matrix.  In order to combine each of the $N$ classes into a mixture of Gaussians, we simply assumed a prior equal weighting on the mixture proportions of each Gaussian, i.e., $\pi_{k} = 1 / N$.  Finally, we assumed any test vector of MFCCs could be generated by one or more of the $N$ multivariate Gaussian distributions.  Classification was then calculated using the posterior probabilities $p(k|\mathbf{x})$ of each of the $k$ components in the Gaussian mixture distribution:
 
-\begin{equation}
+\begin{equationb}
 p(k|\mathbf{x}) = \frac{p(k)p(\mathbf{x}|k)}{\sum_{j}^{N}p(j)p(\mathbf{x}|j)}  
-\end{equation}
+\end{equationb}
 
 \subsubsection{PLCA model}
 
@@ -727,15 +803,15 @@ We performed k-fold cross-validation using 10-folds.  With 10 seconds per class 
 
 In order to assess the estimated results, we made use of a standard technique in describing classification performance, the Receiver Operator Characteristic (ROC) curve.  ROC analysis describes ground truth classes as true and false and the predicted measures as positive and negative for a binary classifier.  The ROC curve then measures the accuracy of the classifier in separating the actual true class from the non-classes by relating the sensitivity, or the \textit{true positive rate}, against 1$-$specificity, or the \textit{false positive rate}.   In order to build the curve for a continuous classifier, the classifier's response must be converted to a set of binary classifiers by using equally spaced thresholds.  We did this by taking equally spaced thresholds on the results of our cross-validation, and calculating the true positive rate of a bin $i$ as: 
 
-\begin{equation}
-TPR_i = \frac{TP}{TP + FN}
-\end{equation}
+\begin{equationb}
+\text{TPR}_i = \frac{\text{TP}}{\text{TP} + \text{FN}}
+\end{equationb}
 
 and the false positive rate as: 
 
-\begin{equation}
-FPR_i = \frac{FP}{TN + FP}
-\end{equation}
+\begin{equationb}
+\text{FPR}_i = \frac{\text{FP}}{\text{TN} + \text{FP}}
+\end{equationb}
 
 The resulting $(x,y)$ points relating the false positive rate to the true positive rate are plotted for each classifier.
 
@@ -850,7 +926,7 @@ Lastly, in developing this work, it became apparent that no standard publicly an
 
 
 \chapter{Computational Auditory Scene Synthesis}
-
+\label{ch:synthesis-audio}
 \minitoc
 
 \section{Abstract}
@@ -882,9 +958,6 @@ One could model the perception of sound in 3-dimensions using a set of rules for
 	\caption{Locations of all 187 Head Related Impulse Responses relative to the user's head.}
 	\label{fig:ircam-listen}
 \end{figure}
-
-
-
                 
 \begin{figure}
         \centering
@@ -924,11 +997,9 @@ Any incoming sound may then be filtered using the final combined and attenuated 
 A user's location is obtained using Apple's CoreLocation framework.  This provides a latitude, longitude, and altitude using Global Positioning System (GPS).  As this defines a point on a Earth through a spherical coordinate system, this location must be converted to a 3-dimensional cartesian point to be used with the filter tree in Figure \ref{fig:ircam-listen}.  For this purpose, a specific projection which flattens the Earth's surface to a 2-dimensional landscape must be used.  We make use of the Universal Transverse Mercator (UTM) coordinate system which maps latitude and longitude locations to a mercator projection, and is described in detail in the 330-page document, Bulletin 1532, by the United States Geological Survey \cite{}.  Any new ``graffiti'' is then given the user's current UTM $x,y$ and altitude.  
 
 CoreLocation also provides different modes of accuracy depending on the application's needs.  As ``Sonic Graffiti'' requires a high precision of accuracy, this was set to ``kCLLocationAccuracyBestForNavigation'', which the Apple Developer Documentation\footnote{\url{https://developer.apple.com/library/mac/documentation/CoreLocation/Reference/CoreLocationConstantsRef/Reference/reference.html#//apple\_ref/c/data/kCLLocationAccuracyBest}} describes as:
-
-\begin{quotation}
+\begin{quotationb}
 Use the highest possible accuracy and combine it with additional sensor data. This level of accuracy is intended for use in navigation applications that require precise position information at all times and are intended to be used only while the device is plugged in.
-\end{quotation}
-
+\end{quotationb}
 During the development of this application, it was found that accuracy when not moving was unreliable to at least 10 meters.  When moving, however, particularly in a straight line, accuracy was more reliable, perhaps to within 1 meter.  As an example, the plots in Figure \ref{fig:gps-tracking} show two example paths taken by me walking around a single block in London.  
 
 \subsubsection{Sonification}
@@ -1008,7 +1079,8 @@ Matching can be formulated as a nearest neighbor algorithm which begins by creat
 
 Using Apple's Accelerate framework, this metric can be computed using efficient vector operations that are optimized for the iPhone:
 \clearpage
-\begin{lstlisting}
+\begin{program}
+\begin{verbatim}
 float cosineDistance(float *x, float *y, unsigned int length) {
 	float dotProd, magX, magY;
 	float *tmp = (float*)malloc(count * sizeof(float));
@@ -1027,7 +1099,9 @@ float cosineDistance(float *x, float *y, unsigned int length) {
 	
 	return 1.0 - (dotProd / (magX * magY));
 }
-\end{lstlisting}
+\end{verbatim}
+\caption{Vectorized code for performing cosine distance}
+\end{program}
 
 \section{Application}
 
@@ -1062,10 +1136,24 @@ John Oswald; Burrough's Cut-up-technique; Scrambled Hackz; Collins; Casey; Grier
 
 
 \chapter{Conceptual Framework for Building Unconscious Visual Representations}
-\label{chap:framework-visual}
+\label{ch:conceptual-visual}
 \minitoc
 
 \section{Introduction}
+
+The world in front of us is measured by the various sensory mechanisms we have available to us: eyes, ears, fingers, etc... These mechanisms enable us to convert the physical phenomena into electrical signals that we use to construct a perception of the world.  However, we are often taught that the world we see is exactly as it is in front of us.  Philosopher Alan Watt's describes this predicament:
+\begin{quotationb}
+Most of us are brought up to feel that what we see out in front of us is something that lies beyond our eyes, out there. That the colors and the shapes that you see in this room are out there. In fact, that is not so. In fact, all that you see is a state of affairs inside your head. All these colors, all these lights, are conditions of the optical nervous system. There are, outside the eyes, quanta, electronic phenomena, vibrations, but these are not light, they are not colors until they are translated into states of the human nervous system. So if you want to know how the inside of your head feels, open your eyes and look. That is how the inside of your head feels\\
+\flushright{\textsc{Alan Watts}}
+\end{quotationb}
+How it feels at certain levels...what these representations look like... build up theory... 
+
+
+William Gibson
+
+J. J. Gibson
+
+... 
 
 In a seminal study on visual perception published in 1921, Rubin describes a fundamental form of experience consisting of a figure standing on a ground.  The figure describes the focal or fundamental experience of a scene, whereas the ground describes the ambient or marginal portions of a scene.  Expanding this point further in the 1920's, the Gestalt psychologists developed a comprehensive perceptual theory employing figure-ground as a fundamental type of perception where the notion of a Gestalt, or totality, is described by a figure and ground.  The Gestalt describes the fundamental experience of perception.  As a result, any subdivision or interrogation of a part of the Gestalt would alter experience into yet another figure and ground relationship \cite{Wever1927}.  
 
@@ -1124,6 +1212,8 @@ Rensink takes this evidence in developing a theory of coherence, proposing that 
 Visual Mismatch Negativity... reviews in Czigler 2007, 2010...
 \cite{Stefanics2011}
 
+Border-ownership in V2 modeled by lateral interactions, producing self-organizing structures resembling shapes.
+
 Violation of sequential rules elicited for a deviant color (Czigler 2002), orientation (Kimura 2010), movement (Pazo-Alvarez 2004), spatial frequency (Heslenfeld 2003), contrast (Stagg 2004), sequential conditional relationships (Stefanics, 2011), and even facial expressions (Zhao and Li, 2006)
 
 %Marr, invariances...
@@ -1136,9 +1226,9 @@ Research in change blindness has indicated that though we experience a rich, det
 When considering evidence for gist in relation to Rensink's theory of coherence, it seems viable to consider proto-objects as the same representation that gist may use \cite{Rensink2002}.  Though Schyns and Oliva argue for using oriented banded filters, it is not unlikely that collections of blob-like entities which necessarily also respond to the scale of the proto-object could provide a cue for spatial layout.   However, when considering evidence in rapid determination of the meaning of scenes, Schyns and Oliva demonstrated that early processing of a scene could be re-organized based on prior experiences \cite{Schyns1994,Oliva1997}.  Thus, it is not clear from their research alone whether the pre-conceptual representation itself can be changed, or if only the attentional machinery acting on a set of possible representations has changed.  The latter effect would entail a sort of conceptual prior on a scene, suggesting the organization of a scenes early representation remains untouched.
 
 Pylyshyn theorizes that the understanding of a concept is not all that is required for visual experience: 
-\begin{quotation}
+\begin{quotationb}
 ''Vision suited for the control of action will have to provide something more than a system that constructs a conceptual representation from visual stimuli; it will also need to provide a special kind of direct (preconceptual, unmediated) connection between elements of a visual representation and certain elements in the world. Like natural language demonstratives (such as 'this' or 'that') this direct connection allows entities to be referred to without being categorized or conceptualized. \cite{Pylyshyn2001}''
-\end{quotation}  
+\end{quotationb}  
 The preconceptual connections Pylyshyn describes are easily described by the pre-attentive proto-objects Rensink also describes \cite{Rensink2000,Rensink2001}.  What is interesting in Pylyshyn's theory is the notion that this pre-conceptual representation does not need to be categorized or conceptualized in order to be referred to.  In other words, the categorization which Pylyshyn theorizes of is part of the attentional machinery which refers to proto-objects, rather than an explicit property of the proto-object themselves.  According to Pylyshyn's theory, proto-objects of a visual scene are then described by one particular fate, and attentional mechanisms can only select from the set of possible proto-objects, rather than influence their definition. 
 
 Proto-objects act as an indexical reference to a conceptual referent.  How proto-objects are defined is based on the features that best give coherence to the scene.  They are also scaled with increasing eccentricity, presumably at least because of the shape of the eye would decrease spatial resolution, but as well due to the nature of attention acting at the point of fixation.  Functionally, visual material outside of the region is of less importance to the task at hand.  Thus, the biological nature of the shape of the eye could also be understood in terms of evolving to act in the world.  Proto-objects may also possibly find re-definition from the act of attention.  As proto-objects are volatile in nature, the act of attention reshapes ones perspective of a scene, thus reorganizing the boundaries defining proto-objects, even at the point of attention.
@@ -1177,6 +1267,7 @@ Similar computational models have been developed to explain visual perception ma
 
 
 \chapter{Computational Visual Scene Analysis}
+\label{ch:analysis-visual}
 \minitoc
 
 \section{Introduction}  
@@ -1201,6 +1292,7 @@ Similar computational models have been developed to explain visual perception ma
 
 
 \chapter{Computational Visual Scene Synthesis}
+\label{ch:synthesis-visual}
 \minitoc
 
 \begin{figure}[ht]
@@ -1237,35 +1329,35 @@ For both the candidate and target frames, we aim to detect abstracted shape prim
 We use MSCR to detect the set of all regions in each candidate and target frame, denoted as $\mathbf{R_C} = \{R_1, R_2, ..., R_{N_C}\}$ and $\mathbf{R_T} = \{R_1, R_2, ..., R_{N_T}\}$ where $N_C$ is the number of regions detected in all candidate frames and $N_T$ is the number of target regions.  
 \subsection{Tracking}\vspace{-0.4em}
 It is often desirable to produce temporally coherent stylizations, meaning if a region within a target video frame has not moved, it is not re-stylized.  This is especially the case in noisy or compressed videos, where artifacts may appear that should not be stylized.  One approach would be to track regions using a GPU-based Optical Flow measure.  This would likely produce reasonable temporal coherence without sparing real-time interaction.  However, we simply follow \cite{Hertzmann2000} in using the flicker for detecting the change in the original target video, as this approach is fast and easy to compute.  Let the flicker for a pixel at location $(i,j)$ be described by:
-\begin{equation}
+\begin{equationb}
 f(i,j) = I_t(i,j) - I_{t-1}(i,j)
-\end{equation} 
+\end{equationb} 
 where $I$ is the image luminance at time $t$.  Then, if the flicker at the region's centroid, $f(C_{R_i})$, between the current and previous frame is greater than a threshold, $threshold$, we remove the region from the set of detected regions to synthesize:
-\begin{equation}
+\begin{equationb}
 R_T = \{ R_i \suchthat f(C_{R_i}) > threshold, \forall i = 1...N_T \}
-\end{equation}
+\end{equationb}
 \subsection{Description}\vspace{-0.4em}
 We form a descriptor comprised of shape and color values.  The shape descriptor for each region, $d_{R_i}$, is composed of the normalized central moments up to order 2.  The average color of the region is converted from RGB to the 3-channel CIELAB color space, $L, a^{*}, b^{*}$.  These form the final descriptor: 
-\begin{equation}
+\begin{equationb}
 d_{R_i} = \Big(\mu_{00}, \eta_{11}, \eta_{20}, \eta_{02}, L, a^{*}, b^{*}\Big)
-\end{equation}
+\end{equationb}
 where $\mu_{ij}$ is the central image moment of order $i$ and $j$, i.e. $\mu_{00}$ is simply the area, and $\eta_{ij}$ is the normalized central image moment computed as: 
-\begin{equation}
+\begin{equationb}
 \eta_{ij} = \frac{\mu_{ij}}{\mu_{00}^{\left(1 + \frac{i+j}{2}\right)}}
-\end{equation}
+\end{equationb}
 Centralizing the moments allows us to compare regions with translation-invariance, while normalizing the first and second order moment allows us to compare regions with scale-invariance.  We include the area as the first term as this ensures regions are not distorted too much when matching.  Further, employing CIELAB allows us to define the region in a color space where we can then use perceptual metrics for matching.  We describe this metric in greater detail in the next section.
 \subsection{Matching}\vspace{-0.4em}
 We match each region in the target to its nearest neighbors in the database using a metric combining distances from each region's shape and color, $d_s(R_t, R_c)$ and $d_c(R_t, R_c)$, respectively:  
-\begin{equation}
+\begin{equationb}
 d(R_t, R_c) = d_s(R_t, R_c) + d_c(R_t, R_c)
-\end{equation}
+\end{equationb}
 \label{eq:distance}
 The shape distance is simply computed as the absolute difference between the first and second order normalized central image moments of each region (i.e. the first four components of the descriptor).  For the color distance, we make use of the official CIE color-difference equation, CIEDE2000, which provides reliable color discrimination with interactive terms for lightness, chromaticity, and hue weighting \cite{Luo2001}.   This difference formula has been shown to be more perceptually accurate at determining the difference between colors than previous methods employing linear difference using RGB or LUV color values, as it is based on empirical evidence of perceived color difference.  For our tests, we use the default parameters described in \cite{Luo2001} for the weighting terms.
 \subsection{Synthesis}\vspace{-0.4em}
 To ensure regions are drawn from their background to the foreground, we synthesize each target region in order from the largest to smallest area sizes.  In contrast to methods that place brush strokes based on the stroke direction at each pixel on the medial axis (e.g.,\cite{Wang2004a}), we find the affine geometric transform describing the transformation from $R_{C_i}$ to $R_{T_i}$.  This can be described by a translation, rotation, and scaling.  The translation component is simply the difference in each region's centroid.  The rotation can be found using the central image moments: 
-\begin{equation}
+\begin{equationb}
 \Theta = \frac{1}{2} * \arctan  \dfrac{ 2 * \frac{\mu_{11}}{\mu_{00}} } { \frac{\mu_{20}}{\mu_{00}} - \frac{\mu_{02}}{\mu_{00}} }
-\end{equation}
+\end{equationb}
 Finally, scaling is simply the ratio of the target to candidate region's bounding box.  This process has the benefit of being very fast using graphics hardware as it can be computed by a single matrix multiplication.  Each region is then layered above the previous one before creating a synthesized image.  In image-based stylization, multiple syntheses created with changing parameters can be blended together to create more detailed and expressive styles which may require many ``layers'' of ``paint''.  We discuss these parameters in greater detail in the next section.
 \section{Parameters}  
 Parameters influencing the region detection algorithm are set independently for the corpus and the target, as their function differs.
@@ -1431,13 +1523,13 @@ A number of issues could be addressed in future versions.  For instance, synthes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Computational Audiovisual Scene Synthesis}
+\label{ch:audiovisual}
 \minitoc
 
-\begin{abstract}
-
-\end{abstract}
-
 \section{Introduction}
+
+
+
 
 \section{Augmented Reality Hallucination}
 
@@ -1454,11 +1546,32 @@ A number of issues could be addressed in future versions.  For instance, synthes
   \label{fig:vam-graphics-bar}
 \end{figure}
 
-An interesting case of ``Memory Mosaicing'' is when a participant can actively explore a visual scene.  By using augmented reality goggles, we allowed participants to explore their environment through the our proposed stylization process during an exhibition called ``Augmented Reality Hallucinations'' held at the Victoria and Albert Museum in London.  Participants were invited to wear the goggles where two small CRT screens presented the same output of a ``Memory Mosaicing'' of a single camera mounted on the goggles right eye that faced the scene in front of them (see Figure \ref{fig:vam}).  As the only user interaction was in exploring a scene, a single preset was defined based on large region sizes and low number of timesteps, as shown in the left column in Figure \ref{fig:memory-mosaicing}.  
+An interesting case of ``Memory Mosaicing'' is when a participant can actively explore a visual scene.  By using augmented reality goggles, we allowed participants to explore their environment through the our proposed stylization process during an exhibition called ``Augmented Reality Hallucinations'' held at the Victoria and Albert Museum in London.  Participants were invited to wear the goggles where two small CRT screens presented the same output of a ``Memory Mosaicing'' of a single camera mounted on the goggles right eye that faced the scene in front of them (see Figure \ref{fig:vam}).  As the only user interaction was in exploring a scene, a single preset was defined based on large region sizes and low number of timesteps.  
 
 Participants were also invited to give quantitative and qualitative feedback on their experience.  The summary of the quantitative feedback is shown in Figure \ref{fig:vam-graphics-bar}.  On the feedback form, when participants were asked, ``Did this experience make you think of anything you had seen or heard before?'', three participants made references to their experiences on hallucinogens and two to dreams.  Also of note in the qualitative feedback was references to art styles such as, ``It reminded me of Francis Bacon's Figurative style'' and ``The movement was Impressionistic, almost painterly''.  When asked, ``What did you dislike most about the experience?'', of note were the responses, ``Would have liked more depth in colour'', ``Not sure what I was seeing at first with the goggles'', and ``Hard to understand how it works.''  The lack of understanding of the process may also be revealed in the quantitative analysis in the second bar of the graph.  However, on average, this number is still quite high across participants, though there is also no baseline to compare to.  
 
+\subsection{Hardware}
+\subsubsection{Vuzix Wrap20AR}
+\subsubsection{Oculus Rift}
+
+
 \section{YouTube Smash Up}
+
+
+
+\subsection{YouTube Content ID}
+
+In October 2007, YouTube introduced a content management tool, Video ID, to help content owners find infringing material.  Block, track, monetize.
+
+Margaret Gould Stewart, YouTube's head of content revealed in a TED talk \cite{Stewart2010},
+
+\begin{quotationb}
+Here we can see the reference file being compared to the user generated content. The system compares every moment of one to the other to see if there's a match. This means we can identify a match even if the copy uses just a portion of the original file, plays it in slow motion, and has degraded audio or video.  The scale and speed of this system is truly breathtaking -- we're not just talking about a few videos, we're talking about over 100 years of video every day between new uploads and the legacy scans we regularly do across all of the content on the site. And when we compare those 100 years of video, we're comparing it against millions of reference files in our database. It'd be like 36,000 people staring at 36,000 monitors each and every day without as much as a coffee break.
+\end{quotationb}
+
+Smitelli's reverse engineering of YouTube's Content ID system revealed a number of parameters which could and could not be detected by their system \cite{Smitelli2009}.  
+
+Though one month after the 2012 fall democratic convention speech featuring first lady Michelle Obama was aired and subsequently taken down due to copyright infringement \cite{Singel2012}, YouTube released a statement saying they would enforce manual reviewing of more of their copyright claims by the content owners in an effort to reduce erroneous claims \cite{Alfishawi2012}.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1480,13 +1593,14 @@ Participants were also invited to give quantitative and qualitative feedback on 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Conclusion}
+\label{ch:conclusion}
 \minitoc
 
-\begin{abstract}
-
-\end{abstract}
-
-\section{Introduction}
+\section{Summary}
+\section{Contribution}
+\section{Limitations}
+\section{Future Work}
+\section{Final Discussion}
 
 
 

@@ -1,10 +1,22 @@
 \begin{thebibliography}{xxxx}
 
-\bibitem[Ahlberg~1995]{Ahlberg1995}
-Christopher Ahlberg and Erik Wistrand.
-\newblock {\em {IVEE: An Information Visualization \& Exploration Environment
-  Exploration Environment}}.
-\newblock Proceedings of IEEE Viz'95, 1995.
+\bibitem[Alain~2001]{Alain2001}
+C~Alain, SR~Arnott and TW~Picton.
+\newblock {\em {Bottom–up and top–down influences on auditory scene
+  analysis: Evidence from event-related brain potentials.}}
+\newblock Journal of Experimental Psychology: Human Perception and Performance,
+  vol.~27, no.~5, pages 1072--1089, 2001.
+
+\bibitem[Alain~2002]{Alain2002}
+Claude Alain, Benjamin~M. Schuler and Kelly~L. McDonald.
+\newblock {\em {Neural activity associated with distinguishing concurrent
+  auditory objects}}.
+\newblock The Journal of the Acoustical Society of America, vol.~111, no.~2,
+  page 990, 2002.
+
+\bibitem[Alfishawi~2012]{Alfishawi2012}
+Thabet Alfishawi.
+\newblock {\em {Improving Content ID}}, 2012.
 
 \bibitem[Allamanche~2001]{Allamanche2001}
 Eric Allamanche, J~Herre and Oliver Hellmuth.
@@ -19,13 +31,6 @@ Jean-Julien Aucouturier, Boris Defreville and Fran\c{c}ois Pachet.
   sufficient model for urban soundscapes but not for polyphonic music.}}
 \newblock Journal of the Acoustical Society of America, vol.~122, no.~2, pages
   881--91, 2007.
-
-\bibitem[Bartsch~2001]{Bartsch2001}
-Mark~A. Bartsch and Gregory~H Wakefield.
-\newblock {\em {To Catch a Chorus: Using Chroma-based Representations for Audio
-  Thumbnailing}}.
-\newblock In IEEE Workshop on Applications of Signal Processing to Audio and
-  Acoustics, 2001.
 
 \bibitem[Benetos~2011]{Benetos2011}
 Emmanouil Benetos and Simon Dixon.
@@ -86,12 +91,6 @@ Tom Campbell, Istv\'{a}n Winkler and Teija Kujala.
   related to N1.}}
 \newblock Psychophysiology, vol.~44, no.~4, pages 530--40, July 2007.
 
-\bibitem[Cartwright~]{Cartwright}
-Mark Cartwright, Zafar Rafii, Jinyu Han and Bryan Pardo.
-\newblock {\em {Making searchable melodies: Human vs. machine}}.
-\newblock In Proceedings of the 2011 AAAI Workshop on Human Computation, San
-  Francisco, USA.
-
 \bibitem[Casey~]{CaseyICMC2007}
 Michael Casey and Mick Grierson.
 \newblock {\em {SOUNDSPOTTER / REMIX-TV : FAST APPROXIMATE MATCHING FOR AUDIO
@@ -103,17 +102,10 @@ Michael Casey.
 \newblock {\em {General sound classification and similarity in MPEG-7}}.
 \newblock Organised Sound, vol.~6, no.~02, pages 153--164, 2001.
 
-\bibitem[Casey~2008a]{Casey2008b}
+\bibitem[Casey~2008]{Casey2008b}
 MA~Casey, Remco Veltkamp and Masataka Goto.
 \newblock {\em {Content-based music information retrieval: current directions
   and future challenges}}.
-\newblock Proceedings of the IEEE, vol.~96, no.~4, 2008.
-
-\bibitem[Casey~2008b]{Casey2008c}
-Michael~A Casey, Remco Veltkamp, Masataka Goto, Marc Leman, Christophe Rhodes
-  and Malcolm Slaney.
-\newblock {\em {Content-Based Music Information Retrieval : Current Directions
-  and Future Challenges}}.
 \newblock Proceedings of the IEEE, vol.~96, no.~4, 2008.
 
 \bibitem[Celsis~1999]{Celsis1999}
@@ -131,17 +123,17 @@ IC~Chang, YM~Peng, YS~Chen and SC~Wang.
 \newblock Journal of Information Science and Engineering, vol.~26, pages
   1443--1458, 2010.
 
-\bibitem[Christel~1998]{Christel1998}
-Michael Christel and David Martin.
-\newblock {\em {Information visualization within a digital video library}}.
-\newblock Journal of Intelligent Information Systems, no.~June, 1998.
-
 \bibitem[Chu~2009]{Chu2009a}
 Selina Chu, Shrikanth Narayanan and C.C.J. Kuo.
 \newblock {\em {Environmental sound recognition with time–frequency audio
   features}}.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~17, no.~6, pages 1142--1158, 2009.
+
+\bibitem[Copeland~2002]{Copeland2002}
+Roger Copeland.
+\newblock {\em {Merce Cunningham and the aesthetic of collage}}.
+\newblock TDR/The Drama Review, vol.~46, no.~1, pages 11--28, 2002.
 
 \bibitem[Cowan~1988]{Cowan1988}
 Nelson Cowan.
@@ -166,12 +158,6 @@ S~Davis and Paul Mermelstein.
 Doug DeCarlo and Anthony Santella.
 \newblock {\em {Stylization and abstraction of photographs}}.
 \newblock ACM Transactions on Graphics, vol.~21, no.~3, pages 1--8, July 2002.
-
-\bibitem[Dominik~2009]{Dominik2009}
-L~Dominik and Matthias Jarke.
-\newblock {\em {Adaptive multimodal exploration of music collections}}.
-\newblock Proceedings of the 10th International Society for Music Information
-  Retrieval Conference, no.~Ismir, pages 195--200, 2009.
 
 \bibitem[Duan~2012]{Duan2012}
 Zhiyao Duan, Gautham~J Mysore and Paris Smaragdis.
@@ -240,13 +226,6 @@ Paul Haeberli.
 \newblock ACM SIGGRAPH Computer Graphics, vol.~24, no.~4, pages 207--214,
   September 1990.
 
-\bibitem[Harding~2007]{Harding2007}
-Sue Harding, Martin Cooke and P.~K\"{o}nig.
-\newblock {\em {Auditory gist perception: an alternative to attentional
-  selection of auditory streams?}}
-\newblock Attention in Cognitive Systems. Theories and Systems from an
-  Interdisciplinary Viewpoint, pages 399--416, 2007.
-
 \bibitem[Hari~1984]{Hari1984}
 R~Hari, M~H\"{a}m\"{a}l\"{a}inen, R~Ilmoniemi, E~Kaukoranta, K~Reinikainen,
   J~Salminen, K~Alho, R~N\"{a}\"{a}t\"{a}nen and M~Sams.
@@ -268,11 +247,6 @@ Christopher~G. Healey, Laura Tateosian, James~T. Enns and Mark Remple.
   visualization}}.
 \newblock ACM Transactions on Graphics, vol.~23, no.~1, pages 64--96, January
   2004.
-
-\bibitem[Heise~2012]{Heise2012}
-S~Heise, M~Hlatky and J~Loviscach.
-\newblock {\em {Soundtorch: Quick browsing in large audio collections}}.
-\newblock Audio Engineering Society Convention 125, 2012.
 
 \bibitem[Henderson~1999]{Henderson1999}
 J~M Henderson and a~Hollingworth.
@@ -321,12 +295,6 @@ S~a Hillyard and M~Kutas.
 \newblock {\em {Electrophysiology of cognitive processing.}}
 \newblock Annual review of psychology, vol.~34, no.~Haber 1974, pages 33--61,
   January 1983.
-
-\bibitem[Himmel~1998]{Himmel1998}
-Dave Himmel, Mark Greaves, Anne Kao and Steve Poteet.
-\newblock {\em {Visualization for large collections of multimedia
-  information}}.
-\newblock Content Visualization and Intermedia Representations, 1998.
 
 \bibitem[Hofmann~1999]{Hofmann1999}
 Thomas Hofmann.
@@ -385,6 +353,11 @@ Paul Joyce.
 \newblock {Hockney on Photography: Conversations with Paul Joyce}.
 \newblock Harmony, 1988.
 
+\bibitem[Kahn~1994]{DouglasKahn1994}
+Douglas Kahn.
+\newblock {Wireless Imagination: Sound, Radio, and the Avant-Garde}.
+\newblock The MIT Press, 1994.
+
 \bibitem[Kanoh~2001]{Kanoh2001}
 S~Kanoh, Toshinori Arai, R.~Futami and N.~Hoshimiya.
 \newblock {\em {Properties of auditory temporal integration revealed by
@@ -403,12 +376,6 @@ HG~Kim and Nicolas Moreau.
   representations}}.
 \newblock Circuits and Systems for Video, vol.~14, no.~5, pages 716--725, 2004.
 
-\bibitem[Knees~2006]{Knees2006}
-Peter Knees, Markus Schedl and Tim Pohle.
-\newblock {\em {An innovative three-dimensional user interface for exploring
-  music collections enriched with meta-information from the web}}.
-\newblock Proceedings of the ACM, 2006.
-
 \bibitem[Koch~1985]{Koch1985}
 C~Koch and S~Ullman.
 \newblock {\em {Shifts in selective visual attention: towards the underlying
@@ -417,7 +384,7 @@ C~Koch and S~Ullman.
 
 \bibitem[Kyprianidis~2012]{Kyprianidis2012}
 J~Kyprianidis, John Collomosse, Tinghuai Wang and Tobias Isenberg.
-\newblock {\em {State of the'Art': A Taxonomy of Artistic Stylization
+\newblock {\em {State of the 'Art': A Taxonomy of Artistic Stylization
   Techniques for Images and Video}}.
 \newblock IEEE transactions on Visualization and Computer Graphics, 2012.
 
@@ -445,6 +412,10 @@ Peter Litwinowicz.
 \newblock {\em {Processing images and video for an impressionist effect}}.
 \newblock SIGGRAPH '97 Proceedings of the 24th annual conference on Computer
   graphics and interactive techniques, pages 407--414, 1997.
+
+\bibitem[Ltd.~]{Ltd}
+N3krozoft Ltd.
+\newblock {\em {// WALTER RUTTMANN}}.
 
 \bibitem[Luo~2001]{Luo2001}
 M.~R. Luo, G.~Cui and B.~Rigg.
@@ -486,12 +457,6 @@ Barbara~J. Meier.
 \newblock Proceedings of the 23rd annual conference on Computer graphics and
   interactive techniques - SIGGRAPH '96, pages 477--484, 1996.
 
-\bibitem[Melucci~2000]{Melucci2000}
-Massimo Melucci and Nicola Orio.
-\newblock {\em {SMILE: A system for content-based musical information retrieval
-  environments}}.
-\newblock RIAO'2000 Conference proceedings, 2000.
-
 \bibitem[Merrill~1968]{Merrill1968}
 RG~Merrill and DR~Metcalf.
 \newblock {\em {COGNITIVE STYLES OF VISUAL PERCEPTION IN THE EVALUATION OF
@@ -528,6 +493,11 @@ R~N\"{a}\"{a}t\"{a}nen and T~Picton.
 \newblock {\em {The N1 Wave of the Human Electric and Magnetic Response to
   Sound: A Review and an Analysis of the Component Structure}}.
 \newblock Psychophysiology, vol.~24, no.~4, pages 375--425, 1987.
+
+\bibitem[N\"{a}\"{a}t\"{a}nen~2001]{Naatanen2001a}
+R~N\"{a}\"{a}t\"{a}nen, M~Tervaniemi, E~Sussman, P~Paavilainen and I~Winkler.
+\newblock {\em {"Primitive intelligence" in the auditory cortex.}}
+\newblock Trends in neurosciences, vol.~24, no.~5, pages 283--8, May 2001.
 
 \bibitem[N\"{a}\"{a}t\"{a}nen~2007a]{Naatanen2007}
 R~N\"{a}\"{a}t\"{a}nen, P~Paavilainen, T~Rinne and K~Alho.
@@ -670,12 +640,6 @@ D~Schwarz.
 \newblock {\em {Concatenative Sound Synthesis: The Early Years}}.
 \newblock J. New Music Research, vol.~35, no.~1, 2006.
 
-\bibitem[Schwarz~2008]{Schwarz2008}
-Diemo Schwarz, Roland Cahen and Sam Britton.
-\newblock {\em {Principles and applications of interactive corpus-based
-  concatenative synthesis}}.
-\newblock Journ\'{e}es d'Informatique Musicale (JIM), GMEA, Albi, France, 2008.
-
 \bibitem[Schyns~1994]{Schyns1994}
 Philippe~G Schyns and Aude Oliva.
 \newblock {\em {From Blobs to Boundary Edges: Evidence for Time- and
@@ -688,6 +652,12 @@ SangHyun Seo and KyungHyun Yoon.
   model and a statistical analysis}}.
 \newblock The Visual Computer: International Journal of Computer Graphics,
   vol.~26, no.~6-8, pages 421--431, April 2010.
+
+\bibitem[Shamma~2010]{Shamma2010}
+SA~Shamma and Christophe Micheyl.
+\newblock {\em {Behind the scenes of auditory perception}}.
+\newblock Current opinion in neurobiology, vol.~20, no.~3, pages 361--366,
+  2010.
 
 \bibitem[Shamma~2011]{Shamma2011}
 Shihab~a Shamma, Mounya Elhilali and Christophe Micheyl.
@@ -711,6 +681,11 @@ D~J Simons and C~F Chabris.
   dynamic events.}}
 \newblock Perception, vol.~28, no.~9, pages 1059--74, January 1999.
 
+\bibitem[Singel~2012]{Singel2012}
+Ryan Singel.
+\newblock {\em {YouTube Flags Democrats’ Convention Video on Copyright
+  Grounds}}, 2012.
+
 \bibitem[Smaragdis~2006]{SmaragdisRajShashanka}
 Paris Smaragdis, Bhiksha Raj and Madhusudana Shashanka.
 \newblock {\em {A Probabilistic Latent Variable Model for Acoustic Modeling}}.
@@ -728,6 +703,10 @@ Paris Smaragdis, Bhiksha Raj and Madhusudana Shashanka.
   single-channel mixtures}}.
 \newblock In Proceedings of the 7th international conference on Independent
   component analysis and signal separation, 2007.
+
+\bibitem[Smitelli~]{Smitelli2009}
+Scott Smitelli.
+\newblock {\em {Fun with YouTube's Audio Content ID System}}.
 
 \bibitem[Smith~2011]{Smith2011a}
 Tim Smith and Parag~Kumar Mital.
@@ -753,22 +732,15 @@ G\'{a}bor Stefanics, Motohiro Kimura and Istv\'{a}n Czigler.
 \newblock Frontiers in human neuroscience, vol.~5, no.~May, page~46, January
   2011.
 
-\bibitem[Stewart~2008]{Stewart2008}
-R~Stewart and M~Levy.
-\newblock {\em {3D interactive environment for music collection navigation}}.
-\newblock Proc. DAFx-08, pages 1--5, 2008.
+\bibitem[Stewart~2010]{Stewart2010}
+Margaret~Gould Stewart.
+\newblock {\em {How YouTube thinks about copyright | Video on TED.com}}, 2010.
 
 \bibitem[Su~2011]{Su2011}
 F~Su, L~Yang and Tong Lu.
 \newblock {\em {Environmental sound classification for scene recognition using
   local discriminant bases and HMM}}.
 \newblock Proceedings of the 19th ACM international, pages 1389--1392, 2011.
-
-\bibitem[Sussman~2005]{Sussman2005}
-Elyse~S. Sussman.
-\newblock {\em {Integration and segregation in auditory scene analysis}}.
-\newblock The Journal of the Acoustical Society of America, vol.~117, no.~3,
-  page 1285, 2005.
 
 \bibitem[Sutton~1965]{Sutton1965}
 S~Sutton, M~Braren, Joseph Zubin and ER~John.
@@ -785,6 +757,11 @@ George Sziklai.
 Benjamin~W Tatler, Mary~M Hayhoe, Michael~F Land and Dana~H Ballard.
 \newblock {\em {Eye guidance in natural vision : Reinterpreting salience}}.
 \newblock Journal of Vision, vol.~11, pages 1--23, 2011.
+
+\bibitem[Taylor~2006]{Taylor2006b}
+Brandon Taylor.
+\newblock {Collage: The Making of Modern Art}.
+\newblock Thames \& Hudson, 2006.
 
 \bibitem[Teki~2011]{Teki2011a}
 Sundeep Teki, Maria Chait, Sukhbinder Kumar, Katharina von Kriegstein and
@@ -809,11 +786,17 @@ M.~Tervaniemi, J.~Saarinen, P.~Paavilainen, N.~Danilova and
   as reflected by the mismatch negativity}}.
 \newblock Biological Psychology, vol.~38, no.~2-3, pages 157--167, 1994.
 
-\bibitem[Tervaniemi~1997]{Tervaniemi1997}
+\bibitem[Tervaniemi~1997a]{Tervaniemi1997}
 M~Tervaniemi, E~Schr\"{o}ger and R~N\"{a}\"{a}t\"{a}nen.
 \newblock {\em {Pre-attentive processing of spectrally complex sounds with
   asynchronous onsets: an event-related potential study with human subjects.}}
 \newblock Neuroscience letters, vol.~227, no.~3, pages 197--200, May 1997.
+
+\bibitem[Tervaniemi~1997b]{Tervaniemi1997a}
+M~Tervaniemi, I~Winkler and R~N\"{a}\"{a}t\"{a}nen.
+\newblock {\em {Pre-attentive categorization of sounds by timbre as revealed by
+  event-related potentials.}}
+\newblock Neuroreport, vol.~8, no.~11, pages 2571--4, July 1997.
 
 \bibitem[Tervaniemi~2000]{Tervaniemi2000}
 M~Tervaniemi, S~V Medvedev, K~Alho, S~V Pakhomov, M~S Roudas, T~L {Van Zuijen}
@@ -872,11 +855,6 @@ Jue Wang, Yingqing Xu, Heung-Yeung Shum and Michael~F. Cohen.
 \newblock {\em {Video tooning}}.
 \newblock In SIGGRAPH '04 ACM SIGGRAPH 2004 Papers, pages 574--583, New York,
   New York, USA, 2004. ACM Press.
-
-\bibitem[Wang~2006]{Wang2006a}
-Avery Wang.
-\newblock {\em {The Shazam Music Recognition Service}}.
-\newblock Communications of the ACM, vol.~49, no.~8, 2006.
 
 \bibitem[Wang~2011]{Wang2011}
 JC~Wang, HS~Lee and HM~Wang.
@@ -940,12 +918,6 @@ HL~Yang and CK~Yang.
 Alfred Yarbus.
 \newblock {Eye movements and vision}.
 \newblock 1967.
-
-\bibitem[Young~2008]{Young2008}
-MW~Young, JL~Drever, Mick Grierson and Ian Stonehouse.
-\newblock {\em {Goldsmiths Electronic Music Studios: 40 Years}}.
-\newblock In Proceedings of the 2008 International Computer Music Conference,
-  pages 8--11, 2008.
 
 \bibitem[Zeng~2009]{Zeng2009}
 K~Zeng, M~Zhao, C~Xiong and SC~Zhu.
