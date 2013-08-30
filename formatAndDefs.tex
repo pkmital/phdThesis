@@ -2,7 +2,8 @@
 % \usepackage[french]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[left=1.5in,right=1.3in,top=1.1in,bottom=1.1in,includefoot,includehead,headheight=13.6pt]{geometry}
+%\usepackage[left=1.5in,right=1.3in,top=1.1in,bottom=1.1in,includefoot,includehead,headheight=13.6pt]{geometry}
+\usepackage[left=1.5in,right=1.5in,top=1.1in,bottom=1.1in,includefoot,includehead,headheight=13.6pt]{geometry}
 \renewcommand{\baselinestretch}{1.05}
 
 % Table of contents for each chapter
@@ -64,9 +65,9 @@
 \hypersetup
 {
 bookmarksopen=true,
-pdftitle="Design and Use of Anatomical Atlases for Radiotherapy",
-pdfauthor="Olivier COMMOWICK", 
-pdfsubject="Creation of atlases and atlas based segmentation", %subject of the document
+pdftitle="Computational Audiovisual Scene Synthesis",
+pdfauthor="Parag Mital", 
+pdfsubject="encoding decoding perception modeling collage arts", %subject of the document
 %pdftoolbar=false, % toolbar hidden
 pdfmenubar=true, %menubar shown
 pdfhighlight=/O, %effect of clicking on a link
@@ -198,3 +199,76 @@ urlcolor=linkcol %couleur des liens pour les url
 {\newpage\vspace*{\fill}\thispagestyle{empty}\renewcommand{\headrulewidth}{0pt}}
 {\vspace*{\fill}}
 
+
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage{fixltx2e}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{afterpage}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[authoryear,round]{natbib}
+\usepackage{epigraph}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{framed}
+\usepackage{lipsum}
+
+
+%% Stuff for making gray background in different environments 
+\definecolor{light-gray}{gray}{0.95}
+\renewenvironment{leftbar}[1][\hsize]
+{%
+    \def\FrameCommand
+    {%
+        {\color{black}\vrule width 1pt}%
+        \hspace{0pt}%must no space.
+        \fboxsep=\FrameSep\colorbox{light-gray}%
+    }%
+    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}%
+{\endMakeFramed}%
+\newenvironment{quotationb}%
+{\begin{leftbar}\begin{quotation}}%
+{\end{quotation}\end{leftbar}}%
+\newenvironment{verseb}%
+{\begin{leftbar}\begin{verse}}%
+{\end{verse}\end{leftbar}}%
+\newenvironment{equationb}%
+{\begin{leftbar}\begin{equation}}%
+{\end{equation}\end{leftbar}}%
+\newenvironment{eqnarrayb}%
+{\begin{leftbar}\begin{eqnarray}}%
+{\end{eqnarray}\end{leftbar}}%
+
+%\usepackage[raggedright]{titlesec}
+%\newlength\mylen
+%\setlength\mylen{\dimexpr\oddsidemargin+\hoffset\relax}
+%\titleformat{\section}
+%  {\normalfont\Large\bfseries}
+%  {\llap{\hspace*{-\mylen}\thesection\hfill}}{0em}{}
+%  [{\makebox[\linewidth][l]{%
+%      \hspace*{-\mylen}\rule{0.6\mylen}{1pt}}}]
+%    \hspace*{-\mylen}\rule{\dimexpr\textwidth+\mylen\relax}{1pt}}}]
+% More space between paragraphs
+ \setlength{\parskip}{6pt}
+\allowdisplaybreaks
+\raggedbottom
+
+% Remove line in epigraphs
+\setlength{\epigraphwidth}{0.6\textwidth}
+\setlength{\epigraphrule}{0pt}
+\setcounter{tocdepth}{3}
+\setcounter{minitocdepth}{3}
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+
+% FLOAT
+\floatstyle{ruled}
+\newfloat{program}{thp}{lop}
+\floatname{program}{Program}
+\newenvironment{abstract}{\rightskip1in\itshape}{}

@@ -2,94 +2,6 @@
 %\documentclass[a4paper,11pt,draft]{ThesisStyle}
 
 \include{formatAndDefs}
-\usepackage{wrapfig}
-\usepackage{hyperref}
-\usepackage{fixltx2e}
-\usepackage{color}
-\usepackage{listings}
-\usepackage{afterpage}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{float}
-\usepackage{hyperref}
-\usepackage[authoryear,round]{natbib}
-\usepackage{epigraph}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{lipsum}
-\usepackage{setspace}
-\usepackage{framed}
-\usepackage{lipsum}
-
-\definecolor{light-gray}{gray}{0.95}
-\renewenvironment{leftbar}[1][\hsize]
-{%
-    \def\FrameCommand
-    {%
-        {\color{black}\vrule width 1pt}%
-        \hspace{0pt}%must no space.
-        \fboxsep=\colorbox{light-gray}%
-    }%
-    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
-}
-{\endMakeFramed}
-
-
-\newenvironment{quotationb}%
-{\begin{leftbar}\begin{quotation}}%
-{\end{quotation}\end{leftbar}}
-
-\newenvironment{verseb}%
-{\begin{leftbar}\begin{verse}}%
-{\end{verse}\end{leftbar}}
-
-
-\renewenvironment{leftbar}[1][\hsize]
-{%
-    \def\FrameCommand
-    {%
-        {\color{black}\vrule width 1pt}%
-        \hspace{0pt}%must no space.
-        \fboxsep=\FrameSep\colorbox{light-gray}%
-    }%
-    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
-}
-{\endMakeFramed}
-
-
-\newenvironment{equationb}%
-{\begin{leftbar}\begin{equation}}%
-{\end{equation}\end{leftbar}}
-
-\newenvironment{eqnarrayb}%
-{\begin{leftbar}\begin{eqnarray}}%
-{\end{eqnarray}\end{leftbar}}
-
-%\usepackage[raggedright]{titlesec}
-%\newlength\mylen
-%\setlength\mylen{\dimexpr\oddsidemargin+\hoffset\relax}
-%\titleformat{\section}
-%  {\normalfont\Large\bfseries}
-%  {\llap{\hspace*{-\mylen}\thesection\hfill}}{0em}{}
-%  [{\makebox[\linewidth][l]{%
-%      \hspace*{-\mylen}\rule{0.6\mylen}{1pt}}}]
-%    \hspace*{-\mylen}\rule{\dimexpr\textwidth+\mylen\relax}{1pt}}}]
-% More space between paragraphs
- \setlength{\parskip}{6pt}
-\allowdisplaybreaks
-\raggedbottom
-% Remove line in epigraphs
-\setlength{\epigraphwidth}{0.6\textwidth}
-\setlength{\epigraphrule}{0pt}
-\setcounter{tocdepth}{3}
-\setcounter{minitocdepth}{3}
-\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
-% FLOAT
-\floatstyle{ruled}
-\newfloat{program}{thp}{lop}
-\floatname{program}{Program}
-\newenvironment{abstract}{\rightskip1in\itshape}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -345,21 +257,26 @@ This is a sampling sport
 
 \subsection{Computational Collage-based Practices}
 
-The notion of collage in the world of computer graphics may require pinning down, as a variety of new techniques can afford new kinds of compositions.  One theorist claims that collage will proliferate so long as ``cut'' and ``paste'' operations persist, as described by Taylor in ``Collage'' \cite{Taylor2006b}.   Cut-and-paste, in the digital realm, implies an operation of copying a digitally stored representation (i.e. 1's and 0's in machine code) from a source to a target.  However, for most computers, a copy operation is carried out whenever information is simply accessed.  That is, unlike a book whose information is not copied whenever read, a digital piece of information is first kept stored in a permanent storage location, such as a hard disk, before being copied by software.  For example, when a sound or image is required for display or decoding (e.g. from an MP3-file to one that can be played as -1 to +1 values through the speakers, or a JPEG-file to one that can be displayed as RGB values in a monitor), the permanent file must be copied into a temporary high-speed memory storage, and used within the appropriate software making use of that information.  Even for lossless file formats, such as a WAVE audio file or RAW image file, most software will require the file to first be copied into high-speed memory to allow it to be manipulated, displayed (e.g. as a waveform or image), and possibly copied again in order to interface with hardware.  As a result of the pervasive use of copying within computing architecture, copyright laws have likened the pure access and interfacing of digitally stored information as falling within the domain of copyright, leading to several attempts to digitally manage content (e.g. Digital Rights Management, or DRM).  The implications of the interpretation of copyright within digital media will be explored more in Chapter \ref{ch:audiovisual}, when discussing YouTube Smash Up, a project that explores an audiovisual collage within short films through the use of existing copyrighted material hosted on YouTube.  It is therefore important to consider that the notion of copy-and-paste alone may not suffice as a definition of collage for digitally represented material.  
+The notion of collage in the world of computer graphics may require pinning down, as a variety of new techniques can afford new kinds of compositions.  One theorist claims that collage will proliferate so long as ``cut'' and ``paste'' operations persist, as described by Taylor in ``Collage'' \cite{Taylor2006b}.   Cut-and-paste, in the digital realm, implies an operation of copying a digitally stored representation (i.e. 1's and 0's in machine code) from a source to a target.  However, for most computers, a copy operation is carried out whenever information is simply accessed.  That is, a digital piece of information is first kept stored in a permanent storage location such as a hard disk, before being copied by software.  For example, when a sound or image is required for display or decoding (e.g. from an MP3-file to one that can be played as -1 to +1 values through the speakers, or a JPEG-file to one that can be displayed as RGB values in a monitor), the permanent file must be copied into a temporary high-speed memory storage, and used within the appropriate software making use of that information.  Even for lossless file formats, such as a WAVE audio file or RAW image file, most software will require the file to first be copied into high-speed memory to allow it to be manipulated, displayed (e.g. as a waveform or image), and possibly copied again in order to interface with hardware.  As a result, copyright laws have likened the pure access and interfacing of digitally stored information as falling within the domain of copyright, leading to several attempts to digitally manage content (e.g. Digital Rights Management, or DRM).  The implications of the interpretation of copyright within digital media will be explored more in Chapter~\ref{ch:audiovisual}, when discussing YouTube Smash Up, a project that explores an audiovisual collage within short films through the use of existing copyrighted material hosted on YouTube.  
 
-Another issue with Taylor's definition comes into play when considering the procedural nature of computing.  For instance, Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
+If we can temporarily overlook the distinction of copying that copyright law has taken, and enforce a stricter sense of copying, i.e. in terms of moving information across spatial (e.g. papier collies) or temporal dimensions (e.g. montage or musique concr\`{e}te) as the literature to now has demonstrated, then what are procedural or computational approaches to collage-based practices?  In order to situate this literature, it is important to briefly consider seminal developments within cybernetics, signal processing, and information theory beginning in the 1940's.
 
-Composing an artwork through an assemblage of \textit{processes} is certainly not a new one.  In fact, the earliest of procedural artworks may very well be described by collage-based ideas.  It is however a crime to consider the notion of procedure without first discussing cybernetics.  
+\subsubsection{Cybernetics, Signal Processing, and Information Theory}
 
-Described in Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, cybernetics evolved out of military experiments in the 1940's describing feedback processes which repositioned actuators (e.g. missiles/guns) based on updated predictions (e.g. sonar/radar/filters).  As an example, a matched filter provided a template response of a radar signal (e.g. of a known target) and was matched at each radar sweep providing a new orientation towards a target.  This new orientation could then be fed back into the system which would then again perform a radar sweep, a matched filter response, and a new heading, \textit{ad infinitum}.  This process forms the basic idea of homing in missile guidance, and is a defining principle of reducing noise in the field of signal processing.  It has also been likened to processes of active perception by Wiener himself.  Wiener suggests that each movement of the eye and neuronal levels of processing leads towards an invariant object representation (discussed in greater detail in Chapter \ref{ch:conceptual-visual}).  This entire process, in Wiener's own words, ``brings [visual] information one step nearer to the form in which it is used and is preserved in the memory.''  Wiener's early insights into the function of the eye, neuronal processing stages, and internal representations supporting perception will be expanded upon more in this thesis, as I attempt to model such a process with computation and use it within a collage-based practice.
+Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, describes a field of research denoted, cybernetics, which evolved out of military experiments in the 1940's describing feedback processes which repositioned actuators (e.g. missiles/guns) based on updated predictions (e.g. sonar/radar/filters).  As an example, a matched filter provided a template response of a radar signal (e.g. of a known target) and was matched at each radar sweep providing a new orientation towards a target.  This new orientation could then be fed back into the system which would then again perform a radar sweep, a matched filter response, and a new heading, \textit{ad infinitum}.  This process forms the basic idea of homing in missile guidance, and is a defining principle of reducing noise in the field of signal processing (i.e. it maximizes the signal-to-noise ratio of a known signal corrupted by additive noise).   It has also been likened to processes of active perception by Wiener himself.  Wiener suggests that each movement of the eye and neuronal levels of processing leads towards an invariant object representation (discussed in greater detail in Chapter \ref{ch:conceptual-visual}).  This entire process, in Wiener's own words, ``brings [visual] information one step nearer to the form in which it is used and is preserved in the memory.''  Wiener's early insights into the function of the eye, neuronal processing stages, and internal representations supporting perception will be expanded upon more in this thesis, as I attempt to motivate and model a similar perceptual process in both auditory and visual domain and use the model within a collage-based practice.
 
-Cybernetics also provided a vehicle for mathematicians and biologists in the coming years, even offering a method for investigating ecology.  It treated individual humans, animals, machines, or in cybernetic terms, \textit{systems}, as individual entities whose inner functions were not measured by their own capacities, but only in relation to what could be communicated by its own outputs to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  
+Cybernetics provided a vehicle for mathematicians and biologists in the coming years, even offering a method for investigating ecology.  It treated individual humans, animals, machines, or in cybernetic terms, \textit{systems}, as individual entities whose inner functions were not measured by their own capacities, but only in relation to what could be communicated by its own outputs to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  
 
 By the 1950's, artists and composers would also engage with cybernetic approaches.  Ross Ashby's \textit{Homeostat} for instance created a ... Bruce Lacey ... Thus, it appeared with the advent of robotics and increasingly more prevalent control structures, most notably the computer, making art through collections or fragments of processes would become a defining aspect of computational practices.
 
+For instance, Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
+
+Composing an artwork through a collage of \textit{processes} is certainly not a new one.  
 Computational creativity, Boden, defining a successful work/evaluation... 
 
 Other cut-and-paste generative algorithms?
+
+\subsubsection{Digital Media}
 
 Lev Manovich's Soft Cinema
 
@@ -367,11 +284,17 @@ Computer Graphics -> boundaries of collage become less clear: https://www.youtub
 
 Space of collage: Andruid Kerne's Collage Machine; I/O/D's WebStalker; Mark Napier's Riot; 
 
-Developments in machine vision/listening led to new tools/applications;
+\subsubsection{Computer Graphics and Computer Vision}
 
 Aaron Hertzmann; SIGGRAPH community
 
+\subsubsection{Speech Technologies}
+
 Diemo Schwarz's CataRT; Nick Collins's BBCut and klippAV
+
+Developments in machine vision/listening led to new tools/applications;
+
+
 
 Ben Bogart's Dreaming Machine
 
@@ -388,6 +311,7 @@ Ben Bogart's Dreaming Machine
 
 \section{Goals}
 
+This thesis attempts to work towards a better understanding on the representations we build to support our ongoing scene perception.  Working in both auditory and visual modalities, the approach of this thesis is to first motivate a theory, computationally model it, and then work through an arts practice in order to better understand the shortcomings and successes of the model.  As designing a computational model of our perceptual systems within even one modality is a significant task, the goal of this model is not to accurately represent all possible levels of processing, but rather to focus on one: a pre-attentive or unconscious representation.  In the following chapters, numerous literature will be reviewed that has motivated such a representation.  Yet, little attempt has been made to understand what an entire auditory or visual scene would sound and look like to our conscious awareness if represented in such a way.
 
 
 %A set of parameters effect the two major modular components of the algorithm: attention modeling and representation.   Interaction is focused on the selection of material used in the collage, how the source content is parsed, stored, and for dynamic media, how the collage should be composited over time.  This system affords entirely new experiences around collage, such as the ability to aggregate source content in real-time or experience the collage through an augmented reality headset that mosaics the worlds as it is experienced.  
@@ -404,34 +328,11 @@ Model is beyond scope; more of a framework that can be expanded.
 
 \section{Overview}
 
-This thesis investigates a computational method for audiovisual scene synthesis, an automated collage generation where the units of the collage are based on psychologically-motivated unconscious representations in perception.  Ideally, this experience is one that can replace the current stream of audiovisual information coming to a participant, such that they are unaware of any other information in the world.  As a result, two artistic mediums will be explored in the final practice chapter: an augmented reality and films, as both have the capability of requiring the full attention of a participant, thus minimizing extra sensorial influences on their experiences.
+This thesis investigates a computational method for audiovisual scene synthesis, an automated collage generation where the units of the collage are based on psychologically-motivated unconscious representations in perception.  This experience attempts to demonstrate how the current stream of audiovisual information coming to a participant could be interpreted by our own perceptual systems.  Two artistic mediums will be explored in the final practice chapter: an augmented reality and a series of short films.
 
-To produce these outputs, this thesis will work through a modular approach.  This means the thesis will focus on developing scene synthesis for audio, without regard to vision, and then follow with developing another framework for vision.  Finally, the outputs of the two modalities will be combined, though still as separate modular frameworks, in the hopes that their deeper connections (e.g. cross-modal and multisensory influences) could be explored in the future.  
+To produce these outputs, this thesis will work through a modular approach.  This means the thesis will first focus on developing scene synthesis for audio and then move on to developing another framework for vision.  Finally, the outputs of the two modalities will be combined, though still as separate modular frameworks in the hopes that their deeper connections (e.g. cross-modal and multisensory influences) could be explored in the future.  
 
 To begin either module (i.e. audio and vision), a conceptual framework for unconscious representations in perception will be developed based on theory in behavioral psychology and electrophysiology (Chapter \ref{ch:conceptual-audio} and \ref{ch:conceptual-visual}).  This conceptual framework will then be modeled computationally (Chapter \ref{ch:analysis-audio} and \ref{ch:analysis-visual}) and developed into a scene synthesis framework for the purposes of developing automated collages (Chapter \ref{ch:synthesis-audio} and \ref{ch:synthesis-visual}).  The two modules will later be combined within an augmented reality and film (Chapter \ref{ch:audiovisual}).  Finally, concluding thoughts on the contribution of this work, limitations, and future will be discussed (Chapter \ref{ch:conclusion}).  
-
-Basics:
-	- Attention literature
-	- Representation literature
-
-Auditory Scene Analysis
-
-Auditory Scene Synthesis
-	- Memory Mosaic app
-	- Daphne Oram Browser
-	- Infected Puppets (exhibited in India at the Bangalore Artist Residency and developed in collaboration with 12 students at Srishti School of Art, Technology, and Design's Center for Experimental Media Art)
-	
-Visual Scene Analysis
-
-Visual Scene Synthesis
-	- Photo Synthesizer app; Have contact from an artist, Frieso Boning (The Winnipeg Trash Museum) who used it in their arts practice to create some very nice photos...
-	- Artistic Stylization of Image/Video
-
-AudioVisual Scene Synthesis
-	- YouTube Smash Up; Copyright Issues; Validation through Copyright Infringements
-	- Augmented Reality Hallucinations; exhibited at V\&A; Feedback from 21 participants
-
-Conclusion
 
 
 
@@ -483,10 +384,9 @@ Our perception of the world is comprised of objects, events, and meaningful enti
 
 Numerous theories since then have proposed a representational framework for perception.  These are generally described by representations that are inaccessible to our conscious awareness similar to the prior notions in Helmholtz's inferences.  As we do not have direct access to them, what might an unconscious representation supporting perception look or sound like?  What can they explain, and what do they lack the ability to explain?  It is the aim of this thesis to build a better understanding of questions such as these through an arts practice focused on computational approaches to sonic and visual collage processes.  Within this collage-based practice, the units being assembled will be modeled based on the theoretical foundations laid in this chapter.  
 
-This chapter is thus dedicated to reviewing what is known about unconscious representations in auditory perception.  As this field is incredibly vast with many non-overlapping research areas, this review will sacrifice brevity for more depth in fewer areas of research, primarily describing research making use of electrophysiological techniques in the domains of cognitive neuroscience and behavioral psychology.  These reviews will set the groundwork for a theory of unconscious memory representations in auditory perception which will be computationally modeled and used in practice in the later chapters of this thesis.   
+This chapter is thus dedicated to (1) reviewing what is known about how unconscious representations in auditory perception may be formed and (2) motivate a basic framework for a computational model of unconscious auditory representations.  As this field is incredibly vast with many non-overlapping research areas, this review will sacrifice brevity for more depth in fewer areas of research, primarily describing research making use of electrophysiological techniques within cognitive neuroscience.  Further, as this PhD is focused on practical outputs rather than building an accurate model of perception, many aspects of perception will certainly be overlooked.  The attempt here is just to motivate a few concepts for designing a computational model as shown by some of the literature in cognitive neuroscience.  
 
 %As we do not have direct access to them, what do these representations look or sound like?  What can they explain, and what do they lack the ability to explain?  It is the aim of this thesis to build an understanding of perception through an arts practice focused on computational approaches to sonic and visual collage processes.  Within this collage-based practice, the units being assembled are modeled based on a theory of representations supporting perception motivated in this chapter.  The final aim of this practice is to open a dialogue around questions of representation within perception, thus reflecting back onto the theories set forth in this chapter.  
-
 
 \section{Auditory Object}
 
@@ -534,9 +434,9 @@ However, their result was later reinterpreted in another study which used longer
 
 \subsection{N2-P3a/MMN}
 
-In 1976, another now well-known combination of components, the N2-P3a \cite{Snyder1976}, was demonstrated.  Unlike the N1 component which is based on the simple onset of a stimulus, the N2 was generated whenever a deviant or infrequent stimuli was presented.  This difference became even greater with larger differences in Hz between the standard and deviant (e.g. 80\% chance of a 1000 Hz tone versus deviants of 1020 or 1040 Hz at 20\%).  This entailed the notion that some temporal regularity had been represented in order to compare it to the deviant stimuli.  Unlike the PN, the deviant did not need to be known or recognized based on prior training, or require selective attention, though its characteristics could effectively demand attention, hence evoking a P3a component peaking around 258 ms.  In contrast, when the subject was actively attending, a later P3 component denoted the P3b was evoked, peaking around 378 ms, still with the N2 component preceding it. 
+In 1976, another now well-known combination of components, the N2-P3a \cite{Snyder1976}, was demonstrated.  Unlike the N1 component which is based on the simple onset of a stimulus, the N2 was generated whenever a \textit{deviant}, or infrequent stimuli, was presented.  This difference became even greater with larger differences in Hz between the deviant and the \textit{standard}, or the stimuli that was presented more frequently.  For example, a tone would be presented with an 80\% chance of a standard 1000 Hz tone versus deviants of 1020 or 1040 Hz at 20\%).  This entailed the notion that some temporal regularity had been represented in order to compare it to the deviant stimuli.  Unlike the PN, the deviant did not need to be known or recognized based on prior training, or require selective attention, though its characteristics could effectively demand attention, hence evoking a P3a component peaking around 258 ms.  In contrast, when the subject was actively attending, a later P3 component denoted the P3b was evoked, peaking around 378 ms, still with the N2 component preceding it. 
 
-The N2 component has since been very well studied, as it entails that we are able to represent sounds and compare them to the ongoing environment even outside of a given task.  In particular, a re-interpretation of the 1976 study in 1978 showed that when subtracting the deviant trials from the standard ones, the remaining N2 spike (``N2a'') demonstrates the brains capability to detect irregular changes in what the authors originally called ``template mismatch'' \cite{Naatanen1978}.  Importantly, these changes are not dependent on the deviant stimuli's features itself, but only in relation to the temporal regularities represented in the standard tones.  In other words, the template being matched to is likely an unconscious one, as the participant was not searching for it, nor were they aware of the deviant beforehand.  Rather, the standard set a predictive or inferential basis for any future irregularities.  
+The N2 component has since been very well studied, as it entails that we are able to represent the regularities of sounds and compare them to the ongoing environment evoking N2s whenever the regularity is violated even outside of a given task.  In particular, a re-interpretation of the 1976 study in 1978 showed that when subtracting the deviant trials from the standard ones, the remaining N2 spike (``N2a'') demonstrates the brains capability to detect irregular changes in what the authors originally called ``template mismatch'' \cite{Naatanen1978}.  Importantly, these changes are not dependent on the deviant stimuli's features itself, but only in relation to the temporal regularities represented in the standard tones.  In other words, the template being matched to is likely an unconscious one, as the participant was not searching for it, nor were they aware of the deviant beforehand.  Note that unconscious in this sense simple means the inability to report or being aware of hearing any deviant tones.  Rather, the standard set a predictive or inferential basis for any future irregularities.  
 
 The remaining subtraction originally defined as the N2a was later denoted as the \textit{mismatch negativity} (MMN), and has been shown to appear anywhere from 100 - 250 ms after onset of a deviating stimuli \cite{Naatanen1978,Naatanen1987,Naatanen2007,Campbell2007,Garrido2009,Naatanen2011}.  Such relational negativities were also capable of appearing within the time-frame of the N1, originally leading it to be classified as a part of the N1 \cite{Naatanen1987}.  Though only recently it has been discriminated from the N1 \cite{Campbell2007}.  As well, the MMN's counterparts in other techniques for studying brain activity has also been demonstrated, including equivalents for magnetoencephalograph (MEG) \cite{Hari1984}, optical-imaging (OI) \cite{Rinne1999}, positron emission tomography (PET) \cite{Tervaniemi2000}, and functional magnetic resonance imaging (fMRI) \cite{Celsis1999}.  
 
@@ -550,18 +450,27 @@ The standard tone must also be established through repetition before a MMN can b
 
 Evidence for simultaneous grouping cues has been evidenced by research looking at the neural responses during listening of complex tones composed of inharmonicities \cite{Alain2001,Alain2002}.  Participants listened to a complex tone where all of the tones were either harmonic (i.e. all tones were multiples of the fundamental tone) or inharmonic tones (i.e. one tone was not a multiple of the fundamental).  The tones were also matched for perceptual loudness to ensure any differences were based on the complexities of the tone rather than a separate loudness cue.  Participants were given both an active and passive task.  For the active task, participants had to press a buzzer if they heard two separate tones.  For the passive task, participants read a book.   Participant's were at about 20\% chance of reporting that they heard 2 sounds when the mistuning was at 2\%.  This increased to 50\% at a 4\% mistuning, and 80\% for an 8\% mistuning.  The ERP data for active listening trials revealed an N1-P2 complex peaking at 110 and 200 ms over the central and frontal electrodes, followed by a late positive P3b component in the parietal regions.   Subtracting the ERPs to harmonic trials from inharmonic trials revealed that participants elicited a negative ERP component at 150-180 ms deemed the \textit{object related negativity} (ORN) in both active and passive listening.  This was followed by a late positive peak at 350-400 ms (P400) during active listening only.  The finding of an ORN in both active and passive listening conditions suggests that the detection of inharmonicities is an automatic process, though can be influenced by attention, as its amplitude in the active case was significantly larger than the passive one \cite{Alain2001,Alain2002}.
 
-\section{Discussion}
+\section{Conceptual Framework}
 
-Certainly, research behind the neuronal basis for memory representations is greatly evidenced by research in electrophysiology.  This body of research suggests that the ORN and MMN provide a neural trace of an unconscious memory representation, the PN as a trace of a conscious one, and the N1 as evidence for the brain's capacity for an unconscious stimulus onset detector.  In particular, research demonstrating ORNs provides evidence for the brain's capability for segregation via a simultaneous cue, while the MMNs provides evidence for segregation via a sequential or schema-based grouping cue.  The schema for MMNs are defined by the temporal regularities of the standard, leading any deviances from this regularity to be segregated (with enough deviance).  With such deviants, the entire stream is not integrated into one concept, but segregated into two through an explicit measure of its deviance.
+Research behind the neuronal basis for memory representations, both conscious and unconscious, is greatly evidenced by research in electrophysiology.  This body of research suggests that the ORN and MMN provide a neural trace of an unconscious memory representation, the PN as a trace of a conscious one acting through selective attention, and the N1 as evidence for the brain's capacity for an unconscious stimulus onset detector.  In particular, research demonstrating ORNs provides evidence for the brain's capability for segregation via a simultaneous cue such as through inharmonicities, while the MMNs provides evidence for segregation via a sequential or schema-based grouping cue.  The schema for MMNs are defined by the temporal regularities of the standard, leading any deviances from this regularity to be segregated (with enough deviance).  With such deviants, the entire stream is not integrated into one concept, but segregated into two through an explicit measure of its deviance. 
 
-\subsection{Temporal Coherences}
+Extending this research into a basic computational model requires at least: (1), an onset detector such as evidenced by the N1; (2), a template match functionality as evidenced by the PN; and (3), an online segregation as evidenced by the MMN and ORN.  Of course, this is a radical simplification of the perceptual system of auditory listening.   Of course, this is a gross simplification, and an idealized model should consider, at the very least: the numerous influences of attention (e.g. \cite{Shamma2011}), how integration occurs and if it should occur before or after segregation (e.g. \cite{Sussman2005}), what a template is defined by, how the stimulus timings, inter stimulus timings, and contextual influences effect stream formation, and how binaural cues such as interaural level and time differences may effect any one of these processes.  However, any one of these questions are all very active areas of research.  As a result, the basic set of components laid above can at least provide a starting point for a plausible model from which representations of unconscious auditory objects, or streams, may be built.  
 
-In real-world scenarios, it is likely that cues are given in both simultaneous and sequential formations.  As a result, some research has suggested that Bregman's notion of stream formation may be understood in terms of temporal coherences.  These describe the formation of streams in terms of any incoherences within the set of possible cues coming from pitch, intensity, spatial location, or sequential groupings defined by Gestalt-like rules.  Describe Shamma's work and Denham's work...
+The next sections are dedicated to expanding on the conceptual underpinnings of each component further.
+
+\subsection{Onset Detection}
+
+Evidence demonstrating the elicitation of an N1 ERP component suggests that as little as 60-70 ms are required before the brain is capable of detecting the onset of a stimulus.  This component demonstrates the brains remarkable ability to detect a change in the environment even before we become aware of it.  It takes almost another 250-300 ms before we can become conscious aware of the stimulus onset, i.e. report the actual stimulus onset, as demonstrated by the late positive ERP component, the P3.  As a result, it seems plausible that a basic perceptual model should have the capability of detecting stimulus changes in the environment.  
+
+However, the literature presented thus far does not seem to provide enough evidence on how an onset may be computationally modeled.  In each of the experiments reviewed above, short evoked tones were presented to a participant, thus assuming that each tone would provide an event evoking an N1 response.  However, the world is not neatly aligned by short evoked tones, nor events.  Rather, it is a continuous amalgamation that our brain is capable of neatly organizing.  How then does the N1 decide when an event has occurred?  
+
+Looking the evidence of the elicitation of the MMN and the groundwork laid by Bregman's Auditory Scene Analysis, one may be able to begin to define an onset detector based on similar strategies of simultaneous and sequential grouping cues.  Though these are traditionally thought to provide evidence of segregation in a continuous stream, they can similarly be thought of in terms of a segregation from an ongoing stream into one that may be further processed.  As a result, the MMN and N1 may share very similar basic strategies. The major difference seems to be that the MMN is time locked to the onset, providing a basis for separation, i.e. the sonic environment before and after the N1 response.  The N1 may likely be based on an automatic time window, where the capability for detecting irregularities of the sonic world are based on task/attentional demands.  Further, given the research demonstrated thus far, it is likely that this window is very short, e.g. within the timespan of evoking P3s, given the capability for detecting ISIs of up to 350 ms.  
+
+\subsection{Template Match}
 
 
-\subsection{Change Deafness}
 
-May delete this section.
+Further, in real-world scenarios, it is likely that cues are given in both simultaneous and sequential formations.  As a result, some research has suggested that segregation may be understood in terms of temporal coherences.  These describe the formation of streams in terms of any incoherences within the set of possible cues coming from pitch, intensity, spatial location, or sequential groupings defined by Gestalt-like rules.  Shihab Shamma's work in modeling temporal coherences suggests that stream formation may be aided by attentional mechanisms.  Rather than stream formation occurring due to any incoherences in cues, attention may select one of many cues, and only then will other similar temporally coherent cues be bounded together.  Such an interpretation is still open to debate.  Yet, it does highlight the fact that the role of attention within stream formation is still very difficult to determine.   That is, unconscious representations may be mediated by top-down processes such as attention, task, and memory.
 
 Research in representations forming outside of selective attention has been given additional support through the phenomena of change deafness, termed similarly to change blindness as it shares some similarities (discussed in Section \ref{sec:change-blindness}) \cite{Vitevitch2000}.  Participants were instructed to repeat out loud a list of words as heard coming from one ear of their headphones, and to ignore the words presented in the other.  The words range from lexically easy words (high word frequency and few words are similar sounding) to lexically hard words (low word frequency, many words sound similar to it, and the similar sounding words have a high frequency of occurrence).  Halfway through the list of words, participants were given a 1 minute break, and the speaker's voice would change on only one of the trials.  42\% of participants (5/12) were unable to detect the change in speaker.  Unlike participants that did not detect the change, participants detecting the change had faster reaction times in repeating lexical words with decreased lexical difficulty though were unaware of the change in the speaker's voice.  This suggests that in order to detect the change, some increase in processing and hence the increased reaction time in repeating the word was required.  This increase in processing suggested that attention towards the auditory stimuli was required for detecting the change.  
 
@@ -939,6 +848,9 @@ Memory Mosaicing is a real-time sonic collage experience employing a perceptuall
 
 \section{Introduction}
 
+perceptual model of listening to help determine the representation of the corpus... daphne oran browser.
+
+
 The juxtaposition of fragments of sound as an arts practice has roots at least as early as music concrete, a compositional technique assembling various natural found sounds in order to produce a collage of sound.  Digital Sampling came in the 1970's allowing sound segments to be triggered using an interface such as a keyboard or pad.  More recent techniques have focused on corpus-based concatenative synthesis, where a target sound is matched to a stored database of segments or sounds (for a comprehensive review, see \cite{Schwarz2006}).  
 
 This chapter focuses on describing practical outputs in developing auditory scene synthesis.  The culmination of this practice will lead to the development of an application, ``Memory Mosaic'', which delivers an automated sonic-collage to a single user wearing headphones.  This application will also later be used in combination with the developments in my visual-practice in Chapter 7.   Before developing this application, however, I will discuss a few outputs created along the way which focused on exploring the use of spatialization, cut-up, narrative, and memory within a sonic collage practice.  
@@ -1276,6 +1188,8 @@ Similar computational models have been developed to explain visual perception ma
 
 \section{Introduction}  
 
+Run model on DIEM..
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1532,8 +1446,11 @@ A number of issues could be addressed in future versions.  For instance, synthes
 
 \section{Introduction}
 
+Talk about attempts to combine models in perception and practice.   DIEM model, how do you combine two modalities.
 
+Classic effects in crossmodal/multisensory perception
 
+Unresolved scientific questions... hence parallel...
 
 \section{Augmented Reality Hallucination}
 
