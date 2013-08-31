@@ -3,7 +3,7 @@
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 %\usepackage[left=1.5in,right=1.3in,top=1.1in,bottom=1.1in,includefoot,includehead,headheight=13.6pt]{geometry}
-\usepackage[left=1.5in,right=1.5in,top=1.1in,bottom=1.1in,includefoot,includehead,headheight=13.6pt]{geometry}
+\usepackage[left=1.5in,right=1.5in,top=1.25in,bottom=1.25in,headheight=13.6pt]{geometry}
 \renewcommand{\baselinestretch}{1.05}
 
 % Table of contents for each chapter
@@ -117,14 +117,28 @@ urlcolor=linkcol %couleur des liens pour les url
 %\renewcommand{\sectionmark}[1]{         % Lower case Section marker style
 %  \markright{\thesection.\ #1}}         %
 
-\fancyhead[LE,RO]{\bfseries\thepage}    % Page number (boldface) in left on even
+\fancyheadoffset[LE, RE, LO, RO]{2cm}
+\fancyfootoffset[LE, RE, LO, RO]{2cm}
+\fancyhead[LE]{\makebox[2cm][l]{\bfseries\thepage}}    % Page number (boldface) in left on even
+\fancyhead[RO]{\makebox[2cm][r]{\bfseries\thepage}}    % Page number (boldface) in left on even
 % pages and right on odd pages
-\fancyhead[RE]{\bfseries\nouppercase{\leftmark}}      % Chapter in the right on even pages
-\fancyhead[LO]{\bfseries\nouppercase{\rightmark}}     % Section in the left on odd pages
+%\fancyhead[RE]{\bfseries\nouppercase{\leftmark}}      % Chapter in the right on even pages
+%\fancyhead[LO]{\bfseries\nouppercase{\rightmark}}     % Section in the left on odd pages
+%\fancyfoot[RE,LO]{\bfseries{Parag K. Mital | Computational Audiovisual Scene Synthesis}}
+\fancyhead[RE]{\makebox[2cm][r]{\bfseries\nouppercase{\rightmark}}}     % Section in the left on odd pages
+\fancyhead[LO]{\makebox[2cm][l]{\bfseries\nouppercase{\rightmark}}}     % Section in the left on odd pages
+\fancyfoot[LO]{\makebox[2cm][l]{\bfseries\nouppercase{\leftmark}}}
+\fancyfoot[RE]{\makebox[2cm][r]{\bfseries\nouppercase{\leftmark}}}
+\fancyfoot[LE]{\makebox[2cm][l]{\bfseries\thepage}}    % Page number (boldface) in left on even
+\fancyfoot[RO]{\makebox[2cm][r]{\bfseries\thepage}}    % Page number (boldface) in left on even
 
 \let\headruleORIG\headrule
 \renewcommand{\headrule}{\color{black} \headruleORIG}
 \renewcommand{\headrulewidth}{1.0pt}
+\let\footruleORIG\footrule
+\renewcommand{\footrule}{\color{black} \footruleORIG}
+\renewcommand{\footrulewidth}{1.0pt}
+
 \usepackage{colortbl}
 \arrayrulecolor{black}
 
@@ -272,3 +286,4 @@ urlcolor=linkcol %couleur des liens pour les url
 \newfloat{program}{thp}{lop}
 \floatname{program}{Program}
 \newenvironment{abstract}{\rightskip1in\itshape}{}
+
