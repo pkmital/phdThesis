@@ -571,13 +571,15 @@ In this chapter, we develop the conceptual framework laid down in Chapter \ref{c
 \item \textbf{Matching}: decodes the encoded stream by matching to a known template.
 \end{enumerateb}
 
-We first develop event detection using an onset detector based on whole spectrum changes, leading to segmented units of sounds.  These units provide the basic events within a streaming paradigm which can then be encoded into memory.  Depending on the temporal irregularities of the stream, either an integrated or segregated stream can be encoded into memory.  Integration means the entire sound stream is encoded, or retained in memory, without any further manipulations.  Segregated units on the other hand describe the integrated unit in terms of two distinct streams: a foreground and background stream, where the foreground stream denotes the stream that is encoded as a result of being ``selected'' by attention.  This case is classically described by the ``cocktail party problem'', where the voice of a particular person may be foregrounded during a conversation, thus encoding it into memory, while any background chatter is not encoded.
+We first develop event detection using an onset detector based temporal irregularities within whole spectrum changes, thus defining event boundaries for segmented units of sounds.  These units provide the basic events within a streaming paradigm which can then be encoded into memory.  Depending on the temporal irregularities of the stream, either the entire stream or the segregated stream is encoded into memory.  If the entire sound stream is to be encoded\footnote{sometimes also denoted as ``integration'' and distinguished from segregation, though this is not to be confused with this frameworks definition of integration which can occur after a segregation and is not necessarily a separate process}, then the unit defined by the event detection is encoded without further manipulations. However, if the unit requires segregation, then the unit is described in terms of two distinct streams: a foreground and background stream, where the foreground stream denotes the stream that is encoded as a result of being ``selected'' by attention.  This case is classically described by the ``cocktail party problem'', where the voice of a particular person may be foregrounded during a conversation, thus encoding it into memory, while any background chatter is not encoded.  
 
 %An efficient model should be able to classify an acoustic scene into its constituent classes, allowing for a parts-based analysis of the stored data such as which acoustic events appear within an audio clip.  For example, a street scene may be better described by the parts that describe it such as ``car'' and ``horn''.  An analogous model in vision is one that detects objects in a visual scene rather than the entire scene itself.  However, the difficulty of classifying the parts comprising a mixture of acoustic events is well noted in the literature of acoustic event detection where classification performance breaks down from 70\% for classification of a single event in isolation to 25-40\% during mixtures of events or events presented with noise \cite{Temko2007}. 
 
-The basic auditory units as defined by our event detector requires encoding and decoding using a representation for either segregated or integrated cases.  In this chapter, we investigate three possible computational representations: (1) a full-frequency and (2) reduced frequency representation both built using a probabilistic variant of non-negative matrix factorization, Probabilistic Latent Component Analysis (PLCA), which describes audio by the latent components that represent the signal, and (3) a Gaussian Mixture Model of one of the most common acoustic feature representations, MFCCs. 
+In order to develop the last two components, integration and matching, effectively encoding and decoding, respectively, we investigate three possible computational representations motivated by approaches in speech and signal processing: (1) a full-frequency and (2) reduced frequency representation both built using a probabilistic variant of non-negative matrix factorization, Probabilistic Latent Component Analysis (PLCA), which describes audio by the latent components that represent the signal, and (3) a Gaussian Mixture Model of one of the most common acoustic feature representations, MFCCs. 
 
-In order to evaluate each model's performance, we consider a common use-case for computational auditory models within an information retrieval context: classification.  In particular, information retrieval attempts to aid the browsing and retrieval of content within large archives, a need that has grown due to the growth of digital audio archives.  Within audio archives, an acoustic class (i.e. a label of an auditory scene) is likely composed of a mixture of acoustic streams (e.g. the classic cocktail party problem).  Thus, an ideal information retrieval engine should be capable of determining both the integrated and segregated streams.  For example, an auditory scene of ``party'' may also be composed of a scenes with a ``hair-dryer'' in the background.  However, this additional class may make it difficult to describe the scene, unless it is capable of segregating the scene into two classes.  The final evaluation of this chapter therefore evaluates auditory scene classification within a large audio corpus of labeled acoustic scenes in five experiments combining integrated and segregated cases within an event and texture based scenes: (1) classifying isolated acoustic classes which have been encoded into memory, (2), classifying acoustic classes which have been encoded into memory, but also in the presence of additional noise, (3), classifying acoustic mixtures of classes, where both acoustic classes have been encoded into memory, (4), classifying isolated auditory events as determined by onset detection, and (5), classifying auditory events as determined by onset detection in the presence of additional noise.  
+In order to evaluate each model's performance, we consider a common use-case employing both encoding and decoding routines (outside of the context of scene synthesis): classification.  In particular, classification is often employed within information retrieval frameworks in order to attempt to aid the browsing and retrieval of content within large archives, a need that has grown due to the growth of digital audio archives.  Within audio archives, an acoustic class (i.e. a label of an auditory scene) is likely composed of a mixture of acoustic streams (e.g. the classic cocktail party).  Thus, an ideal information retrieval engine should be capable of also determining segregated streams.  For example, an auditory scene of ``party'' may also be composed of a scenes with a ``hair-dryer'' in the background.  However, this additional class may make it difficult to describe the scene, unless it is capable of segregating the scene into two classes.  
+
+The final evaluation of this chapter therefore evaluates auditory scene classification within a large audio corpus of labeled acoustic scenes in a series of experiments: (1) classifying isolated acoustic classes which have been encoded into memory, (2), classifying acoustic classes which have been encoded into memory, but also in the presence of additional noise, (3), classifying acoustic mixtures of classes, where both acoustic classes have been encoded into memory, (4), classifying isolated auditory events as determined by onset detection, and (5), classifying auditory events as determined by onset detection in the presence of additional noise.  
 
 The experiments are also described in diagram in Figure \ref{fig:audio-experiments}.
 
@@ -767,13 +769,11 @@ The last model we describe was built in the same way as the PLCA model, except i
 
 %Our work in classifying mixtures is inspired by research in auditory perception highlighting the importance of the separation/segregation of sound information for structuring sensory input for high-level perceptual processes \cite{Winkler2009a,Teki2011a}.  For instance, the predictive regularities and temporal coherence of frequency information may lend listeners a cue for discovering sources of sound information \cite{Winkler2009a, Shamma2011}.  Such evidence is reminiscent of approaches in Auditory Scene Analysis \cite{Bregman1990} that claim that the perceptual organization of an auditory scene is represented by a decomposition into streams.  According to Bregman, each stream is encoded by one of two formations: (1) primitive, low-level characteristics such as frequency, intensity, and location; and (2), schema-driven integration of sensory evidence where schema are defined by Gestalt-like regularities such as similarities, differences, common-fate, or continuity in frequency information from a continuous signal.  Attention is then thought to act upon one of these streams of information.  Thus, in investigating computational models of acoustic information, we are motivated by algorithms able to capture the predictive regularities describing \textit{subspaces} of frequency distributions. 
 
-\subsubsection{Methods}
-
-\paragraph{Material}
+\subsection{Material}
 % add this after blind review \cite{Lallemand}\footnote{Courtesy of Ianis Lallemand, \url{http://imtr.ircam.fr/imtr/Environmental\_Sound\_Dataset}}
 Sounds were sourced from both the Sound Ideas archive and the BBC Sound Library and selected based on whether the sound file consistently represented a single sound class.  We removed any beginning or ending silences or envelopes of sound, and constrained examples that were not at least 10 seconds long.  In total, we were left with a single example of $N = 37$ classes: \textit{airplane, arcade, booing, bubbles, bus, cheering, chickens, clapping, clock-ticking, conversation, copier, crickets, dirt-drive, fan, fire, fire-gas, geiger, hair-dryer, jet-engine, laughing-audience, laughing-man, motor, race, rain, refrigerator, shouting, sink, spray-can, steam, swamp, sword, train, treads, trees, typing, waterfall, and wooden-gears}.  
 
-\paragraph{Models}
+\subsection{Models}
 
 \begin{figure}
 \centering
@@ -784,19 +784,20 @@ Sounds were sourced from both the Sound Ideas archive and the BBC Sound Library 
 
 We tested 3 kinds of models, (1), a Gaussian Mixture Model of Mel-Frequency Cepstral Coefficients (MFCC Model), (2), a probabilistic Latent Component Analysis of a frequency transformation (PLCA Model), and (3), a probabilistic Latent Component Analysis of a Mel-frequency transformation (Mel-PLCA Model).  In the following section, the models are explained in more detail.  The models are also summarized graphically in Figure \ref{fig:models}.
 
-
-\subsubsection{Experiments}
-\paragraph{Experiment 1}
+\subsection{Experiment 1}
 Most previous studies in acoustic classification use multiple examples of a single class in isolation.  However, as our investigation focused on classification performance during mixtures of classes, we only trained a single example of each class, building a set of 37 classifiers for experiment 1.  As a sanity check, we tested whether the MFCC and PLCA models were able to correctly classify the test example built using the 37 classifiers.
 
-\paragraph{Experiment 2}
+\subsection{Experiment 2}
 For experiment 2, we determined whether the MFCC and PLCA models were able to correctly classify the trained class in the presence of an untrained class (noise).  As we have 37 classes, this equates to 36 possible mixtures for each class, where each of the 36 classes are trained in isolation, and tested in a mixture of a 37th untrained class.  In order to create the $37*36 = 1332$ possible mixtures, we used balanced mixing.  For this experiment, this means each class is actually represented with 36 possible examples (36 possible mixtures for each class).  
 
-\paragraph{Experiment 3}
+\subsection{Experiment 3}
 For experiment 3, we added the 37th un-trained class to the set of possible classifiers in order to see if both classes could be correctly classified when presented as an acoustic mixture.  This means we tested on $37 \choose 2 = 666$ possible mixtures and sought to find out whether the MFCC and PLCA models were capable of classifying either or both of the mixed acoustic classes, even though they were presented as a single acoustic stream.
 
+\subsection{Experiment 4}
 
-\subsubsection{Validation and Reporting}
+\subsection{Experiment 5}
+
+\subsection{Validation and Reporting}
 \label{sec:ROC}
 We performed k-fold cross-validation using 10-folds.  With 10 seconds per class (370 seconds total), this equates to 1 second folds per class where training occurs on 9 seconds of material per class, and testing occurs on 1 second of material per example. The results of all folds were then averaged together to produce a single estimation.
 
@@ -818,9 +819,9 @@ A perfect score is denoted by 100\% sensitivity (no false negatives) and 100\% s
 
 As well, the area under the ROC curve (AUC) neatly summarizes the performance of the curve with 1.0 being a perfect score, and 0.5 being a classifier that performs at chance.  We can also understand the AUC as the probability of classifying a randomly chosen positive instance with higher likelihood than a negative one.
 
-\subsubsection{Results}
+\section{Results}
 
-\paragraph{Experiment 1: Classifying isolated acoustic textures}
+\subsection{Experiment 1: Classifying isolated acoustic textures}
 
 We tested the performance of a single class in isolation as a sanity check, and as we expected, the performance of the MFCC and PLCA models as determined by the ROC analysis are excellent, with an AUC of within 0.001 of perfect discrimination.
 
@@ -833,7 +834,7 @@ We tested the performance of a single class in isolation as a sanity check, and 
 
 %GMM-MFCC: 98.4\%, PLCA-1c: 78.1\%
 
-\paragraph{Experiment 2: Classifying acoustic textures in the presence of noise}
+\subsection{Experiment 2: Classifying acoustic textures in the presence of noise}
 
 \begin{figure}
 \centering
@@ -844,7 +845,7 @@ We tested the performance of a single class in isolation as a sanity check, and 
 
 We tested the performance of both the MFCC and PLCA-based classifiers in the presence of noise by mixing one of 36 trained classes with an untrained class of sound (the 37th class), effectively masking the trained class with noise.  The average results of 1332 mixtures are depicted in Figure \ref{fig:unknown-mixture-roc-results} using ROC curves depicting each model's performance in classifying the correctly masked class.  We can see the MFCC model does well above chance, though both of the PLCA models do a far greater job.  Interestingly, the Mel-PLCA model is very close to the performance of the full-spectrum based PLCA model, even though this model uses only 40 samples versus 8192 samples per frequency frame.
 
-\paragraph{Experiment 3: Classifying acoustic mixtures}
+\subsection{Experiment 3: Classifying acoustic mixtures}
 
 
 \begin{figure*}
@@ -879,6 +880,9 @@ Mel-PLCA&0.9989&0.9065&0.9443\\ \hline
 \end{table}
 
 % The methods presented can be extended to do generalizable acoustic event classification by training multiple classifiers representative of the variety of events that describe each class.  However there are three issues with any solution based purely on frequency information.  First, there is a dependence on microphone responses.  As microphone responses create a filter on the frequencies able to be represented, determining events on a headset quality microphone using classifiers trained on a studio quality microphone will be very difficult.  Second, different compression rates will also affect the representation of frequency bands creating artificial banded filters.  Lastly, how sounds may be recorded will also create ``filters'' of sound that can affect the representation of frequencies describing a sound.  For instance, in comparison to sounds heard in front of a listener, sounds heard behind a listener have a ``low-pass'' filter on the frequency responses.  
+
+\subsection{Experiment 4: }
+\subsection{Experiment 5: }
 
 
 \section{Discussion}
