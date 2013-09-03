@@ -117,20 +117,20 @@ urlcolor=linkcol %couleur des liens pour les url
 %\renewcommand{\sectionmark}[1]{         % Lower case Section marker style
 %  \markright{\thesection.\ #1}}         %
 
-\fancyheadoffset[LE, RE, LO, RO]{2cm}
-\fancyfootoffset[LE, RE, LO, RO]{2cm}
-\fancyhead[LE]{\makebox[2cm][l]{\bfseries\thepage}}    % Page number (boldface) in left on even
-\fancyhead[RO]{\makebox[2cm][r]{\bfseries\thepage}}    % Page number (boldface) in left on even
+\fancyheadoffset[LE, RE, LO, RO]{1.7cm}
+\fancyfootoffset[LE, RE, LO, RO]{1.7cm}
+\fancyhead[LE]{\makebox[1.7cm][l]{\bfseries\thepage}}    % Page number (boldface) in left on even
+\fancyhead[RO]{\makebox[1.7cm][r]{\bfseries\thepage}}    % Page number (boldface) in left on even
 % pages and right on odd pages
 %\fancyhead[RE]{\bfseries\nouppercase{\leftmark}}      % Chapter in the right on even pages
 %\fancyhead[LO]{\bfseries\nouppercase{\rightmark}}     % Section in the left on odd pages
 %\fancyfoot[RE,LO]{\bfseries{Parag K. Mital | Computational Audiovisual Scene Synthesis}}
-\fancyhead[RE]{\makebox[2cm][r]{\bfseries\nouppercase{\rightmark}}}     % Section in the left on odd pages
-\fancyhead[LO]{\makebox[2cm][l]{\bfseries\nouppercase{\rightmark}}}     % Section in the left on odd pages
-\fancyfoot[LO]{\makebox[2cm][l]{\bfseries\nouppercase{\leftmark}}}
-\fancyfoot[RE]{\makebox[2cm][r]{\bfseries\nouppercase{\leftmark}}}
-\fancyfoot[LE]{\makebox[2cm][l]{\bfseries\thepage}}    % Page number (boldface) in left on even
-\fancyfoot[RO]{\makebox[2cm][r]{\bfseries\thepage}}    % Page number (boldface) in left on even
+\fancyhead[RE]{\makebox[1.7cm][r]{\bfseries\nouppercase{\rightmark}}}     % Section in the left on odd pages
+\fancyhead[LO]{\makebox[1.7cm][l]{\bfseries\nouppercase{\rightmark}}}     % Section in the left on odd pages
+\fancyfoot[LO]{\makebox[1.7cm][l]{\bfseries\nouppercase{\leftmark}}}
+\fancyfoot[RE]{\makebox[1.7cm][r]{\bfseries\nouppercase{\leftmark}}}
+\fancyfoot[LE]{\makebox[1.7cm][l]{\bfseries\thepage}}    % Page number (boldface) in left on even
+\fancyfoot[RO]{\makebox[1.7cm][r]{\bfseries\thepage}}    % Page number (boldface) in left on even
 
 \let\headruleORIG\headrule
 \renewcommand{\headrule}{\color{black} \headruleORIG}
@@ -146,6 +146,8 @@ urlcolor=linkcol %couleur des liens pour les url
   \fancyhead{}
   \fancyfoot{}
   \renewcommand{\headrulewidth}{0pt}
+\fancyfoot[LE]{\makebox[1.7cm][l]{\bfseries\thepage}}    % Page number (boldface) in left on even
+\fancyfoot[RO]{\makebox[1.7cm][r]{\bfseries\thepage}}    % Page number (boldface) in left on even
 }
 
 \usepackage{algorithm}
@@ -259,6 +261,9 @@ urlcolor=linkcol %couleur des liens pour les url
 \newenvironment{eqnarrayb}%
 {\begin{leftbar}\begin{eqnarray}}%
 {\end{eqnarray}\end{leftbar}}%
+\newenvironment{enumerateb}%
+{\begin{leftbar}\begin{enumerate}}%
+{\end{enumerate}\end{leftbar}}%
 
 %\usepackage[raggedright]{titlesec}
 %\newlength\mylen
