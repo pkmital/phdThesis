@@ -256,6 +256,7 @@ This is a sampling sport
 
 \subsection{Computational Collage-based Practices}
 
+
 The notion of collage in the world of computer graphics may require pinning down, as a variety of new techniques can afford new kinds of compositions.  One theorist claims that collage will proliferate so long as ``cut'' and ``paste'' operations persist, as described by Taylor in ``Collage'' \cite{Taylor2006b}.   Cut-and-paste, in the digital realm, implies an operation of copying a digitally stored representation (i.e. 1's and 0's in machine code) from a source to a target.  However, for most computers, a copy operation is carried out whenever information is simply accessed.  That is, a digital piece of information is first kept stored in a permanent storage location such as a hard disk, before being copied by software.  For example, when a sound or image is required for display or decoding (e.g. from an MP3-file to one that can be played as -1 to +1 values through the speakers, or a JPEG-file to one that can be displayed as RGB values in a monitor), the permanent file must be copied into a temporary high-speed memory storage, and used within the appropriate software making use of that information.  Even for lossless file formats, such as a WAVE audio file or RAW image file, most software will require the file to first be copied into high-speed memory to allow it to be manipulated, displayed (e.g. as a waveform or image), and possibly copied again in order to interface with hardware.  As a result, copyright laws have likened the pure access and interfacing of digitally stored information as falling within the domain of copyright, leading to several attempts to digitally manage content (e.g. Digital Rights Management, or DRM).  The implications of the interpretation of copyright within digital media will be explored more in Chapter~\ref{ch:audiovisual}, when discussing YouTube Smash Up, a project that explores an audiovisual collage within short films through the use of existing copyrighted material hosted on YouTube.  
 
 If we can temporarily overlook the distinction of copying that copyright law has taken, and enforce a stricter sense of copying, i.e. in terms of moving information across spatial (e.g. papier collies) or temporal dimensions (e.g. montage or musique concr\`{e}te) as the literature to now has demonstrated, then what are procedural or computational approaches to collage-based practices?  In order to situate this literature, it is important to briefly consider seminal developments within cybernetics, signal processing, and information theory beginning in the 1940's.
@@ -271,6 +272,9 @@ By the 1950's, artists and composers would also engage with cybernetic approache
 For instance, Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
 
 Composing an artwork through a collage of \textit{processes} is certainly not a new one.  
+
+Mick's thesis talking about software being composed of collage processes, visual programming environments vuo, maxmsp, jitter, qc, 4v, ....
+
 Computational creativity, Boden, defining a successful work/evaluation... 
 
 Other cut-and-paste generative algorithms?
@@ -379,11 +383,11 @@ To begin either module (i.e. audio and vision), a conceptual framework for uncon
 
 %Beginning with seminal theories of visual perception such as ``Gestalts'', ``proto-objects'' and ``Geons'' and seminal studies in Gist and Change Blindness, reinforcing what is known about early representations in visual perception, this chapter will then proceed into literature discussing auditory perception, focusing on research in Auditory Scene Analysis, fMRI, and the recording of electrical activity of the brain and Event Related Potentials (ERPs), leading to a discussion of representation in audition.  Finally, the review concludes in a discussion on developing a computational model of early perception using the presented theories.  
 
-Our perception of the world is comprised of objects, events, and meaningful entities.  Yet, the sensory information we use to constitute these percepts are built from physical signals that have no meaning by themselves.  The challenge our perceptual machinery must face is associating this noisy incoming stimuli to meaningful entities we have already learned so that we may identify and utilize them.  This challenge was perhaps first described in the work of 19th-century empiricist, Hermann von Helmholtz, who suggested that the mind evaluates sensations through ``unconscious inferences'' which combine the stimulus of the world with prior notions of it to form our final perception. This process can also be summarized by two basic coding procedures: \textit{encoding}, or sensorial input as it is received to our brains, and \textit{decoding}, or the perceptual experience as we interpret it.
+Our perception of the world is comprised of objects, events, and meaningful entities.  Yet, the sensory information we use to constitute these percepts are built from physical signals that have no meaning by themselves.  The challenge our perceptual machinery must face is associating this noisy incoming stimuli to meaningful entities we have already learned so that we may identify and utilize them.  This challenge was perhaps first described in the work of 19th-century empiricist, Hermann von Helmholtz, who suggested that the mind evaluates sensations through ``unconscious inferences'' which combine the stimulus of the world with prior notions of it to form our final perception. This process can also be summarized by two basic coding procedures: \textit{encoding}, or sensorial input as it is represented in our brains, and \textit{decoding}, or the perceptual experience as we interpret it.
 
-To understand how coding processes may occur, numerous theories have proposed a representational framework for perception.  Such theories generally described the encoding of representations that are inaccessible to our conscious awareness, similar to the prior notions in Helmholtz's inferences.  As we do not have direct access to them, what might an unconscious representation supporting perception look or sound like?  What can they explain, and what do they lack the ability to explain?  And how are they formed?  It is the aim of this thesis to build a better understanding of questions such as these through an arts practice focused on computational approaches to sonic and visual collage processes.  Within this collage-based practice, the units being assembled will be modeled based on the theoretical foundations laid in this chapter.  
+To understand how coding processes may occur, numerous theories have proposed a representational framework for perception.  Such theories generally described the encoding of representations that are inaccessible to our conscious awareness, similar to the prior notions in Helmholtz's inferences.  As we do not have direct access to them, what might a representation supporting perception look or sound like?  What can they explain, and what do they lack the ability to explain?  And how are they formed?  It is the aim of this thesis to build a better understanding of questions such as these through an arts practice focused on computational approaches to sonic and visual collage processes.  Within this collage-based practice, the units being assembled will be modeled based on the theoretical foundations laid in this chapter.  
 
-This chapter is thus dedicated to (1) reviewing what is known about how unconscious representations in auditory perception may be coded and (2) motivating a basic framework for a computational model of auditory encoding and decoding.  As this field is incredibly vast with many non-overlapping research areas, this review will sacrifice brevity for more depth in fewer areas of research, primarily describing research making use of electrophysiological techniques within cognitive neuroscience.  Further, as this PhD is focused on practical outputs rather than building an accurate model of perception, many aspects of perception will certainly be overlooked.  The attempt here is just to motivate a few concepts for designing a computational model as shown by some of the literature in cognitive neuroscience.   
+This chapter is thus dedicated to (1) reviewing what is known about how representations in auditory perception may be coded and (2) motivating a basic framework for a computational model of auditory encoding and decoding.  As this field is incredibly vast with many non-overlapping research areas, this review will sacrifice brevity for more depth in fewer areas of research, primarily describing research making use of electrophysiological techniques within cognitive neuroscience.  Further, as this PhD is focused on practical outputs rather than building an accurate model of perception, many aspects of perception will certainly be overlooked.  The attempt here is just to motivate a few concepts for designing a computational model as shown by some of the literature in cognitive neuroscience.   
 
 Stress more about the practical aims, how this model will be used in natural, complex, real-world scenes... Give some examples... 
 %As we do not have direct access to them, what do these representations look or sound like?  What can they explain, and what do they lack the ability to explain?  It is the aim of this thesis to build an understanding of perception through an arts practice focused on computational approaches to sonic and visual collage processes.  Within this collage-based practice, the units being assembled are modeled based on a theory of representations supporting perception motivated in this chapter.  The final aim of this practice is to open a dialogue around questions of representation within perception, thus reflecting back onto the theories set forth in this chapter.  
@@ -462,7 +466,7 @@ Extending this research into a basic computational model requires at least:
 \begin{enumerateb}
 \item \textbf{Event Detection}, such as evidenced by the N1, where an ongoing auditory stream is marked by an event boundary, allowing it to be encoded into memory; 
 \item \textbf{Segregation}, as evidenced by the MMN and ORN, where a foreground stream is encoded separately from a segregated background stream;
-\item \textbf{Integration}, the encoding process which stores the result of event detection, or if presented with enough deviance, the segregated auditory stream, into memory;
+\item \textbf{Integration}, the encoding process which stores the result of event detection, or if presented with enough deviance, the segregated auditory stream, into memory (whether or not segregation can occur before integration is certainly debatable, e.g. \cite{Sussman2005}, though for the purposes of this simplified framework, allowing segregation to occur before integration will have to suffice);
 \item \textbf{Template Matching}, functionality as evidenced by the PN, where selective attention is capable of recognizing a stream as one that is the target of attention. 
 \end{enumerateb}
 Of course, this is a radical simplification of the perceptual system of auditory listening.   An idealized model should consider, at the very least: the numerous influences of stream formation by attention (e.g. \cite{Shamma2011}), whether integration should occur before or after segregation (e.g. \cite{Sussman2005}), what a template is defined by, how the stimulus timings, inter stimulus timings, and contextual influences effect stream formation, and how binaural cues such as interaural level and time differences may effect any one of these processes.  However, any one of these questions are all very active areas of research.  As a result, the basic set of components laid above can at least provide a starting point for a plausible model from which representations of unconscious auditory objects, or streams, may be built.  
@@ -471,7 +475,7 @@ Of course, this is a radical simplification of the perceptual system of auditory
 
 Evidence demonstrating the elicitation of an N1 component suggests that as little as 60-70 ms are required before the brain is capable of detecting the onset of a stimulus event, even when engaged in another task.  This component demonstrates the brains remarkable ability to unconsciously detect a change in the environment.  It takes almost another 250-300 ms before we can become conscious aware of the stimulus onset, i.e. report the actual stimulus onset, as demonstrated by the P3 wave.  As a result, it seems that the most basic perceptual model should at least begin with the detection of stimulus changes in the environment.  
 
-However, the literature presented thus far does not seem to be clear on exactly how an onset may be computationally modeled.  Each of the experiments reviewed above were modeled on the streaming paradigm in which short evoked tones were presented to a participant, meaning each tone was itself an event likely to be an onset.  Thus, each tone evoked an N1 response, as demonstrated by averaged event-related potential measurements.  However, the real world is not aligned by events for us, and the notion of an event evoking an N1 outside of the psychophysical world of simple tones is still an unclear one.  How then does the N1 represent an event and determine when one has occurred?
+However, the literature discussing N1 elicitation does not seem to be clear on exactly how an onset may be modeled by the brain.  Each of the experiments reviewed above were designed with a streaming paradigm where short evoked tones were presented to a participant, meaning each tone was itself an event likely to be an onset.  Thus, each tone evoked an N1 response, as demonstrated by averaged event-related potential measurements.  However, the real world is not aligned by events for us, making the notion of an event evoking an N1 outside of the psychophysical world of simple tones an unclear one.  How then does the N1 represent an event and determine when one has occurred?
 
 Considering the groundwork laid by Bregman's Auditory Scene Analysis, one may be able to begin to define an onset detector based on the strategies of simultaneous and sequential grouping cues.  Though these cues up until now have been provided as evidence of cues for segregation (i.e. as evidenced by the ORN and MMN) rather than eliciting an N1 component, a re-interpretation of this theoretical foundation with the presented literature may allow us to apply the same framework for defining events in a continuous, real-world setting, i.e. defining onsets.  As a result, the ORN, MMN and N1 may share very similar strategies.  The major difference seems to be that the ORN/MMN are time locked to an onset, providing a basis for foreground segregation, i.e. the sonic environment before and after the N1 response, whereas the N1 may likely be based on an automatic time window.  It is unclear whether the N1 component is also activated for changes in the segregated foreground as may be represented by regularities required for the ORN/MMN, or if the N1 is only defined for changes in the entire acoustic scene.  It is likely though that the N1 may be able to consider any irregularity as a result of cues from either simultaneous or sequential grouping strategies, as it must act before both the ORN and MMN.  As well, given the research demonstrated thus far, it is also likely that this window is very short, e.g. within the timespan of evoking P3s, given the capability for detecting ISIs of up to 350 ms, though it is likely that this window size is also based on task/attentional demands.  
 
@@ -505,7 +509,7 @@ Considering this framework within SFGS stimuli, it is likely that many onsets ar
 
 The evidence presented thus far demonstrates the brains remarkable capability for detecting events in the sonic world (e.g. N1), discretizing the continuous amalgamation of sound into units of processing where updates in representations may occur (e.g. MMN and ORN), or selective attention may discover a match (e.g. PN).  Much of the literature to date has focused on either simple alternating tone sequences or random complex tone sequences, meaning many inferences must be made about how such evidence can be applied within complex natural scenes.  Nevertheless, some understanding can be gained towards developing a practical computational model capable of producing either segregated or integrated auditory streams.  It should be stressed that this framework is not an accurate perceptual model, but simply one based on a basic understanding of some of the capabilities of our perceptual systems.  The conceptual framework presented here aims to build event-related units through a simple computational model beginning with an onset detection modeled after the N1 component.  From here, one of three processes may occur: matching, integration or segregation.  Matching occurs when a search task is involved and is modeled by evidence of the PN.  Otherwise, either integration or segregation occurs, defining the irregularities of the environment as it relates to the ongoing regularities.  This is in contrast to the N1, which likely requires some notion of regularities (as it must be evoked by an event that the sonic world has caused), but likely does not require segregation. WIth enough irregularity, a segregated stream may be defined, otherwise the stream is integrated.  
 
-The presented framework has given us the notion of the auditory unit of perception that can be used within a collage-based practice: namely, either an integrated or segregated stream.  Further, during selective attention tasks, it has given us a notion of matching through a processing negativity, and that this matching process should occur within the timeframe of an onset.  We will develop these concepts into a computational framework in the next chapter, Chapter \ref{ch:analysis-audio}, demonstrating its use as a method for online source separation, browsing of a large corpus of audio, and for classifying auditory scenes.  This computational framework will then be developed for use within a collage-based practice in Chapter \ref{ch:synthesis-audio}, and combined with a visual collage-based practice producing computational audiovisual collages in Chapter \ref{ch:audiovisual}.
+The presented framework has given us the notion of the auditory unit of perception that can be used within a collage-based practice: namely, the auditory stream determined by auditory scene analysis as an integrated or segregated stream.  Further, during selective attention tasks, it has given us a notion of matching through a processing negativity, and that this matching process should occur within the timeframe of an onset.  We will develop these concepts into a computational framework in the next chapter, Chapter \ref{ch:analysis-audio}, demonstrating its use as a method for online source separation, browsing of a large corpus of audio, and for classifying auditory scenes.  This computational framework will then be developed for use within a collage-based practice in Chapter \ref{ch:synthesis-audio}, and combined with a visual collage-based practice producing computational audiovisual collages in Chapter \ref{ch:audiovisual}.
 
 %Teki's recent work in 2011 and 2013 on complex scenes.
 
@@ -562,7 +566,7 @@ The presented framework has given us the notion of the auditory unit of percepti
 
 \section{Introduction}
 
-In this chapter, we develop the conceptual framework laid down in Chapter \ref{ch:conceptual-audio} into a computational model capable of two processes: \textit{encoding}, or storing an auditory stream into memory; and \textit{decoding}, or associating the current auditory scene to any stored representations.  These two processes will be necessary for developing an auditory scene synthesis, a collage based synthesis where the unit of the collage process is based on psychologically motivated representations supporting perception.  To model these two processes, we will develop four components, as motivated in Chapter \ref{ch:conceptual-audio}: 
+In this chapter, we develop the conceptual framework laid down in Chapter \ref{ch:conceptual-audio} into a computational model capable of two processes: \textit{encoding}, or sensorial input as it is represented in our brains, and \textit{decoding}, or the perceptual experience as we interpret it.   These two processes will be necessary for developing an auditory scene synthesis, a collage based synthesis where the unit of the collage process is based on psychologically motivated representations supporting perception.  To model these two processes, we will develop four components, as motivated in Chapter \ref{ch:conceptual-audio}: 
 
 \begin{enumerateb}
 \item \textbf{Event detection}: temporally segments the ongoing auditory stream in order to define the boundaries of processing; 
@@ -609,7 +613,7 @@ In order to compute the basis decomposition of an audio signal's frequency trans
 
 \section{Building the Computational Auditory Scene Analysis Model}
 
-The conceptual framework described in Chapter \ref{ch:conceptual-audio} details three major components: event detection, segregation, and matching.  We will now develop each component into a computational model and later evaluate it within an information retrieval context for performing classification and browsing within a large audio corpus.
+The conceptual framework described in Chapter \ref{ch:conceptual-audio} details three major components: event detection, segregation, integration, and matching.  We will now develop each component into a computational model and later evaluate it within an information retrieval context for performing classification and browsing within a large audio corpus.
 
 \subsection{Event Detection}
 
@@ -653,10 +657,11 @@ p^{(t+1)}(t|k_i) &=& \sum_{f}p(f,t|k_i)  \\
 
 Practically, one can use a fixed number of iterations of EM and assume convergence, though testing for the change in performance avoids the risk of over-fitting \cite{Hofmann1999} (e.g. using Least-Squares or Kullback-Leibler Divergence).   
 
-The basic algorithm is simple to implement and is shown as functional Matlab/Octave code in the Algorithm below: 
+The basic algorithm is simple to implement and is shown as functional Matlab/Octave code in Program \ref{pg:plca}: 
 
 
 \begin{program}
+\label{pg:plca}
   \begin{verbatim}
 function [f,t,k] = plca_basic(X,K)
 % Initialize
@@ -698,7 +703,7 @@ X = X ./ repmat( sum(X, 2), 1, size(X, 2) );
 
 % Say more about Smaragdis's work here.  Denoising.  Humming paper.  Ron Bello's work on unsupervised structure using Chromas.  Maybe also Spencer's work in ISMIR last year.
 
-\subsection{Matching}
+\subsection{Integration and Matching}
 
 \subsubsection{MFCC model}
 The first model we built describes each acoustic class by first decomposing each training example into a vector of Mel-frequency cepstral coefficients (MFCCs) and then building a classifier using a Gaussian Mixture Model (GMM).  
@@ -784,18 +789,20 @@ Sounds were sourced from both the Sound Ideas archive and the BBC Sound Library 
 
 We tested 3 kinds of models, (1), a Gaussian Mixture Model of Mel-Frequency Cepstral Coefficients (MFCC Model), (2), a probabilistic Latent Component Analysis of a frequency transformation (PLCA Model), and (3), a probabilistic Latent Component Analysis of a Mel-frequency transformation (Mel-PLCA Model).  In the following section, the models are explained in more detail.  The models are also summarized graphically in Figure \ref{fig:models}.
 
-\subsection{Experiment 1}
+\subsection{Experiments}
+
+\paragraph{Experiment 1}
 Most previous studies in acoustic classification use multiple examples of a single class in isolation.  However, as our investigation focused on classification performance during mixtures of classes, we only trained a single example of each class, building a set of 37 classifiers for experiment 1.  As a sanity check, we tested whether the MFCC and PLCA models were able to correctly classify the test example built using the 37 classifiers.
 
-\subsection{Experiment 2}
+\paragraph{Experiment 2}
 For experiment 2, we determined whether the MFCC and PLCA models were able to correctly classify the trained class in the presence of an untrained class (noise).  As we have 37 classes, this equates to 36 possible mixtures for each class, where each of the 36 classes are trained in isolation, and tested in a mixture of a 37th untrained class.  In order to create the $37*36 = 1332$ possible mixtures, we used balanced mixing.  For this experiment, this means each class is actually represented with 36 possible examples (36 possible mixtures for each class).  
 
-\subsection{Experiment 3}
-For experiment 3, we added the 37th un-trained class to the set of possible classifiers in order to see if both classes could be correctly classified when presented as an acoustic mixture.  This means we tested on $37 \choose 2 = 666$ possible mixtures and sought to find out whether the MFCC and PLCA models were capable of classifying either or both of the mixed acoustic classes, even though they were presented as a single acoustic stream.
+\paragraph{Experiment 3}
+For experiment 3, we added the 37th un-trained class to the set of possible classifiers in order to see if both classes could be correctly classified when presented as an acoustic mixture.  This means we tested on $37\choose2$ $= 666$ possible mixtures and sought to find out whether the MFCC and PLCA models were capable of classifying either or both of the mixed acoustic classes, even though they were presented as a single acoustic stream.
 
-\subsection{Experiment 4}
+\paragraph{Experiment 4}
 
-\subsection{Experiment 5}
+\paragraph{Experiment 5}
 
 \subsection{Validation and Reporting}
 \label{sec:ROC}
@@ -1036,15 +1043,15 @@ Next are two installation outputs developed as part of a course I led in a desig
 
 
 
-\subsection{Browser}
+\section{Browser}
 
-\subsubsection{Introduction}
+\subsection{Introduction}
 We focus on visualizing the Daphne Oram archive using two methods for describing the archive: (1) discovering latent distributions of frequencies using a recently developed source separation algorithm, probabilistic latent component analysis (PLCA) \cite{SmaragdisRajShashanka}; and (2), using a widely-adopted multi-dimensional feature for speech, music, and general acoustic classification, the Mel-Frequency Cepstral Coefficients (MFCCs).  We cluster the data from either descriptor using Multidimensional Scaling and develop a 3D visualization that allows researchers to project the archive onto multiple dimensions of the data.  Finally, we report user-feedback from researchers of the archive using the 3D visualization tool.  
 
 Our main contribution is in describing the impact of visualizing segregated streams of a large audio archive through a case-driven exploration of the work of Daphne Oram.  We compare the feedback from archivists using a visualization of latent timbre-relationships versus one using a perceptually inspired multi-dimensional feature, MFCCs, and show that PLCA is more effective at producing a meaningful visualization.  
 
 
-\subsubsection{Browsing}
+\subsection{Browsing}
 
 A number of previous approaches for visualizing large audio corpora have focused on the application of music-based corpora.  Some approaches to content-based musical information retrieval solutions require a user to search by example or performance, aiding retrieval when a user is unaware of exactly what they are looking for.  However, visualization of such retrieval methods often amounts to viewing lists of the $k$-most similar results of an explicit query, and thus any exploratory analysis of the corpus as a whole requires further research into approaches for visualization.  For instance, SMILE \cite{Melucci2000} presents a MIDI-keyboard for the user to ``perform'' a query, and results are presented based on how similar the MIDI sequences are to the performance.  Similar approaches built for more generic signal-based audio break a corpus into frequency information and further into fingerprints such as MFCCs or psychacoustic descriptors.  audioDB \cite{Casey2008c,Rhodes2010} for instance allows a user to input shingles, or segments of an audio track for discovering similarities in an archive.  Other solutions such as Query-by-humming allow a user to hum/sing a tune in order to discover similar results (e.g. \cite{Wang2006a,Cartwright}).  The previous methods may be suitable for applications where a user has an explicit example query.  However, in exploring an archive, it requires the user to have a priori knowledge of what the archive already contains.
 
@@ -1054,7 +1061,7 @@ More recently, CataRT \cite{Schwarz2008} approaches Starfield style visualizatio
 
 The critical deviation of our approach to feature analysis from the previous approaches is by defining a 3D space using the corpora's own latent frequency distributions.  As we make no assumptions to the structure, perceptual relevance, or harmonic nature of the corpus, using probabilistic latent component analysis, we can discover the archive's own predominant distributions of frequencies and are able to use this reduced dimensionality dictionary as a representation of a high-dimensional space.  When projecting any 3-dimensions, the user is able to navigate the archive in a manner similar to CataRT \cite{Schwarz2008}. However, the axes are not user-defined psychoacoustic descriptions, but rather are projections of the archive onto ``timbres'' defined by latent frequency distributions.  Our work similarly encourages exploration and navigation as in  \cite{Knees2006,Dominik2009,Heise2012}, though takes a information-centric point of view to analysis and retrieval.   We build a second visualization using a model which does not take into account the density of the data but instead uses a perceptual frequency transformation for building decorrelated features, MFCCs, similar to \cite{Heise2012} and report the user feedback for each visualization.
 
-\subsubsection{Method}
+\subsection{Method}
 
 Currently, the Daphne Oram Archive has over 215 tape reels or 60 hours digitized.  As the amount of available memory is a constraint on our approach, we are only able to investigate the first 10 minutes of the first 60 tape reels or 10 hours in total.  We describe each half second segment by their frequencies over time, described using the short-time Fourier transform, and describe each time-frequency matrix as a slice.  In total we have 1200 slices per tape and 72,000 slices for all 60 tape reels\footnote{We use all data for building the description of the corpus, though later use a reduced subset for visualization.}.  We aim to visualize this data using a clustering algorithm able to extract the timbre-relationships within the archive.  Specifically, we look at two methods for grouping the possible interesting frequencies describing the archive: (1) PLCA, a probabilistic method for discovering latent component relationships of a time-frequency matrix, and (2) MFCC, a widely-adopted approximation of the frequency spectrum inspired by the human auditory system's response properties.
 
@@ -1093,7 +1100,7 @@ using the eigenvectors $\mathbf{E}$ and eigenvalues $\mathbf{\Lambda}$ of $\math
 One may also notice the algorithm is equivalent to a doubly-centered version of PCA in the case where the distances are Euclidean.  As both the PLCA and MFCC model's feature dimensions are de-correlated, we would expect to find the number of eigenvalues approach the same dimensionality as either model.  Thus, the PLCA model is clustered in 45 dimensions, and the MFCC model in 13.
 
 
-\subsubsection{Browser}
+\subsection{Interface}
 
 \begin{figure*}
   \centering
@@ -1115,7 +1122,7 @@ The user can also move the camera around the OpenGL origin by dragging the left 
 %State that we worked with the users to make the interface more usable.
 
 
-\subsubsection{User Feedback}\label{results}
+\subsection{User Feedback}\label{results}
 
 Three researchers of the Oram Archive were invited to navigate the browser and spent 1 hour in total using both the PLCA and MFCC visualizations.  They were unaware of how either model was created, were unfamiliar with signal processing and machine learning, and were only told that we are investigating a way to navigate the Oram Archive.  Each user was given 5-10 minutes of explanation of the features of the browser and were then left to explore the browser by themselves.  Each user proceeded to explore the archive by using the mouse to listen to the different slices located in 3D space.  In addition, each user managed to find particularities of the archive that seemingly would have been very difficult without the browser.  For instance, finding a significant portion of one tape reel that was labeled as ``POP TRY-OUTS'' in another reel labeled as ``COPY DONKEY HELL ABC \& ITV. BIRDS \& PERC'' by exploring slices located near each other in the 3D space.  Also, one found components relating to Daphne Oram's piece, ``Birds of Parallax'' during lectures series that were only labeled by their location, indicating she demonstrated these components during her talk.
 
@@ -1146,7 +1153,7 @@ User 2 additionally remarked on the potential of incorporating other mediums of 
 %Detail a few areas where new information was gathered about the recordings.
 %Describe how some of our metadata was verified and more clearly understood - we found components relating to Daphne Oram's piece "Birds of Parallax".
 
-\subsubsection{Discussion and Future Work}\label{discussion}
+\subsection{Discussion and Future Work}\label{discussion}
 
 Each researcher had prior knowledge of many aspects of the Archive and Daphne Oram's composition techniques, and were also familiar with many of the recordings.  Their interests in the archive stemmed from her methods in composition to the actual electronics of the Oramics Machine.  When given the chance to navigate the archive in a 3D space arranged by acoustic similarity, each user was incredibly pleased by the possibilities and results of just one hour's navigating, and also preferred the PLCA model to the MFCC one generally for 3 reasons: (1) the visual form and structure of the PLCA model was easier to navigate, as knowing where one was in 3D space is easier to notice, (2), navigating within the ''glob-like'' mass of the MFCC representation in 3D required users to go inside the sphere, making interaction very difficult, and (3), the mapping and clustering in the PLCA model appeared more intuitive, with users reporting they understood how it was mapped and the similarity of sounds along a projection seemed to cluster sounds better.  
 
