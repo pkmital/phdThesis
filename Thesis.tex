@@ -567,7 +567,7 @@ The presented framework has given us the notion of the auditory unit of percepti
 
 \section{Introduction}
 
-In this chapter, we develop the conceptual framework laid down in Chapter \ref{ch:conceptual-audio} into a computational model capable of two processes: \textit{encoding}, or sensorial input as it is represented in our brains, and \textit{decoding}, or the perceptual experience as we interpret it.   These two processes will be necessary for developing an auditory scene synthesis, a collage-based synthesis where the unit of the collage process is based on psychologically motivated representations supporting perception.  To model these two processes, we need to develop four components, as motivated in Chapter \ref{ch:conceptual-audio}: 
+In this chapter, we develop the conceptual framework laid down in Chapter \ref{ch:conceptual-audio} into a computational model capable of two processes: \textit{encoding}, or sensorial input as it is represented in our brains, and \textit{decoding}, or the perceptual experience as we interpret it.   These two processes will be necessary for developing an auditory scene synthesis, a collage-based synthesis where the units of the collage process are based on psychologically motivated representations thought to support perception.  To model these two processes, we need to develop four components, as motivated in Chapter \ref{ch:conceptual-audio}: 
 
 \begin{enumerateb}
 \item \textbf{Event detection}: temporally segments the ongoing auditory stream in order to define the boundaries of processing; 
@@ -578,13 +578,13 @@ In this chapter, we develop the conceptual framework laid down in Chapter \ref{c
 
 We develop event detection in Chapter \ref{ch:synthesis-audio}.  For now, we assume that we have developed event detection, discovering temporal segments of sound that must be encoded and decoded.  If the entire sound stream is to be encoded\footnote{sometimes also denoted as ``integration'' and distinguished from segregation, though this is not to be confused with this frameworks definition of integration which can occur after a segregation and is not necessarily a separate process}, then the unit defined by the event detection is encoded without further manipulations. However, if the unit requires segregation, then the unit is separated into a foreground and background stream, where the foreground stream denotes the stream that is encoded as a result of being ``selected'' by attention.  
 
-In order to develop the last two components, integration and matching, effectively encoding and decoding, respectively, we investigate three possible computational representations motivated by approaches in speech and signal processing: (1) a full-frequency and (2) reduced frequency representation both built using a probabilistic variant of non-negative matrix factorization, Probabilistic Latent Component Analysis (PLCA), which describes audio by the latent components that represent the signal, and (3) a Gaussian Mixture Model of one of the most common acoustic feature representations, MFCCs.  As we will see, the first two models attempt to compute a basis decomposition of a time-frequency matrix into a set of components modeled by a set of frequencies with a time-varying amplitude, ideal for cases when segregation is required.  The last model on the other hand models the set of frequencies by their its spectral shape.  This shape does not vary with time like the first two models, and it is composed of only one set of values describing the entire shape of the spectrum, making it ideal for cases when segregation is not required.
+In order to develop the last two components, integration and matching, we investigate three possible computational representations motivated by approaches in speech and signal processing: (1) a full-frequency and (2) reduced frequency representation both built using a probabilistic variant of non-negative matrix factorization, Probabilistic Latent Component Analysis (PLCA), which describes audio by the latent components that represent the signal, and (3) a Gaussian Mixture Model of one of the most common acoustic feature representations, MFCCs.  As we will see, the first two models attempt to compute a basis decomposition of a time-frequency matrix into a set of components modeled by a set of frequencies with a time-varying amplitude, ideal for cases when segregation is required.  The last model on the other hand models a set of frequencies by its overall spectral shape.  This shape does not vary with time like the first two models, and it is composed of only one set of values describing the entire shape of the spectrum, making it ideal for cases when segregation is not required.
 
-In order to evaluate each model's performance, we consider a common use-case outside of the context of scene synthesis which require encoding and decoding routines: classification.  In particular, classification is often employed within information retrieval frameworks in order to attempt to aid the browsing and retrieval of content within large archives, a need that has grown due to the growth of digital audio archives.  As the notion of classification entails providing a semantic description of an auditory stimulus, it is important to be clear about what this thesis means by a \textit{class}, \textit{scene}, \textit{event}, and \textit{stream}.  A class semantically describes either a scene or event.  A scene defines a collection of acoustic events associated with that particular physical place.  As an example, one would expect to find events labeled as ``honking'', ``engine noise'', and ``talking'', in an acoustic scene described as ``city street''.  A likely distinction between the term acoustic scene and acoustic event is that a scene is composed of many events, many of which could be of different classes, while an event is composed of only one particular class.  As a result, there is a many-to-one definition entailed by scenes, where many possible definitions can give rise to the same scene, and a one-to-one definition for events.  The terminology of a stream enters when discussing a particular perception of that scene.  For instance, when listening to an acoustic scene, a stream would by described by what is encoded into memory (i.e. the entire scene, which may be segregated during particular events into foreground and background streams) and the resulting perception would describe what is decoded.  
+In order to evaluate each model's performance, we consider a common use-case outside of the context of scene synthesis which requires encoding and decoding routines: classification.  In particular, classification is often employed within information retrieval frameworks in order to attempt to aid the browsing and retrieval of content within large archives, a need that has grown due to the growth of digital audio archives.  As the notion of classification entails providing a semantic description of an auditory stimulus, it is important to be clear about what this thesis means by a \textit{class}, \textit{scene}, \textit{event}, and \textit{stream}.  A class semantically describes either a scene or event.  A scene defines a collection of acoustic events associated with that particular physical place.  As an example, one would expect to find events labeled as ``honking'', ``engine noise'', and ``talking'', in an acoustic scene described as ``city street''.  A likely distinction between the term acoustic scene and acoustic event is that a scene is composed of many events, many of which could be of different classes, while an event is composed of only one particular class.  As a result, there is a many-to-one definition entailed by scenes, where many possible definitions can give rise to the same scene, and a one-to-one definition for events.  The terminology of a stream enters when discussing a particular perception of that scene.  For instance, when listening to an acoustic scene, a stream would by described by what is encoded into memory (i.e. the entire scene, which may be segregated during particular events into foreground and background streams) and the resulting perception would describe what is decoded.  
 
 An ideal information retrieval engine should be capable of classifying acoustic scenes, events, and when presented with complex scenes, also determine if simultaneously occurring events can be described.  For example, an auditory scene of ``party'' may also be composed of a ``hair-dryer'' in the background.  This additional class may make it difficult to describe the scene, unless it is capable of also segregating the scene into two classes.  An analogous model in vision is one that detects objects in a visual scene rather than the entire scene itself.  The difficulty of classifying the multiple events comprising an acoustic scene is well noted in acoustic event detection literature where classification performance breaks down from 70\% for classification of a single event in isolation to 25-40\% during mixtures of events or events presented with noise \cite{Temko2007}.  
 
-With these distinctions in mind, we evaluate our model within the context of auditory classification by using a large audio corpus of labeled acoustic events in a series of experiments: (1) classifying acoustic events, (2), classifying acoustic events in the presence of an additional unknown acoustic scene, and (3), classifying an acoustic scene comprised of two simultaneous events.  We will see that both PLCA models outperform the MFCC-based model in cases (2) and (3), correctly classifying the mixture's sources 94\% of the time in comparison to 74\% of the time for the model built with MFCCs.  However, for case (1), i.e. when a scene does not require segregation, all of the models perform with excellent performance.  This evaluation serves to highlight how each model may perform within complex auditory scenes composed of multiple events when coupled with event detection.  
+With these distinctions in mind, we evaluate our model within the context of auditory classification by using a large audio corpus of labeled acoustic events in a series of experiments: (1) classifying isolated acoustic events, (2), classifying an acoustic scene comprised of one known acoustic event and an additional unknown acoustic event, effectively creating noise, and (3), classifying an acoustic scene comprised of two simultaneous events that are both known.  By known and unknown, we simply mean to say that the classifier has or has not encoded knowledge of this class in some way.  For testing purposes, this entails performing cross-fold validation on 10 folds, where 9 folds are encoded, and the additional 1 fold must be classified.  We will see that both PLCA models outperform the MFCC-based model in cases (2) and (3), correctly classifying the mixture's sources 94\% of the time in comparison to 74\% of the time for the model built with MFCCs.  However, for case (1), i.e. when a scene does not require segregation, all of the models perform with excellent performance.  This evaluation serves to highlight how each model may perform within complex auditory scenes composed of multiple events when it is later coupled with event detection in Chapter \ref{ch:synthesis-audio}.  
 
 
 \section{Related Work}
@@ -597,14 +597,11 @@ Due to the amount of information contained in archives and the complexity in pre
 
 % The ability to segregate an acoustic scene and classify the simultaneous parts of a content allows for more descriptive analysis of stored data, such as which acoustic events appear within the scene (e.g. ``car'', ``horn'', ``talking'' versus ``street noise'').  However, 
 
-Approaches building MFCC and low-level based descriptors into a large feature vector attempt to depict an auditory scene by a vector of global parameters. Thus distance measures acting on the MFCC feature vector are generally unsuited for describing the segregated acoustic scene.  As such, any measures acting on the MFCC will penalize any deviation from the global feature vector's approximation.  In other words, approaches to auditory classifiers using k-means \cite{Harma2005,Eronen2006,Allamanche2001}, hidden Markov models \cite{Eronen2006,Mesaros2010}, support vector machines \cite{Guo2003a}, or Gaussian mixture models \cite{Wang2011,Aucouturier2007a,Pampalk2006a} aim to model the distribution of possible variants of a feature vector rather than the many possible subspaces that may define them. 
+Approaches building MFCC and low-level based descriptors into a large feature vector attempt to depict an auditory scene by a vector of global parameters. Thus distance measures attempting to perform matching and that act on the MFCC feature vector are generally unsuited for describing acoustic scenes requiring segregatation.  This is because any measures acting on the MFCC will penalize any deviation from the global feature vector's approximation.  In other words, approaches to auditory classifiers using k-means \cite{Harma2005,Eronen2006,Allamanche2001}, hidden Markov models \cite{Eronen2006,Mesaros2010}, support vector machines \cite{Guo2003a}, or Gaussian mixture models \cite{Wang2011,Aucouturier2007a,Pampalk2006a} aim to model the distribution of possible variants of a feature vector rather than the many possible subspaces that may define them. 
 
 The MPEG-7 standard \cite{Casey2001a,Manjunath2002}, however, describes a modular approach to understanding the subspaces of such feature vectors by looking at their basis decomposition.  In this manner, our approach to modeling segregation most resembles models employing spectral basis decompositions which describe de-correlated features of an acoustic signal using principal component analysis and independent component analysis \cite{Casey2001a,Xiong2003,Kim2004}, local discriminant bases \cite{Su2011}, matching pursuits \cite{Chu2009a}, or non-negative matrix factorization \cite{Raj2010}.  However, our approach differs from the MPEG-7 standard's spectral basis decomposition \cite{Casey2001a} as we instead investigate a full-frequency and Mel-frequency decomposition, rather than decibel-power scale or de-correlated features, and further use a recently developed machine learning algorithm for discovering latent components rather than any of the aforementioned models.
 
-In order to compute the basis decomposition of an audio signal's frequency transform, we focus on a recently developed method for latent component analysis based on probabilistic Latent Semantic Analysis (pLSA) \cite{Hofmann1999} called probabilistic Latent Component Analysis (PLCA) \cite{SmaragdisRajShashanka}.   PLCA has shown great promise for a variety of use cases including source separation and de-noising \cite{Smaragdis2007a,Smaragdis2007}, online dictionary learning for source separation \cite{Duan2012}, riff-identification \cite{Weiss2011}, polyphonic music transcription \cite{Benetos2011}, and classification during mixtures \cite{Nam2012}.  However, no detailed investigation of PLCA into the performance and applicability of classification for isolated or mixtures of classes in comparison to a standard MFCC model exists.  Further, previous investigations of PLCA for source separation and classification only make use of the full-frequency spectrum in a limited number of classes, and PLCA's applicability for reduced frequency representations is still unknown.  We therefore investigate the performance of 2 models built using PLCA (full-frequency and reduced) through 3 experiments in acoustic classification while comparing it to a classifier based on the well known Mel-Frequency Cepstral Coefficients (MFCCs): (1) classifying isolated acoustic events, (2), classifying acoustic events in the presence of noise, and (3), classifying acoustic scenes composed of two simultaneous acoustic events.  
-
-% Parag - did you comment this out because it's in the previous model?
-% We further extend the model described by \cite{Smaragdis} by incorporating both a convergence criterion and model-selection in order to both speed up the algorithm and better determine the appropriate number of components to describe each class.
+In order to compute the basis decomposition of an audio signal's frequency transform, we focus on a recently developed method for latent component analysis based on probabilistic Latent Semantic Analysis (pLSA) \cite{Hofmann1999} called probabilistic Latent Component Analysis (PLCA) \cite{SmaragdisRajShashanka}.   PLCA has shown great promise for a variety of use cases including source separation and de-noising \cite{Smaragdis2007a,Smaragdis2007}, online dictionary learning for source separation \cite{Duan2012}, riff-identification \cite{Weiss2011}, polyphonic music transcription \cite{Benetos2011}, and classification during mixtures \cite{Nam2012}.  However, no detailed investigation of PLCA into the performance and applicability of classification for isolated or mixtures of classes in comparison to a standard MFCC model exists.  Further, previous investigations of PLCA for source separation and classification only make use of the full-frequency spectrum in a limited number of classes, and PLCA's applicability for reduced frequency representations is still unknown.  We therefore investigate the performance of 2 models built using PLCA (full-frequency and reduced) through 3 experiments in acoustic classification while comparing it to a classifier based on the well known Mel-Frequency Cepstral Coefficients (MFCCs): (1) classifying isolated acoustic events, (2), classifying acoustic events in the presence of an additional untrained event, effectively creating additional noise, and (3), classifying acoustic scenes composed of two simultaneous acoustic events.  
 
 \section{PLCA}
 
@@ -680,7 +677,7 @@ X = X ./ repmat( sum(X, 2), 1, size(X, 2) );
 
 \section{Computational Auditory Scene Analysis Models}
 
-We develop three possible models and then evaluate their performance in cases where segregation is and is not required.
+We tested 3 kinds of models, (1), a Gaussian Mixture Model of Mel-Frequency Cepstral Coefficients (MFCC Model), (2), a probabilistic Latent Component Analysis of a frequency transformation (PLCA Model), and (3), a probabilistic Latent Component Analysis of a Mel-frequency transformation (Mel-PLCA Model).  In the following section, the models are explained in more detail.
 
 \subsection{MFCC model}
 The first model we built describes each acoustic class by first decomposing each training example into a vector of Mel-frequency cepstral coefficients (MFCCs) and then building a classifier using a Gaussian Mixture Model (GMM).  
@@ -753,9 +750,7 @@ The last model we describe was built in the same way as the PLCA model, except i
 
 \subsection{Material}
 % add this after blind review 
-Sounds were sourced from both the Sound Ideas archive and the BBC Sound Library and selected based on whether the sound file consistently represented a single sound class \cite{Lallemand}\footnote{Courtesy of Ianis Lallemand, \url{http://imtr.ircam.fr/imtr/Environmental\_Sound\_Dataset}}.  We removed any beginning or ending silences or envelopes of sound, and constrained examples that were not at least 10 seconds long.  In total, we were left with a single example of $N = 37$ classes: \textit{airplane, arcade, booing, bubbles, bus, cheering, chickens, clapping, clock-ticking, conversation, copier, crickets, dirt-drive, fan, fire, fire-gas, geiger, hair-dryer, jet-engine, laughing-audience, laughing-man, motor, race, rain, refrigerator, shouting, sink, spray-can, steam, swamp, sword, train, treads, trees, typing, waterfall, and wooden-gears}.  
-
-\subsection{Models}
+Sounds were sourced from both the Sound Ideas\footnote{Courtesy of Ianis Lallemand, \url{http://imtr.ircam.fr/imtr/Environmental\_Sound\_Dataset}} archive and the BBC Sound Library and selected based on whether the sound file consistently represented a single sound class, thus being consisted with our specific definition of an acoustic event.  We removed any beginning or ending silences or envelopes of sound, and constrained examples that were not at least 10 seconds long.  In total, we were left with a single example of $N = 37$ classes: \textit{airplane, arcade, booing, bubbles, bus, cheering, chickens, clapping, clock-ticking, conversation, copier, crickets, dirt-drive, fan, fire, fire-gas, geiger, hair-dryer, jet-engine, laughing-audience, laughing-man, motor, race, rain, refrigerator, shouting, sink, spray-can, steam, swamp, sword, train, treads, trees, typing, waterfall, and wooden-gears}.  
 
 %\begin{figure}
 %\centering
@@ -764,7 +759,6 @@ Sounds were sourced from both the Sound Ideas archive and the BBC Sound Library 
 %\label{fig:models}
 %\end{figure}
 
-We tested 3 kinds of models, (1), a Gaussian Mixture Model of Mel-Frequency Cepstral Coefficients (MFCC Model), (2), a probabilistic Latent Component Analysis of a frequency transformation (PLCA Model), and (3), a probabilistic Latent Component Analysis of a Mel-frequency transformation (Mel-PLCA Model).  In the following section, the models are explained in more detail.
 
 \subsection{Experiments}
 
@@ -801,9 +795,9 @@ As well, the area under the ROC curve (AUC) neatly summarizes the performance of
 
 \section{Results}
 
-\subsection{Experiment 1: Classifying isolated acoustic textures}
+\subsection{Experiment 1: Classifying isolated acoustic events}
 
-We tested the performance of a single class in isolation as a sanity check, and as we expected, the performance of the MFCC and PLCA models as determined by the ROC analysis are excellent, with an AUC of within 0.001 of perfect discrimination.
+We tested the performance of a single event class in isolation as a sanity check, and as we expected, the performance of the MFCC and PLCA models as determined by the ROC analysis are excellent, with an AUC of within 0.001 of perfect discrimination.
 
 %performance during sound classification of 37 classes 
 %	- handle different amplitudes
@@ -814,7 +808,7 @@ We tested the performance of a single class in isolation as a sanity check, and 
 
 %GMM-MFCC: 98.4\%, PLCA-1c: 78.1\%
 
-\subsection{Experiment 2: Classifying acoustic textures in the presence of noise}
+\subsection{Experiment 2: Classifying acoustic events in the presence of noise}
 
 \begin{figure}
 \centering
@@ -825,7 +819,7 @@ We tested the performance of a single class in isolation as a sanity check, and 
 
 We tested the performance of both the MFCC and PLCA-based classifiers in the presence of noise by mixing one of 36 trained classes with an untrained class of sound (the 37th class), effectively masking the trained class with noise.  The average results of 1332 mixtures are depicted in Figure \ref{fig:unknown-mixture-roc-results} using ROC curves depicting each model's performance in classifying the correctly masked class.  We can see the MFCC model does well above chance, though both of the PLCA models do a far greater job.  Interestingly, the Mel-PLCA model is very close to the performance of the full-spectrum based PLCA model, even though this model uses only 40 samples versus 8192 samples per frequency frame.
 
-\subsection{Experiment 3: Classifying acoustic mixtures}
+\subsection{Experiment 3: Classifying mixtures of acoustic events}
 
 
 \begin{figure*}
@@ -917,102 +911,11 @@ assumptions in what is segregated... should have used people .. .but even subjec
 
 \section{Introduction}
 
-perceptual model of listening to help determine the representation of the corpus... daphne oran browser.
+The juxtaposition of fragments of sound as an arts practice has roots at least as early as music concrete, a compositional technique assembling various natural found sounds in order to produce a collage of sound.  Digital Sampling came in the 1970's allowing sound segments to be triggered using an interface such as a keyboard or pad.  More recent techniques have focused on corpus-based concatenative synthesis, where a target sound is matched to a stored database of segments or sounds (for a comprehensive review, see \cite{Schwarz2006}).  In this thesis, we focus on a collage-based technique called scene synthesis which assembles units created through the computational modeling of psychologically motivated representations likely to support perception.  The aim in building these units and re-assembling them within a collage-based practice is to open a dialogue into the nature of representation within perception.  
 
+We have so far derived a conceptual framework for building auditory representations based on evidence in electrophysiology in Chapter \ref{ch:conceptual-audio} and started to develop this framework computationally in Chapter \ref{ch:analysis-audio}.  All three computational models that we have developed have been demonstrated to perform very well in scenes where only classification is required.  When segregation, or understanding the multiple sources in a scene is required, two models based on Principal Latent Component Analysis perform very well.  We now turn to two practical developments using these computational model which will inform the development of a fully realized audiovisual scene synthesis in Chapter \ref{ch:audiovisual}.  The first practical output, the Daphne Oram Browser, makes use of the model requiring segregation.  The second, Memory Mosaic, makes use of the model requiring only segmentation and not segregation.  
 
-The juxtaposition of fragments of sound as an arts practice has roots at least as early as music concrete, a compositional technique assembling various natural found sounds in order to produce a collage of sound.  Digital Sampling came in the 1970's allowing sound segments to be triggered using an interface such as a keyboard or pad.  More recent techniques have focused on corpus-based concatenative synthesis, where a target sound is matched to a stored database of segments or sounds (for a comprehensive review, see \cite{Schwarz2006}).  
-
-This chapter focuses on describing practical outputs in developing auditory scene synthesis.  The culmination of this practice will lead to the development of an application, ``Memory Mosaic'', which delivers an automated sonic-collage to a single user wearing headphones.  This application will also later be used in combination with the developments in my visual-practice in Chapter 7.   Before developing this application, however, I will discuss a few outputs created along the way which focused on exploring the use of spatialization, cut-up, narrative, and memory within a sonic collage practice.  
-
-\section{Sonic Graffiti}
-
-The first practical output I developed towards building an auditory scene synthesis is an application called ``Sonic Graffiti''.  The aim of this application was to create a soundscape based on a collage of sounds that had been recorded at different locations in 3-dimensional space.  A participant of the application could record sounds whenever they pressed a button and could do so in different locations in 3-dimensional space.  Then, when the participant would move in space, they would be able to hear the sounds they recorded as a continuous loop coming from the original location that they were recorded.  The interest in developing this application was (1) to synthesize an acoustic scene by replaying sound fragments based on their original location in space, and (2) to discover more about 3-dimensional sound perception.  My target platform at the time of development was the Apple iPhone 4, which includes a GPS sensor, digital compass, microphone, and audio output.  To begin with, I needed to discover how to record a set of sounds that could be re-positioned based on how a user moved around in 3-dimensional space.
-
-\subsection{Methods}
-
-\subsubsection{3-dimensional Sound Perception}\label{sec:binauralization}
-To recreate the perception of a recorded sound as coming from a particular location in 3-dimensional space, one could record the sound using a binaural microphone.  These are a stereo pair of microphones (2-channels) which are placed in each ear and capture the sound as it would ideally enter your own ears.  When the captured sound is played back through headphones, they should sound fairly realistic creating the impression that a sound had originated in the same relative location to the user.  However, at the time of developing ``Sonic Graffiti'', the iPhone 4 did not support recording of more than one channel of sound without the support of an external device, meaning a binaural microphone would not work.  As a result, I investigated other methods for spatialization which could work with monaural sounds.
-
-One convincing feature of the perception of 3-dimension sound is the Interaural Time Lag (ITL), the lag in time of a sound reaching either ear.  If a sound reaches my left ear faster than my right ear, I perceive a sound coming from the left side of me.  Similarly, if it comes to my right ear faster than my left, then I perceive it as coming from the right of me.  But what about a sound directly in front of me or directly behind me?  These should have the same ITL, though if you listen to a sound behind you, you may notice that higher frequencies are harder to hear.  This is due to the shape of your ear blocking direct waves from entering your earlobe.  Instead, they must travel around or through your ear, creating both an attenuation and a low-pass filter, similarly to what a thin wall may do in effect.  
-
-One could model the perception of sound in 3-dimensions using a set of rules for creating time-lags and filtering sound based on its back-to-front position.  However, another method is to create a sampling of sounds from all directions around an actual head and use these recordings to understand how sound is filtered from any direction.  IRCAM's LISTEN database achieves this by providing a set of Head Related Impulse Responses.  This library has a large database of recordings that was built as follows: using an anechoic chamber, a space where acoustic foam is placed on the sides of the wall in an effort to minimize any reverberations of sounds, a user was sat in the middle of the space.  Within their ears, microphones were placed.  A speaker was moved at a spherical distance 1.95 meters away from the user and produced a ``click'': an instantaneous change in pressure perceived as a loud ``pop'' without any reverberations.  This click essentially delivers a sound wave reaching either ear with an interaural time lag and filtering based on the speakers relative location to the user's head.  
-
-\begin{figure}
-        \centering
-	\includegraphics[width=\textwidth]{images/sphere-xyz-01.png}
-	\caption{Locations of all 187 Head Related Impulse Responses relative to the user's head.}
-	\label{fig:ircam-listen}
-\end{figure}
-                
-\begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.49\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{images/el0-az0.png}
-                \caption{Front}
-                \label{fig:gull}
-        \end{subfigure}%
-        \begin{subfigure}[b]{0.49\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{images/el0-az90.png}
-                \caption{Left}
-                \label{fig:tiger}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.49\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{images/el0-az180.png}
-                \caption{Behind}
-                \label{fig:mouse}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.49\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{images/el0-az270.png}
-                \caption{Right}
-                \label{fig:mouse}
-        \end{subfigure}
-        \caption{Example signals for the Head Related Impulse Responses of 4 different positions.}\label{fig:ircam-hrir}
-\end{figure}
-
-The IRCAM LISTEN database comes with 71 sets of 187 recordings, where each set comes from a different participant, and thus has slightly different responses (due to the individual features of their head, such as the shape of their ear or nose) .  Each recording is 8192 samples long at 44100 Hz sample rate.  Figure \ref{fig:ircam-listen} depicts the locations of all the ``clicks'' in relation to the user's head while Figure \ref{fig:ircam-hrir} depicts 4 filters from a single individual's recordings, IRCAM 1087, from an elevation equal to the individual's ears and placed to the front, left, back, and right of the center of the head at a distance of 1.95 meters away.  Using all 187 recordings gives a reasonable sampling of the space around a user's head, creating a set of ITL's with known relative locations.  Thus, any sound can be binauralized by using any of the 187 recordings.  However, as these are all spaced at 1.95 meters away from the user's head, a sound that is closer or farther away than 1.95 meters must be attenuated.  Further, these 187 sampled locations must be converted to a continuous sampling, allowing for a sound to be binauralized anywhere on surface of a sphere, through the use of interpolation.  To achieve both of these extra features, I use a k-Nearest Neighbor tree using the 3 closest neighbors to a point on a sphere.  These three nearest points are then averaged to produce the final left and right ear filters.  The average distance to the nearest filters are used to attenuate the final filter using a logarithmic relationship between distance and attenuation, simulating the logarithmic perception of sound (decibels).
-
-Any incoming sound may then be filtered using the final combined and attenuated filter.  To filter the original sound with the binaural filters, we make use of an FFT-based convolution to filter the original sound with the binaural filters.  We first remove most of the silence from all filters, cropping the original 8192 sample filters to 512 samples.  Then, an incoming sound wave is chunked in 512 sample frames.  The resulting convolution of the original frame and the filter is $(2N + 1)$ samples long. To achieve continuous filtering, we use an overlap-add operation.  Overlap-add takes the additional resonance, or the additional 513 samples as a result of the convolution operation, and adds this as an overlapping part to the next frame of filtering.  This ensures any energy in the system is continuously kept in the filtering procedure.  
-
-\subsubsection{GPS}
-
-A user's location is obtained using Apple's CoreLocation framework.  This provides a latitude, longitude, and altitude using Global Positioning System (GPS).  As this defines a point on a Earth through a spherical coordinate system, this location must be converted to a 3-dimensional cartesian point to be used with the filter tree in Figure \ref{fig:ircam-listen}.  For this purpose, a specific projection which flattens the Earth's surface to a 2-dimensional landscape must be used.  We make use of the Universal Transverse Mercator (UTM) coordinate system which maps latitude and longitude locations to a mercator projection, and is described in detail in the 330-page document, Bulletin 1532, by the United States Geological Survey \cite{}.  Any new ``graffiti'' is then given the user's current UTM $x,y$ and altitude.  
-
-CoreLocation also provides different modes of accuracy depending on the application's needs.  As ``Sonic Graffiti'' requires a high precision of accuracy, this was set to ``kCLLocationAccuracyBestForNavigation'', which the Apple Developer Documentation\footnote{\url{https://developer.apple.com/library/mac/documentation/CoreLocation/Reference/CoreLocationConstantsRef/Reference/reference.html#//apple\_ref/c/data/kCLLocationAccuracyBest}} describes as:
-\begin{quotationb}
-Use the highest possible accuracy and combine it with additional sensor data. This level of accuracy is intended for use in navigation applications that require precise position information at all times and are intended to be used only while the device is plugged in.
-\end{quotationb}
-During the development of this application, it was found that accuracy when not moving was unreliable to at least 10 meters.  When moving, however, particularly in a straight line, accuracy was more reliable, perhaps to within 1 meter.  As an example, the plots in Figure \ref{fig:gps-tracking} show two example paths taken by me walking around a single block in London.  
-
-\subsubsection{Sonification}
-
-The resulting sonification of any recorded graffiti is achieved through (1) discovering the relative position of the graffiti to the user's current location and orientation, (2) binauralizing the individual graffiti using the procedure described in Section \ref{sec:binauralization}, resulting in a stereo audio signal, (3), summing all resulting binauralizations, and (4) mixing the resulting stereo sum using a compressor so that the signal is within the speaker's limits.   
-
-During initial tests, only 2 - 3 sounds could be binauralized at a time, before clicks and buffer underruns occurred.  These are typical signs that a CPU cannot keep up with processing and is instead opting out of processing audio for a few frames until processing can catch up.  
-
-\subsubsection{Vectorization}
-
-In order to increase the number of sounds that could be binauralized without CPU lags, we made use of vector-based acceleration.  This is a technique that takes advantage of large register sizes in CPU architecture, in this case 16-bytes.  Instead of performing an operation on a single byte, or in the case of floating-point data, 4 bytes, the same operation may be performed on 16-bytes using larger registers.  Further, if the amount of memory is fixed to a certain size, for-loops which require branching on each iteration may be sacrificed through the use of larger register operations, requiring far less branches.  These optimizations are cleverly implemented in the Apple Accelerate Framework, making many arithmetic operations very fast to perform.  After rewriting the binauralization routines in Accelerate language, I could binauralize 25-30 sound sources before clicks and buffer underruns occurred. 
-
-\subsection{GUI}
-
-\subsection{Discussion}
-
-Sonic Graffiti allows a user to record a sound based on the current GPS location of the device.  The resulting sound is played back as a continuous loop and spatialized based on the user's relative location to the original recorded location.  This is achieved through the use of a bespoke binauralization library.  As the routines require significant processing as the number of sounds increase, vectorization was used to accelerate computation.  The resulting framework has been made available online for anyone to use at \url{http://github.com/pkmital}.
-
-\section{Future Echoes}
-
-Next are two installation outputs developed as part of a course I led in a design school in India which explore the use of cut-up technique in delivering a spatialized sonic narrative and the use of sound input as a target for a video-based triptych collage.  
-
-\subsection{Ambisonics}
-
-
-
-
-\section{Browser}
+\section{The Daphne Oram Browser}
 
 \subsection{Introduction}
 We focus on visualizing the Daphne Oram archive using two methods for describing the archive: (1) discovering latent distributions of frequencies using a recently developed source separation algorithm, probabilistic latent component analysis (PLCA) \cite{SmaragdisRajShashanka}; and (2), using a widely-adopted multi-dimensional feature for speech, music, and general acoustic classification, the Mel-Frequency Cepstral Coefficients (MFCCs).  We cluster the data from either descriptor using Multidimensional Scaling and develop a 3D visualization that allows researchers to project the archive onto multiple dimensions of the data.  Finally, we report user-feedback from researchers of the archive using the 3D visualization tool.  
@@ -1420,7 +1323,14 @@ D. recompute flicker based on aggregated proto-object flow
 
 \chapter{Computational Visual Scene Synthesis}
 \label{ch:synthesis-visual}
+
 \minitoc
+
+%\begin{abstract}
+%We investigate an approach to the artistic stylization of photographic images and videos that uses an understanding of the role of abstract representations in art and perception.  We first learn a database of representations from a corpus of images or image sequences.  Using this database, our approach synthesizes a target image or video by matching geometric representations in the target to the closest matches in the database based on their shape and color similarity.  We show how changing a few parameters of the synthesis process can result in stylizations that represent aesthetics associated with Impressionist, Cubist, and Abstract Expressionist paintings.  As the stylization process is fast enough to work in real-time, our approach can also be used to learn and synthesize the same camera image, even aggregating the database with each new video frame in real-time, a process we call "Memory Mosaicing". 
+%\end{abstract}
+
+
 
 \begin{figure}[ht]
  \includegraphics[width=\textwidth]{images/klimt-van-gogh-wide.png}
@@ -1432,10 +1342,6 @@ D. recompute flicker based on aggregated proto-object flow
  \label{fig:teaser}
 \end{figure}
 
-\begin{abstract}
-We investigate an approach to the artistic stylization of photographic images and videos that uses an understanding of the role of abstract representations in art and perception.  We first learn a database of representations from a corpus of images or image sequences.  Using this database, our approach synthesizes a target image or video by matching geometric representations in the target to the closest matches in the database based on their shape and color similarity.  We show how changing a few parameters of the synthesis process can result in stylizations that represent aesthetics associated with Impressionist, Cubist, and Abstract Expressionist paintings.  As the stylization process is fast enough to work in real-time, our approach can also be used to learn and synthesize the same camera image, even aggregating the database with each new video frame in real-time, a process we call "Memory Mosaicing". 
-
-\end{abstract}
 
 \section{Introduction}  
 Despite its apparent precision, our perception of reality is not representative of the way that we see.  For instance, the light coming to our eyes is distorted, upside-down, and constantly disrupted with each movement of the eye.  How can this noisy process ever constitute our experience of the visual world?  Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted representations of the world \cite{Marr1982}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive. As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.
