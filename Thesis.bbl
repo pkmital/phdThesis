@@ -38,6 +38,11 @@ Jean-Julien Aucouturier, Boris Defreville and Fran\c{c}ois Pachet.
 \newblock Journal of the Acoustical Society of America, vol.~122, no.~2, pages
   881--91, 2007.
 
+\bibitem[Augoyard~2006]{Augoyard2006}
+Jean-Francois Augoyard and Henry Torgue.
+\newblock {Sonic Experience: A Guide To Everyday Sounds}.
+\newblock Mcgill Queens Univ Pr, 2006.
+
 \bibitem[Bartsch~2001]{Bartsch2001}
 Mark~A. Bartsch and Gregory~H Wakefield.
 \newblock {\em {To Catch a Chorus: Using Chroma-based Representations for Audio
@@ -81,16 +86,16 @@ Albert~S. Bregman.
   Sound}}.
 \newblock May 1990.
 
-\bibitem[Breton~]{BretonRemembers}
-Andre Breton.
-\newblock {\em {"Le Cadavre Exquis: Son Exaltation"}}.
-\newblock In Exhibition Catalog, pages 5--7, 9--11. La Dragonne, Galerie Nina
-  Dausset, Paris.
-
 \bibitem[Breton~1924]{Breton1924}
 Andr\'{e} Breton.
 \newblock {\em {Manifeste du surr\'{e}alisme}}.
 \newblock 1924.
+
+\bibitem[Breton~1948]{BretonRemembers}
+Andre Breton.
+\newblock {\em {"Le Cadavre Exquis: Son Exaltation"}}.
+\newblock In Exhibition Catalog, pages 5--7, 9--11. La Dragonne, Galerie Nina
+  Dausset, Paris, 1948.
 
 \bibitem[Buswell~1935]{Buswell1935}
 GT~Buswell.
@@ -110,16 +115,16 @@ Mark Cartwright, Zafar Rafii, Jinyu Han and Bryan Pardo.
 \newblock In Proceedings of the 2011 AAAI Workshop on Human Computation, San
   Francisco, USA.
 
-\bibitem[Casey~]{CaseyICMC2007}
-Michael Casey and Mick Grierson.
-\newblock {\em {SOUNDSPOTTER / REMIX-TV : FAST APPROXIMATE MATCHING FOR AUDIO
-  AND VIDEO PERFORMANCE}}.
-\newblock Audio.
-
 \bibitem[Casey~2001]{Casey2001a}
 Michael Casey.
 \newblock {\em {General sound classification and similarity in MPEG-7}}.
 \newblock Organised Sound, vol.~6, no.~02, pages 153--164, 2001.
+
+\bibitem[Casey~2007]{CaseyICMC2007}
+Michael Casey and Mick Grierson.
+\newblock {\em {Soundspotter/Remix-TV: fast approximate matching for audio and
+  video performance}}.
+\newblock Proceedings of the International Computer Music Conference, 2007.
 
 \bibitem[Casey~2008a]{Casey2008b}
 MA~Casey, Remco Veltkamp and Masataka Goto.
@@ -500,9 +505,10 @@ MF~McKinney.
 \newblock {\em {Features for audio and music classification}}.
 \newblock Proc. ISMIR, vol.~4, 2003.
 
-\bibitem[McL~2011]{McLeod2011}
-{Cutting Across Media: Appropriation Art, Interventionist Collage, and
-  Copyright Law}.
+\bibitem[McLeod~2011]{McLeod2011}
+Kembrew McLeod.
+\newblock {Cutting Across Media: Appropriation Art, Interventionist Collage,
+  and Copyright Law}.
 \newblock Duke University Press Books, 2011.
 
 \bibitem[Meier~1996]{Meier1996}
@@ -541,6 +547,11 @@ Parag~Kumar Mital and Mick Grierson.
   Component Relationships}}.
 \newblock In International Symposium on Music Information Retrieval 2012 (In
   Review), 2012.
+
+\bibitem[Moerel~2013]{Moerel2013}
+M~M~L Moerel.
+\newblock {\em {Encoding of natural sounds in the human brain}}.
+\newblock PhD thesis, 2013.
 
 \bibitem[N\"{a}\"{a}t\"{a}nen~1978]{Naatanen1978}
 R~N\"{a}\"{a}t\"{a}nen, AWK Gaillard and S~M\"{a}ntysalo.
@@ -631,6 +642,12 @@ Elias Pampalk.
   patterns}}.
 \newblock International Symposium on Music Information Retrieval, 2006.
 
+\bibitem[Piazza~2013]{Piazza2013}
+Elise~a Piazza, Timothy~D Sweeny, David Wessel, Michael~a Silver and David
+  Whitney.
+\newblock {\em {Humans Use Summary Statistics to Perceive Auditory Sequences.}}
+\newblock Psychological science, June 2013.
+
 \bibitem[Potter~1969]{Potter1969}
 Mary~C Potter and Ellen~I Levy.
 \newblock {\em {Recognition memory for a rapid sequence of pictures}}.
@@ -688,6 +705,12 @@ T~Rinne, G~Gratton, M~Fabiani, N~Cowan, E~Maclin, a~Stinard, J~Sinkkonen,
 M~Sams, K~Alho and R~N\"{a}\"{a}t\"{a}nen.
 \newblock {\em {Sequential effects on the ERP in discriminating two stimuli.}}
 \newblock Biological psychology, vol.~17, no.~1, pages 41--58, August 1983.
+
+\bibitem[Samson~2010]{Samson2010}
+Fabienne Samson, Thomas~a Zeffiro, Alain Toussaint and Pascal Belin.
+\newblock {\em {Stimulus complexity and categorical effects in human auditory
+  cortex: an activation likelihood estimation meta-analysis.}}
+\newblock Frontiers in psychology, vol.~1, no.~January, page 241, January 2010.
 
 \bibitem[Schwarz~2006]{Schwarz2006}
 D~Schwarz.
@@ -764,9 +787,9 @@ Paris Smaragdis, Bhiksha Raj and Madhusudana Shashanka.
 \newblock In Proceedings of the 7th international conference on Independent
   component analysis and signal separation, 2007.
 
-\bibitem[Smitelli~]{Smitelli2009}
+\bibitem[Smitelli~2009]{Smitelli2009}
 Scott Smitelli.
-\newblock {\em {Fun with YouTube's Audio Content ID System}}.
+\newblock {\em {Fun with YouTube's Audio Content ID System}}, 2009.
 
 \bibitem[Smith~2011]{Smith2011a}
 Tim Smith and Parag~Kumar Mital.
@@ -876,9 +899,10 @@ M~Tervaniemi, S~V Medvedev, K~Alho, S~V Pakhomov, M~S Roudas, T~L {Van Zuijen}
   musical information: a PET study.}}
 \newblock Human brain mapping, vol.~10, no.~2, pages 74--9, June 2000.
 
-\bibitem[Tholl~]{Tholl}
+\bibitem[Tholl~2010]{Tholl}
 Andrew Tholl.
 \newblock {\em {Plunderphonics: A Literature Review}}.
+\newblock 2010.
 
 \bibitem[Torralba~2006]{Torralba2006}
 Antonio Torralba, Aude Oliva, Monica~S Castelhano and John~M Henderson.
