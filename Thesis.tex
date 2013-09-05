@@ -470,7 +470,9 @@ Extending this research into a basic computational model requires at least:
 \item \textbf{Template Matching}, functionality as evidenced by the PN, where selective attention is capable of recognizing a stream as one that is the target of attention. 
 \end{enumerateb}
 
-This is without any doubt a radical simplification of the perceptual system of auditory listening.   An idealized model should consider, at the very least: the numerous influences of stream formation by attention (e.g. \cite{Shamma2011}), whether integration should occur before or after segregation (e.g. \cite{Sussman2005}), what a template is defined by, how the stimulus timings, inter stimulus timings, and contextual influences effect stream formation, how priming, cueing, masking, binaural cues such as interaural level and time differences, and the many endogenous effects of language, culture, emotion, stress, and anxiety may effect any one of these processes.  However, any one of these questions are all very active areas of research.  As a result, the basic set of components laid above can at least provide a starting point for a plausible model from which representations of unconscious auditory objects, or streams, may be built.  
+This is without any doubt a crude simplification of the perceptual system of auditory listening.   An idealized model should consider, at the very least: the numerous influences of stream formation by attention (e.g. \cite{Shamma2011}), whether integration should occur before or after segregation (e.g. \cite{Sussman2005}), categorical effects on low-level neuronal representations (e.g. \cite{Samson2010}), how encoded summary statistics from contextual influences may effect stream formation (e.g. \cite{Piazza2013}), and how this research may possibly translate to real-world natural sounds (e.g. \cite{Moerel2013}).  However, any one of these questions are all very active areas of research.  As a result, the basic set of components laid above can at least provide a starting point for a plausible model from which a representation of auditory objects, or streams, may be built.  
+
+%how priming, cueing, masking, binaural cues such as interaural level and time differences, and the many endogenous effects of language, culture, emotion, stress, and anxiety may effect any one of these processes
 
 \subsection{Event Detection}
 
@@ -567,7 +569,7 @@ The presented framework has given us the notion of the auditory unit of percepti
 
 \section{Introduction}
 
-In this chapter, we develop the conceptual framework laid down in Chapter \ref{ch:conceptual-audio} into a computational model capable of two processes: \textit{encoding}, or sensorial input as it is represented in our brains, and \textit{decoding}, or the perceptual experience as we interpret it.   These two processes will be necessary for developing an auditory scene synthesis, a collage-based synthesis where the units of the collage process are based on psychologically motivated representations thought to support perception.  To model these two processes, we need to develop four components, as motivated in Chapter \ref{ch:conceptual-audio}: 
+In this chapter, we develop the conceptual framework laid down in Chapter \ref{ch:conceptual-audio} into a computational model capable of two processes: \textit{encoding}, or the sensorial input as it is represented in our brains, and \textit{decoding}, or the perceptual experience as we interpret it.   These two processes will be necessary for developing an auditory scene synthesis, a collage-based synthesis where the units of the collage process are based on psychologically motivated representations thought to support perception.  To model these two processes, we need to develop four components, as motivated in Chapter \ref{ch:conceptual-audio}: 
 
 \begin{enumerateb}
 \item \textbf{Event detection}: temporally segments the ongoing auditory stream in order to define the boundaries of processing; 
@@ -758,6 +760,30 @@ Sounds were sourced from both the Sound Ideas\footnote{Courtesy of Ianis Lallema
 %\caption{Overview of the different models}
 %\label{fig:models}
 %\end{figure}
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{images/wooden-gears.pdf}
+                \caption{wooden-gears}
+        \end{subfigure}%
+        \begin{subfigure}[b]{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{images/bubbles.pdf}
+                \caption{bubbles}
+        \end{subfigure}%
+        \begin{subfigure}[b]{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{images/laughing-man.pdf}
+                \caption{laughing-man}
+        \end{subfigure}%        
+        \begin{subfigure}[b]{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{images/conversation.pdf}
+                \caption{conversation}
+        \end{subfigure}%
+        \caption{Spectrum of 4 different classes}
+\end{figure}
 
 
 \subsection{Experiments}
@@ -812,29 +838,55 @@ We tested the performance of a single event class in isolation as a sanity check
 
 \begin{figure}
 \centering
-\includegraphics[width=0.99\textwidth]{images/unknown-mixture-roc-results.pdf}
-\caption{Experiment 2: Classification masked by noise.}
-\label{fig:unknown-mixture-roc-results}
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=0.99\textwidth]{images/unknown-mixture-roc-results.pdf}
+		\caption{Experiment 2: Classification masked by noise.}
+		\label{fig:unknown-mixture-roc-results}
+	\end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+          %(or a blank line to force the subfigure onto a new line)
+      \begin{subfigure}[b]{0.48\textwidth}
+      		\centering
+		\includegraphics[width=0.99\textwidth]{images/mixture-roc-results.pdf}
+		\caption{Experiment 3: Classification of acoustic mixtures.}
+		\label{fig:mixture-roc-results}
+	\end{subfigure}
+	\caption{Results of Experiment 2 and 3 as depicted by the ROC curve.}
 \end{figure}
+
+
 
 We tested the performance of both the MFCC and PLCA-based classifiers in the presence of noise by mixing one of 36 trained classes with an untrained class of sound (the 37th class), effectively masking the trained class with noise.  The average results of 1332 mixtures are depicted in Figure \ref{fig:unknown-mixture-roc-results} using ROC curves depicting each model's performance in classifying the correctly masked class.  We can see the MFCC model does well above chance, though both of the PLCA models do a far greater job.  Interestingly, the Mel-PLCA model is very close to the performance of the full-spectrum based PLCA model, even though this model uses only 40 samples versus 8192 samples per frequency frame.
 
 \subsection{Experiment 3: Classifying mixtures of acoustic events}
 
 
-\begin{figure*}
-\centering
-\includegraphics[width=0.99\textwidth]{images/mixture-img-results.pdf}
-\caption{Experiment 3: Classification performance of acoustic mixtures depicting the ground truth classes for each of the 666 mixtures and the MFCC model, the PLCA model, and the Mel-PLCA model's classification likelihoods for each of the 666 mixtures. Images represent likelihood of a class in a given mixture, with white being 1.0, and black being 0.0.}
-\label{fig:mixture-images}
-\end{figure*}
-
-
 \begin{figure}
 \centering
-\includegraphics[width=0.99\textwidth]{images/mixture-roc-results.pdf}
-\caption{Experiment 3: Classification of acoustic mixtures.}
-\label{fig:mixture-roc-results}
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.99\textwidth]{images/mixture-groundtruth.pdf}
+\caption{Ground truth labeling}
+\end{subfigure}%
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.99\textwidth]{images/mixture-mfcc.pdf}
+\caption{Results for MFCC}
+\end{subfigure}%
+
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.99\textwidth]{images/mixture-plca.pdf}
+\caption{Results for PLCA}
+\end{subfigure}%
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.99\textwidth]{images/mixture-melplca.pdf}
+\caption{Results for Mel-PLCA}
+\end{subfigure}%
+\caption{Experiment 3: Classification performance of acoustic mixtures depicting the ground truth classes for each of the 666 mixtures and the MFCC model, the PLCA model, and the Mel-PLCA model's classification likelihoods for each of the 666 mixtures. Images represent likelihood of a class in a given mixture, with white being 1.0, and black being 0.0.}
+\label{fig:mixture-images}
 \end{figure}
 
 
@@ -917,13 +969,14 @@ We have so far derived a conceptual framework for building auditory representati
 
 \section{The Daphne Oram Browser}
 
-\subsection{Introduction}
+Say stuff about the Daphne Oram archive.  Unique collection and use-case... 
+
 We focus on visualizing the Daphne Oram archive using two methods for describing the archive: (1) discovering latent distributions of frequencies using a recently developed source separation algorithm, probabilistic latent component analysis (PLCA) \cite{SmaragdisRajShashanka}; and (2), using a widely-adopted multi-dimensional feature for speech, music, and general acoustic classification, the Mel-Frequency Cepstral Coefficients (MFCCs).  We cluster the data from either descriptor using Multidimensional Scaling and develop a 3D visualization that allows researchers to project the archive onto multiple dimensions of the data.  Finally, we report user-feedback from researchers of the archive using the 3D visualization tool.  
 
 Our main contribution is in describing the impact of visualizing segregated streams of a large audio archive through a case-driven exploration of the work of Daphne Oram.  We compare the feedback from archivists using a visualization of latent timbre-relationships versus one using a perceptually inspired multi-dimensional feature, MFCCs, and show that PLCA is more effective at producing a meaningful visualization.  
 
 
-\subsection{Browsing}
+\subsection{Related Work}
 
 A number of previous approaches for visualizing large audio corpora have focused on the application of music-based corpora.  Some approaches to content-based musical information retrieval solutions require a user to search by example or performance, aiding retrieval when a user is unaware of exactly what they are looking for.  However, visualization of such retrieval methods often amounts to viewing lists of the $k$-most similar results of an explicit query, and thus any exploratory analysis of the corpus as a whole requires further research into approaches for visualization.  For instance, SMILE \cite{Melucci2000} presents a MIDI-keyboard for the user to ``perform'' a query, and results are presented based on how similar the MIDI sequences are to the performance.  Similar approaches built for more generic signal-based audio break a corpus into frequency information and further into fingerprints such as MFCCs or psychacoustic descriptors.  audioDB \cite{Casey2008c,Rhodes2010} for instance allows a user to input shingles, or segments of an audio track for discovering similarities in an archive.  Other solutions such as Query-by-humming allow a user to hum/sing a tune in order to discover similar results (e.g. \cite{Wang2006a,Cartwright}).  The previous methods may be suitable for applications where a user has an explicit example query.  However, in exploring an archive, it requires the user to have a priori knowledge of what the archive already contains.
 
@@ -937,7 +990,7 @@ The critical deviation of our approach to feature analysis from the previous app
 
 Currently, the Daphne Oram Archive has over 215 tape reels or 60 hours digitized.  As the amount of available memory is a constraint on our approach, we are only able to investigate the first 10 minutes of the first 60 tape reels or 10 hours in total.  We describe each half second segment by their frequencies over time, described using the short-time Fourier transform, and describe each time-frequency matrix as a slice.  In total we have 1200 slices per tape and 72,000 slices for all 60 tape reels\footnote{We use all data for building the description of the corpus, though later use a reduced subset for visualization.}.  We aim to visualize this data using a clustering algorithm able to extract the timbre-relationships within the archive.  Specifically, we look at two methods for grouping the possible interesting frequencies describing the archive: (1) PLCA, a probabilistic method for discovering latent component relationships of a time-frequency matrix, and (2) MFCC, a widely-adopted approximation of the frequency spectrum inspired by the human auditory system's response properties.
 
-\paragraph{PLCA Model}
+\subsubsection{PLCA Model}
 One drawback with the basic PLCA model is the number of components describing a distribution must be known \textit{a priori}.  We therefore incorporate model selection, a commonly employed information theoretic approach to determining parameters of a model.  In the case of PLCA, the model parameters are described by $N$, the number of components.  To appropriately determine the correct value for $N$, we use \textit{Bayesian Information Criterion} (BIC) model selection.  Using the log-likelihood of the optimized parameters, an additional parameter which penalizes model complexity is subtracted from the log-likelihood:
 \begin{eqnarray}
 \ln{p(X)} &\simeq& \ln{p(\mathcal{D}|\theta_{\mathtt{MAP}})} - \frac{1}{2}M\ln{N}
@@ -946,10 +999,10 @@ where $M$ is the number of parameters in $\theta$ and $N$ is the number of data 
 
 To begin the model selection, we iterate through every slice of audio.  Using model selection, we compare the results of using the current number of components and using an additional component.  If the results are better explained with an additional component, we add one to the value of $N$ and continue to the next slice. Iteratively running PLCA across all slices on increasing values of $N$ until finding the maximum BIC results in finding $N=45$ for 10 hours of audio.  
 
-\paragraph{MFCC Model}
+\subsubsection{MFCC Model}
 For our second model, we use the commonly employed Mel-frequency Cepstral Coefficients (MFCCs) which approximates a frequency spectrum by a set of de-correlated features.  
 
-\paragraph{Multi-dimensional Scaling}
+\subsubsection{Multi-dimensional Scaling}
 After running each model, we are left with an $M \times N$ dimensional matrix, where $M$ refers to the number of time slices, and $N$ to the number of dimensions that describe each feature.  In the case of PLCA, after running model selection, we are left with $N=45$ dimensions describing the data.  With regards to MFCCs, we specifically choose $N=13$ cepstral coefficients.  
 
 In order to visualize the high-dimensional space created by either model and cluster together similarly weighted features, we make use of Multi-Dimensional Scaling (MDS), a popular technique for multivariate and exploratory data analysis. MDS is a common technique for projecting data in high-dimensional spaces to 2 or 3 dimensional spaces for the purposes of visualization.  It aims to preserve the pairwise distances between data points, starting with the notion of distance, and working backwards in order to create the coordinate space.  The basic algorithm for calculating the unknown low-dimensional coordinate map $\mathbf{X}$ thus starts with a distance or proximity matrix, $\mathbf{P}$.  We aimed to use the full archive of 72,000 slices, however creating a matrix of float values this large requires $~20$ gigabytes of information which must be held in RAM.  Therefore, we reduce our database by taking every 5th slice, effectively looking at 0.5 second slices every 2.5 seconds rather than every 0.5 seconds.  However, the description of the data in the case of PLCA is still dependent on all 72,000 slices.
@@ -1035,13 +1088,17 @@ Further work should focus on issues with navigating in 3D space, as some users r
 
 
 
-\section{Infected Puppets}
-
 
 \section{Memory Mosaic}
 
+Introduce it a bit... 
 
-The juxtaposition of fragments of sound as an arts practice has roots at least as early as music concrete, a compositional technique assembling various natural found sounds in order to produce a collage of sound.  Digital Sampling came in the 1970's allowing sound segments to be triggered using an interface such as a keyboard or pad.  More recent techniques have focused on corpus-based concatenative synthesis, where a target sound is matched to a stored database of segments or sounds (for a comprehensive review, see \cite{Schwarz2006}).  Our technical framework most closely resembles SoundSpotter \cite{CaseyICMC2007}, as its framework provides the basis of our auditory feature transformation described in Section \ref{subsec:acoustic-scene-description}.  Though, of the previous techniques mentioned including those in the review article, none investigate corpus-based concatenative synthesis as a real-time experience in an augmented reality.
+\subsection{Related Work}
+
+Our technical framework most closely resembles SoundSpotter \cite{CaseyICMC2007}, as its framework provides the basis of our auditory feature transformation described in Section \ref{subsec:acoustic-scene-description}.  Though, of the previous techniques mentioned including those in the review article, none investigate corpus-based concatenative synthesis as a real-time experience in an augmented reality.
+
+
+John Oswald; Burrough's Cut-up-technique; Scrambled Hackz; Collins; Casey; Grierson; Schwarz...
 
 %Before reaching the culmination of my sound-based practice in ``Memory Mosaic'', an iOS application which automatically creates sound collages based on an aggregation of learned sounds, I will discuss a few practice-based outputs that led me to this application.  
 %The first application, ``Sonic Graffiti'', grew out of the desire to create a representation of sonic memories as a spatialized global sonic map.  
@@ -1052,12 +1109,12 @@ The juxtaposition of fragments of sound as an arts practice has roots at least a
 %\subsection{Sonic Memory}
 %Motivation for implementing an augmented reality which stores ``sonic memories'' and resynthesizes them using the incoming input comes from literature investigating  
 
-\section{Machine Listening Model}
+\subsection{Methods}
 \label{sec:machine-listening-model}
 
 The machine listening model employed in Memory Mosaic is motivated by evidence in  literature of auditory perception stressing the importance of temporal regularities of an acoustic scene in providing continuity for maintaining a cognitive model of an acoustic scene (see \cite{Winkler2009a} for a recent in-depth review).  Such research reinforces Bregman's theory of streaming \cite{Bregman1990}, where one phase consists of the formation of primitive based features, and another on the schema-based selection of streams.  Our model thus places emphasis on temporal discontinuities of the auditory stream using a description of the acoustic scene based on the well-known cepstral coefficients.  % All math operations, including FFT, addition, subtraction, and multiplication are performed using the Apple Accelerate framework in order to achieve real-time performance on an iPhone.  These libraries are made freely available by the authors here: \url{http://github.com/pkmital}.
 
-\subsection{Acoustic Scene Description}
+\subsubsection{Acoustic Scene Description}
 \label{subsec:acoustic-scene-description}
 
 % this needs expanding
@@ -1065,7 +1122,7 @@ Numerous measures of an acoustic scenes have been investigated ...  We make use 
 
 Details of the Log Frequency Cepstral Coefficients (LFCC) feature transformation are described in \cite{CaseyICMC2007}, though is reiterated here for completeness.  The feature transformation begins with the Fast Fourier Transform (FFT) of an audio signal using a fixed frame-size.  For the purposes of real-time augmented reality on the iPhone, at a sample rate of 44100 Hz, a 4096-sample FFT provides high spectral resolution while still being fast enough to perform in real-time.  Following the real-FFT, the magnitudes undergo a Constant-Q Transform (CQT), a real log base-10 operation, and a Discrete Cosine Transform (DCT) in order to produce the 89-element LFCC feature vector.
 
-\subsection{Segmentation Model}
+\subsubsection{Segmentation Model}
 
 Discontinuity of the spectral shape of an acoustic scene is determined using a statistical model employing the mean and variation of the differences on the distances to a low-pass signal of the features.  The model is described in the Figure \ref{fig:segmentation-model}.  Following the feature transformation, the model has two states of operation: segmenting or not.  When the model is not segmenting, the model of background is built up until a discontinuity appears.  Similarly, for the foreground model, a separate model of the foreground is built up from the start of the segment.  Aside from detecting the discontinuity within the foreground model, the model also detects if the current frame returns to the background model by computing distance to the background model.  Using a prior assumption of a normally distributed feature-space, <<GET A PLOT OF A BUSY STATION'S DISTRIBUTION OF FEATURE VALUES>> we compute deviations of the background and foreground model past 3 standard deviations.  As well, checking whether the currently observed audio frame returns to background, we check if its features are within 3 standard deviations of the background model and stop segmenting.  A parameter controlling the threshold of the standard deviation, between 0.1 and 3.0 standard deviations, is described in Section \ref{subsec:parameters}.
 
@@ -1073,19 +1130,19 @@ Each new segment detected is written to disk using Apple's Extended Audio File F
 
 % uhh...
 
-\section{Concatenative Synthesis Engine}
+\subsubsection{Concatenative Synthesis Engine}
 
 The concatenative synthesis engine describes any input sound using a polyphonic reconstruction from its database of sound segments.  At each new onset determined by a temporal irregularity of the acoustic scene, a new set of matches are constructed to the current audio frame.  The onset detection for the synthesis engine is much like the one for the segmentation model; however, no foreground model is kept, and only the background model may deviate, creating new background models at each onset.  Thus, the model does not require knowing what is foreground or background, and only requires deviations in the continuous acoustic space.  
 
 % include graphic of the algorithm here.  
 
-\subsection{Matching}
+\subsubsection{Matching}
 
 Matching can be formulated as a nearest neighbor algorithm which begins by creating a metric space $X$ of known points $P = p_1, p_2, ..., p_n$ for $n$ points.  These points are pre-processed in such a way that a neighbors to any query point, $q \in X$, are found quickly.  To pre-process the points, we use a distance metric to keep the 3 highest matches to any query point using a simple linear index.  Iterating linearly over the dataset of LFCC vectors, the 3 best matched vectors' indices are kept using cosine similarity, which measures the angle between two vectors $A$ and $B$ like so:
 
-\begin{math}
+\begin{equationb}
 \textnormal{similarity} = \cos(\theta) = {A \cdot B \over |A| |B|} = \frac{ \sum\limits_{i=1}^{n}{A_i \times B_i} }{ \\ \sqrt{\sum\limits_{i=1}^{n}{(A_i)^2}} \times \sqrt{\sum\limits_{i=1}^{n}{(B_i)^2}}} 
-\end{math}
+\end{equationb}
 
 Using Apple's Accelerate framework, this metric can be computed using efficient vector operations that are optimized for the iPhone:
 \clearpage
@@ -1113,14 +1170,20 @@ float cosineDistance(float *x, float *y, unsigned int length) {
 \caption{Vectorized code for performing cosine distance}
 \end{program}
 
-\section{Application}
+\subsection{Application}
 
-\subsection{Parameters}
+\subsubsection{Parameters}
 \label{subsec:parameters}
 
-\section{Discussion}
 
-John Oswald; Burrough's Cut-up-technique; Scrambled Hackz; Collins; Casey; Grierson; Schwarz...
+\subsubsection{Extensions}
+
+iTunes library... DJ'ing... 
+
+\subsection{Discussion}
+
+\section{Conclusion}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1151,7 +1214,7 @@ John Oswald; Burrough's Cut-up-technique; Scrambled Hackz; Collins; Casey; Grier
 
 \section{Introduction}
 
-The world in front of us is measured by the various sensory mechanisms we have available to us: eyes, ears, fingers, etc... These mechanisms enable us to convert the physical phenomena into electrical signals that we use to construct a perception of the world.  However, we are often taught that the world we see is exactly as it is in front of us.  Philosopher Alan Watt's describes this predicament:
+The world in front of us is measured by the various sensory mechanisms we have available to us: eyes, ears, fingers, etc... These mechanisms enable us to convert physical phenomena into electrical signals that we use to construct a perception of the world.  However, we are often taught that the world we perceive is exactly as it is in front of us.  Philosopher Alan Watts describes the situation:
 \begin{quotationb}
 Most of us are brought up to feel that what we see out in front of us is something that lies beyond our eyes, out there. That the colors and the shapes that you see in this room are out there. In fact, that is not so. In fact, all that you see is a state of affairs inside your head. All these colors, all these lights, are conditions of the optical nervous system. There are, outside the eyes, quanta, electronic phenomena, vibrations, but these are not light, they are not colors until they are translated into states of the human nervous system. So if you want to know how the inside of your head feels, open your eyes and look. That is how the inside of your head feels\\
 \flushright{\textsc{Alan Watts}}
