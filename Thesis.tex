@@ -1,6 +1,5 @@
 \documentclass[a4paper,10pt,final]{ThesisStyle}
 %\documentclass[a4paper,11pt,draft]{ThesisStyle}
-
 \include{formatAndDefs}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -162,21 +161,19 @@ synthesis, scene analysis, encoding, decoding
 
 Collage is an arts-practice which appropriates fragments of culture for its materials.  Depending on its medium, it juxtaposes, often chaotically, fragments such as photographs, text, or clips of sound, removing them from their original context.  By doing so, it is capable of producing new interpretations which the original fragments alone could not have provided.  It is inherently a process that invokes new ways of seeing creating a meaning-making process between the artist producing the chaos and the audience that must unify its cut-up percepts into order.  More than an artistic technique, it has also been described as a ``philosophical attitude'' that can be applied to virtually any medium \cite{McLeod2011}.  
 
-As collage-based practices have progressed over the last 100 years, media too has evolved.  As a result, the tools and technologies available for manipulating and accessing media have altered the practice.  Specifically, within computational practices, procedural manipulation of media content have allowed artists to invoke new ways of seeing through algorithmic processing of the media.  
+As collage-based practices have progressed over the last 100 years, media too has evolved.  As a result, the tools and technologies available for manipulating and accessing media have altered the practice.  Specifically, within computational practices, procedural manipulation of media content have allowed artists to invoke new ways of seeing through algorithmic processing of the media.  For instance, Nick Collin's BBCut allows one to generate computationally generated audio collages of existing audio tracks.  His software automatically re-assembles splices of the original audio track in order to emulate different musical styles such as breakbeat or thrashbeat \cite{Collins2004}.  
 
-For instance, Nick Collin's BBCut allows one to generate computationally generated audio collages of existing audio tracks.  His software automatically re-assembles splices of the original audio track in order to emulate different musical styles such as breakbeat or thrashbeat \cite{Collins2004}.  
+The inspiration this thesis takes from collage-based practices is the recombination from the perspective of the participant rather than the audience.  That is, a participant's prior experiences with the original content of the collage affords them to create interpretations of the collage.  In other words, the collages created within this thesis are juxtapositions of familiar material, rather than arbitrary ones.  As a result, there are expectations, surprises, and strange combinations that give rise to new meanings.
 
-The inspiration this thesis takes from such practices is the recombination from the perspective of the participant rather than the audience.  That is, a participant's prior experiences with the original content of the collage affords them to create interpretations of the collage.  In other words, the collage is a juxtaposition of a familiar material, rather than an arbitrary one.  As a result, there are expectations, surprises, and strange combinations that give rise to new meanings.
+%What happens 
 
-What happens 
+%\hl{Importance of abstraction, abstract, to bring about understanding...}
 
-\hl{Importance of abstraction, abstract, to bring about understanding...}
+%\hl{Really have to stress the importance of a user within these processes... their original experiences... 
 
-\hl{Really have to stress the importance of a user within these processes... their original experiences... 
+%Thus, the power of meaning making within the ordinary collage is now extended to be defined based on (1) a participant and (2) the generative algorithms they interact with.   }
 
-Thus, the power of meaning making within the ordinary collage is now extended to be defined based on (1) a participant and (2) the generative algorithms they interact with.   }
-
-This thesis is entirely inspired by interactions with generative algorithms and the power of collage to infer new meanings.  Taking these inspirations forward, this thesis attempts to build a computational framework for generating a particular type of collage I call a \textit{scene synthesis}.  Scene synthesis places emphasis on using psychologically-motivated representations thought to support perception for the units of collage.  Across numerous literature these representations are thought to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  Once the units of collage have been built, scene synthesis requires a target scene to match to.  In the examples presented in this thesis, this can be either an existing sound, existing image or video, or a real-time live feed coming from a camera and microphone.   
+This thesis is inspired by the power of collage to infer new meanings.  Taking this inspiration forward, this thesis attempts to build a computational framework for generating a particular type of collage I call a \textit{scene synthesis}.  Scene synthesis places specific emphasis on using psychologically-motivated representations thought to support perception for the units of collage.  Across numerous literature these representations are thought to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  Once the units of collage have been built, scene synthesis requires a target scene to match to.  In the examples presented in this thesis, this can be either an existing sound, existing image or video, or a real-time live feed coming from a camera and microphone.   
 
 \hl{The overall process of scene synthesis can also be summarized by an \textit{encoding} and \textit{decoding} process.  Shannon's mathematical formulation of a communication system describes a source encoding a message to a transmitter, effectively producing a physical phenomena introducing noise, to be received and decoded finally by any destination.  
 
@@ -184,10 +181,7 @@ Discuss its similarity to coding within discovering distinct neural populations;
 
 %Numerous artists have had similar interests in the power ``abstract'' representations play in defining perception.  For instance... 
 
-Communication theory... signal/noise... receiver... relationship of randomness to information, relationship to exogenous attention or change detection within perception... }
-
-Feedback as regulatory process, would self-regulate, though financial collapse may have disproven the notion.
-
+Communication theory... signal/noise... receiver... relationship of randomness to information, relationship to exogenous attention or change detection within perception... Feedback as regulatory process}
 
 
 %Subvert traditional practice of art, allow user to be integral to the artwork, create the collage based on their experiences and their influence in the piece, therefore defining the artwork as based on their experience, canon
@@ -443,6 +437,8 @@ Bregman argues that before streams are foregrounded, they are encoded by one of 
 
 Bregman's theory provides a basis for understanding the formation of auditory objects as they may appear within our perception as unconscious representations.  Rather than the notion of an explicit auditory object that must be defined by its physical characteristics, Bregman's streams provide a perceptual basis for representation as determined during auditory scene analysis.  Objects in the scene analysis sense are therefore based on the active analysis of a scene, i.e. what can be segregated at the given time based on the aforementioned cues, rather than any fixed description of an entity in the world.  
 
+\hl{Provide transition for next section.  If I want to include the DIEM auditory analysis, then I have to figure out where it should fit... before Electro or after... what does it add?}
+
 \subsection{Electrophysiology}
 
 Research supporting the encoding of both of Bregman's theoretical formations of streams has seen great support through investigations making use of \textit{electroencephalograph} (EEG) recordings.   Before discussing research in electrophysiology, it is important to have a basic background in EEG techniques.  
@@ -459,7 +455,7 @@ ERPs are generally described in terms of specific components that contribute to 
 
 \subsubsection{N1}
 
-One of the first well studied components within auditory processing is the N1 component which has been shown to be elicited during the onset of a stimulus (usually from silence to sound).  Perhaps first described in 1939, Davis described a sound-evoked change in the EEG recordings of the waking human brain \cite{Davis1939}.  The onset of a tone evoked a negative wave 100-150 ms after onset near in the frontal-central locations of the scalp lasting for nearly 100 ms.  This was again described in a study in 1965 in which a flash of light or sound would proceed another flash of light or sound \cite{Sutton1965}.  Sutton et al. describes a negative potential peaking at 110 ms (N1) at the vertex of the scalp and a late positive potential at about 300 ms for sound and 340 ms for light (P3).  
+One of the first well studied components within auditory processing is the N1 component which has been shown to be elicited during the onset of a stimulus (usually from silence to sound), providing evidence of a brain-based representation for unconscious change detection in auditory scenes.  Perhaps first described in 1939, Davis described a sound-evoked change in the EEG recordings of the waking human brain \cite{Davis1939}.  The onset of a tone evoked a negative wave 100-150 ms after onset near in the frontal-central locations of the scalp lasting for nearly 100 ms.  This was again described in a study in 1965 in which a flash of light or sound would proceed another flash of light or sound \cite{Sutton1965}.  Sutton et al. describes a negative potential peaking at 110 ms (N1) at the vertex of the scalp and a late positive potential at about 300 ms for sound and 340 ms for light (P3).  
 
 Hillyard et al.'s 1973 study expanded on these previous results, showing that the N1 component is of even greater magnitude when a subject's selective attention is required in detecting a target tone \cite{Hillyard1973}.   In their study, a subject was presented random tones in either ear with very short irregular inter-stimulus intervals (ISIs, referring to the $\Delta \text{T}$), with higher pitch tones in the left than the right ear, and with randomly placed target tones with a slightly higher pitch in both ears.  The subject's task was to count the randomly placed tones in a target ear, meaning attention should have diverted to the target ear ignoring the other ear.  As a result, Hillyard et al. was able to demonstrate that the N1 component measured at the vertex (around 60-70 ms in most subjects) was of higher amplitude for events in the attended ear.  They suggested their results reflected an enhancement of the N1 component.  They also demonstrated an evoked late positive component peaking at 250 to 400 ms (P3) in the attended ear only when the target tone was presented, indicating the selective recognition of the target tone from which any subsequent cognitive or motor activities could follow (e.g. counting of the tones). 
 
@@ -501,21 +497,21 @@ This is without any doubt a crude simplification of the perceptual system of aud
 
 %how priming, cueing, masking, binaural cues such as interaural level and time differences, and the many endogenous effects of language, culture, emotion, stress, and anxiety may effect any one of these processes
 
-\subsection{Event Detection}
+\subsection{Event Detection}\label{sec:event-detection}
 
 Evidence demonstrating the elicitation of an N1 component suggests that as little as 60-70 ms are required before the brain is capable of detecting the onset of a stimulus event, even when engaged in another task.  This component demonstrates the brains remarkable ability to unconsciously detect a change in the environment.  It takes almost another 250-300 ms before we can become conscious aware of the stimulus onset, i.e. report the actual stimulus onset, as demonstrated by the P3 wave.  As a result, it seems that the most basic perceptual model should at least begin with the detection of stimulus changes in the environment.  
 
-However, the literature discussing N1 elicitation does not seem to be clear on exactly how an onset may be modeled by the brain.  Each of the experiments reviewed above were designed with a streaming paradigm where short evoked tones were presented to a participant, meaning each tone was itself an event likely to be an onset.  Thus, each tone evoked an N1 response, as demonstrated by averaged event-related potential measurements.  However, the real world is not aligned by events for us, making the notion of an event evoking an N1 outside of the psychophysical world of simple tones an unclear one.  How then does the N1 represent an event and determine when one has occurred?
+However, the literature discussing N1 elicitation does not seem to be clear on exactly how an onset may be modeled by the brain.  Each of the experiments reviewed above were designed with a streaming paradigm where short evoked tones were presented to a participant, meaning each tone was itself an event likely to be an onset.  Thus, each tone evoked an N1 response, as was demonstrated by averaged event-related potential measurements.  However, the real world is not aligned by events for us, making the notion of an event evoking an N1 outside of the psychophysical world of simple tones an unclear one.  How then does the N1 represent an event and determine when one has occurred?  Current approaches based on averaging ERP trials may not be able to answer such a question, as the notion of a change in the environment implies a violation of expectation.  By presenting the same auditory scene to a participant (e.g. in trials), the violation of expectation or the evocation of an N1 component, may become less likely.  In other words, the repeated presentation of the same stimulus may entail a more regular representation of the entire scene, making any deviations within it less ``irregular''.
 
-Considering the groundwork laid by Bregman's Auditory Scene Analysis, one may be able to begin to define an onset detector based on the strategies of simultaneous and sequential grouping cues.  Though these cues up until now have been provided as evidence of cues for segregation (i.e. as evidenced by the ORN and MMN) rather than eliciting an N1 component, a re-interpretation of this theoretical foundation with the presented literature may allow us to apply the same framework for defining events in a continuous, real-world setting, i.e. defining onsets.  As a result, the ORN, MMN and N1 may share very similar strategies.  The major difference seems to be that the ORN/MMN are time locked to an onset, providing a basis for foreground segregation, i.e. the sonic environment before and after the N1 response, whereas the N1 may likely be based on an automatic time window.  It is unclear whether the N1 component is also activated for changes in the segregated foreground as may be represented by regularities required for the ORN/MMN, or if the N1 is only defined for changes in the entire acoustic scene.  It is likely though that the N1 may be able to consider any irregularity as a result of cues from either simultaneous or sequential grouping strategies, as it must act before both the ORN and MMN.  As well, given the research demonstrated thus far, it is also likely that this window is very short, e.g. within the timespan of evoking P3s, given the capability for detecting ISIs of up to 350 ms, though it is likely that this window size is also based on task/attentional demands.  
+Despite these issues, considering the groundwork laid by Bregman's Auditory Scene Analysis, one may be able to begin to define an onset detector based on the strategies of simultaneous and sequential grouping cues.  Though these cues up until now have been provided as evidence of cues for segregation (i.e. as evidenced by the ORN and MMN) rather than eliciting an N1 component, a re-interpretation of this theoretical foundation with the presented literature may allow us to apply the same framework for defining events in a continuous, real-world setting, i.e. defining onsets.  As a result, the ORN, MMN and N1 may share very similar strategies.  The major difference seems to be that the ORN/MMN are time locked to an onset, providing a basis for foreground segregation, i.e. the sonic environment before and after the N1 response, whereas the N1 may likely be based on an automatic time window.  It is unclear whether the N1 component is also activated for changes in the segregated foreground as may be represented by regularities required for the ORN/MMN, or if the N1 is only defined for changes in the entire acoustic scene.  It is likely though that the N1 may be able to consider any irregularity as a result of cues from either simultaneous or sequential grouping strategies, as it must act before both the ORN and MMN.  As well, given the research demonstrated thus far, it is also likely that this window is very short, e.g. within the timespan of evoking P3s, given the capability for detecting ISIs of up to 350 ms, though it is likely that this window size is also based on task/attentional demands.  
 
-\subsection{Segregation}
+\subsection{Segregation}\label{sec:segregation}
 
 Segregation as elicited by ORN/MMN waves appears to share similar strategies as the N1.  However, the clear distinction within these waves is that these must be event locked, providing a basis for before and after an event boundary.  
 
-\subsection{Integration}
+\subsection{Integration}\label{sec:integration}
 
-\subsection{Template Match}
+\subsection{Template Match}\label{sec:template-match}
 
 Another fascinating feature of the brain is its rapid capability of detecting a known sound, or a template sound, as illustrated by the PN.  What representation a template takes, or the time required before evoking a PN is still an open question, as the literature presented here did not look into complex environmental sounds.  However, the notion of a template match functionality does give us some evidence in proceeding towards a basic computational model.  Namely, it is likely that during selective attention tasks, the evocation of an N1 component must precede any detection processing of the target.  In other words, before knowing if a known sound has occurred in the sonic world, the onset of that sound must be detected via an N1 component.  Once the N1 is evoked, a PN component may be elicited if that particular event is detected as a match. 
 
@@ -714,7 +710,7 @@ X = X ./ repmat( sum(X, 2), 1, size(X, 2) );
 
 We implemented 3 computational models, (1), a Gaussian Mixture Model of Mel-Frequency Cepstral Coefficients (MFCC Model), (2), a Probabilistic Latent Component Analysis of a short-time Fourier frequency transformation (PLCA Model), and (3), a probabilistic Latent Component Analysis of a short-time Mel frequency transformation (Mel-PLCA Model).  In the following section, each of the models are explained in more detail.
 
-\subsection{MFCC model}
+\subsection{MFCC model}\label{sec:mfcc}
 The first model we built encodes an acoustic class by first representing any units of sounds as a vector of Mel-frequency cepstral coefficients (MFCCs).  The final acoustic class is represented by building a classifier using a generative probabilistic model, a Gaussian Mixture Model (GMM).  
 
 \paragraph{MFCCs}
@@ -797,27 +793,30 @@ Sounds were sourced from both the Sound Ideas\footnote{Courtesy of Ianis Lallema
 %\end{figure}
 \begin{figure}
         \centering
-        \begin{subfigure}[b]{0.25\textwidth}
+        \begin{subfigure}[b]{0.24\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/wooden-gears.pdf}
                 \caption{wooden-gears}
         \end{subfigure}%
-        \begin{subfigure}[b]{0.25\textwidth}
+        \hspace{0.1pt}
+        \begin{subfigure}[b]{0.24\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/bubbles.pdf}
                 \caption{bubbles}
         \end{subfigure}%
-        \begin{subfigure}[b]{0.25\textwidth}
+        \hspace{0.1pt}
+        \begin{subfigure}[b]{0.24\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/laughing-man.pdf}
                 \caption{laughing-man}
         \end{subfigure}%        
-        \begin{subfigure}[b]{0.25\textwidth}
+        \hspace{0.1pt}
+        \begin{subfigure}[b]{0.24\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/conversation.pdf}
                 \caption{conversation}
         \end{subfigure}%
-        \caption{Spectrum describing the frequencies (y-axis) over time (x-axis) of 4 different classes.  White corresponds to higher values.}
+        \caption{Spectrum describing the frequencies (y-axis) over time (x-axis) of 4 of our 37 different classes.  White corresponds to higher values.}
 \end{figure}
 
 
@@ -1099,17 +1098,42 @@ User 2 additionally remarked on the potential of incorporating other mediums of 
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.38\textwidth]{images/plca-all.png}
-  \caption{Screenshot of the first 3 dimensions of the PLCA model visualized in the browser.  We show three different views here.}
-  \label{fig:plca}
+  \begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{images/plca-1.png}
+  \end{subfigure}     
+  \hspace{0.5pt}
+  \begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{images/mfcc-1.png}
+  \end{subfigure}     
+  
+  \begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{images/plca-2.png}
+  \end{subfigure}     
+  \hspace{0.5pt}
+  \begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{images/mfcc-2.png}
+  \end{subfigure}     
+  
+  \begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{images/plca-3.png}
+  \caption{PLCA model}
+  \end{subfigure}     
+  \hspace{0.5pt}
+  \begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{images/mfcc-3.png}
+  \caption{MFCC model}
+  \end{subfigure}     
+  
+\caption{Screenshot of the first 3 dimensions of the PLCA and MFCC models visualized in the browser.  We show three different views here.}
 \end{figure}
 
-\begin{figure}
-  \centering
- \includegraphics[width=0.38\textwidth]{images/mfcc-all.png}
-  \caption{Screenshots of different camera views of the first 3 dimensions of the MFCC model visualized in the browser.  We show three different views here.}
-  \label{fig:mfcc}
-\end{figure}
+
 
 
 %Describe the results of the user studies and how this resulted in changes to the interface.
@@ -1149,36 +1173,30 @@ Our technical framework most closely resembles SoundSpotter \cite{CaseyICMC2007}
 \subsection{Methods}
 \label{sec:machine-listening-model}
 
-The machine listening model employed in Memory Mosaic is motivated by evidence in  literature of auditory perception stressing the importance of temporal regularities of an acoustic scene in providing continuity for maintaining a cognitive model of an acoustic scene (see \cite{Winkler2009a} for a recent in-depth review).  Such research reinforces Bregman's theory of streaming \cite{Bregman1990}, where one phase consists of the formation of primitive based features, and another on the schema-based selection of streams.  Our model thus places emphasis on temporal discontinuities of the auditory stream using a description of the acoustic scene based on the well-known cepstral coefficients.  % All math operations, including FFT, addition, subtraction, and multiplication are performed using the Apple Accelerate framework in order to achieve real-time performance on an iPhone.  These libraries are made freely available by the authors here: \url{http://github.com/pkmital}.
+The machine listening model employed in Memory Mosaic is motivated by evidence in literature of auditory perception stressing the importance of temporal regularities of an acoustic scene in providing continuity for maintaining a cognitive model of an acoustic scene (see \cite{Winkler2009a} for a recent in-depth review).  Such research reinforces Bregman's theory of streaming \cite{Bregman1990}, where one phase consists of the formation of primitive based features, and another on the schema-based selection of streams.  Our model thus places emphasis on temporal discontinuities of the auditory stream using a description of the acoustic scene based on the well-known cepstral coefficients.  All math operations, including FFT, addition, subtraction, and multiplication are performed using the Apple Accelerate framework in order to achieve real-time performance on an iPhone.  The full implementation of the presented framework incorporating these libraries are made freely available by the author here: \url{http://github.com/pkmital}.
 
 \subsubsection{Acoustic Scene Description}
 \label{subsec:acoustic-scene-description}
 
 % this needs expanding
-Numerous measures of an acoustic scenes have been investigated ...  We make use of one that has the benefit of describing as much of the structure of the acoustic space as possible in order to investigate the regularities at any spectral bandwidth.  
+\hl{Numerous computational measures of acoustic scenes have been investigated}.  We make use of one that has the benefit of describing as much of the structure of the acoustic space as possible in order to investigate the regularities at any spectral bandwidth. As demonstrated in Chapter \ref{ch:analysis-audio}, the MFCC feature transformation is capable of encoding the global structure of the auditory scene.  Details of the Mel Frequency Cepstral Coefficients (MFCC) feature transformation are described in Section \ref{sec:mfccs}.  For our iPhone-based implementation which requires a real-time listening experience, our feature transformation must be fast enough to be computed on every audio frame and each frame must also be tested for segmented, and possibly decoded.  Our approach begins with the Fast Fourier Transform (FFT) of an audio signal using a fixed frame-size at a sample rate of 44100 Hz.  A 4096-sample FFT provides high spectral resolution while still being fast enough to perform in real-time.  Following the real-FFT, the magnitudes undergo a Constant-Q Transform (CQT) with 40 triangular windows, a real log base-10 operation, and a Discrete Cosine Transform (DCT) in order to produce an 89-element MFCC feature vector.  We keep the first 13 of these.   For our purposes in defining a real-time scene synthesis, we also store the MFCC delta values, or their change from the previous frame, as well as this delta's delta.  The resulting 36-element vector can be thought of in terms of the magnitude, velocity, and acceleration of the global shape of the auditory scene.  
 
-Details of the Log Frequency Cepstral Coefficients (LFCC) feature transformation are described in \cite{CaseyICMC2007}, though is reiterated here for completeness.  The feature transformation begins with the Fast Fourier Transform (FFT) of an audio signal using a fixed frame-size.  For the purposes of real-time augmented reality on the iPhone, at a sample rate of 44100 Hz, a 4096-sample FFT provides high spectral resolution while still being fast enough to perform in real-time.  Following the real-FFT, the magnitudes undergo a Constant-Q Transform (CQT), a real log base-10 operation, and a Discrete Cosine Transform (DCT) in order to produce the 89-element LFCC feature vector.
+\subsubsection{Event Detection Model}
 
-\subsubsection{Segmentation Model}
+Our event detection model is based on temporal irregularities.  Specifically, the regularities are assumed to be Gaussian in the representational space of the acoustic scene descriptor.  This means that any deviances from the generated Gaussian model will be detected as segments.  We test deviances to the current acoustic description, though first apply a low-pass operation in an attempt to remove spontaneous noise which may produce false positives.  Following the feature transformation, the model has two states of operation: segmenting or not.  When the model is not segmenting, the model of background is built up until a temporal irregularity appears.  Similarly, for the foreground model, a separate Gaussian model of the foreground is built up from the start of the segment.  Aside from detecting the discontinuity within the foreground model, the model also detects if the current frame returns to the background model by computing distance to the background model.  Using a prior assumption of a normally distributed feature-space, we compute deviations of the background and foreground model past 3 standard deviations.  As well, checking whether the currently observed audio frame returns to background, we check if its features are within 3 standard deviations of the background model and stop segmenting.  
 
-Discontinuity of the spectral shape of an acoustic scene is determined using a statistical model employing the mean and variation of the differences on the distances to a low-pass signal of the features.  The model is described in the Figure \ref{fig:segmentation-model}.  Following the feature transformation, the model has two states of operation: segmenting or not.  When the model is not segmenting, the model of background is built up until a discontinuity appears.  Similarly, for the foreground model, a separate model of the foreground is built up from the start of the segment.  Aside from detecting the discontinuity within the foreground model, the model also detects if the current frame returns to the background model by computing distance to the background model.  Using a prior assumption of a normally distributed feature-space, <<GET A PLOT OF A BUSY STATION'S DISTRIBUTION OF FEATURE VALUES>> we compute deviations of the background and foreground model past 3 standard deviations.  As well, checking whether the currently observed audio frame returns to background, we check if its features are within 3 standard deviations of the background model and stop segmenting.  A parameter controlling the threshold of the standard deviation, between 0.1 and 3.0 standard deviations, is described in Section \ref{subsec:parameters}.
-
-Each new segment detected is written to disk using Apple's Extended Audio File Format.  Only the audio segment's first frame's 89-dimensional LFCC feature vector is retained in memory in order to form a matrix of vectors.  \hl{As our model is based on attentional shifts,}
-
-% uhh...
+Each new detected segment detected is written to disk using Apple's Extended Audio File Format.  Only the audio segment's 36-dimensional descriptor is kept in memory in order to form a matrix of vectors where the index of this vector also provides a lookup to the disk recording.  
 
 \subsubsection{Concatenative Synthesis Engine}
 
-The concatenative synthesis engine describes any input sound using a polyphonic reconstruction from its database of sound segments.  At each new onset determined by a temporal irregularity of the acoustic scene, a new set of matches are constructed to the current audio frame.  The onset detection for the synthesis engine is much like the one for the segmentation model; however, no foreground model is kept, and only the background model may deviate, creating new background models at each onset.  Thus, the model does not require knowing what is foreground or background, and only requires deviations in the continuous acoustic space.  
-
-% include graphic of the algorithm here.  
+The concatenative synthesis engine describes a decoding of an input sound using a polyphonic reconstruction from the nearest similar represented sound segments.  At each new onset determined by a temporal irregularity of the acoustic scene, a new set of matches are found to the current acoustic description.  The onset detection for the synthesis engine is much like the one for the segmentation model; however, no foreground model is kept, and only the background model may deviate, creating new background models at each onset.  Thus, the model does not require knowing what is foreground or background, and only requires deviations in the continuous acoustic space.  
 
 \subsubsection{Matching}
 
-Matching can be formulated as a nearest neighbor algorithm which begins by creating a metric space $X$ of known points $P = p_1, p_2, ..., p_n$ for $n$ points.  These points are pre-processed in such a way that a neighbors to any query point, $q \in X$, are found quickly.  To pre-process the points, we use a distance metric to keep the 3 highest matches to any query point using a simple linear index.  Iterating linearly over the dataset of LFCC vectors, the 3 best matched vectors' indices are kept using cosine similarity, which measures the angle between two vectors $A$ and $B$ like so:
+Matching can be formulated as a nearest neighbor algorithm which begins by creating a metric space $X$ of known points $P = p_1, p_2, ..., p_n$ for $n$ points.  These points are pre-processed in such a way that a neighbors to any query point, $q \in X$, are found quickly.  To pre-process the points, we use a distance metric to keep the 3 highest matches to any query point using a simple linear index.  Iterating linearly over the dataset of the acoustic description vectors, the 3 best matched vectors' indices are kept using cosine similarity, which measures the angle between two vectors $\mathbf{A}$ and $\mathbf{B}$ like so:
 
 \begin{equationb}
-\textnormal{similarity} = \cos(\theta) = {A \cdot B \over |A| |B|} = \frac{ \sum\limits_{i=1}^{n}{A_i \times B_i} }{ \\ \sqrt{\sum\limits_{i=1}^{n}{(A_i)^2}} \times \sqrt{\sum\limits_{i=1}^{n}{(B_i)^2}}} 
+\textnormal{similarity} = \cos(\theta) = {\mathbf{A} \cdot \mathbf{B} \over |\mathbf{A}| |\mathbf{B}|} = \frac{ \sum\limits_{i=1}^{n}{\mathbf{A}_i \times \mathbf{B}_i} }{ \\ \sqrt{\sum\limits_{i=1}^{n}{(\mathbf{A}_i)^2}} \times \sqrt{\sum\limits_{i=1}^{n}{(\mathbf{B}_i)^2}}} 
 \end{equationb}
 
 Using Apple's Accelerate framework, this metric can be computed using efficient vector operations that are optimized for the iPhone:
@@ -1186,22 +1204,22 @@ Using Apple's Accelerate framework, this metric can be computed using efficient 
 \begin{program}
 \begin{verbatim}
 float cosineDistance(float *x, float *y, unsigned int length) {
-	float dotProd, magX, magY;
-	float *tmp = (float*)malloc(count * sizeof(float));
+    float dotProd, magX, magY;
+    float *tmp = (float*)malloc(length * sizeof(float));
 	
-	vDSP\_dotpr(x, 1, y, 1, &dotProd, length);
+    vDSP_dotpr(x, 1, y, 1, &dotProd, length);
 	
-	vDSP\_vsq(x, 1, tmp, 1, length);
-	vDSP\_sve(tmp, 1, &magX, length);
-	magX = sqrt(magX);
+    vDSP_vsq(x, 1, tmp, 1, length);
+    vDSP_sve(tmp, 1, &magX, length);
+    magX = sqrt(magX);
 	
-	vDSP\_vsq(y, 1, tmp, 1, length);
-	vDSP\_sve(tmp, 1, &magY, length);
-	magY = sqrt(magY);
+    vDSP_vsq(y, 1, tmp, 1, length);
+    vDSP_sve(tmp, 1, &magY, length);
+    magY = sqrt(magY);
 	
-	delete tmp;
+    delete tmp;
 	
-	return 1.0 - (dotProd / (magX * magY));
+    return 1.0 - (dotProd / (magX * magY));
 }
 \end{verbatim}
 \caption{Vectorized code for performing cosine distance}
@@ -1209,15 +1227,18 @@ float cosineDistance(float *x, float *y, unsigned int length) {
 
 \subsection{Application}
 
-\subsubsection{Parameters}
-\label{subsec:parameters}
+\begin{figure}
+\centering
+\includegraphics[width=0.95\textwidth]{images/memory-mosaic-ios.png}
+\caption{Screenshot of the iOS application Memory Mosaic}
+\label{fig:memory-mosaic-ios}
+\end{figure}
 
-
-\subsubsection{Extensions}
-
-\hl{iTunes library... DJ'ing... }
+The interface of the iOS application is shown in Figure \ref{fig:memory-mosaic-ios}.  The title appears at the top, with a subtitle prefaced by ``size'' and a number.  This number reveals to the user how many ``memories'' have been learned.  Two sliders allow for interactive control of mixing the input source between the fully decoded stream, and the original input target stream.  The fully decoded stream is built as a result of the matching procedure outlined above.  The input target stream can be either the microphone or a user selected song from the iTune Library (by pressing the middle button).  The user can also start/stop learning, defining whether any segmented from the ongoing target are learned.  As well, the user can also erase the memory, thus reseting the size of the memory database to 0.  Lastly, the second slider allows the user to control the number of retrieved matches to any detected events.  The higher the number, the greater the polyphony of the resulting scene synthesis. 
 
 \subsection{Discussion}
+
+
 
 \section{Conclusion}
 
@@ -1243,8 +1264,6 @@ float cosineDistance(float *x, float *y, unsigned int length) {
 
 
 
-
-
 \onehalfspacing
 \chapter{Conceptual Framework for Building Unconscious Visual Representations}
 \label{ch:conceptual-visual}
@@ -1253,39 +1272,45 @@ float cosineDistance(float *x, float *y, unsigned int length) {
 
 \section{Introduction}
 
-The world in front of us is measured by the various sensory mechanisms we have available to us: eyes, ears, fingers, etc... These mechanisms enable us to convert physical phenomena into electrical signals that we use to construct a perception of the world.  However, we are often taught that the world we perceive is exactly as it is in front of us.  Philosopher Alan Watts describes the situation:
+The world in front of us is measured by the various sensory mechanisms we have available to us.  These mechanisms enable us to convert physical phenomena into electrical signals that we use to construct a perception of the world.  However, we are often taught that the world we perceive is exactly as it is in front of us.  Philosopher Alan Watts describes the situation:
 \begin{quotationb}
 Most of us are brought up to feel that what we see out in front of us is something that lies beyond our eyes, out there. That the colors and the shapes that you see in this room are out there. In fact, that is not so. In fact, all that you see is a state of affairs inside your head. All these colors, all these lights, are conditions of the optical nervous system. There are, outside the eyes, quanta, electronic phenomena, vibrations, but these are not light, they are not colors until they are translated into states of the human nervous system. So if you want to know how the inside of your head feels, open your eyes and look. That is how the inside of your head feels\\
 \flushright{\textsc{Alan Watts}}
 \end{quotationb}
-How it feels at certain levels...what these representations look like... build up theory... 
 
+\hl{Describe representation, why I'm interested in it, what this thesis will eventually do.  
+
+what it has already done... }
+
+Certainly, the issue of perception tackled by our brains must functionally find similar outcomes in vision as it does in audition (e.g. discover representable aspects of the world and be able to function with them).  Still, these domains require individual treatment as we employ fundamentally different behaviors when using either modality.  One obvious reasoning for this is that movements of the eye provide a unique window into visual processing, whereas within audition, no similar window exists.  However, this should not be taken to mean that these domains are modally processed in the brain.  Clearly, many multisensory and crossmodal effects have been demonstrated (e.g. the auditory override of visual perception as demonstrated in the double flash illusion and the visual override of auditory perception as demonstrated in the McGurk effect).   However, only so much can be explored within this thesis, and we therefore work towards a modal solution in the hopes that the interactions within the two modalities could be explored in the future.
+
+\hl{How it feels at certain levels...what these representations look like... build up theory... 
 
 William Gibson
 
 J. J. Gibson
 
-... 
+... }
 
 \section{Background}
 
-In a seminal study on visual perception published in 1921, Rubin describes a fundamental form of experience consisting of a figure standing on a ground.  The figure describes the focal or fundamental experience of a scene, whereas the ground describes the ambient or marginal portions of a scene.  Expanding this point further in the 1920's, the Gestalt psychologists developed a comprehensive perceptual theory employing figure-ground as a fundamental type of perception where the notion of a Gestalt, or totality, is described by a figure and ground.  The Gestalt describes the fundamental experience of perception.  As a result, any subdivision or interrogation of a part of the Gestalt would alter experience into yet another figure and ground relationship \cite{Wever1927}.  
+In a seminal thesis on visual perception in 1915, Edgar Rubin describes a fundamental form of experience consisting of a figure standing on a ground \cite{Rubin1915}.  The figure describes the focal or fundamental experience of a scene, whereas the ground describes the ambient or marginal portions of a scene.  Expanding this point further in the 1920's, the Gestalt psychologists developed a comprehensive perceptual theory employing figure-ground as a fundamental type of perception where the notion of a Gestalt, or totality, is described by a set of rules describing the formation of a figure and ground.  Effectively, the ``Gestalt'' describes the fundamental experience of perception.  As a result, any subdivision or interrogation of a part of the Gestalt would alter experience into yet another figure and ground relationship \cite{Koffka1935, Kohler1947}.  
 
 From these seminal studies, visual perception research has continued in trying to understand how the brain supports the formation and understanding of such figures.  The physiology and behavior of the eye has given researchers in visual attention and active visual cognition a unique window into the brain.  Starting with the physical wavelengths of light entering our eyes, we rapidly shift our gaze an average of 3-5 times a second, completely disrupting the continuity of light entering our eyes.  Visual acuity limitations mean that our eyes require rapid ballistic movements of the eye taking all of 30 ms (a \textit{saccade}) to project the light from the particular point of a visual scene we are interested in onto a 2-degree area of the retina with the highest spatial resolution (the \textit{fovea}).  Going away from the fovea (the \textit{parafovea}), resolution for spatial detail drops logarithmically, while resolution for motion detail increases, a relationship due to the distribution of photo-receptive cells in the eye combined with the lens of the eye itself.  
 
-As our parafovea has been engineered for high motion resolution rather than high spatial resolution, we cannot encode with high spatial detail an entire visual scene at once, as a camera with a small aperture may be able to do.  Instead, we require an active viewing of a scene in order to perceive the details of a scene.  We do this through the use of saccades and head-movements to move and finally stabilize (a \textit{fixation}) our eyes to the region of interest, a process lasting on average 330 ms.  During this time, it is thought that the encoding of details at the point of fixation into memory occurs as well as planning of the next eye-movement \cite{}.  
+As our parafovea has been engineered for high motion resolution rather than high spatial resolution, we cannot encode with high spatial detail an entire visual scene at once, as a camera with a small aperture may be able to do.  Instead, we require an active viewing of a scene in order to perceive the details of a scene.  We do this through the use of saccades and head-movements to move and finally stabilize (a \textit{fixation}) our eyes to the region of interest, a process lasting on average 330 ms.  During this time, it is thought that the encoding of details at the point of fixation into memory occurs as well as planning of the next eye-movement \cite{Henderson2003,Findlay2003}.  
 
 \subsection{Attention}
 
-The focus of research in eye-movement behavior has investigated why, where, and in which circumstances we move our eyes.  The earliest studies \cite{Buswell1935,Yarbus1967} describe two main influences of a viewer's attention to a visual scene: (1) influences dependent on mental states which focus attention towards contextually and cognitively relevant aspects of the world (\textit{endogenous}), and (2) influences dependent on involuntary capture of attention from the external environment (\textit{exogenous}).  As exogenous factors are involuntary, one would expect to find the behavior influenced by these factors to be highly consistent across viewers.  In contrast, as endogenous influences are dependent on cognitive factors resulting from emotion, memory, language, task, and previous experiences, the relation of a scene and one's endogenous influences on the scene are much less consistent across viewers.  
+The focus of research in eye-movement behavior has investigated why, where, and under which circumstances we move our eyes.  The earliest studies \cite{Buswell1935,Yarbus1967} describe two main influences of a viewer's attention to a visual scene: (1) influences dependent on mental states which focus attention towards contextually and cognitively relevant aspects of the world (\textit{endogenous}), and (2) influences dependent on involuntary capture of attention from the external environment (\textit{exogenous}).  As exogenous factors are involuntary, one would expect to find the behavior influenced by these factors to be highly consistent across viewers.  In contrast, as endogenous influences are dependent on cognitive factors resulting from emotion, memory, language, task, and previous experiences, the relation of a scene and one's endogenous influences on the scene are much less consistent across viewers.  
 
 \subsubsection{Exogenous Influences on Attention}
 
-In seminal work investigating the speed of visual perception using Gestalt primitives, Sziklai demonstrated the human visual system exhibits an attentional bottleneck of 40 bits per second on selected information, suggesting our visual systems require a simplified representation from the many megabytes per second of information coming from exogenous visual information \cite{Sziklai1956,Merrill1968}.  Much research investigating exogenous influences on static visual scenes therefore describe a simplified representation of attentional control known as a \textit{bottom-up} model \cite{Koch1985,Itti1998,Wolfe1989,Itti2001}.  Such models are built around theories of feature-integration \cite{Treisman1980} and are further supported by physiological evidence of the receptive fields and visual architecture of the visual cortex of cats \cite{Hubel1962}.  To discover the attentional biases for portions of a scene (\textit{saliency}), bottom-up models recompose a full resolution image using filter banks tuned to multiple frequency orientations and scales corresponding to pre-attentive visual features also found in early visual cortex such as luminance, oriented edges, and color contrasts.  Saliency is then computed as a weighted linear summation (\textit{integration}) of the resulting ``feature maps'' formed of different scales. 
+In seminal work investigating the speed of visual perception using Gestalt primitives, Sziklai demonstrated the human visual system exhibits an attentional bottleneck of 40-bits per second on selected information, suggesting our visual systems require a simplified representation from the many megabytes per second of information coming from exogenous visual information \cite{Sziklai1956,Merrill1968}.  Much research investigating exogenous influences on static visual scenes therefore describe a simplified representation of attentional control known as a \textit{bottom-up} model \cite{Koch1985,Itti1998,Wolfe1989,Itti2001}.  Such models are built around theories of feature-integration \cite{Treisman1980} and are further supported by physiological evidence of the receptive fields and visual architecture of the visual cortex of cats \cite{Hubel1962}.  To discover the attentional biases for portions of a scene (\textit{saliency}), bottom-up models recompose a full resolution image using filter banks tuned to multiple frequency orientations and scales corresponding to pre-attentive visual features also found in early visual cortex such as luminance, oriented edges, and color contrasts.  Saliency is then computed as a weighted linear summation (\textit{integration}) of the resulting ``feature maps'' formed of different scales. 
 
-It is thought that basic feature levels of models of integration are modulated by what Itti et. al calls ''top-down'' influences \cite{Itti2001} such as the current ongoing task \cite{Yarbus1967,Smith2011a} and the context of a scene in order to reduce processing load \cite{Henderson2003,Torralba2006}.  Though, the level at which top-down influences may affect processing is still open to debate.  Further, though these modulations are often described as top-down influences, such a term should not be confused with endogenous influences, as much research has shown that memory, context, and other endogenous factors affect early visual processing \cite{Tatler2011} which would correlate with initial feature stages thought to be unaffected in a bottom-up model.  Further, gist-based models (presented later) separating ``conceptual'' and ``perceptual'' influences may similarly be looked at in terms of ``bottom-up'' and ``top-down'' influences, or even ``exogenous'' and ``endogenous''.  As a result, these terms all vary slightly in their use and meaning, which should be no surprise given the complicated nature of the brain.  For the purposes of this thesis, endogenous and exogenous seem to offer the most useful definition separating influences originating from the brain and from the sensorial world, respectively, and other distinctions, e.g. bottom-up/top-down, are not used. 
+It is thought that basic feature levels of models of integration are modulated by what Itti et. al calls ''top-down'' influences \cite{Itti2001} such as the current ongoing task \cite{Yarbus1967,Smith2011a} and the context of a scene in order to reduce processing load \cite{Henderson2003,Torralba2006}.  Though, the level at which top-down influences may affect processing is still open to debate.  For instance, do top-down effects reach the level primary visual cortex, or secondary visual cortex, thus effecting the formation of filter bank maps?  Further, though these modulations are often described as top-down influences, such a term should not be confused with endogenous influences, as much research has shown that memory, context, and other endogenous factors affect early visual processing \cite{Tatler2011} which would correlate with initial feature stages thought to be unaffected in a bottom-up model.  Further, gist-based models (presented later) separating ``conceptual'' and ``perceptual'' influences may similarly be looked at in terms of ``bottom-up'' and ``top-down'' influences, or even ``exogenous'' and ``endogenous''.  As a result, a variety of confounding terms have been introduced in this literature to effectively help the understanding of processes in the brain.  However, they all vary slightly in their use and meaning, which should be no surprise given the complicated nature of the brain.  We therefore attempt to restrict our use, for the purposes of this thesis, to endogenous and exogenous, as these terms seem to offer the most useful definition separating influences originating from the brain and from the sensorial world, respectively, and other distinctions, e.g. bottom-up/top-down, are not used given their possible confounding definitions. 
 
-Clustering of gaze during dynamic scene viewing -> motivate flicker as an attentional map, prior to understanding temporal incoherences, sets basis for proto-object representation later... discuss attentional synchrony paradigm... 
+\hl{Clustering of gaze during dynamic scene viewing -> motivate flicker as an attentional map, prior to understanding temporal incoherences, sets basis for proto-object representation later... discuss attentional synchrony paradigm... }
   	
 \subsubsection{Endogenous Influences on Attention}
 \label{sec:endogenous-influences}
@@ -1294,12 +1319,12 @@ In a seminal study on how task affects eye-movements during static scene viewing
 
 In a similar study on dynamic scene viewing, Smith studied task-based effects on viewers' eye-movements looking at unedited videos of natural scenes from a camera mounted on a tripod \cite{Smith2011a}.  Participants were natives to the city of Edinburgh and viewed a variety of indoor and outdoor scenes from the city.  The study revealed that during free-viewing, i.e. not given any task other than to look at the video, participants looked at mostly moving objects such as people moving across the frame or cars.  However, when given the task to identify the location of the presented scene, participants had to concentrate their gaze towards the elements of a scene depicting landmarks such as buildings, signs, and trees and showed a remarkable ability to distract away from moving objects.  After viewers pressed a button indicating recognition of the location, their viewing behavior reverted to resembling the free-viewing task, fixating on moving objects such as people and cars again.  The study re-asserts the findings of Yarbus, though for a dynamic time-course.  Further, it also provides evidence of default viewing conditions during the time-course of viewing, as participants were able to ``return'' to the free-viewing task after having finished the task of recognizing the location of the scene.  
 
-Discuss use of attentional synchrony paradigm in smith paper and in Melissa's paper too...
+\hl{Discuss use of attentional synchrony paradigm in smith paper and in Melissa's paper too...}
 
 \subsection{Gist}
 \label{sec:gist}
 
-<<Introduce RSVP. then introduce gist more before saying what its findings entail... >>
+\hl{Introduce RSVP. then introduce gist more before saying what its findings entail...}
 
 The ability to classify scenes with rapid pre-attentive processing lasting only 45-135 ms (\textit{Gist}) \cite{Potter1969,Biederman1974,Potter1976,Schyns1994,Henderson1999} suggests that the general shape and structure of a scene leading one to infer its context are defined by either volumetric forms (\textit{geons}) \cite{Biederman1987}, spatial arrangement of blobs defined by contrasts in luminance or color \cite{Schyns1994,Oliva1997} or by using a scene's spatial frequency content \cite{Oliva2001,Oliva2005}.  A scene's spatial frequency content can be described by oriented band-pass filters: at a low spatial frequency, this content resembles broad edges and the layout and orientations of a scene's largest similarly textured regions, whereas at a high-spatial frequency, the response of the sharpest edges and their directions are encoded.  
 
@@ -1307,9 +1332,9 @@ Endogenous influences on subsequent processing of gist seem to influence the spe
 
 While gist is thought to be pre-attentive, i.e. before the timescale of acts of selective attention, such research suggests either that (1) the scale at which the early representation of gist operates at is affected by task-demands (i.e. only one scale of gist is encoded for pre-attentively), or (2), attention and further encoding into memory is dependent on endogenous influences on scale selection, (i.e. gist may be encoded at multiple scales, but only the scale selected by attentional machinery is encoded into memory).  Though not all scales are necessary for determining a scene's content when given prior cues (\textit{priming}), the neurobiology of early visual cortex gives scope for encoding of multiple visual scales.  It thus seems possible to assume (2) is a more likely model for the interaction of gist and attentional machinery.
 
-<<Talk about features diagnostic to a scene's description, and how they accelerate or impair recognition of a scene, e.g. color in natural environments (Oliva, 2005).>>
+\hl{Talk about features diagnostic to a scene's description, and how they accelerate or impair recognition of a scene, e.g. color in natural environments (Oliva, 2005)}
 
-Oliva further argues for two types of gist, \textit{conceptual} and \textit{perceptual}.  Conceptual gist refers to semantic information inferred from viewing a scene or from shortly after a scene disappears. Perceptual gist is thought to be motivated by the given task at hand in order to provide the structure or form of a scene and uses pre-attentive low-level information such as color, orientation, depth, and motion (Oliva, 2005).  <<Need to explain these much more as they go back into proto-objects and should be related to endo/exo as well etc...>>
+Oliva further argues for two types of gist, \textit{conceptual} and \textit{perceptual}.  Conceptual gist refers to semantic information inferred from viewing a scene or from shortly after a scene disappears. Perceptual gist is thought to be motivated by the given task at hand in order to provide the structure or form of a scene and uses pre-attentive low-level information such as color, orientation, depth, and motion (Oliva, 2005).  \hl{Need to explain these much more as they go back into proto-objects and should be related to endo/exo as well etc...}
 	
 Gist has been understood in terms of the classic rapid serial visual paradigm (RSVP), or within a screen based presentation where stimulus presentations are preceded by empty or noisy screens.  However, the real-world is not preceded by such screens, and rather the notion of gist across saccades, in a situated world becomes an important one to make.  How does a dynamic model of gist help us to maintain a coherent perspective of the world, and further guide our attention?  
 
@@ -1332,19 +1357,21 @@ Rensink takes this evidence in developing a theory of coherence, proposing that 
 
 \subsection{Visual Acuity}
 
-Models function of the eye to develop higher spatial acuity at fixation... Higher motion resolution outside of fixation.
+\hl{Models function of the eye to develop higher spatial acuity at fixation... Higher motion resolution outside of fixation.  }
+
+Behavioral evidence from change blindness studies has indicated an essential gap in our encoding of a scene, namely the precise details of a scene are only encoded at the point of fixation.  This is likely due to the computational complexity required for encoding an entire scene's high-spatial resolution information.  More importantly, it is physiologically impossible given the visual acuity limitations of the retina.  As discussed in \cite{Kalloniatis2007}, a number of factors effect visual acuity: refractive error, size of the pupil, illumination, time of exposure of the target, area of the retina stimulated, state of adaptation of the eye, and eye-movements.  Modeling each of these would be a thesis in itself.  We therefore take an overly simplified view of acuity in suggesting that a 2-degree Gaussian window describes the highest detail regions of foveal processing, from which a logarithmic falloff is a plausible general approximation.  
 
 \subsection{Exogenous Attention Model}
 
-Flicker, motion cues.
+\hl{Flicker, motion cues.}
 
 \subsection{Proto-objects}
 
-Spatial grouping of color, motion, and luminance cues.  Builds a shape representation.
+\hl{Spatial grouping of color, motion, and luminance cues.  Builds a shape representation.}
 
 \section{Discussion}
 
-Research in change blindness has indicated that though we experience a rich, detailed visual world, we do not use such rich details in building a stable representation \cite{Simons1997}.  Rensink argues that object representation requires focal attention.  However, in considering an architecture of visual perception, what is the cause of producing focal attention?  The literature presented here suggests that there is either an endogenous explanation or exogenous one.  For example, I may focus on a cup, but not build the representation of the fingerprints on the cups as I was not intending to look at this particular scale.  In this case, the endogenous influence of perceiving the object representation of fingerprints on the cup was necessary for building such a representation, even though focal attention will have brought my eyes to the cup.  It may be that my task of drinking from the cup saw the cup as what it afforded: a drink.  In a free-viewing task, if such a thing exists, it may be more likely that an exogenous influence such as the mis-representation of the cup will provoke more detailed representations and cause additional focal attention to the cup.  Thus, it may be the case that focal attention is necessary for explaining an object, however, it seems it is not sufficient and the cause of focal attention should still be considered.  
+Research in change blindness has indicated that though we experience a rich, detailed visual world, we do not use such rich details in building a stable representation \cite{Simons1997}.  Rensink argues that object representation requires focal attention.  However, in considering an architecture of visual perception, what is the cause of producing focal attention?  The literature presented here suggests that there is either an endogenous explanation or exogenous one.  For example, I may focus on a cup, but not build the representation of the fingerprints on the cups as I was not intending to look at this particular scale.  In this case, the endogenous influence of perceiving the object representation of fingerprints on the cup was necessary for building such a representation, even though focal attention will have brought my eyes to the cup.  It may be that my task of drinking from the cup saw the cup as what it afforded: a drink.  In a free-viewing task, or a task where no explicit instruction is given, it may be more likely that an exogenous influence such as the mis-representation of the cup will provoke more detailed representations and cause additional focal attention to the cup.  Thus, it may be the case that focal attention is necessary for explaining an object, however, it seems it is not sufficient and the cause of focal attention should still be considered.  
 
 When considering evidence for gist in relation to Rensink's theory of coherence, it seems viable to consider proto-objects as the same representation that gist may use \cite{Rensink2002}.  Though Schyns and Oliva argue for using oriented banded filters, it is not unlikely that collections of blob-like entities which necessarily also respond to the scale of the proto-object could provide a cue for spatial layout.   However, when considering evidence in rapid determination of the meaning of scenes, Schyns and Oliva demonstrated that early processing of a scene could be re-organized based on prior experiences \cite{Schyns1994,Oliva1997}.  Thus, it is not clear from their research alone whether the pre-conceptual representation itself can be changed, or if only the attentional machinery acting on a set of possible representations has changed.  The latter effect would entail a sort of conceptual prior on a scene, suggesting the organization of a scenes early representation remains untouched.
 
@@ -1359,8 +1386,6 @@ Proto-objects act as an indexical reference to a conceptual referent.  How proto
 Global shape as in the gist of a scene gives a context for defining the possible scale of proto-objects.  As well, the collection of proto-objects themselves can be understood as a scene's shape.  In audition, the shape could be defined as the timbre, or what frequencies the sprectrum may generalize to, as in MFCC or LFCC features.  Proto-objects for audition may be thought of in terms of independent components in a matrix factorization of a time-frequency matrix.  These components map to gestalts of spectral information.  They are also understood in the Bregman sense of streams as they are perceptual units that are also volatile depending on the current auditory information and perception of the viewer.
 
 \section{Conclusion}
-
-Needs a rewrite.
 
 Considering both the implicit, unmediated representation and the attentional and contextual mechanisms, at least two critical layers should be built into any computational model based on the evidence presented here:  (1), a pre-conceptual representation which takes into account different possible spatial configurations, composed of either band-passed edge-oriented filters, geons, or proto-objects, where this representation is affected by a logarithmic filter around the point of fixation based on the evidence of response properties of photo-receptors; (2), an attentional and contextual influence supported by the ongoing experiences of the subject such that parafoveal information becomes unstable without ongoing attention and is only inferred by through the context of the scene.  The intentions of an agent within this model are still not well-understood, as the variety of possible endogenous influences that may be possible are too great.  
 
@@ -1397,7 +1422,8 @@ Similar computational models have been developed to explain visual perception ma
 
 \section{Introduction}  
 
-Run model on DIEM..
+Despite its apparent precision, our perception of reality is not representative of the way that we see.  For instance, the light coming to our eyes is distorted, upside-down, and constantly disrupted with each movement of the eye.  How can this noisy process ever constitute our experience of the visual world?  Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted representations of the world \cite{Marr1982}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive. As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.
+
 
 Flicker provides an exogenous attention cue during dynamic scene viewing.  However, attention must act on groupings of proto-objects, rather than a pixel-based notion of change.  As a result, it is likely that the flicker is modulated by spatial grouping cues.  
 
@@ -1410,6 +1436,12 @@ D. recompute flicker based on aggregated proto-object flow
 
 Visual acuity attempts to 
 
+
+\subsection{Exogenous Attention Model}
+
+
+\subsection{Proto-objects}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1427,6 +1459,7 @@ Visual acuity attempts to
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 \onehalfspacing
@@ -1441,7 +1474,7 @@ Visual acuity attempts to
 
 
 
-\begin{figure}[ht]
+\begin{figure}
  \includegraphics[width=\textwidth]{images/klimt-van-gogh-wide.png}
  \caption{Klimt's ``The Kiss'' is synthesized using 3 images of Van Gogh paintings to produce the result on the right.  Best viewed in color at 400\%.  Images representing faithful reproductions of Gustav Klimt and Van Gogh sourced from \href{http://commons.wikimedia.org}{Wikimedia Commons} are public domain.}
  %https://en.wikipedia.org/wiki/File:Gustav_Klimt_016.jpg
@@ -1453,23 +1486,30 @@ Visual acuity attempts to
 
 
 \section{Introduction}  
-Despite its apparent precision, our perception of reality is not representative of the way that we see.  For instance, the light coming to our eyes is distorted, upside-down, and constantly disrupted with each movement of the eye.  How can this noisy process ever constitute our experience of the visual world?  Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted representations of the world \cite{Marr1982}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive. As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.
 
 Artists are well aware of the role of representation in perception.  By leaving out particular details from a visual scene and accentuating others, they are able to direct a viewer's attention within a visual medium, influencing their perception \cite{Haeberli1990,Zimmer2003}.  Picasso once famously said, "I paint forms as I think them, not as I see them" \cite{Hughes1991}.  As one of the pioneers of Cubism, Picasso wanted to represent the fact that our perception of an object is based on all possible views of it.  He did so by compressing all views of an object into a synthesized one built using abstracted shape primitives.  Other movements in art can also be characterized as utilizing representations formed through geometrical primitives.  In Impressionist painting, these forms are often described by a dense number of short and visible brush strokes.  In Abstract Expressionist painting, the primitives are again dense, though tended to be of much larger strokes in an attempt to abstract away as much detail of a real scene as possible.
 
 In this paper, we investigate an approach to the artistic stylization of photographic images and videos through the use abstracted shape representations.  The representations that are built by this method can be varied in size and density using a process that allows the user to manipulate parameters in real-time.  Our system first learns a database of representations from a corpus of images.  It then synthesizes a target image or video by matching geometric representations in the target to the closest matches in the database.  We show how changing the parameters of the synthesis process results in stylizations that represent aesthetics associated with Impressionist, Cubist, and Abstract Expressionist paintings.  As the stylization process is fast enough to work in real-time, this approach can also be used to learn and synthesize the same camera image, even aggregating the database with each new video frame in real-time, a process we call "Memory Mosaicing".  
+
 \section{Related Work}  
+
 Artistic stylization has seen significant advances over the last 14 years.  Kyprianidis recently surveyed the field in \cite{Kyprianidis2012}.  The field began as filtering and clustering algorithms were applied to images, accentuating regions within an existing image to produce aesthetics associated with different styles (e.g., for Pointillism \cite{Yang2006,Seo2010}; for cartoonization \cite{Wang2004}; for oil and watercolor \cite{Meier1996,Hertzmann2000,Bousseau2007,Gooch2002}; for Impressionism \cite{Litwinowicz1997,Hertzmann1998}).  More recent approaches focused on using user-guided segmentation, where the user manually labels key frames with strokes defining how the frame is stylized (e.g. \cite{O'Donovan2012}) or uses eye-movements in deciding which aspects of a photo are most salient \cite{DeCarlo2002}.
 
 Hertzmann's seminal work in Image Analogies \cite{Hertzmann2001} presented a branch from the aforementioned approaches by allowing control of the stylization process through choosing a pair of example images.  By finding the patterns associated with an existing stylization of an image A to another image A', a user could then stylize a target image B by analogy into B' (later extended to include analogies between curved strokes \cite{Hertzmann2002}).  In the same year, \cite{Efros2001,Liang2001a} also developed methods in texture transfer and patch-based sampling, where existing image material was used to synthesize textures of arbitrary sizes.  These methods were later extended in \cite{Wang2004a}, where a user specified small blocks in an example painting that represented the style to recreate.  These blocks were then synthesized along computed paint strokes in the target image using an efficient hierarchical texture synthesis method.  Though Wang's approach and even more recent methods (e.g., \cite{Guo2006}) produces impressive results, it also relies on user interaction to select the representative patches expressing an artistic style.  Further, the aforementioned work in texture transfer as well as more recent approaches (e.g., \cite{Lee2010}) all rely on a single source image in order to transfer the style of the texture, meaning the range of stylizations possible are constrained to the information contained in a single image.  In this paper, we develop an approach that does not require the user to manually label any regions and that is not confined to a single example image while still affording a range of possible styles.  
 
 Our approach, corpus-based visual synthesis (CBVS), synthesizes a target image/video using existing pre-defined visual content.  As a result, it is also borrows methods from dictionary-based approaches (\cite{Zeng2009,Healey2004}), though our approach does not focus on developing strokes from expert training as we automatically segment a corpus of user chosen images.  It also shares methodology with collage/mosaic-based work (e.g. \cite{Kim2002,Orchard2008,Huang2011a,Miller2012}), allowing a user to work with a period of an artist's work or entire videos, for example.  Though these approaches are targeted for collage/mosaic-based purposes rather than artistic stylization, \cite{Huang2011a} describes an approach that is also motivated by an artist making use of collage.  Their approach produces what they call ``Arcimboldo-like'' collages in the style of 18th century painter Giuseppe Arcimboldo, relying on user strokes to segment the images used.  In contrast, CBVS is aimed towards producing a range of possible artistic stylizations through changing a few simple parameters.  Further, as segmentation happens without requiring user-selected patches or strokes, CBVS is also suitable for producing stylization of videos, unlike the very impressive though slow approach (15 minutes for a 300 x 400 pixel image) reported in \cite{Chang2010}.
+
 \section{Corpus-based Visual Synthesis Framework}  
+
 CBVS begins by first aggregating all frames from a user chosen corpora of images, $\mathbf{C} = \{C_1, C_2, ..., C_N\}$, containing $N$ total candidate images.  We aim to use the content solely from this corpus to artistically stylize a target image or video, $\mathbf{T} = \{T_1, T_2, ..., T_M\}$, containing $M$ total frames.  We develop a rendering procedure for image and video-based targets where parameters of the synthesis can be changed interactively.  To begin, we describe detection, tracking, description, matching, and synthesis of the abstracted shape representations.  We then describe parameters influencing each of these steps before showing our results in Section \ref{sec:results}.
-\subsection{Detection}\vspace{-0.4em}
+
+\subsection{Detection}
+
 For both the candidate and target frames, we aim to detect abstracted shape primitives described by coherent image regions.  For this purpose, we make use of maximally stable color regions (MSCR) \cite{Forssen2007}.  The algorithm described in \cite{Forssen2007} successively clusters neighboring pixels with similar colors described by multiple thresholds of a distance measure which takes into account the inherent camera noise and the probability distribution of each RGB color channel.  Regions are denoted as maximally stable if they do not grow larger than a minimum margin for certain number of time-steps.  Previous techniques employing posterization, filtering, or watershed have had to apply their algorithm at multiple scales in order to discover regions that are superimposed or overlapped, increasing their computational complexity.  MSCR has the benefit over these previous techniques as it provides an implicit ordering of superimposed regions discovered through successive time-steps of the clustering algorithm.  Further, it allows us to prune regions by restricting their area to a range of minimum and maximum sizes.  In Section \ref{sec:parameters}, we discuss these parameters in greater detail in relation to the styles they can produce. 
 We use MSCR to detect the set of all regions in each candidate and target frame, denoted as $\mathbf{R_C} = \{R_1, R_2, ..., R_{N_C}\}$ and $\mathbf{R_T} = \{R_1, R_2, ..., R_{N_T}\}$ where $N_C$ is the number of regions detected in all candidate frames and $N_T$ is the number of target regions.  
-\subsection{Tracking}\vspace{-0.4em}
+
+\subsection{Tracking}
+
 It is often desirable to produce temporally coherent stylizations, meaning if a region within a target video frame has not moved, it is not re-stylized.  This is especially the case in noisy or compressed videos, where artifacts may appear that should not be stylized.  One approach would be to track regions using a GPU-based Optical Flow measure.  This would likely produce reasonable temporal coherence without sparing real-time interaction.  However, we simply follow \cite{Hertzmann2000} in using the flicker for detecting the change in the original target video, as this approach is fast and easy to compute.  Let the flicker for a pixel at location $(i,j)$ be described by:
 \begin{equationb}
 f(i,j) = I_t(i,j) - I_{t-1}(i,j)
@@ -1478,7 +1518,9 @@ where $I$ is the image luminance at time $t$.  Then, if the flicker at the regio
 \begin{equationb}
 R_T = \{ R_i \suchthat f(C_{R_i}) > threshold, \forall i = 1...N_T \}
 \end{equationb}
-\subsection{Description}\vspace{-0.4em}
+
+\subsection{Description}
+
 We form a descriptor comprised of shape and color values.  The shape descriptor for each region, $d_{R_i}$, is composed of the normalized central moments up to order 2.  The average color of the region is converted from RGB to the 3-channel CIELAB color space, $L, a^{*}, b^{*}$.  These form the final descriptor: 
 \begin{equationb}
 d_{R_i} = \Big(\mu_{00}, \eta_{11}, \eta_{20}, \eta_{02}, L, a^{*}, b^{*}\Big)
@@ -1488,70 +1530,82 @@ where $\mu_{ij}$ is the central image moment of order $i$ and $j$, i.e. $\mu_{00
 \eta_{ij} = \frac{\mu_{ij}}{\mu_{00}^{\left(1 + \frac{i+j}{2}\right)}}
 \end{equationb}
 Centralizing the moments allows us to compare regions with translation-invariance, while normalizing the first and second order moment allows us to compare regions with scale-invariance.  We include the area as the first term as this ensures regions are not distorted too much when matching.  Further, employing CIELAB allows us to define the region in a color space where we can then use perceptual metrics for matching.  We describe this metric in greater detail in the next section.
-\subsection{Matching}\vspace{-0.4em}
+
+\subsection{Matching}
+
 We match each region in the target to its nearest neighbors in the database using a metric combining distances from each region's shape and color, $d_s(R_t, R_c)$ and $d_c(R_t, R_c)$, respectively:  
 \begin{equationb}
 d(R_t, R_c) = d_s(R_t, R_c) + d_c(R_t, R_c)
 \end{equationb}
 \label{eq:distance}
 The shape distance is simply computed as the absolute difference between the first and second order normalized central image moments of each region (i.e. the first four components of the descriptor).  For the color distance, we make use of the official CIE color-difference equation, CIEDE2000, which provides reliable color discrimination with interactive terms for lightness, chromaticity, and hue weighting \cite{Luo2001}.   This difference formula has been shown to be more perceptually accurate at determining the difference between colors than previous methods employing linear difference using RGB or LUV color values, as it is based on empirical evidence of perceived color difference.  For our tests, we use the default parameters described in \cite{Luo2001} for the weighting terms.
-\subsection{Synthesis}\vspace{-0.4em}
+
+\subsection{Synthesis}
+
 To ensure regions are drawn from their background to the foreground, we synthesize each target region in order from the largest to smallest area sizes.  In contrast to methods that place brush strokes based on the stroke direction at each pixel on the medial axis (e.g.,\cite{Wang2004a}), we find the affine geometric transform describing the transformation from $R_{C_i}$ to $R_{T_i}$.  This can be described by a translation, rotation, and scaling.  The translation component is simply the difference in each region's centroid.  The rotation can be found using the central image moments: 
 \begin{equationb}
 \Theta = \frac{1}{2} * \arctan  \dfrac{ 2 * \frac{\mu_{11}}{\mu_{00}} } { \frac{\mu_{20}}{\mu_{00}} - \frac{\mu_{02}}{\mu_{00}} }
 \end{equationb}
 Finally, scaling is simply the ratio of the target to candidate region's bounding box.  This process has the benefit of being very fast using graphics hardware as it can be computed by a single matrix multiplication.  Each region is then layered above the previous one before creating a synthesized image.  In image-based stylization, multiple syntheses created with changing parameters can be blended together to create more detailed and expressive styles which may require many ``layers'' of ``paint''.  We discuss these parameters in greater detail in the next section.
+
+
 \section{Parameters}  
+
 Parameters influencing the region detection algorithm are set independently for the corpus and the target, as their function differs.
-\subsection{Corpus Parameters}\vspace{-0.4em}
+
+\subsection{Corpus Parameters}
 \label{sec:parameters}
+
 For the corpus, we define the \textit{timesteps}, \textit{minimum region area}, and \textit{maximum region area} of the detected regions.  We use a set of parameters that learns the widest range of possible regions covering both small and large regions.  In some cases, as in more abstract styles, it may be desirable to learn a very small number of regions, limiting the range of expressiveness to a few possible primitives.  As the timesteps parameter influences the number of evolutions allowed in the MSCR algorithm, the higher this number, the more regions will be discovered.  Similarly, lowering the minimum region size and increasing the maximum region size reduces the number of region that are pruned.  In our tests, we found a single set of parameters to be sufficient for defining a varied corpus: 100 for the timesteps, 35 pixels for the minimum region area, and 50\% of the image's size for maximum region area.
 
 When learning a corpus from many images, we restrict learning regions that are within a distance threshold (using Equation \ref{eq:distance}) of all regions in the existing database.  For our examples, we set this parameter to 50.  This value is low enough to include many regions, though high enough to avoid detecting duplicate regions.  A higher number for this parameter will lead to very discriminative regions.  In our tests, when setting this number higher, we found that our corpus had less variety of regions to synthesize from, leading to stronger shape or color mismatches.  
-\subsection{Target Parameters}\vspace{-0.4em}
-\begin{figure}[ht]
+
+\subsection{Target Parameters}
+
+\begin{figure}
   \centering
-  \includegraphics[width=3.1in]{images/spatial-blending-3.png}
-  
+  \includegraphics[width=\textwidth]{images/spatial-blending-3.png}
   \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, we show an example stylization with (first image) and without (second image) spatial blending.  We also draw the region's orientation depicted by red/green axes in order to better show the regions (best viewed in the color manuscript at 200\%).}
   \label{fig:spatial-blending}
 \end{figure}
-\begin{figure}[ht]
+
+\begin{figure}
   \centering
-  \includegraphics[width=3.1in]{images/increasing-timesteps-2.png}
-  
+  \includegraphics[width=\textwidth]{images/increasing-timesteps-2.png}
   \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the timesteps are increased over time.  This allows the user to detect more regions and develop a denser and higher contrast stylization.}
   \label{fig:timesteps}
 \end{figure}
-\begin{figure}[ht]
+
+\begin{figure}
   \centering
-  \includegraphics[width=3.1in]{images/decreasing-minimum-size-2.png}
-  
+  \includegraphics[width=\textwidth]{images/decreasing-minimum-size-2.png}
   \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the minimum region size is decreased over time, allowing the user to detect smaller regions and produce finer detailed stylizations.}
   \label{fig:minimum-size}
 \end{figure}
-\begin{figure}[ht]
+
+\begin{figure}
   \centering
-  \includegraphics[width=3.1in]{images/blending-radius-2.png}
-  
+  \includegraphics[width=\textwidth]{images/blending-radius-2.png}
   \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the blending radius is increased over time.  This parameter influences the overall size of the drawn regions.  Setting this number smaller can help to produce finer details on top of existing layers, often associated with both Impressionist and Abstract Expressionist styles.}
   \label{fig:blending-radius}
 \end{figure}
-\begin{figure}[ht]
+
+\begin{figure}
   \centering
-  \includegraphics[width=3.1in]{images/temporal-blending.png}
-  
+  \includegraphics[width=\textwidth]{images/temporal-blending.png}
   \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, we increase the temporal blending factor.  This influences the opacity of every region drawn. }
   \label{fig:temporal-blending}
 \end{figure}
-\begin{figure}[ht]
+
+\begin{figure}
   \centering
-  \includegraphics[width=3.1in]{images/temporal-blending-changing-params.png}
-  
-  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, we use temporal blending as well as decreasing minimum region size and increased timesteps to begin to produce the final synthesis.}
+  \includegraphics[width=\textwidth]{images/temporal-blending-changing-params.png}
+    \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, we use temporal blending as well as decreasing minimum region size and increased timesteps to begin to produce the final synthesis.}
   \label{fig:temporal-blending-changing-parameters}
 \end{figure}
+
 For the target, we allow the user to interactively define a few parameters affecting the output stylization.  
+
 \begin{itemize}
 \item \textit{Spatial blending}: Allows the user to use feathered elliptical regions instead of rectangular ones (see Figure-\ref{fig:spatial-blending}).  When stylizing finer details of an image, this parameter is very useful for removing hard edges produced by rectangular regions.  
 \item \textit{Timesteps}: Increasing this produces more regions, making the image denser (see Figure-\ref{fig:timesteps}).  As well, this will also produce more regions that coincide with each other.  As a result, when synthesizing with a high number for the timesteps, the result resembles an overpainting effect.  For styles that require many ``layers'' of ``paint'', we use a higher number for the timesteps.  When used in combination with blending, increasing this can also increase the contrast.
@@ -1561,13 +1615,16 @@ For the target, we allow the user to interactively define a few parameters affec
 \item \textit{Motion tracking}: Allows regions to be drawn only if their detected motion is higher than a fixed threshold.  For our experiments, we set this number to 5.  
 \item \textit{Blending radius}: Influences the feathering radius of the detected region (see Figure-\ref{fig:blending-radius}).  Normally, each detected region is matched to one in the database and then through an affine transformation placed where the detected region was using the same scale and rotation.  However, it may be desirable to change the scale of this region using the blending radius to produce different effects.  When scaling this region down, a user confines drawing to only small regions being painted, often produces styles associated with Abstract Expressionism.
 \end{itemize}
+
 For image-based targets, the aforementioned parameters effect the frame-to-frame compositing, meaning the same image is rendered over itself.  For video-based targets, however, only a single iteration is used for each frame, as much of the information required for building styles requiring more detailed composites can be extracted over the first 1 or 2 frames.  We demonstrate how these parameters can influence a wide range of stylizations in the next section.
-\section{Results}  
-\label{sec:results}
+
+\section{Results}\label{sec:results}
+
 We use the presented framework to produce artistic stylizations of photo-realistic images and videos.  In this section, we show our results in image-based stylization using a landscape, abstract, and painterly scene. We then show how the same framework can be used with video targets, including an abstract and portrait video.  As well, we show a particular case where the source material is aggregated from a live-stream of the target, i.e. the source and target are the same, a process we call ``Memory Mosaicing''.  
 
-\subsection{Image: Landscape}\vspace{-0.4em}
-\begin{figure*}[ht]
+\subsection{Image: Landscape}
+
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/cows-klee.png}
   \caption{A landscape picture of cows grazing is synthesized using 13 images of Expressionism painter Paul Klee to produce the image on the right.  Images representing faithful reproductions of Paul Klee sourced from \href{http://www.artchive.com/}{Mark Harden's Artchive} are public domain. Photo of cows taken by the author.}
@@ -1575,19 +1632,25 @@ We use the presented framework to produce artistic stylizations of photo-realist
   %This work is in the public domain in the United States because it was first published outside the United States (and not published in the U.S. within 30 days) and it was first published before 1978 without complying with U.S. copyright formalities or after 1978 without copyright notice and it was in the public domain in its home country on the URAA date (January 1, 1996 for most countries).
   %This work is in the public domain in the European Union and non-EU countries with a copyright term of life of the author plus 70 years or less.
   \label{fig:cows-klee}
-\end{figure*}
+\end{figure}
+
 In Figure-\ref{fig:cows-klee}, we synthesize a landscape photo of cows grazing using Expressionist painter Paul Klee.  We turn off spatial blending and use a small value for the minimum region size.  We also allow the maximum region size to be very large.  This results in a relatively smaller region being matched to the sky and stretched to fill the top-half of the image.  The synthesized region happens to look like a rainbow, though the original region itself was very abstract (see the first image in the second row of the Klee corpus).  
-\subsection{Image: Abstract}\vspace{-0.4em}
-\begin{figure*}[ht]
+
+\subsection{Image: Abstract}
+
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/blanket-klimt.png}
   \caption{A close-up picture of a blanket is synthesized using Klimt's The Kiss to produce the image on the right. Best viewed in the color manuscript at 200\%. Images representing faithful reproductions of Gustav Klimt sourced from \href{http://commons.wikimedia.org}{Wikimedia Commons} are public domain.  Photorealistic scene of blanket taken by the author.}
   %https://en.wikipedia.org/wiki/File:Gustav_Klimt_016.jpg
   \label{fig:blanket-klimt}
-\end{figure*}
+\end{figure}
+
 In Figure-\ref{fig:blanket-klimt}, we synthesize a close-up picture of a blanket using Klimt's The Kiss.  The target this time is very abstract and we will not need to synthesize parameters that force an abstract quality rendering such as large region sizes.  As such, we allow the minimum region size to be very small producing more details, though retaining a style associated with Abstract Expressionism.
-\subsection{Image: Painterly}\vspace{-0.4em}
-\begin{figure*}[ht]
+
+\subsection{Image: Painterly}
+
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/van-gogh-monet.png}
   \caption{Van Gogh's ``The Bedroom'' is synthesized using 3 images of Monet paintings to produce the image on the right. Images representing faithful reproductions of Van Gogh and Claude Monet sourced from \href{http://commons.wikimedia.org}{Wikimedia Commons} are public domain.}
@@ -1596,32 +1659,42 @@ In Figure-\ref{fig:blanket-klimt}, we synthesize a close-up picture of a blanket
   %https://en.wikipedia.org/wiki/File:Bridge_Over_a_Pond_of_Water_Lilies,_Claude_Monet_1899.jpg
   %https://en.wikipedia.org/wiki/File:Monet_Water_Lilies_1916.jpg
   \label{fig:van-gogh-monet}
-\end{figure*}
+\end{figure}
+
 We demonstrate how CBVS can stylize existing painterly images into other styles.  In the teaser graphic in Figure-\ref{fig:teaser}, we use three paintings by Van Gogh to stylize Klimt's The Kiss.  Here, we set the minimum region size to be small, allowing finer details and smaller brush strokes, and allow the timesteps to be high as we want to bring out as much contrast as possible.  
 
 In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom using 3 images of Monet's Water Lilies series.  Here, we ensure we detect many small regions by increasing the timesteps and setting the minimum region size to be very small.  Further, we turn on spatial blending as we decrease the minimum region size, as we want to avoid rendering any strong edges, retaining an Impressionist quality.
+
 \subsection{Video: Portrait}
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=2.8in]{images/dad-rowing-4x2.png}
-  \caption{Left: 4 frames from a target video; Right: Stylization using Paul Klee's corpus in Figure-\ref{fig:cows-klee}.  We aim to synthesize with greater expression and less abstraction, and allow the minimum region size to be very small. Best viewed in the color manuscript at 200\% or in the video online. Photos by the author.}
-  \label{fig:rowing}
+
+
+\begin{figure}
+  	\centering
+  	\includegraphics[width=\textwidth]{images/dad-rowing-4x2.png}
+  	\caption{Left: 4 frames from a target video; Right: Stylization using Paul Klee's corpus in Figure-\ref{fig:cows-klee}.  We aim to synthesize with greater expression and less abstraction, and allow the minimum region size to be very small. Best viewed in the color manuscript at 200\% or in the video online. Photos by the author.}
+  	\label{fig:rowing}
 \end{figure}
+  
+\begin{figure}
+  	\centering
+  	\includegraphics[width=\textwidth]{images/blanket-video.png}
+  	\caption{Left: 4 frames from a target video; Right: Stylization using Paul Klee's corpus in Figure-\ref{fig:cows-klee}.  Here we aim to stylize with greater abstraction than in Figure-\ref{fig:rowing}, and set the minimum region size to be fairly large. Best viewed in the color manuscript at 200\% or in the video online.   Photos by the author.}
+  	\label{fig:blanket-video}
+\end{figure}
+   
+
+
 Two examples in video-based stylization are presented: one of a subject rowing a boat and another of abstract imagery.  In Figure-\ref{fig:rowing}, we can see 4 frames taken from a video stylization.  We use the same corpus as in Figure-\ref{fig:cows-klee} and allow the minimum region size to be very small, resulting in a more Expressionist style.  The first frame is not as composed as the later frames, as there will have only been 1 frame of compositing.  As a result, the first frame in video-based Expressionist stylization may not be a consistent style with its later frames.
-\subsection{Video: Abstract}\vspace{-0.4em}
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=2.8in]{images/blanket-video.png}
-  \caption{Left: 4 frames from a target video; Right: Stylization using Paul Klee's corpus in Figure-\ref{fig:cows-klee}.  Here we aim to stylize with greater abstraction than in Figure-\ref{fig:rowing}, and set the minimum region size to be fairly large. Best viewed in the color manuscript at 200\% or in the video online.   Photos by the author.}
-  \label{fig:blanket-video}
-\end{figure}
+
+\subsection{Video: Abstract}
+
 In Figure-\ref{fig:blanket-video}, we stylize a video using the same corpus as in Figure-\ref{fig:cows-klee} and set the minimum region size to be very large.  Thus, instead of producing an Expressionist style as in Figure-\ref{fig:rowing}, less details are synthesized resulting in a more abstract style.  The first frame in this video does not necessarily require more than 1 iteration as it is synthesizing very large regions that often also overlap.
 
-\subsubsection{Video: The Simpsons vs. Family Guy}
+\subsection{Video: The Simpsons vs. Family Guy}
 
 70k views and Vimeo Staff Pick, and selected for exhibition twice, once at the Tin Shed Gallery in London, UK, and again at the Media Art Histories conference during the ART+COMMUNICATION: SAVE AS Exhibition in Riga, Latvia.
 
-\subsection{Memory Mosaicing}\vspace{-0.4em}
+\subsection{Memory Mosaicing}
 % picture of memory mosaicing as video thumbnails
 
 The artistic stylization process can be used in a real-time context without an explicit corpus.  In this case, we aggregate representations learned from the ongoing stream of target frames.  Parameters are generally set by the user interacting with the process, or contained to a single preset.  In particular, restricting the total number of representations as first-in-first-out queue allows the process to continue in real-time with a simple linear search index.  In the examples shown in Figure \ref{fig:memory-mosaicing}, we show two example outputs from the same camera stream.  In the left image, we aim for large region sizes and low timesteps, resulting in a more abstract style, reminiscent of Cubist style paintings.  In the right example, we allow higher timesteps and only small region sizes, resulting in a more expressive style similar to paintings in Abstract Expressionism.  
@@ -1637,13 +1710,12 @@ A number of issues could be addressed in future versions.  For instance, synthes
 %%% Please use the ``acmsiggraph'' BibTeX style to properly format your
 %%% bibliography.
 
-\begin{figure}[h]
+\begin{figure}
   \centering
-  \includegraphics[width=2.8in]{images/memory-mosaic-2x2.png}
+  \includegraphics[width=\textwidth]{images/memory-mosaic-2x2.png}
   \caption{2 examples of ``Memory Mosaicing'' showing the input (top) and resulting real-time stylization (bottom).   Photos by the author.}
   \label{fig:memory-mosaicing}
 \end{figure}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1752,7 +1824,6 @@ Though one month after the 2012 fall democratic convention speech featuring firs
 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1770,6 +1841,8 @@ Though one month after the 2012 fall democratic convention speech featuring firs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \appendix
 \include{Appendix1}
