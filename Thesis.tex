@@ -101,7 +101,7 @@ synthesis, scene analysis, encoding, decoding
 
 \singlespacing
 \tableofcontents
-\onehalfspacing
+\doublespacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,10 +145,11 @@ synthesis, scene analysis, encoding, decoding
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\onehalfspacing
 \chapter{Introduction}
 \label{chap:intro}
 \minitoc
-
+\doublespacing
 
 \epigraph{\flushright{These fragments I have shored against my ruins.}}%
 {-- \textsc{T.S. Eliot}, excerpt from \textit{The Waste Land}}%
@@ -159,15 +160,35 @@ synthesis, scene analysis, encoding, decoding
 
 %This thesis approaches the study of perception through an arts practice based in collage.  the world appears to us as constituting meaningful objects and entities.  Signal -> Semantics; Study of perception; My approach based in collage... 
 
-Collage is an arts-practice which appropriates cultural fragments for its raw materials.  Depending on its medium, it juxtaposes, often chaotically, fragments such as photographs, text, or clips of sound, removing them from their original context.  Collage is capable of producing new interpretations which the original fragments alone could not have provided.  It is inherently a process that invokes new ways of seeing creating a meaning-making process between the artist producing the chaos and the audience that must unify its cut-up percepts into order.  % More than an artistic technique, it has also been described as a ``philosophical attitude'' that can be applied to virtually any medium \cite{McLeod2011}.  
+Collage is an arts-practice which appropriates fragments of culture for its materials.  Depending on its medium, it juxtaposes, often chaotically, fragments such as photographs, text, or clips of sound, removing them from their original context.  By doing so, it is capable of producing new interpretations which the original fragments alone could not have provided.  It is inherently a process that invokes new ways of seeing creating a meaning-making process between the artist producing the chaos and the audience that must unify its cut-up percepts into order.  More than an artistic technique, it has also been described as a ``philosophical attitude'' that can be applied to virtually any medium \cite{McLeod2011}.  
 
-%As collage-based practices have progressed over the last 100 years, media too has evolved.  As a result, the tools and technologies available for manipulating and accessing media have altered the practice.  
+As collage-based practices have progressed over the last 100 years, media too has evolved.  As a result, the tools and technologies available for manipulating and accessing media have altered the practice.  Specifically, within computational practices, procedural manipulation of media content have allowed artists to invoke new ways of seeing through algorithmic processing of the media.  
 
-This thesis attempts to build a computational framework for generating a particular type of collage I call a \textit{scene synthesis}.  Scene synthesis places emphasis on using psychologically-motivated representations thought to support perception for the units of collage.  Across numerous literature these representations are thought to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  Once the units of collage have been built, scene synthesis requires a target scene to match to.  In the examples presented in this thesis, this can be either an existing sound, existing image or video, or a real-time live feed coming from a camera and microphone.   
+For instance, Nick Collin's BBCut allows one to generate computationally generated audio collages of existing audio tracks.  His software automatically re-assembles splices of the original audio track in order to emulate different musical styles such as breakbeat or thrashbeat \cite{Collins2004}.  
 
-The overall process of scene synthesis can also be summarized by an \textit{encoding} and \textit{decoding} process.  Discuss its similarity to coding within discovering distinct neural populations; information compression in media.
+The inspiration this thesis takes from such practices is the recombination from the perspective of the participant rather than the audience.  That is, a participant's prior experiences with the original content of the collage affords them to create interpretations of the collage.  In other words, the collage is a juxtaposition of a familiar material, rather than an arbitrary one.  As a result, there are expectations, surprises, and strange combinations that give rise to new meanings.
+
+What happens 
+
+\hl{Importance of abstraction, abstract, to bring about understanding...}
+
+\hl{Really have to stress the importance of a user within these processes... their original experiences... 
+
+Thus, the power of meaning making within the ordinary collage is now extended to be defined based on (1) a participant and (2) the generative algorithms they interact with.   }
+
+This thesis is entirely inspired by interactions with generative algorithms and the power of collage to infer new meanings.  Taking these inspirations forward, this thesis attempts to build a computational framework for generating a particular type of collage I call a \textit{scene synthesis}.  Scene synthesis places emphasis on using psychologically-motivated representations thought to support perception for the units of collage.  Across numerous literature these representations are thought to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  Once the units of collage have been built, scene synthesis requires a target scene to match to.  In the examples presented in this thesis, this can be either an existing sound, existing image or video, or a real-time live feed coming from a camera and microphone.   
+
+\hl{The overall process of scene synthesis can also be summarized by an \textit{encoding} and \textit{decoding} process.  Shannon's mathematical formulation of a communication system describes a source encoding a message to a transmitter, effectively producing a physical phenomena introducing noise, to be received and decoded finally by any destination.  
+
+Discuss its similarity to coding within discovering distinct neural populations; information theory/transmission/compression in media, stuart hall's account in cultural studies, ecology...
 
 %Numerous artists have had similar interests in the power ``abstract'' representations play in defining perception.  For instance... 
+
+Communication theory... signal/noise... receiver... relationship of randomness to information, relationship to exogenous attention or change detection within perception... }
+
+Feedback as regulatory process, would self-regulate, though financial collapse may have disproven the notion.
+
+
 
 %Subvert traditional practice of art, allow user to be integral to the artwork, create the collage based on their experiences and their influence in the piece, therefore defining the artwork as based on their experience, canon
 
@@ -214,13 +235,13 @@ It is in the 'screen world' that a wealth of new technologies would be developed
 
 Various other software such as Adobe Director, Adobe Flash, VJamm, VDMX, Apple Quartz Composer, Cycling '74's Jitter, Resolume's Avenue, VVVV, Modul8, Algoriddim's VJay, or Processing created greater possibilities for video-based media than standard non-linear editors such as Adobe Premiere or Apple Final Cut Pro could offer \cite{Jaeger2006}.  These tools opened video-based practices to real-time and performative practices within Visual Music and VJ cultures.  Many Visual Music and VJ artists even created their own software, releasing them to the public such as Matt Black of Coldcut, who created VJamm, Netochka Nezvanova who wrote Nato.0+55, or Miller Puckette, author of pd \cite{Jaeger2006}.  %Though these practitioners did not employ collage solely, it was certainly common of VJ practice to use fragments of existing material in the form of found video footage and mix them; while in Visual Music, abstract representations very similar to the ones proposed in this thesis as psychologically motivated representations were in abundance.  Seminal artists such as Oskar Fischinger, Norman McLaren, and 
 
-Situationists detournment
+\hl{Situationists detournment
 
 Culture Jamming
 
 William Burrough's Electronic Revolution
 
-Scratch Video of British 1980's 
+Scratch Video of British 1980's}
 
 Collage-based video practitioners in the 1990's would often use clips of appropriated television footage such as the news footage of the motorcade leading to John F. Kennedy's assassination in Steinski's ``The Motorcade Sped On'', George H. W. Bush's news broadcasts on the Gulf War in EBN's ``We Will Rock You'', or Coldcut's use of nature videos.  However, these early examples as well as some recent artists such as Eclectic Method did not employ collage in the traditional spatial-sense, i.e. by juxtaposing fragments spatially across a single frame, and generally kept any source frames intact.  They did however experiment with the use of ``blending'', a technique with takes 2 or more images and blends the two together using a variety of functions such as: add, multiply, subtract, or difference.  
 
@@ -243,6 +264,8 @@ Caught, now in court 'cause I stole a beat\\
 This is a sampling sport
 \end{verseb}
 
+\hl{Why did I bring up Hip-hop?}
+
 %Stop Motion -> Jan Svankmajer -> Pink Freud: https://www.youtube.com/watch?v=5NPiOjFVQRc
 %Vinyl -> DJ'ing
 %VJ'ing (VDMX, Quartz Composer, Jitter, Resolume Avenue; VVVV; Modul8). EBN; Coldcut in the 90's who used nature videos such as monkeys jumping, beetles tapping, and plants opening and synchronized their motions to sound samples using VJamm. Eclectic Method using Algoriddim's VJay iPad app.
@@ -263,43 +286,43 @@ If we can temporarily overlook the distinction of copying that copyright law has
 
 \subsubsection{Cybernetics, Signal Processing, and Information Theory}
 
-Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, describes a field of research denoted, cybernetics, which evolved out of military experiments in the 1940's describing feedback processes which repositioned actuators (e.g. missiles/guns) based on updated predictions (e.g. sonar/radar/filters).  As an example, a matched filter provided a template response of a radar signal (e.g. of a known target) and was matched at each radar sweep providing a new orientation towards a target.  This new orientation could then be fed back into the system which would then again perform a radar sweep, a matched filter response, and a new heading, \textit{ad infinitum}.  This process forms the basic idea of homing in missile guidance, and is a defining principle of reducing noise in the field of signal processing (i.e. it maximizes the signal-to-noise ratio of a known signal corrupted by additive noise).   It has also been likened to processes of active perception by Wiener himself.  Wiener suggests that each movement of the eye and neuronal levels of processing leads towards an invariant object representation (discussed in greater detail in Chapter \ref{ch:conceptual-visual}).  This entire process, in Wiener's own words, ``brings [visual] information one step nearer to the form in which it is used and is preserved in the memory.''  Wiener's early insights into the function of the eye, neuronal processing stages, and internal representations supporting perception will be expanded upon more in this thesis, as I attempt to motivate and model a similar perceptual process in both auditory and visual domain and use the model within a collage-based practice.
+Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, describes a field of research denoted, cybernetics, which evolved out of military experiments in the 1940's describing feedback processes which repositioned actuators (e.g. missiles/guns) based on updated predictions (e.g. sonar/radar/filters).  As an example, a matched filter provided a template response of a radar signal (e.g. of a known target) and was matched at each radar sweep providing a new orientation towards a target.  This new orientation could then be fed back into the system which would then again perform a radar sweep, a matched filter response, and a new heading, \textit{ad infinitum}.  This process forms the basic idea of homing in missile guidance, and is a defining principle of reducing noise in the field of signal processing (i.e. it maximizes the signal-to-noise ratio of a known signal corrupted by additive noise).   
 
-Cybernetics provided a vehicle for mathematicians and biologists in the coming years, even offering a method for investigating ecology.  It treated individual humans, animals, machines, or in cybernetic terms, \textit{systems}, as individual entities whose inner functions were not measured by their own capacities, but only in relation to what could be communicated by its own outputs to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  
+It has also been likened to processes of active perception by Wiener himself.  Wiener suggests that each movement of the eye and neuronal levels of processing leads towards an invariant object representation (discussed in greater detail in Chapter \ref{ch:conceptual-visual}).  This entire process, in Wiener's own words, ``brings [visual] information one step nearer to the form in which it is used and is preserved in the memory.''  Wiener's early insights into the function of the eye, neuronal processing stages, and internal representations supporting perception will be expanded upon more in this thesis, as I attempt to motivate and model a similar perceptual process in both auditory and visual domain and use the model within a collage-based practice.
+
+Cybernetics provided a vehicle for mathematicians and biologists in the coming years (e.g. Ross Ashby, Gregory Bateson).  It treated individual humans, animals, machines, or in cybernetic terms, \textit{systems}, as individual entities whose inner functions were not measured by their own capacities, but only in relation to what could be communicated by its own outputs to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  
 
 By the 1950's, artists and composers would also engage with cybernetic approaches.  Ross Ashby's \textit{Homeostat} for instance created a ... Bruce Lacey ... Thus, it appeared with the advent of robotics and increasingly more prevalent control structures, most notably the computer, making art through collections or fragments of processes would become a defining aspect of computational practices.
 
 For instance, Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
 
-Composing an artwork through a collage of \textit{processes} is certainly not a new one.  
+\hl{Composing an artwork through a collage of \textit{processes} is certainly not a new one.  
 
 Mick's thesis talking about software being composed of collage processes, visual programming environments vuo, maxmsp, jitter, qc, 4v, ....
 
 Computational creativity, Boden, defining a successful work/evaluation... 
 
-Other cut-and-paste generative algorithms?
+Other cut-and-paste generative algorithms?}
 
 \subsubsection{Digital Media}
 
-Lev Manovich's Soft Cinema
+\hl{Lev Manovich's Soft Cinema
 
 Computer Graphics -> boundaries of collage become less clear: https://www.youtube.com/watch?v=fw3XyOyl47Q
 
-Space of collage: Andruid Kerne's Collage Machine; I/O/D's WebStalker; Mark Napier's Riot; 
+Space of collage: Andruid Kerne's Collage Machine; I/O/D's WebStalker; Mark Napier's Riot; }
 
 \subsubsection{Computer Graphics and Computer Vision}
 
-Aaron Hertzmann; SIGGRAPH community
+\hl{Aaron Hertzmann; SIGGRAPH community; 
+
+Ben Bogart's Dreaming Machine}
 
 \subsubsection{Speech Technologies}
 
-Diemo Schwarz's CataRT; Nick Collins's BBCut and klippAV
+\hl{Diemo Schwarz's CataRT; Nick Collins's BBCut and klippAV
 
-Developments in machine vision/listening led to new tools/applications;
-
-
-
-Ben Bogart's Dreaming Machine
+Developments in machine vision/listening led to new tools/applications}
 
 %\subsection{Media Libraries}
 %As well, the amount of media has grown, and its access has only become easier with the advent of online archives such as YouTube, Flickr, Soundcloud, Freesound, just to name a few. 
@@ -319,7 +342,7 @@ This thesis attempts to work towards a better understanding on the representatio
 
 %A set of parameters effect the two major modular components of the algorithm: attention modeling and representation.   Interaction is focused on the selection of material used in the collage, how the source content is parsed, stored, and for dynamic media, how the collage should be composited over time.  This system affords entirely new experiences around collage, such as the ability to aggregate source content in real-time or experience the collage through an augmented reality headset that mosaics the worlds as it is experienced.  
 
-Encode only parts of a scene that are likely to attract attention... motivate attentional model for dynamic content... 
+\hl{Encode only parts of a scene that are likely to attract attention... motivate attentional model for dynamic content... 
 
 Develop representation of audio and visual corpus that affords simple interaction to produce different styles...
 
@@ -327,7 +350,7 @@ Fragments of a collage require precarious balance between what is identifiable, 
 
 Difficulty of evaluating something subjective; not impossible; can measure performance of speed; art critics...
 
-Model is beyond scope; more of a framework that can be expanded.
+Model is beyond scope; more of a framework that can be expanded.}
 
 \section{Overview}
 
@@ -358,9 +381,11 @@ To begin either module (i.e. audio and vision), a conceptual framework for uncon
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\onehalfspacing
 \chapter{Conceptual Framework for Building Unconscious Audio Representations}
 \label{ch:conceptual-audio}
 \minitoc
+\doublespacing
 
 \section{Introduction}
 
@@ -387,9 +412,9 @@ Our perception of the world is comprised of objects, events, and meaningful enti
 
 To understand how coding processes may occur, numerous theories have proposed a representational framework for perception.  Such theories generally described the encoding of representations that are inaccessible to our conscious awareness, similar to the prior notions in Helmholtz's inferences.  As we do not have direct access to them, what might a representation supporting perception look or sound like?  What can they explain, and what do they lack the ability to explain?  And how are they formed?  It is the aim of this thesis to build a better understanding of questions such as these through an arts practice focused on computational approaches to sonic and visual collage processes.  Within this collage-based practice, the units being assembled will be modeled based on the theoretical foundations laid in this chapter.  
 
-This chapter is thus dedicated to (1) reviewing what is known about how representations in auditory perception may be coded and (2) motivating a basic framework for a computational model of auditory encoding and decoding.  As this field is incredibly vast with many non-overlapping research areas, this review will sacrifice brevity for more depth in fewer areas of research, primarily describing research making use of electrophysiological techniques within cognitive neuroscience.  Further, as this PhD is focused on practical outputs rather than building an accurate model of perception, many aspects of perception will certainly be overlooked.  The attempt here is just to motivate a few concepts for designing a computational model as shown by some of the literature in cognitive neuroscience.   
+This chapter is thus dedicated to (1) reviewing what is known about how representations in auditory perception may be coded and (2) describe a basic conceptual framework for their encoding and decoding.  As this field is incredibly vast with many non-overlapping research areas, this review will sacrifice brevity for more depth in fewer areas of research, primarily describing research making use of electrophysiological techniques within cognitive neuroscience.  Further, as this PhD is focused on practical outputs rather than building an accurate model of perception, many aspects of perception will certainly be overlooked.  The attempt here is just to motivate a few important concepts that help to inform the implementation of a computational model.
 
-Stress more about the practical aims, how this model will be used in natural, complex, real-world scenes... Give some examples... 
+% Stress more about the practical aims, how this model will be used in natural, complex, real-world scenes... Give some examples... 
 %As we do not have direct access to them, what do these representations look or sound like?  What can they explain, and what do they lack the ability to explain?  It is the aim of this thesis to build an understanding of perception through an arts practice focused on computational approaches to sonic and visual collage processes.  Within this collage-based practice, the units being assembled are modeled based on a theory of representations supporting perception motivated in this chapter.  The final aim of this practice is to open a dialogue around questions of representation within perception, thus reflecting back onto the theories set forth in this chapter.  
 
 \section{Background Review}
@@ -399,6 +424,8 @@ Stress more about the practical aims, how this model will be used in natural, co
 %talk more about bandwidth filters... work this into discussion and conclusion... 
 
 We are capable of selectively listening to one of multiple sounds in an environment cluttered with simultaneous events, a feat known more colloquially as the cocktail-party problem \cite{McDermott2009}.  Though we do not have eyes to move to different parts of an auditory scene, the cochlea of the inner ear can effectively break down the set of pressure waves coming to the ear which we perceive as sound.  These waves initially form a complex time-varying set of frequencies and are broken down into a set of narrow, ``critical bands'' \cite{Fletcher1940}.  From the energy in these bands, understanding how we represent and understand scenes within the auditory modality has been the main challenge of neuroscientists and psychologists investigating auditory perception.  
+
+\hl{Should probably discuss the physiology of the cochlea to auditory cortex a bit more.}
 
 Certainly one challenge has been to define what the entities that compose the auditory scene may be described by within the auditory modality.  As Winkler points out \cite{Ist2010}, the notion of an object is highly guided by our visual experiences, and even the Merriam-Webster Dictionary defines object as, ``something that may be seen or felt'' (as quoted in \cite{Ist2010}) or as the Oxford English Dictionary puts it, ``something placed before or presented to the eyes or other senses'' (as quoted in \cite{Griffiths2004}).  
 
@@ -510,7 +537,7 @@ Considering this framework within SFGS stimuli, it is likely that many onsets ar
 
 \section{Conclusion}
 
-The evidence presented thus far demonstrates the brains remarkable capability for detecting events in the sonic world (e.g. N1), discretizing the continuous amalgamation of sound into units of processing where updates in representations may occur (e.g. MMN and ORN), or selective attention may discover a match (e.g. PN).  Much of the literature to date has focused on either simple alternating tone sequences or random complex tone sequences, meaning many inferences must be made about how such evidence can be applied within complex natural scenes.  Nevertheless, some understanding can be gained towards developing a practical computational model capable of producing either segregated or integrated auditory streams.  It should be stressed that this framework is not an accurate perceptual model, but simply one based on a basic understanding of some of the capabilities of our perceptual systems.  The conceptual framework presented here aims to build event-related units through a simple computational model beginning with an onset detection modeled after the N1 component.  From here, one of three processes may occur: matching, integration or segregation.  Matching occurs when a search task is involved and is modeled by evidence of the PN.  Otherwise, either integration or segregation occurs, defining the irregularities of the environment as it relates to the ongoing regularities.  This is in contrast to the N1, which likely requires some notion of regularities (as it must be evoked by an event that the sonic world has caused), but likely does not require segregation. WIth enough irregularity, a segregated stream may be defined, otherwise the stream is integrated.  
+The evidence presented thus far demonstrates the brains remarkable capability for detecting events in the sonic world and discretizing the continuous amalgamation of sound into units of processing where updates in representations may occur, or selective attention may discover a match.  Much of the literature to date has focused on either simple alternating tone sequences or random complex tone sequences, meaning many inferences must be made about how such evidence can be applied within complex natural scenes.  Nevertheless, some understanding can be gained towards developing a practical computational model capable of producing either segregated or integrated auditory streams.  It should be stressed that this framework is not an accurate perceptual model, but simply one based on a basic understanding of some of the capabilities of our perceptual systems.  The conceptual framework presented here aims to build event-related units through a simple computational model beginning with an onset detection modeled after the N1 component.  From here, one of three processes may occur: matching, integration or segregation.  Matching occurs when a search task is involved and is modeled by evidence of the PN.  Otherwise, either integration or segregation occurs, defining the irregularities of the environment as it relates to the ongoing regularities.  This is in contrast to the N1, which likely requires some notion of regularities (as it must be evoked by an event that the sonic world has caused), but likely does not require segregation. WIth enough irregularity, a segregated stream may be defined, otherwise the stream is integrated.  
 
 The presented framework has given us the notion of the auditory unit of perception that can be used within a collage-based practice: namely, the auditory stream determined by auditory scene analysis as an integrated or segregated stream.  Further, during selective attention tasks, it has given us a notion of matching through a processing negativity, and that this matching process should occur within the timeframe of an onset.  We will develop these concepts into a computational framework in the next chapter, Chapter \ref{ch:analysis-audio}, demonstrating its use as a method for online source separation, browsing of a large corpus of audio, and for classifying auditory scenes.  This computational framework will then be developed for use within a collage-based practice in Chapter \ref{ch:synthesis-audio}, and combined with a visual collage-based practice producing computational audiovisual collages in Chapter \ref{ch:audiovisual}.
 
@@ -559,9 +586,11 @@ The presented framework has given us the notion of the auditory unit of percepti
 
 
 
+\onehalfspacing
 \chapter{Computational Auditory Scene Analysis}
 \label{ch:analysis-audio}
 \minitoc
+\doublespacing
 
 %\begin{abstract}
 %The growth of digital audio archives has built the need for intelligent content-based analysis systems.  Within audio archives, an acoustic class may not occur as an isolated stream but rather within a mixture of other acoustic classes.  As such, content-based information retrieval algorithms should also be capable of classifying the separate acoustic classes that give rise to an acoustic scene's mixture.  This paper investigates the performance of three classifiers; (1) a full-frequency and (2) reduced frequency classifier both built using a probabilistic variant of non-negative matrix factorization, probabilistic Latent Component Analysis (pLCA), which describes audio by the latent components that represent the signal, and (3) a Gaussian Mixture Model of one of the most common acoustic features, MFCCs.  We evaluate these models in a variety of cases: (1) classifying acoustic textures, (2), classifying acoustic textures in the presence of noise, and (3), classifying acoustic mixtures.  Both pLCA models outperform the MFCC-based model in cases (2) and (3), correctly classifying the mixture's sources 94\% of the time in comparison to 74\% of the time for the model built with MFCCs.
@@ -573,14 +602,16 @@ In this chapter, we develop the conceptual framework laid down in Chapter \ref{c
 
 \begin{enumerateb}
 \item \textbf{Event detection}: Temporally segments the ongoing auditory stream in order to define the boundaries of processing.  This component is only necessary in cases where explicit events are not already defined; 
-\item \textbf{Segregation}: In case an audio stream is composed of a multiple streams, the mixed stream is split into a foreground and background stream where only the foreground is encoded; 
-\item \textbf{Integration}: Represents the segmented and, if required, segregated foreground stream into memory, and 
+\item \textbf{Segregation}: In case an auditory stream is composed of a multiple streams, the mixed stream is split into a foreground and background stream where only the foreground is encoded; 
+\item \textbf{Integration}: Represents the segmented and, if required, segregated foreground stream into memory; 
 \item \textbf{Matching}: Decodes the encoded stream by matching to a known template.
 \end{enumerateb}
 
-For now, we only work with fixed-length units of sound, thus already giving us explicit event boundaries.  These units must be encoded and decoded in an offline setting, i.e. can run as a non-real-time process.  In Chapter \ref{ch:synthesis-audio}, we will see how combining this framework with event detection affords an online, or real-time, experience for encoding and decoding when discussion Memory Mosaic.
+For now, we only work with fixed-length units of sound, thus already giving us explicit event boundaries.  These units of sound must then be encoded and decoded.  In Chapter \ref{ch:synthesis-audio}, we will see how combining this framework with event detection affords a real-time experience for encoding and decoding when discussing Memory Mosaic.
 
 If the entire sound stream is to be encoded\footnote{Sometimes this case is also denoted as ``integration'' and distinguished from segregation, though this is not to be confused with this framework's definition of integration which can occur after a segregation and is not necessarily a separate process.  For more information, refer to the conceptual framework in Chapter \ref{ch:conceptual-audio}}, then the unit defined by the event detection is encoded without further manipulations. However, if the unit requires segregation, then the unit is separated into a foreground and background stream, where the foreground stream denotes the stream that is encoded as a result of being ``selected'' by attention.  Finally, matching determines whether the current stream matches a previously learned target encoding, effectively allowing us to decode a stream based on prior learning.
+
+\hl{Really need to talk about existing auditory models, different frequency transformations, leaky integrators, phase, slaney, lyons,... }
 
 In this chapter, we implement three computational representations for encoding and decoding.  These are described as (1) a full-frequency and (2) reduced frequency representation both built using a probabilistic variant of non-negative matrix factorization, Probabilistic Latent Component Analysis (PLCA), which describes audio by the latent components that represent the signal, and (3) a Gaussian Mixture Model of one of the most common acoustic feature representations, MFCCs.  As we will see, the first two models attempt to compute a basis decomposition of a time-frequency matrix into a set of components modeled by a set of frequencies with a time-varying amplitude, ideal for cases when segregation is required.  The last model on the other hand describes a set of frequencies by its overall spectral shape, taking into account the perceptual bandwidth given to different frequencies.  This spectral shape does not vary with time like the first two models, and is composed of only one set of values describing the global shape of the spectrum, making it ideal for cases when segregation is not required.
 
@@ -957,9 +988,11 @@ The currently developed models have shown promise at encoding and decoding simpl
 
 
 
+\onehalfspacing
 \chapter{Computational Auditory Scene Synthesis}
 \label{ch:synthesis-audio}
 \minitoc
+\doublespacing
 
 %\section{Abstract}
 
@@ -969,20 +1002,19 @@ The currently developed models have shown promise at encoding and decoding simpl
 
 The juxtaposition of fragments of sound as an arts practice has roots at least as early as music concrete, a compositional technique assembling various natural found sounds in order to produce a collage of sound.  Digital Sampling came in the 1970's allowing sound segments to be triggered using an interface such as a keyboard or pad.  More recent techniques have focused on corpus-based concatenative synthesis, where a target sound is matched to a stored database of segments or sounds (for a comprehensive review, see \cite{Schwarz2006}).  In this thesis, we focus on a collage-based technique called scene synthesis which assembles units created through the computational modeling of psychologically motivated representations thought to support perception.  The aim in building these units and re-assembling them within a collage-based practice is to open a dialogue into the nature of representation within perception.  
 
-We have so far derived a conceptual framework for building auditory representations based on evidence in electrophysiology in Chapter \ref{ch:conceptual-audio} and started to develop this framework computationally in Chapter \ref{ch:analysis-audio}.  In particular, we demonstrated that our computational model described by MFCCs perform very well in scenes where classification of the entire scene is required.  Further we demonstrated that when segregation or understanding the multiple sources in a scene is required, models based on Principal Latent Component Analysis perform very well.  
+We have so far derived a conceptual framework for building auditory representations based on evidence in electrophysiology in Chapter \ref{ch:conceptual-audio} and started to develop this framework computationally in Chapter \ref{ch:analysis-audio}.  In particular, we demonstrated that our computational model described by Mel-Frequency Cepstral Coefficients (MFCCs) perform very well at encoding auditory scenes in cases where the entire scene must be integrated.  Further we demonstrated that when segregation or understanding the multiple sources in a scene is required, models based on Principal Latent Component Analysis (PLCA) perform very well and are much better suited than MFCCs.  
 
-We now turn to two practical developments using these computational models.  The first practical output, the Daphne Oram Browser, makes use of our model requiring segregation to provide an interactive scene synthesis in the form of a 3D virtual browser.  This output attempts to discover how the representations motivated in Chapter \ref{ch:conceptual-audio} and computationally modeled with PLCA may help researchers understand the content within a large audio corpus.  
+We now turn to two practical developments using these computational models as it is within the necessary practical developments that we can better understand the applicability of these models to real-world and interactive settings, and also better understand where there are any missing pieces to our computational model and conceptual framework.  The first practical output, the Daphne Oram Browser, compares our MFCC and PLCA models within an interactive scene synthesis.  This scene synthesis is presented to a user of an audio archive in the form of a 3D virtual browser where they can select any segments of sound and hear them played back in real-time as an interactive sonic-collage.  This output attempts to discover how the representations motivated in Chapter \ref{ch:conceptual-audio} and computationally modeled with PLCA may help researchers understand any inherent content-based relationships within the content of a large audio corpus.  In other words, by using the representations built using our computational models, the relationships are not based on the content's filenames or metadata, but based on the way the content sounds.  A successful representation will ideally be able to define any inherent relationships within the archive based on purely sonic aspects.
 
-Finally, we describe Memory Mosaic a real-time auditory scene synthesis in the form of an iOS application.  This output will require the development of the last missing component of our conceptual framework, event detection, which explicitly defines events within a real-time stream of audio based on our own abilities to unconsciously detect change within an auditory scene.  The auditory units demarcated by this process are then encoded to produce, over time, a large database of ``memories''.  As this is a real-time experience, the current unit of sound is also decoded, thus matching it to the closest previously encoded stream to produce a real-time scene synthesis. 
+Finally, we describe Memory Mosaic a real-time auditory scene synthesis in the form of an iOS application.  This output will require the development of the last missing component of our conceptual framework, event detection, which explicitly defines events within a real-time stream of audio.  As motivated in our conceptual framework in Chapter \ref{ch:conceptual-audio}, event detection describes our ability to unconsciously detect change within an auditory scene.  The auditory units demarcated by this process are then encoded to produce, over time, a large database of sonic ``memories''.  Within this real-time experience, the current unit of sound is also decoded, effectively matching the segment to the closest previously encoded stream to produce a real-time scene synthesis. 
 
 \section{The Daphne Oram Browser}
 
-The Daphne Oram Archive presents a unique case-study ...
+The Daphne Oram Collection presents a unique case-study for the study of auditory representations.  It contains over 120 hours of 1/4'' tape dating from 1957 onwards and includes studio compositions, radio plays, sound effects, lectures, and interviews related to the British electronic musician, Daphne Oram (31 December 1925 Ð 5 January 2003) \cite{Young2008}.  Researchers working to understand the archive want to know more about her, her compositional techniques, and her radically innovative instrumental technique of ``Oramics'' for creating electronic sounds.  They have thus recently begun the process of digitizing the archive and at the time of this study had digitized 60 hours of the collection.  This process requires converting the analog tape reels to digital lossless formats allowing them to markup the digital files with metadata, or any additional textual descriptions of the audio file.  However, as this process has gone on, researchers have realized that the archive contains many duplicates and very little to no metadata.  In an effort to aid the researchers understand the digital contents of their archive better, we employed our representations to build a 3D visualization of the archive where the axes of the visualization refer to relationships between similarly represented material.  
 
 Using two of the methods developed in Chapter \ref{ch:analysis-audio}, we focus on visualizing the Daphne Oram archive using the encoded representations in order to project the archive as a 3-dimensional visualization.  These two methods are: (1) discovering latent distributions of frequencies using a recently developed source separation algorithm, probabilistic latent component analysis (PLCA) \cite{SmaragdisRajShashanka}; and (2), using a widely-adopted multi-dimensional feature for speech, music, and general acoustic classification, the Mel-Frequency Cepstral Coefficients (MFCCs).  We cluster the data from either descriptor using Multidimensional Scaling and develop a 3D visualization that allows researchers to project the archive onto multiple dimensions of the data.  Finally, we report user-feedback from researchers of the archive using the 3D visualization tool.  
 
-Our main contribution is in describing the impact of visualizing segregated streams of a large audio archive through a case-driven exploration of the work of Daphne Oram.  We compare the feedback from archivists using a visualization of latent timbre-relationships versus one using a perceptually inspired multi-dimensional feature, MFCCs, and show that PLCA is more effective at producing a meaningful visualization.  
-
+Our main contribution is in describing the impact of visualizing segregated streams of a large audio archive through a case-driven exploration of the work of Daphne Oram.  We compare the feedback from archivists using a visualization of latent timbre-relationships versus one using a perceptually inspired multi-dimensional feature, MFCCs, and find that PLCA is more effective at producing a meaningful visualization.  
 
 \subsection{Related Work}
 
@@ -994,7 +1026,7 @@ More recently, CataRT \cite{Schwarz2008} approaches Starfield style visualizatio
 
 The critical deviation of our approach to feature analysis from the previous approaches is by defining a 3D space using the corpora's own latent frequency distributions.  As we make no assumptions to the structure, perceptual relevance, or harmonic nature of the corpus, using probabilistic latent component analysis, we can discover the archive's own predominant distributions of frequencies and are able to use this reduced dimensionality dictionary as a representation of a high-dimensional space.  When projecting any 3-dimensions, the user is able to navigate the archive in a manner similar to CataRT \cite{Schwarz2008}. However, the axes are not user-defined psychoacoustic descriptions, but rather are projections of the archive onto ``timbres'' defined by latent frequency distributions.  Our work similarly encourages exploration and navigation as in  \cite{Knees2006,Dominik2009,Heise2012}, though takes a information-centric point of view to analysis and retrieval.   We build a second visualization using a model which does not take into account the density of the data but instead uses a perceptual frequency transformation for building decorrelated features, MFCCs, similar to \cite{Heise2012} and report the user feedback for each visualization.
 
-\subsection{Method}
+\subsection{Methods}
 
 Currently, the Daphne Oram Archive has over 215 tape reels or 60 hours digitized.  As the amount of available memory is a constraint on our approach, we are only able to investigate the first 10 minutes of the first 60 tape reels or 10 hours in total.  We describe each half second segment by their frequencies over time, described using the short-time Fourier transform, and describe each time-frequency matrix as a slice.  In total we have 1200 slices per tape and 72,000 slices for all 60 tape reels\footnote{We use all data for building the description of the corpus, though later use a reduced subset for visualization.}.  We aim to visualize this data using a clustering algorithm able to extract the timbre-relationships within the archive.  Specifically, we look at two methods for grouping the possible interesting frequencies describing the archive: (1) PLCA, a probabilistic method for discovering latent component relationships of a time-frequency matrix, and (2) MFCC, a widely-adopted approximation of the frequency spectrum inspired by the human auditory system's response properties.
 
@@ -1094,19 +1126,16 @@ Regarding (1) and (2), the form of the PLCA model (see Figure \ref{fig:plca}) is
 
 Further work should focus on issues with navigating in 3D space, as some users reported on the 3D nature as requiring practice to navigate.  One solution may be to create more intuitive control through the use of other input and display devices such as touch-screens.  As well, similar latent-analysis techniques may be applied for additional meta-data from the archive as is done in audiovisual and text corpora, e.g. \cite{Himmel1998,Christel1998}, to create more informed visualizations.  In this case, the input of text annotations as well can create a user-guided visualization, where feedback from the user reshapes the 3D visualization. 
 
-
-
-
 \section{Memory Mosaic}
 
-Introduce it a bit... 
+\hl{Introduce it a bit...}
 
 \subsection{Related Work}
 
 Our technical framework most closely resembles SoundSpotter \cite{CaseyICMC2007}, as its framework provides the basis of our auditory feature transformation described in Section \ref{subsec:acoustic-scene-description}.  Though, of the previous techniques mentioned including those in the review article, none investigate corpus-based concatenative synthesis as a real-time experience in an augmented reality.
 
 
-John Oswald; Burrough's Cut-up-technique; Scrambled Hackz; Collins; Casey; Grierson; Schwarz...
+\hl{John Oswald; Burrough's Cut-up-technique; Scrambled Hackz; Collins; Casey; Grierson; Schwarz...}
 
 %Before reaching the culmination of my sound-based practice in ``Memory Mosaic'', an iOS application which automatically creates sound collages based on an aggregation of learned sounds, I will discuss a few practice-based outputs that led me to this application.  
 %The first application, ``Sonic Graffiti'', grew out of the desire to create a representation of sonic memories as a spatialized global sonic map.  
@@ -1134,7 +1163,7 @@ Details of the Log Frequency Cepstral Coefficients (LFCC) feature transformation
 
 Discontinuity of the spectral shape of an acoustic scene is determined using a statistical model employing the mean and variation of the differences on the distances to a low-pass signal of the features.  The model is described in the Figure \ref{fig:segmentation-model}.  Following the feature transformation, the model has two states of operation: segmenting or not.  When the model is not segmenting, the model of background is built up until a discontinuity appears.  Similarly, for the foreground model, a separate model of the foreground is built up from the start of the segment.  Aside from detecting the discontinuity within the foreground model, the model also detects if the current frame returns to the background model by computing distance to the background model.  Using a prior assumption of a normally distributed feature-space, <<GET A PLOT OF A BUSY STATION'S DISTRIBUTION OF FEATURE VALUES>> we compute deviations of the background and foreground model past 3 standard deviations.  As well, checking whether the currently observed audio frame returns to background, we check if its features are within 3 standard deviations of the background model and stop segmenting.  A parameter controlling the threshold of the standard deviation, between 0.1 and 3.0 standard deviations, is described in Section \ref{subsec:parameters}.
 
-Each new segment detected is written to disk using Apple's Extended Audio File Format.  Only the audio segment's first frame's 89-dimensional LFCC feature vector is retained in memory in order to form a matrix of vectors.  As our model is based on attentional shifts,
+Each new segment detected is written to disk using Apple's Extended Audio File Format.  Only the audio segment's first frame's 89-dimensional LFCC feature vector is retained in memory in order to form a matrix of vectors.  \hl{As our model is based on attentional shifts,}
 
 % uhh...
 
@@ -1186,7 +1215,7 @@ float cosineDistance(float *x, float *y, unsigned int length) {
 
 \subsubsection{Extensions}
 
-iTunes library... DJ'ing... 
+\hl{iTunes library... DJ'ing... }
 
 \subsection{Discussion}
 
@@ -1216,9 +1245,11 @@ iTunes library... DJ'ing...
 
 
 
+\onehalfspacing
 \chapter{Conceptual Framework for Building Unconscious Visual Representations}
 \label{ch:conceptual-visual}
 \minitoc
+\doublespacing
 
 \section{Introduction}
 
@@ -1358,9 +1389,11 @@ Similar computational models have been developed to explain visual perception ma
 
 
 
+\onehalfspacing
 \chapter{Computational Visual Scene Analysis}
 \label{ch:analysis-visual}
 \minitoc
+\doublespacing
 
 \section{Introduction}  
 
@@ -1373,15 +1406,9 @@ B. get objects for a frame
 C. modulate objects based on flicker
 D. recompute flicker based on aggregated proto-object flow
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Visual Acuity}
 
-
+Visual acuity attempts to 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1392,10 +1419,21 @@ D. recompute flicker based on aggregated proto-object flow
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\onehalfspacing
 \chapter{Computational Visual Scene Synthesis}
 \label{ch:synthesis-visual}
-
 \minitoc
+\doublespacing
 
 %\begin{abstract}
 %We investigate an approach to the artistic stylization of photographic images and videos that uses an understanding of the role of abstract representations in art and perception.  We first learn a database of representations from a corpus of images or image sequences.  Using this database, our approach synthesizes a target image or video by matching geometric representations in the target to the closest matches in the database based on their shape and color similarity.  We show how changing a few parameters of the synthesis process can result in stylizations that represent aesthetics associated with Impressionist, Cubist, and Abstract Expressionist paintings.  As the stylization process is fast enough to work in real-time, our approach can also be used to learn and synthesize the same camera image, even aggregating the database with each new video frame in real-time, a process we call "Memory Mosaicing". 
@@ -1626,10 +1664,11 @@ A number of issues could be addressed in future versions.  For instance, synthes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\onehalfspacing
 \chapter{Computational Audiovisual Scene Synthesis}
 \label{ch:audiovisual}
 \minitoc
-
+\doublespacing
 \section{Introduction}
 
 Talk about attempts to combine models in perception and practice.   DIEM model, how do you combine two modalities.
@@ -1699,9 +1738,11 @@ Though one month after the 2012 fall democratic convention speech featuring firs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\onehalfspacing
 \chapter{Conclusion}
 \label{ch:conclusion}
 \minitoc
+\doublespacing
 
 \section{Summary}
 \section{Contribution}
