@@ -43,6 +43,12 @@ Jean-Francois Augoyard and Henry Torgue.
 \newblock {Sonic Experience: A Guide To Everyday Sounds}.
 \newblock Mcgill Queens Univ Pr, 2006.
 
+\bibitem[Azzopardi~2012]{Azzopardi2012}
+George Azzopardi and Nicolai Petkov.
+\newblock {\em {A CORF computational model of a simple cell that relies on LGN
+  input outperforms the Gabor function model.}}
+\newblock Biological cybernetics, vol.~106, no.~3, pages 177--89, March 2012.
+
 \bibitem[Bartsch~2001]{Bartsch2001}
 Mark~A. Bartsch and Gregory~H Wakefield.
 \newblock {\em {To Catch a Chorus: Using Chroma-based Representations for Audio
@@ -109,6 +115,12 @@ Tom Campbell, Istv\'{a}n Winkler and Teija Kujala.
   related to N1.}}
 \newblock Psychophysiology, vol.~44, no.~4, pages 530--40, July 2007.
 
+\bibitem[Carmi~2006]{Carmi2006}
+Ran Carmi and Laurent Itti.
+\newblock {\em {Visual causes versus correlates of attentional selection in
+  dynamic scenes.}}
+\newblock Vision research, vol.~46, no.~26, pages 4333--45, December 2006.
+
 \bibitem[Cartwright~]{Cartwright}
 Mark Cartwright, Zafar Rafii, Jinyu Han and Bryan Pardo.
 \newblock {\em {Making searchable melodies: Human vs. machine}}.
@@ -166,6 +178,12 @@ Selina Chu, Shrikanth Narayanan and C.C.J. Kuo.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~17, no.~6, pages 1142--1158, 2009.
 
+\bibitem[Collins~2004]{Collins2004}
+Nick Collins.
+\newblock {\em {On onsets on-the-fly: Real-time event segmentation and
+  categorisation as a compositional effect}}.
+\newblock In Perception. Citeseer, 2004.
+
 \bibitem[Copeland~2002]{Copeland2002}
 Roger Copeland.
 \newblock {\em {Merce Cunningham and the aesthetic of collage}}.
@@ -218,6 +236,12 @@ AJ~Eronen, VT~Peltonen and JT~Tuomi.
 \newblock {\em {Audio-based context recognition}}.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~14, no.~1, pages 321--329, 2006.
+
+\bibitem[Findlay~2003]{Findlay2003}
+John~M. Findlay and Iain~D. Gilchrist.
+\newblock {Active Vision: The Psychology of Looking and Seeing (Oxford
+  Psychology)}.
+\newblock Oxford University Press, USA, 2003.
 
 \bibitem[Fletcher~1940]{Fletcher1940}
 Harvey Fletcher.
@@ -379,6 +403,12 @@ DH~Hubel and T.~N. Wiesel.
   architecture in the cat's visual cortex}}.
 \newblock The Journal of physiology, vol.~160, pages 106--154, 1962.
 
+\bibitem[Hubel~1968]{Hubel1968}
+DH~Hubel and TN~Wiesel.
+\newblock {\em {Receptive fields and functional architecture of monkey striate
+  cortex}}.
+\newblock The Journal of physiology, pages 215--243, 1968.
+
 \bibitem[Hughes~1991]{Hughes1991}
 Robert Hughes.
 \newblock {Shock of the New}.
@@ -396,6 +426,19 @@ L~Itti and C~Koch.
 \newblock Nature reviews. Neuroscience, vol.~2, no.~3, pages 194--203, March
   2001.
 
+\bibitem[Itti~2005a]{Itti2005}
+Laurent Itti.
+\newblock {\em {Quantifying the contribution of low‐level saliency to human
+  eye movements in dynamic scenes}}.
+\newblock Visual Cognition, vol.~12, no.~6, pages 1093--1123, August 2005.
+
+\bibitem[Itti~2005b]{Itti2005b}
+Laurent Itti and Pierre Baldi.
+\newblock {\em {A Principled Approach to Detecting Surprising Events in
+  Video}}.
+\newblock Proceedings of the IEEE International Conference on Computer Vision
+  and Pattern Recognition, no.~June, 2005.
+
 \bibitem[Jaeger~2006]{Jaeger2006}
 Timothy Jaeger.
 \newblock {\em {VJ: Live Cinema Unraveled}}.
@@ -410,6 +453,10 @@ Paul Joyce.
 Douglas Kahn.
 \newblock {Wireless Imagination: Sound, Radio, and the Avant-Garde}.
 \newblock The MIT Press, 1994.
+
+\bibitem[Kalloniatis~2007]{Kalloniatis2007}
+Michael Kalloniatis and Charles Luu.
+\newblock {\em {Visual Acuity}}, 2007.
 
 \bibitem[Kanoh~2001]{Kanoh2001}
 S~Kanoh, Toshinori Arai, R.~Futami and N.~Hoshimiya.
@@ -440,6 +487,17 @@ C~Koch and S~Ullman.
 \newblock {\em {Shifts in selective visual attention: towards the underlying
   neural circuitry.}}
 \newblock Human Neurobiology, vol.~4, no.~4, pages 219--227, 1985.
+
+\bibitem[Koffka~1935]{Koffka1935}
+Kurt Koffka.
+\newblock {Principles of gestalt psychology}.
+\newblock Harcourt, Brace and Company, 1935.
+
+\bibitem[K\"{o}hler~1947]{Kohler1947}
+Wolfgang K\"{o}hler.
+\newblock {Gestalt Psychology: An Introduction to New Concepts in Modern
+  Psychology}.
+\newblock Liveright, 1947.
 
 \bibitem[Kyprianidis~2012]{Kyprianidis2012}
 J~Kyprianidis, John Collomosse, Tinghuai Wang and Tobias Isenberg.
@@ -500,6 +558,11 @@ Josh~H McDermott.
 \newblock {\em {The cocktail party problem.}}
 \newblock Current biology : CB, vol.~19, no.~22, pages R1024--7, December 2009.
 
+\bibitem[McGurk~1976]{MCGURK1976}
+Harry McGurk and John Macdonald.
+\newblock {\em {Hearing lips and seeing voices}}.
+\newblock Nature, vol.~264, no.~5588, pages 746--748, December 1976.
+
 \bibitem[McKinney~2003]{McKinney2003}
 MF~McKinney.
 \newblock {\em {Features for audio and music classification}}.
@@ -539,6 +602,12 @@ Jordan Miller and David Mould.
 \newblock {\em {Accurate and Discernible Photocollages}}.
 \newblock Computational Aesthetics in Graphics, Visualization, and Imaging,
   pages 115--124, 2012.
+
+\bibitem[Mital~2011]{Mital2011}
+Parag~K. Mital, Tim~J. Smith, Robin~L. Hill and John~M. Henderson.
+\newblock {\em {Clustering of Gaze During Dynamic Scene Viewing is Predicted by
+  Motion}}.
+\newblock Cognitive Computation, October 2011.
 
 \bibitem[Mital~2012]{Mital2012b}
 Parag~Kumar Mital and Mick Grierson.
@@ -635,6 +704,11 @@ Jeff Orchard and CS~Kaplan.
 \bibitem[Osw~]{OswaldInterviews}
 {\em {Plunderphonics: Onterviews}}.
 
+\bibitem[Palmer~1999]{Palmer1999}
+Stephen~E. Palmer.
+\newblock {Vision science: Photons to phenomenology.}
+\newblock 1999.
+
 \bibitem[Pampalk~2006]{Pampalk2006a}
 Elias Pampalk.
 \newblock {\em {Audio-based music similarity and retrieval: Combining a
@@ -672,6 +746,19 @@ Bhiksha Raj, Tuomas Virtanen, Sourish Chaudhuri and Rita Singh.
 \newblock Proceedings of the 11th Annual Conference of the International Speech
   Communication Association, pages 717--720, 2010.
 
+\bibitem[Rao~1999]{Rao1999a}
+R~P Rao and D~H Ballard.
+\newblock {\em {Predictive coding in the visual cortex: a functional
+  interpretation of some extra-classical receptive-field effects.}}
+\newblock Nature neuroscience, vol.~2, no.~1, pages 79--87, January 1999.
+
+\bibitem[Rauss~2011]{Rauss2011}
+Karsten Rauss, Sophie Schwartz and Gilles Pourtois.
+\newblock {\em {Top-down effects on early visual processing in humans: a
+  predictive coding framework.}}
+\newblock Neuroscience and biobehavioral reviews, vol.~35, no.~5, pages
+  1237--53, April 2011.
+
 \bibitem[Rensink~2000]{Rensink2000}
 Ronald~a. Rensink.
 \newblock {\em {The Dynamic Representation of Scenes}}.
@@ -700,6 +787,17 @@ T~Rinne, G~Gratton, M~Fabiani, N~Cowan, E~Maclin, a~Stinard, J~Sinkkonen,
 \newblock {\em {Scalp-recorded optical signals make sound processing in the
   auditory cortex visible?}}
 \newblock NeuroImage, vol.~10, no.~5, pages 620--4, November 1999.
+
+\bibitem[Rosenholtz~1999]{Rosenholtz1999}
+Ruth Rosenholtz.
+\newblock {\em {Rapid communication A simple saliency model predicts a number
+  of motion popout phenomena}}.
+\newblock Vision Research, vol.~39, pages 3157--3163, 1999.
+
+\bibitem[Rubin~1915]{Rubin1915}
+Edgar 1886-1951 Rubin.
+\newblock {\em {Synsoplevede figurer: studier i psykologisk analyse}}.
+\newblock PhD thesis, K\o benhavn og Kristiania, Gyldendal, 1915.
 
 \bibitem[Sams~1983]{Sams1983}
 M~Sams, K~Alho and R~N\"{a}\"{a}t\"{a}nen.
@@ -746,6 +844,17 @@ SA~Shamma and Christophe Micheyl.
 Shihab~a Shamma, Mounya Elhilali and Christophe Micheyl.
 \newblock {\em {Temporal coherence and attention in auditory scene analysis.}}
 \newblock Trends in neurosciences, vol.~34, no.~3, pages 114--23, March 2011.
+
+\bibitem[Shams~2002]{Shams2002}
+Ladan Shams, Yukiyasu Kamitani and Shinsuke Shimojo.
+\newblock {\em {Visual illusion induced by sound.}}
+\newblock Brain research. Cognitive brain research, vol.~14, no.~1, pages
+  147--52, June 2002.
+
+\bibitem[Sherrington~1906]{Sherrington1906}
+Sir Charles~Scott Sherrington.
+\newblock {The Integrative action of the nervous system}.
+\newblock Yale University Press, 1906.
 
 \bibitem[Simons~1997]{Simons1997}
 Daniel~J Simons and Daniel~T Levin.
@@ -961,12 +1070,6 @@ Ron~J. Weiss and Juan~Pablo Bello.
 \newblock IEEE Journal of Selected Topics in Signal Processing, vol.~5, no.~6,
   pages 1240--1251, October 2011.
 
-\bibitem[Wever~1927]{Wever1927}
-EG~Wever.
-\newblock {\em {Figure and ground in the visual perception of form}}.
-\newblock The American Journal of Psychology, vol.~38, no.~2, pages 194--226,
-  1927.
-
 \bibitem[Wiener~1948]{Wiener1948}
 Norbert Wiener.
 \newblock {Cybernetics; or control and communication in the animal and the
@@ -1010,6 +1113,12 @@ HL~Yang and CK~Yang.
 Alfred Yarbus.
 \newblock {Eye movements and vision}.
 \newblock 1967.
+
+\bibitem[Young~2008]{Young2008}
+MW~Young, JL~Drever, Mick Grierson and Ian Stonehouse.
+\newblock {\em {Goldsmiths Electronic Music Studios: 40 Years}}.
+\newblock In Proceedings of the 2008 International Computer Music Conference,
+  pages 8--11, 2008.
 
 \bibitem[Zeng~2009]{Zeng2009}
 K~Zeng, M~Zhao, C~Xiong and SC~Zhu.
