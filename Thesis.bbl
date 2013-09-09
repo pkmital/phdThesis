@@ -196,6 +196,11 @@ Nelson Cowan.
   system.}}
 \newblock Psychological bulletin, vol.~104, no.~2, pages 163--191, 1988.
 
+\bibitem[Curcio~1990]{Curcio1990}
+CA~Curcio and KA~Allen.
+\newblock {\em {Topography of ganglion cells in human retina}}.
+\newblock Journal of Comparative Neurology, vol.~300, pages 5--25, 1990.
+
 \bibitem[Davis~1939]{Davis1939}
 P.~A. Davis.
 \newblock {\em {EFFECTS OF ACOUSTIC STIMULI ON THE WAKING HUMAN BRAIN}}.
@@ -237,11 +242,17 @@ AJ~Eronen, VT~Peltonen and JT~Tuomi.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~14, no.~1, pages 321--329, 2006.
 
-\bibitem[Findlay~2003]{Findlay2003}
+\bibitem[Findlay~2003a]{Findlay2003}
 John~M. Findlay and Iain~D. Gilchrist.
 \newblock {Active Vision: The Psychology of Looking and Seeing (Oxford
   Psychology)}.
 \newblock Oxford University Press, USA, 2003.
+
+\bibitem[Findlay~2003b]{Findlay2003a}
+John~M Findlay and Iain~D Gilchrist.
+\newblock {\em {Eye Guidance and Visual Search}}.
+\newblock In Geoffrey Underwood, editeur, Cognitive Processes in Eye Guidance,
+  pages 1--22. 2003.
 
 \bibitem[Fletcher~1940]{Fletcher1940}
 Harvey Fletcher.
@@ -267,6 +278,12 @@ Bruce Gooch, Greg Coombe and Peter Shirley.
   techniques}}.
 \newblock In NPAR '02 Proceedings of the 2nd international symposium on
   Non-photorealistic animation and rendering, page~83, 2002.
+
+\bibitem[Gottlieb~1998]{Gottlieb1998}
+J~P Gottlieb, M~Kusunoki and M~E Goldberg.
+\newblock {\em {The representation of visual salience in monkey parietal
+  cortex.}}
+\newblock Nature, vol.~391, no.~6666, pages 481--4, January 1998.
 
 \bibitem[Griffiths~2004]{Griffiths2004}
 Timothy~D Griffiths and Jason~D Warren.
@@ -391,6 +408,11 @@ a~Hollingworth, G~Schrock and J~M Henderson.
   position within the scene.}}
 \newblock Memory \& cognition, vol.~29, no.~2, pages 296--304, March 2001.
 
+\bibitem[Horn~1981]{Horn1981}
+BKP Horn and BG~Schunck.
+\newblock {\em {Determining optical flow}}.
+\newblock Artificial intelligence, vol.~17, pages 185--203, 1981.
+
 \bibitem[Huang~2011]{Huang2011a}
 Hua Huang, Lei Zhang and Hong-Chao Zhang.
 \newblock {\em {Arcimboldo-like collage using internet images}}.
@@ -476,6 +498,12 @@ HG~Kim and Nicolas Moreau.
   representations}}.
 \newblock Circuits and Systems for Video, vol.~14, no.~5, pages 716--725, 2004.
 
+\bibitem[Klier~2001]{Klier2001}
+EM~Klier, Hongying Wang and JD~Crawford.
+\newblock {\em {The superior colliculus encodes gaze commands in retinal
+  coordinates}}.
+\newblock Nature neuroscience, pages 627--632, 2001.
+
 \bibitem[Knees~2006]{Knees2006}
 Peter Knees, Markus Schedl and Tim Pohle.
 \newblock {\em {An innovative three-dimensional user interface for exploring
@@ -499,6 +527,12 @@ Wolfgang K\"{o}hler.
   Psychology}.
 \newblock Liveright, 1947.
 
+\bibitem[Kusunoki~2000]{Kusunoki2000}
+M~Kusunoki, J~Gottlieb and M~E Goldberg.
+\newblock {\em {The lateral intraparietal area as a salience map: the
+  representation of abrupt onset, stimulus motion, and task relevance.}}
+\newblock Vision research, vol.~40, no.~10-12, pages 1459--68, January 2000.
+
 \bibitem[Kyprianidis~2012]{Kyprianidis2012}
 J~Kyprianidis, John Collomosse, Tinghuai Wang and Tobias Isenberg.
 \newblock {\em {State of the 'Art': A Taxonomy of Artistic Stylization
@@ -517,6 +551,19 @@ Hochang Lee, S~Seo, S~Ryoo and K~Yoon.
 \newblock NPAR '10 Proceedings of the 8th International Symposium on
   Non-Photorealistic Animation and Rendering, vol.~1, no.~212, pages 43--50,
   2010.
+
+\bibitem[Leuba~1994]{Leuba1994}
+G.~Leuba and R.~Kraftsik.
+\newblock {\em {Changes in volume, surface estimate, three-dimensional shape
+  and total number of neurons of the human primary visual cortex from
+  midgestation until old age}}.
+\newblock Anatomy and Embryology, vol.~190, no.~4, October 1994.
+
+\bibitem[Li~2002]{Li2002}
+Zhaoping Li.
+\newblock {\em {A saliency map in primary visual cortex}}.
+\newblock Trends in Cognitive Sciences, vol.~6, no.~1, pages 9--16, January
+  2002.
 
 \bibitem[Liang~2001]{Liang2001a}
 Lin Liang, Ce~Liu, Ying-Qing Xu, Baining Guo and Heung-Yeung Shum.
@@ -622,6 +669,12 @@ M~M~L Moerel.
 \newblock {\em {Encoding of natural sounds in the human brain}}.
 \newblock PhD thesis, 2013.
 
+\bibitem[Moore~2003]{Moore2003}
+Tirin Moore and KM~Armstrong.
+\newblock {\em {Selective gating of visual signals by microstimulation of
+  frontal cortex}}.
+\newblock Nature, vol.~421, no.~January, pages 370--373, 2003.
+
 \bibitem[N\"{a}\"{a}t\"{a}nen~1978]{Naatanen1978}
 R~N\"{a}\"{a}t\"{a}nen, AWK Gaillard and S~M\"{a}ntysalo.
 \newblock {\em {Early selective-attention effect on evoked potential
@@ -721,6 +774,12 @@ Elise~a Piazza, Timothy~D Sweeny, David Wessel, Michael~a Silver and David
   Whitney.
 \newblock {\em {Humans Use Summary Statistics to Perceive Auditory Sequences.}}
 \newblock Psychological science, June 2013.
+
+\bibitem[Posner~1984]{Posner1984}
+MI~Posner and Y~Cohen.
+\newblock {\em {Components of visual orienting}}.
+\newblock In Attention and Performance X: Control of Language Processes., pages
+  551--556. 1984.
 
 \bibitem[Potter~1969]{Potter1969}
 Mary~C Potter and Ellen~I Levy.
@@ -900,17 +959,42 @@ Paris Smaragdis, Bhiksha Raj and Madhusudana Shashanka.
 Scott Smitelli.
 \newblock {\em {Fun with YouTube's Audio Content ID System}}, 2009.
 
+\bibitem[Smith~2009]{Smith2009a}
+Tim~J. Smith and John~M. Henderson.
+\newblock {\em {Facilitation of return during scene viewing}}.
+\newblock Visual Cognition, vol.~17, no.~6-7, pages 1083--1108, August 2009.
+
 \bibitem[Smith~2011]{Smith2011a}
 Tim Smith and Parag~Kumar Mital.
 \newblock {\em {Watching the world go by: Attentional prioritization of social
   motion during dynamic scene viewing}}.
 \newblock In Vision Sciences Society (abstract), 2011.
 
+\bibitem[Smith~2013]{Smith2013}
+Tim~J Smith and Parag~K Mital.
+\newblock {\em {Attentional synchrony and the influence of viewing task on gaze
+  behavior in static and dynamic scenes}}.
+\newblock Journal of Vision, vol.~13, no.~June, pages 1--25, 2013.
+
 \bibitem[Snyder~1976]{Snyder1976}
 Elaine Snyder and Steven~A. Hillyard.
 \newblock {\em {Long-latency evoked potentials to irrelevant, deviant
   stimuli}}.
 \newblock Behavioral Biology, vol.~16, no.~3, pages 319--331, March 1976.
+
+\bibitem[Soltani~2010a]{Soltani2010}
+Alireza Soltani and Christof Koch.
+\newblock {\em {Visual saliency computations: mechanisms, constraints, and the
+  effect of feedback.}}
+\newblock The Journal of neuroscience : the official journal of the Society for
+  Neuroscience, vol.~30, no.~38, pages 12831--43, September 2010.
+
+\bibitem[Soltani~2010b]{Soltani2010a}
+Alireza Soltani and Christof Koch.
+\newblock {\em {Visual saliency computations: mechanisms, constraints, and the
+  effect of feedback.}}
+\newblock The Journal of neuroscience : the official journal of the Society for
+  Neuroscience, vol.~30, no.~38, pages 12831--43, September 2010.
 
 \bibitem[Steenhuisen~2005]{Steenhuisen2005}
 Paul Steenhuisen.
@@ -948,6 +1032,16 @@ George Sziklai.
 \newblock {\em {Some studies in the speed of visual perception}}.
 \newblock IEEE Transactions on Information Theory, vol.~2, no.~3, pages
   125--128, 1956.
+
+\bibitem[Tatler~2009a]{Tatler2009a}
+Benjamin Tatler.
+\newblock {\em {Current understanding of eye guidance}}.
+\newblock Visual Cognition, vol.~17, no.~6, pages 777--789, August 2009.
+
+\bibitem[Tatler~2009b]{Tatler2009}
+Benjamin Tatler and Benjamin Vincent.
+\newblock {\em {The prominence of behavioural biases in eye guidance}}.
+\newblock Visual Cognition, vol.~17, no.~6, pages 1029--1054, August 2009.
 
 \bibitem[Tatler~2011]{Tatler2011}
 Benjamin~W Tatler, Mary~M Hayhoe, Michael~F Land and Dana~H Ballard.
@@ -1013,6 +1107,13 @@ Andrew Tholl.
 \newblock {\em {Plunderphonics: A Literature Review}}.
 \newblock 2010.
 
+\bibitem[Thompson~2005]{Thompson2005}
+Kirk~G Thompson, Keri~L Biscoe and Takashi~R Sato.
+\newblock {\em {Neuronal basis of covert spatial attention in the frontal eye
+  field.}}
+\newblock The Journal of neuroscience : the official journal of the Society for
+  Neuroscience, vol.~25, no.~41, pages 9479--87, October 2005.
+
 \bibitem[Torralba~2006]{Torralba2006}
 Antonio Torralba, Aude Oliva, Monica~S Castelhano and John~M Henderson.
 \newblock {\em {Contextual guidance of eye movements and attention in
@@ -1057,6 +1158,13 @@ Jue Wang, Yingqing Xu, Heung-Yeung Shum and Michael~F. Cohen.
 Avery Wang.
 \newblock {\em {The Shazam Music Recognition Service}}.
 \newblock Communications of the ACM, vol.~49, no.~8, 2006.
+
+\bibitem[Wang~2010]{Wang2010}
+Zhiguo Wang, Kan Zhang and Raymond~M Klein.
+\newblock {\em {Inhibition of return in static but not necessarily in dynamic
+  search.}}
+\newblock Attention, perception \& psychophysics, vol.~72, no.~1, pages 76--85,
+  January 2010.
 
 \bibitem[Wang~2011]{Wang2011}
 JC~Wang, HS~Lee and HM~Wang.
@@ -1124,6 +1232,11 @@ MW~Young, JL~Drever, Mick Grierson and Ian Stonehouse.
 K~Zeng, M~Zhao, C~Xiong and SC~Zhu.
 \newblock {\em {From image parsing to painterly rendering}}.
 \newblock ACM Transactions on Graphics (TOG), vol.~29, no.~1, 2009.
+
+\bibitem[Zhang~2012]{Zhang2012a}
+Xilin Zhang, Li~Zhaoping, Tiangang Zhou and Fang Fang.
+\newblock {\em {Neural activities in v1 create a bottom-up saliency map.}}
+\newblock Neuron, vol.~73, no.~1, pages 183--92, January 2012.
 
 \bibitem[Zimmer~2003]{Zimmer2003}
 Robert Zimmer.
