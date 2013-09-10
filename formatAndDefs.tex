@@ -234,7 +234,9 @@ urlcolor=linkcol %couleur des liens pour les url
 \usepackage{setspace}
 \usepackage{framed}
 \usepackage{lipsum}
+\usepackage{enumitem}
 
+\setlist{labelwidth=\widthof{0.},leftmargin={\labelwidth+\labelsep+10pt},rightmargin=\leftmargin}
 
 %% Stuff for making gray background in different environments 
 \definecolor{light-gray}{gray}{0.95}
@@ -242,9 +244,9 @@ urlcolor=linkcol %couleur des liens pour les url
 {%
     \def\FrameCommand
     {%
-        {\color{black}\vrule width 1pt}%
+        {\hspace{-3pt}\color{black}\vrule width 3pt}%
         \hspace{0pt}%must no space.
-        \fboxsep=\FrameSep\colorbox{light-gray}%
+        \fboxsep=\colorbox{light-gray}%
     }%
     \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
 }%
