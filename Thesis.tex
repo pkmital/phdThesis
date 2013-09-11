@@ -173,18 +173,11 @@ The inspiration this thesis takes from collage-based practices is the recombinat
 
 %Thus, the power of meaning making within the ordinary collage is now extended to be defined based on (1) a participant and (2) the generative algorithms they interact with.   }
 
-This thesis is inspired by the power of collage to infer new meanings.  Taking this inspiration forward, this thesis attempts to build a computational framework for generating a particular type of collage I call a \textit{scene synthesis}.  Scene synthesis places specific emphasis on using psychologically-motivated representations thought to support perception for the units of collage.  Across numerous literature these representations are thought to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  Once the units of collage have been built, scene synthesis requires a target scene to match to.  In the examples presented in this thesis, this can be either an existing sound, existing image or video, or a real-time live feed coming from a camera and microphone.   
+This thesis is inspired by the power of collage to infer new meanings.  In particular, it attempts to build a computational framework for generating a particular type of collage I call a \textit{scene synthesis}.  Scene synthesis places specific emphasis on using representations thought to support human perception for producing collages.  Across numerous literature these representations are thought to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  Once a set of units for the collage have been learned, scene synthesis can occur for any target scene.  In the examples presented in this thesis, this can be either an existing sound, existing image or video, or a real-time live feed coming from a camera and microphone.   The overall process of scene synthesis can also be summarized by an \textit{encoding} and \textit{decoding} process, where an encoding stores representations of an audiovisual scene using a model of representation based on human perception, and the decoding attempts to describe the stimuli again.   
 
-\hl{The overall process of scene synthesis can also be summarized by an \textit{encoding} and \textit{decoding} process.  Shannon's mathematical formulation of a communication system describes a source encoding a message to a transmitter, effectively producing a physical phenomena introducing noise, to be received and decoded finally by any destination.}
+The terms encoding/decoding are not without their history.  In the 1940's, Shannon mathematical formulation of a generalized communication system described the communication between a source and receiver through a transmitter and receiver, respectively.  The source encoded the message, and the transmitter would convert the message to physical phenomena, thus introducing possible noise sources effecting the message.  Finally, the message could be received and decoded finally by any destination that was capable of recovering the message.  His developments formed the basis of Information Theory, and along with developments occurring in military technology would later be incorporated by Norbert Wiener in a seminal text on communication theory entitled, Cybernetics.  Their developments along with others at the time would form the basis for modern day Information Sciences, where encoding and decoding are still very much used.  For instance, it is used to describe the processes of information compression, where a file such as an image, document, or video must be transmitted or stored.  To achieve this process, it is first encoded to a different representation by an encoder, only to later be decoded back into its original form when it is retrieved or accessed.  Decoding occurs every time you listen to an (encoded) MP3 file.  The MP3-codec describes the representation for compression and the procedures for encoding/decoding to/from it.  These terms are also commonly used within the field of Neural Coding, where encoding attempts to describe the neural populations representing brain-based representations of an external stimuli and decoding attempts to work from the neural populations back to describing the stimuli as a whole again.  The field has grown significantly in the last 10 years due to its successes with decoding images, video, and sound, and recent developments within brain imaging and pattern recognition.  
 
-\hl{Discuss its similarity to coding within discovering distinct neural populations; information theory/transmission/compression in media, stuart hall's account in cultural studies, ecology...}
-
-%Numerous artists have had similar interests in the power ``abstract'' representations play in defining perception.  For instance... 
-
-\hl{Communication theory... signal/noise... receiver... relationship of randomness to information, relationship to exogenous attention or change detection within perception... Feedback as regulatory process}
-
-
-%Subvert traditional practice of art, allow user to be integral to the artwork, create the collage based on their experiences and their influence in the piece, therefore defining the artwork as based on their experience, canon
+Ideally, the representations motivated and built in this thesis will allow for a synthesis indistinguishable from its target.   However, what happens when representations used by the encoder come from a set of representations that are unlike the stimuli?  For instance, what if my encoder only knows what the world of trees and birds sounds like?  How would it then decode a Michael Jackson recording?  Or in the visual case, what if my encoder only ever saw the animation ``The Family Guy'', and had to decode ``The Simpsons''?  This thesis asks these very same questions when discussing audio scene synthesis in Chapter \ref{ch:synthesis-audio} and visual scene synthesis in Chapter \ref{ch:synthesis-visual}.  More generally, this thesis attempts to ask how experience shapes perception, suggesting that perception is not a one-to-one relationship with the world but one experienced based on our prior notions of it.  
 
 The framework for scene synthesis presented here is rooted in building interactive dynamic collages where a participant can experience a collage being generated in real-time.  A defining aspect of the interaction within this framework is to place the participant within the collage-generation process such that the generated collage is specific to that participant.  As a result, the learned representations are based on the participant's previous experiences or relationships to the stimulus material.  For instance, in one incarnation available as an iOS app, ``Memory Mosaic'', a participant experiences a real-time collage of sound clips built using sounds triggered by a model of exogenous attention.  The sound clips are aggregated in real-time from the current environment and are meant to represent the fragmented sonic memories of the participant during the course of the experience.  The scene synthesis continually associates sounds in the ongoing sonic world to its previous memories creating a real-time sonic collage.  
 
@@ -709,10 +702,10 @@ X = X ./ repmat( sum(X, 2), 1, size(X, 2) );
 
 \section{Computational Auditory Scene Analysis Models}
 
-We implemented 3 computational models, (1), a Gaussian Mixture Model of Mel-Frequency Cepstral Coefficients (MFCC Model), (2), a Probabilistic Latent Component Analysis of a short-time Fourier frequency transformation (PLCA Model), and (3), a probabilistic Latent Component Analysis of a short-time Mel frequency transformation (Mel-PLCA Model).  In the following section, each of the models are explained in more detail.
+In the following section, we describe three approaches for computationally implementing our conceptual framework as described in Chapter \ref{ch:conceptual-audio}: (1), a Gaussian Mixture Model of Mel-Frequency Cepstral Coefficients (MFCC Model), (2), a Probabilistic Latent Component Analysis of a short-time Fourier frequency transformation (PLCA Model), and (3), a probabilistic Latent Component Analysis of a short-time Mel frequency transformation (Mel-PLCA Model).  These models aim to perform ``Segregation'', ``Integration'' and ``Matching'' of auditory scenes.  
 
 \subsection{MFCC model}\label{sec:mfcc}
-The first model we built encodes an acoustic class by first representing any units of sounds as a vector of Mel-frequency cepstral coefficients (MFCCs).  The final acoustic class is represented by building a classifier using a generative probabilistic model, a Gaussian Mixture Model (GMM).  
+The first model we built encodes an auditory scene by first representing any units of sounds as a vector of Mel-frequency Cepstral Coefficients (MFCCs).  For the purposes of classification, we define its acoustic class using a generative probabilistic model, a Gaussian Mixture Model (GMM).  
 
 \paragraph{MFCCs}
 The basic algorithm for computing MFCCs is summarized below:
@@ -763,7 +756,7 @@ Using the formulation described in Section \ref{sec:plca}, we encoded an acousti
 
 \subsection{Mel-PLCA Model}
 
-The last model we describe was built in the same way as the PLCA model, except it uses as input a Mel-frequency transformed STFT rather than a linear-frequency scale (i.e. $p(f,t) \rightarrow p(S_m(f),t)$.  The Mel filter-bank effectively performs a data-reduction from a $16384$ point frequency transform in the standard PLCA model to a $40$ element vector by summing the energy in the Mel-frequency critical bands.  This model most resembles approaches taken in MPEG-7 Spectral Basis Decomposition, however does not take the last step of de-correlating the frequency scale, and further makes use of PLCA instead of PCA or ICA.  % It should be noted that in a preliminary investigation, we also tested a model using MFCCs as input to PLCA (MFCC-PLCA).  However, the performance of this model was as good as random and is therefore not reported here.
+The last model we describe was built in the same way as the PLCA model, except it uses as input a Mel-frequency transformed STFT rather than a linear-frequency scale (i.e. $p(f,t) \rightarrow p(S_m(f),t)$.  The Mel filter-bank effectively performs a data-reduction from a $16384$ point frequency transform in the standard PLCA model to a $40$ element vector by summing the energy in the Mel-frequency critical bands.  This model most resembles approaches taken in MPEG-7 Spectral Basis Decomposition, however does not take the last step of de-correlating the frequency scale, and further makes use of PLCA instead of PCA or ICA.   %It should be noted that in a preliminary investigation, we also tested a model using MFCCs as input to PLCA (MFCC-PLCA).  However, the performance of this model was as good as random and is therefore not reported here.  This is likely due to the de-correlation taken in the last step of computing the MFCC.  As it creates an orthonormal projection, any further basis decomposition would likely fail to describe the data.  
 
 \section{Evaluation}
 
@@ -1424,7 +1417,7 @@ The interface of the iOS application is shown in Figure \ref{fig:memory-mosaic-i
 
 \subsubsection{User Reviews}
 
-After uploading Memory Mosaic to the Apple App Store (henceforth ``the app'') in August 2012, 3 reviews have been sent to the app store where reviewers had to indicate the number of stars to give the app, and 1 review has been sent to me personally.  These are reproduced below:
+Since uploading Memory Mosaic to the Apple App Store (henceforth ``the app'') in August 2012, A total of 235 downloads in 2011, 273 in 2012, and 140 in 2013 for a total of 648 downloads have been recorded on the iTunes App Store.  During this time, 3 reviews have been sent to the app store where reviewers had to indicate the number of stars to give the app, and 1 review has been sent to me personally.  These are reproduced below:
 
 \begin{quotationb}
 This a fascinating audio app that creates beautiful and thought provoking audio landscapes from your the sounds in your immediate world. Even after a 1/2 hour of recording and fiddling with the sliders the results are very interesting and got me thinking and made me more aware about my own personal audio environment. My only quibble is that i would like to able to save the result and have a clearer "recording" button. But the button is a minor thing and its probably just me. Great App!
@@ -1447,8 +1440,6 @@ You can use this app with speakers too if you place the mic away from the speake
 by TruthOverFear - (USA) - Jan 20, 2012}
 \end{quotationb}
 
-Further, a total of 535 downloads since the release date are recorded on the iTunes App Store.
-
 \begin{quotationb}
 The sound app.  I actually quite liked this one in the sense that, very quickly, I had a basic understanding input/output!  I am not a sound person at all.  After selecting, I think three tracks, I realised what was happening.  As someone who is not into apps, it's excellent that it worked quickly and that I didn't have to spend too much time grasping what was happening - once I realised what was happening I thought, this is interesting.  If I were really into sound, I can see myself getting into selecting tracks which would "mix" a bit better, it has the sort of vibe similar to my current obsession with Scrabble on the Ipad - you use your brain, there is a sort of strategy involved and an end result.  For tracks I used AC/DC, Motorhead and Calibre.  For some reason the AC/DC track (black in black) went crazy with the "number of voices".  Very weird, but the other tracks didn't.... Yeah, interesting app and why AC/DC went crazy interests me and yeah, good.
 \flushright{by Anonymous - Aug 22, 2013}
@@ -1460,10 +1451,11 @@ As well as releasing the app to the public, I have explored the app in a series 
 
 \subsection{Discussion}
 
-Memory Mosaic presents a significant step towards the final aim of this thesis, an audiovisual scene synthesis.  
+\hl{Memory Mosaic presents a significant step towards the final aim of this thesis, an audiovisual scene synthesis.  }
 
 \section{Conclusion}
 
+\hl{whaaaaa}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1690,15 +1682,35 @@ D. recompute flicker based on aggregated proto-object flow
 
 \hl{Where do I put a background of computational visual models?  I haven't done this yet.. .shit.}
 
-\subsection{Visual Acuity}
-
-\hl{Visual acuity attempts to }
-
-
 \subsection{Exogenous Attention Model}
 
-\hl{Previous attempts to model attention from exogenous influences }
+We develop a model of exogenous attention following our previous research looking at the correlations of eye-movements and dynamic scenes.  
 
+\subsection{Visual Acuity}
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/acuity-original.png}
+\end{subfigure}%
+\hspace*{5pt}
+\begin{subfigure}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/acuity-example.png}
+\end{subfigure}%
+\vspace*{5pt}
+\begin{subfigure}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/acuity-original2.png}
+\end{subfigure}%
+\hspace*{5pt}
+\begin{subfigure}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/acuity-example2.png}
+\end{subfigure}
+\caption{The output of the visual acuity filter on two example frames from an idealized scene depicting a man standing up are demonstrated.  (Left): Original frames; (Right): Examples of how the exogenous attention map (inlayed in the image) is used to simulate the point of fixation (drawn as a black/white circle as seen over the man potting).  This point along with the entire map's entropy, is then fed to visual acuity filter.  As the entropy is low, the blurring is quite substantial, removing many of the details more likely to be unattended such as the high frequency edges in the bricks, grass, and leaves.}
+\end{figure}
 
 \subsection{Proto-objects}
 
@@ -2002,7 +2014,38 @@ The artistic stylization process can be used in a real-time context without an e
 
 
 \subsection{Photosynthesizer iOS Application}
+Since the release of Photosynthesizer (henceforth ``the app'') in August 2012, the iTunes App Store has recorded 6,640 downloads for 2012, and 1,843 downloads for 2013 up to August 30th for a total of 8483 downloads in 13 months.  During this time, it also reached the iTunes Top 50 for Photo and Video Apps in 8 different countries (including US and UK) and the Top 500 in 26 different countries.  A large number of reviews are also recorded on the App Store, with an average rating of 3/5 for both the US (of 32 reviews) and UK (of 15 reviews).    As there are nearly 100 in 26 different countries, only a few of the English ones representing different views are reproduced here:
 
+\begin{quotationb}
+Like the way you can watch art materialize before you're eyes. First image important. Colors are fun to try and predict where the images go. Can't remove pics when added to pallet. Other than that. Awesome
+\end{quotationb}
+\begin{quotationb}
+Yeah pretty cool... Be nice to have a bit of control over the process though...worth every penny.( a few days later)...i love this app and the amazing pic it creates. it does tend to crash off and on .. I thinkitsgreat [\textit{sic}] though but i also se lots more potential... ( a few days later) i must say am i getting a little tired of what i can only describe as the "digital Poonsification" that is the resultant image (google Larry Poons art of the 60's to see what i'm talking about) . It would be cool if you could get say a more planar/cubist kind of thing revisualization... As opposed to tinier and tinier "eyelike ellipses" that are always generated . M thinking of a slighlty [\textit{sic}] more collage like result. Say like the work of Schwitters. Pretty cool app still.
+\end{quotationb}
+\begin{quotationb}
+Instructions say 'pick a few pictures'. Four pictures: 'insufficient memory'. Three pictures: 'insufficient memory'. Two: 'insufficient memory'.... (I don't think you can 'synthesise' [\textit{sic}] fewer than two things??). Guess I'll wait for the update (it's coming, right?)
+\end{quotationb}
+\begin{quotationb}
+... [\textit{sic}] Reading the description for this app I thought WOW, but after the initial excitement ..... [\textit{sic}] I suggest, the programmer(s) change the drugs they are being subscribed for serious delusions. They don't work, neither does the program, unless you call an indistinguishable mess being produced from your photos a synthesis, which I don't. I am going to throw some leftover food onto a canvas .... [\textit{sic}] It is more exiting..... [\textit{sic}] The star I had to give so someone may read this lines.
+\end{quotationb}
+\begin{quotationb}
+Doesn't work at all if you deny location access even once !
+\end{quotationb}
+\begin{quotationb}
+I've spent a surprising amount of time using this - its a great idea. It would be good to be able to delete images from the database as its really nice when you just use one image to make another, but this means quitting the app from the multitasking tray. Also, there seems to be some issues with the rendering on 3rd generation iPads.
+\end{quotationb}
+\begin{quotationb}
+Nice idea but very low res output - deleted!
+\end{quotationb}
+\begin{quotationb}
+Just did a couple of images and I like it very much. It has possibilities! I do backgrounds and videos for different musical performers and this will be very helpful. Will let you know more later?
+\end{quotationb}
+\begin{quotationb}
+Picasso in an app. Smart download.
+\end{quotationb}
+\begin{quotationb}
+The latest updates have really improved final results of your selected image. Only drawback is how long it takes to complete the image synthesis. Of course, you can always capture the image at less than 100\%, amd [\textit{sic}] you will still have a fine image for your collection. Biggest portion of the wait time seems to be with the finer details. I'll definitely be using this app more often now.
+\end{quotationb}
 
 \section{Discussion and Future Works}
 We have presented a framework for producing artistic stylizations of images or videos.  A corpus of image material is automatically segmented, defining the possible strokes effecting the possible colors and textures in the stylization.  Using a simple set of parameters, we have shown that many stylizations of a target image or video are possible, ranging from Impressionism, Expressionism, and Abstract Expressionism.  By allowing the interactive refinement of an image's stylization, we allow the user to experiment with a range of stylizations through simple parameters.  This interactive refinement affords compositing, the ability to blend together stylizations from different parameters over time.  We also demonstrate the extension of this framework to video-based stylization using simple motion tracking.  As in image-based stylization, the user can influence the stylization through the same set of parameters in real-time to interactively refine the stylization.  
@@ -2126,15 +2169,15 @@ Here we can see the reference file being compared to the user generated content.
 \doublespacing
 
 \section{Summary}
-a
+The work presented here details a computational arts practice exploring a specific type of collage called scene synthesis.  
 \section{Contribution}
-a
+
 \section{Limitations}
-a
+
 \section{Future Work}
-a
+Shocking the mind, adding noise to the stored representations, exploring really massive data sets, better model selection, sparse coding, stochastic sampling.
 \section{Final Discussion}
-a
+Give me money!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
