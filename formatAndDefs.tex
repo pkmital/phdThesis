@@ -9,6 +9,7 @@
 % Table of contents for each chapter
 
 \usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage{caption}
 \usepackage{minitoc}
 \setcounter{minitocdepth}{2}
 \mtcindent=15pt
@@ -229,7 +230,6 @@ urlcolor=linkcol %couleur des liens pour les url
 \usepackage[authoryear,round]{natbib}
 \usepackage{epigraph}
 \usepackage{graphicx}
-\usepackage{caption}
 \usepackage{subcaption}
 \usepackage{setspace}
 \usepackage{framed}
@@ -246,7 +246,7 @@ urlcolor=linkcol %couleur des liens pour les url
     {%
         {\hspace{-3pt}\color{black}\vrule width 3pt}%
         \hspace{0pt}%must no space.
-        \fboxsep=\colorbox{light-gray}%
+        \fboxsep=1.0pt\colorbox{light-gray}%
     }%
     \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
 }%
@@ -302,5 +302,5 @@ urlcolor=linkcol %couleur des liens pour les url
 \usepackage{setspace}
 \onehalfspacing
 \usepackage{soul}
+%\newcommand{\hl}[1]{\colorbox{yellow}{#1}}
 \usepackage[strict]{changepage}
-\usepackage{caption}

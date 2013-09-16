@@ -1,149 +1,22 @@
 \documentclass[a4paper,10pt,final]{ThesisStyle}
 %\documentclass[a4paper,11pt,draft]{ThesisStyle}
 \include{formatAndDefs}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
-
 \include{TitlePage}
 \dominitoc
 \pagenumbering{roman}
  \cleardoublepage
- 
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \section*{Acknowledgments}
 \lipsum[1-3]
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter*{Abstract}
 \lipsum[1-3]
-
 {\large\textbf{Keywords:}}
 synthesis, scene analysis, encoding, decoding
-
 \cleardoublepage
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \singlespacing
 \tableofcontents
 \doublespacing
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \mainmatter
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \onehalfspacing
 \chapter{Introduction}
 \label{chap:intro}
@@ -240,7 +113,6 @@ Collage-based video practitioners in the 1990's would often use clips of appropr
 Use of appropriated materials in GIF: \url{http://scorpiondagger.tumblr.com/}
 
  
-
 \subsubsection{Sound Culture}
 For sound, collage-based practices exploded with the birth of digital sampler hardware.  Similar to the practice of collage or montage, sampling refers to taking portions of existing media and using it within a performance or composition.  Digital sampling refers to sampling after an analog-to-digital process, where physical vibrations of sound are digitally sampled at equally spaced intervals, creating a discretely sampled representation of the continuous real-world phenomena.  This discrete sampling can easily be encoded by 1's and 0's in computer storage, and easily decoded back to the physical world, via an digital-to-analog process, such as through a speaker.  
 
@@ -253,10 +125,10 @@ Two years later in 1989, John Oswald released an amalgamation of sampled music i
 Unfortunately for Oswald, the Canadian Recording Industry Association ordered him to cease-and-desist production and to destroy all remaining copies of ``Plunderphonics''.   In a similar fate as Oswald, sound collage artists Negativland in 1991 were sued by the pop band U2's label, Island Records, for their use of the trademark ``U2'' on the album cover and their sampling of U2's 1987 song, ``I Still Haven't Found What I'm Looking For''.   
 
 Perhaps the most pervasive and popular use of sampling, or creative plagiarism as Kembrew McLeod cites it \cite{McLeod2011}, however, came in the form of Hip-Hop music.  Public Enemy's song, ``Caught, Can I Get a Witness?'', released in 1988, remarks on the practice of digital sampling: 
-\begin{verseb}
+\begin{verse}
 Caught, now in court 'cause I stole a beat\\
 This is a sampling sport
-\end{verseb}
+\end{verse}
 
 \hl{Why did I bring up Hip-hop?}
 
@@ -291,16 +163,19 @@ For instance, Joseph Nechvatal's computer-robotic assisted paintings such as \te
 
 In glitch art, artefacts exposed by procedural errors are exploited in creative and interesting ways.  For instance, datamoshing refers to the practice of intentionally altering information within encoded file formats so as to produce distorted interpretations of that file when it is decoded.  The technique itself can be applied in many different ways depending on the codec used.  As an example, when using Motion-JPEG, a popular video codec, artists often remove a particular kind of ``keyframe'' which tells the decoder when it should update all of its pixels.  In between these keyframes, the decoder will not use the actual content of the video, but instead track the individual pixels from the previous keyframe so that new image content does not need to be created.  This effectively helps keep the file size down while maintaining the important parts of the content.  When an artist removes these keyframes intentionally, the image content is tracked into a new video frame where much of the content should have been updated, effectively tricking the decoder into thinking it does not need to update all of its pixels.  This has the effect of one frame bleeding into the other in what Peter Kirn describes as causing ``frames to melt into one another like wax'' \cite{Kirn2009}.   Perhaps one interesting feature of the effect is that many people are already familiar with compression artifacts (e.g. from poor bandwidth streaming where network packets encoding the keyframes may have been lost).  When the artefacts are appropriated for creative use, however, they can create subtle and targeted effects such as the image of Justin Bieber in one frame being moved across by the motion of the next few frames.  Artist Yung Jake raps about this effect in his song, ``Datamosh''\footnote{Which also features some excellent datamoshing: \url{https://www.youtube.com/watch?v=nS7QvOX8LVk}}:
 
-\begin{verseb}
+\begin{verse}
 Datamoshing cool, datamoshing great \\
-Justin Bieber move him with my face \\
+Justin Bieber move him with my face\footnote{Jake is describing the effect from removing a keyframe where before there was a picture of Justin Bieber, and after there is Jake's own face.  The effect of removing the keyframe allows him to move Bieber's face with his own movements} \\
 Then use it for an art show, use it for a piece \\
 ... \\
 You thought it was an accident, a video glitch \\
 I did it on purpose though... it's nothing \\
-You don't have bad Internet, I'm just datamoshing \\
+You don't have bad Internet, I'm just datamoshing\footnote{Jake is describing how the effect resembles streaming artefacts from slow connections} \\
+... \\
+I'm on my datamosh, digital effects, man \\
+I'm moshing data, geeked up can't stand\footnote{Jake makes mention to being ``on datamosh'' and that he's ``geeked up'' and ``can't stand'', suggesting the effect of data mosh has a drug-like power.} \\
 \flushright{\textsc{Yung Jake -- Datamosh}}
-\end{verseb}
+\end{verse}
 
 Other techniques in glitch-based art include opening JPEG or other similarly encoded files in a normal text-pad and rewriting parts of it using normal keyboard letters.  This immediate representation (i.e. the one viewed in the textpad) is not meant to be decoded by a text parser.  However, the interaction of writing text within this format is then stored back into the file, and when read by a decoder, viewed as an image.  The parts that were changed are likely unknown by the one manipulating the file, so there may also be a trial-and-error process.  
 
@@ -324,7 +199,7 @@ Dimensionality reduction...
 
 \subsubsection{Algorithmic and Generative Art}
 
-\hl{Lev Manovich's Soft Cinema, \url{https://en.wikipedia.org/wiki/Database_cinema}}
+\hl{Lev Manovich's Soft Cinema} see \url{https://en.wikipedia.org/wiki/Database_cinema}
 
 \hl{Computer Graphics -> boundaries of collage become less clear: https://www.youtube.com/watch?v=fw3XyOyl47Q}
 
@@ -1251,7 +1126,7 @@ Currently, the Daphne Oram Archive has over 215 tape reels or 60 hours digitized
 \subsubsection{PLCA Model}
 We use the basic model for PLCA as described in Chapter \ref{ch:analysis-audio} for encoding the entire archive.  However, one important extension is required, as with the basic PLCA model, the number of components describing a distribution must be known \textit{a priori}.  We therefore incorporate model selection, a commonly employed information theoretic approach to determining parameters of a model.  In the case of PLCA, the model parameters are described by $N$, the number of components or encoded representations to use.  We could use as many components as we have slices, producing 72,000 components.  However, this would likely over fit the database.  To appropriately determine the correct value for $N$, we use \textit{Bayesian Information Criterion} (BIC) model selection.  Using the log-likelihood of the optimized parameters, an additional parameter which penalizes model complexity is subtracted from the log-likelihood:
 \begin{equationb}
-\ln{p(X)} &\simeq& \ln{p(\mathcal{D}|\theta_{\mathtt{MAP}})} - \frac{1}{2}M\ln{N}
+\ln{p(X)} \simeq \ln{p(\mathcal{D}|\theta_{\mathtt{MAP}})} - \frac{1}{2}M\ln{N}
 \end{equationb}
 where $M$ is the number of parameters in $\theta$ and $N$ is the number of data points.  BIC ensures that we do not let the model overfit to a large value of $N$, while still producing a suitable log likelihood explanation of the observed data.
 
@@ -2154,15 +2029,15 @@ a
 a
 \hl{In October 2007, YouTube introduced a content management tool, Video ID, to help content owners find infringing material.  Block, track, monetize.}
 
-\hl{Margaret Gould Stewart, YouTube's head of content revealed in a TED talk \cite{Stewart2010}}
+Margaret Gould Stewart, YouTube's head of content revealed in a TED talk \cite{Stewart2010}
 
 \begin{quotationb}
 Here we can see the reference file being compared to the user generated content. The system compares every moment of one to the other to see if there's a match. This means we can identify a match even if the copy uses just a portion of the original file, plays it in slow motion, and has degraded audio or video.  The scale and speed of this system is truly breathtaking -- we're not just talking about a few videos, we're talking about over 100 years of video every day between new uploads and the legacy scans we regularly do across all of the content on the site. And when we compare those 100 years of video, we're comparing it against millions of reference files in our database. It'd be like 36,000 people staring at 36,000 monitors each and every day without as much as a coffee break.
 \end{quotationb}
 
-\hl{Smitelli's reverse engineering of YouTube's Content ID system revealed a number of parameters which could and could not be detected by their system \cite{Smitelli2009}. }
+Smitelli's reverse engineering of YouTube's Content ID system revealed a number of parameters which could and could not be detected by their system \cite{Smitelli2009}.
 
-\hl{Though one month after the 2012 fall democratic convention speech featuring first lady Michelle Obama was aired and subsequently taken down due to copyright infringement \cite{Singel2012}, YouTube released a statement saying they would enforce manual reviewing of more of their copyright claims by the content owners in an effort to reduce erroneous claims \cite{Alfishawi2012}. }
+Though one month after the 2012 fall democratic convention speech featuring first lady Michelle Obama was aired and subsequently taken down due to copyright infringement \cite{Singel2012}, YouTube released a statement saying they would enforce manual reviewing of more of their copyright claims by the content owners in an effort to reduce erroneous claims \cite{Alfishawi2012}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

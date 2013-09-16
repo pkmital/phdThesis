@@ -121,11 +121,11 @@ Ran Carmi and Laurent Itti.
   dynamic scenes.}}
 \newblock Vision research, vol.~46, no.~26, pages 4333--45, December 2006.
 
-\bibitem[Cartwright~]{Cartwright}
+\bibitem[Cartwright~2011]{Cartwright}
 Mark Cartwright, Zafar Rafii, Jinyu Han and Bryan Pardo.
 \newblock {\em {Making searchable melodies: Human vs. machine}}.
 \newblock In Proceedings of the 2011 AAAI Workshop on Human Computation, San
-  Francisco, USA.
+  Francisco, USA., 2011.
 
 \bibitem[Casey~2001]{Casey2001a}
 Michael Casey.
@@ -203,7 +203,7 @@ CA~Curcio and KA~Allen.
 
 \bibitem[Davis~1939]{Davis1939}
 P.~A. Davis.
-\newblock {\em {EFFECTS OF ACOUSTIC STIMULI ON THE WAKING HUMAN BRAIN}}.
+\newblock {\em {Effects of Acoustic Stimuli on the Waking Human Brain}}.
 \newblock Journal of Neurophysiology, vol.~2, November 1939.
 
 \bibitem[Davis~1980]{Davis1980}
@@ -476,6 +476,12 @@ Douglas Kahn.
 \newblock {Wireless Imagination: Sound, Radio, and the Avant-Garde}.
 \newblock The MIT Press, 1994.
 
+\bibitem[Kahneman~1984]{Kahneman1984}
+D.~Kahneman and A.~Treisman.
+\newblock {\em {Changing views of attention and automaticity}}.
+\newblock In R.~Parasuraman and R.~Davies, editeurs, Varieties of Attention,
+  pages 29--61. New York: Academic Press, 1984.
+
 \bibitem[Kalloniatis~2007]{Kalloniatis2007}
 Michael Kalloniatis and Charles Luu.
 \newblock {\em {Visual Acuity}}, 2007.
@@ -497,6 +503,17 @@ HG~Kim and Nicolas Moreau.
 \newblock {\em {Audio classification based on MPEG-7 spectral basis
   representations}}.
 \newblock Circuits and Systems for Video, vol.~14, no.~5, pages 716--725, 2004.
+
+\bibitem[Kirn~2009]{Kirn2009}
+Peter Kirn.
+\newblock {\em {How to Datamosh with Free Video Tools, “Datamosh” is the
+  Wrong Word, David O’Reilly is Also Wrong}}, 2009.
+
+\bibitem[Klein~2000]{Klein2000}
+RM~Klein.
+\newblock {\em {Inhibition of return}}.
+\newblock Trends in cognitive sciences, vol.~72, no.~1, pages 76--85, January
+  2000.
 
 \bibitem[Klier~2001]{Klier2001}
 EM~Klier, Hongying Wang and JD~Crawford.
@@ -577,9 +594,9 @@ Peter Litwinowicz.
 \newblock SIGGRAPH '97 Proceedings of the 24th annual conference on Computer
   graphics and interactive techniques, pages 407--414, 1997.
 
-\bibitem[Ltd.~]{Ltd}
+\bibitem[Ltd.~2013]{Ltd}
 N3krozoft Ltd.
-\newblock {\em {// WALTER RUTTMANN}}.
+\newblock {\em {// WALTER RUTTMANN}}, 2013.
 
 \bibitem[Luo~2001]{Luo2001}
 M.~R. Luo, G.~Cui and B.~Rigg.
@@ -589,10 +606,17 @@ M.~R. Luo, G.~Cui and B.~Rigg.
   October 2001.
 
 \bibitem[Manjunath~2002]{Manjunath2002}
-BS~Manjunath and P~Salembier.
-\newblock {\em {Introduction to MPEG-7: multimedia content description
-  interface}}.
-\newblock WWW-address: http://ipsi. fhg. de/delite/Projects/, 2002.
+BS~Manjunath, P~Salembier and Thomas Sikora, editeurs.
+\newblock {Introduction to MPEG-7: Multimedia Content Description Interface}.
+\newblock John Wiley and Sons, 2002.
+
+\bibitem[Marr~1978]{Marr1978}
+D~Marr and H~K Nishihara.
+\newblock {\em {Representation and recognition of the spatial organization of
+  three-dimensional shapes.}}
+\newblock Proceedings of the Royal Society of London. Series B, Containing
+  papers of a Biological character. Royal Society (Great Britain), vol.~200,
+  no.~1140, pages 269--94, February 1978.
 
 \bibitem[Marr~1982]{Marr1982}
 David Marr.
@@ -754,8 +778,19 @@ Jeff Orchard and CS~Kaplan.
 \newblock {\em {Cut-out image mosaics}}.
 \newblock ACM Transactions on Graphics, vol.~1, no.~212, 2008.
 
-\bibitem[Osw~]{OswaldInterviews}
-{\em {Plunderphonics: Onterviews}}.
+\bibitem[Oswald~1985]{Oswald1985}
+John Oswald.
+\newblock {\em {Plunderphonics, or Audio Piracy as a Compositional
+  Prerogative}}.
+\newblock In Wired Society Electro-Acoustic Conference, 1985.
+
+\bibitem[Oswald~2013a]{J2013}
+John Oswald.
+\newblock {\em {Plunderphonics - Essay}}, 2013.
+
+\bibitem[Oswald~2013b]{OswaldInterviews}
+John Oswald.
+\newblock {\em {Plunderphonics: Interviews}}, 2013.
 
 \bibitem[Palmer~1999]{Palmer1999}
 Stephen~E. Palmer.
@@ -780,6 +815,12 @@ MI~Posner and Y~Cohen.
 \newblock {\em {Components of visual orienting}}.
 \newblock In Attention and Performance X: Control of Language Processes., pages
   551--556. 1984.
+
+\bibitem[Posner~1985]{Posner1985}
+Michael~I. Posner, Robert~D. Rafal, Lisa~S. Choate and Jonathan Vaughan.
+\newblock {\em {Inhibition of return: Neural basis and function}}.
+\newblock Cognitive Neuropsychology, vol.~2, no.~3, pages 211--228, August
+  1985.
 
 \bibitem[Potter~1969]{Potter1969}
 Mary~C Potter and Ellen~I Levy.
@@ -885,6 +926,12 @@ Philippe~G Schyns and Aude Oliva.
 \newblock {\em {From Blobs to Boundary Edges: Evidence for Time- and
   Spatial-Scale-Dependent Scene Recognition}}.
 \newblock Psychological Science, vol.~5, no.~4, pages 195--200, 1994.
+
+\bibitem[Scotia~2010]{Wang2010}
+Nova Scotia.
+\newblock {\em {Inhibition of return in static but not necessarily in dynamic
+  search}}.
+\newblock vol.~72, no.~1, pages 76--85, 2010.
 
 \bibitem[Seo~2010]{Seo2010}
 SangHyun Seo and KyungHyun Yoon.
@@ -1158,13 +1205,6 @@ Jue Wang, Yingqing Xu, Heung-Yeung Shum and Michael~F. Cohen.
 Avery Wang.
 \newblock {\em {The Shazam Music Recognition Service}}.
 \newblock Communications of the ACM, vol.~49, no.~8, 2006.
-
-\bibitem[Wang~2010]{Wang2010}
-Zhiguo Wang, Kan Zhang and Raymond~M Klein.
-\newblock {\em {Inhibition of return in static but not necessarily in dynamic
-  search.}}
-\newblock Attention, perception \& psychophysics, vol.~72, no.~1, pages 76--85,
-  January 2010.
 
 \bibitem[Wang~2011]{Wang2011}
 JC~Wang, HS~Lee and HM~Wang.
