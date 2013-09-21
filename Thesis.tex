@@ -29,7 +29,7 @@ synthesis, scene analysis, encoding, decoding
 
 \section{Motivation}
 
-The world in front of us is measured by the various sensory mechanisms we have available to us.  These mechanisms enable us to convert the physical phenomena into electrical signals which we use to construct a perception of the world.  However, we are often taught that the world we perceive is exactly as it is in front of us.  Philosopher Alan Watts describes the situation:
+The world in front of us is measured by the various sensory mechanisms we have available to us.  These mechanisms enable us to convert physical phenomena into electrical signals which we use to construct a perception of the world.  However, we are often taught that the world we perceive is exactly as it is in front of us.  Philosopher Alan Watts describes the situation:
 \begin{quotationb}
 Most of us are brought up to feel that what we see out in front of us is something that lies beyond our eyes, out there. That the colors and the shapes that you see in this room are out there. In fact, that is not so. In fact, all that you see is a state of affairs inside your head. All these colors, all these lights, are conditions of the optical nervous system. There are, outside the eyes, quanta, electronic phenomena, vibrations, but these are not light, they are not colors until they are translated into states of the human nervous system. So if you want to know how the inside of your head feels, open your eyes and look. That is how the inside of your head feels\\
 \flushright{\textsc{Alan Watts}}
@@ -37,12 +37,12 @@ Most of us are brought up to feel that what we see out in front of us is somethi
 
 Though perhaps a bit lyrical, Watts describes the feeling of the inside of our heads as the one that we often mistakenly describe as what is ``out there''.  Many theories of perception suggest that we encode the sensations entering our sensory mechanisms into a set of internal representations inaccessible to our consciousness\footnote{This thesis uses consciousness and awareness interchangeably.  Awareness denotes the ability to report something.  Consequently, unconsciousness denotes things of which we are not aware, and things that we cannot report.}.  Across numerous literature these representations are theorized to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  As we do not have conscious access to them, what are the representations supporting these processes?  How are they modeled, what do they look like, what can they explain, and what can they not explain?  
 
-It is the aim of this thesis to develop a better understanding of questions such as these through a computational arts practice defined by a process called \textit{scene synthesis}.  Scene synthesis is a computationally generated collage which encodes scenes such as images, videos, or sounds, into a set of internal unconscious representations using computational processes modeled by our own early perceptual machinery.  Once a set of units for the collage have been encoded, scene synthesis attempts to decode a target scene such as an existing sound clip, image, video, or for interactive experiences, a real-time video feed and/or microphone using the set of previously encoded internal representations. 
+It is the aim of this thesis to develop a better understanding of questions such as these through a computational arts practice defined by a process called \textit{scene synthesis}.  Scene synthesis is a computationally generated collage process, which begins by first representing existing scenes such as images, videos, or sounds into a set of representations using computational processes modeled by our own early perceptual machinery.  Once a set of representations have been learned, scene synthesis attempts to synthesize a target scene such as an existing sound clip, image, video, or for interactive experiences, a real-time video feed and/or microphone using the set of previously encoded internal representations. 
 
-Scene synthesis, as it is developed in this thesis, is capable of building interactive, dynamic, and computationally generated collages.  A defining aspect of the interaction within this framework is to place a participant within the collage-generation process such that the generated collage is specific to that participant.  As a result, the encoded representations are based on the participant's previous experiences or their own relationships to the stimulus material.  For instance, in one incarnation available as an iOS app, ``Memory Mosaic'', a participant experiences a real-time stream of sonic collages created automatically by the software.  The collages are generated using sounds the app has heard since the participant started the app.  By continually associating the incoming input with its stored memories, the app attempts to reveal a basic perceptual process of auditory listening through the decoded collages. 
-In an analogous fashion, visual scene synthesis aggregates representations learned from visual scenes, such as a live stream of a webcamera, in order to build a set of representations used for decoding any other visual scenes.  This framework is applied in an iOS application called ``PhotoSynthesizer'' where a user can encode any number of source photos in their Photo Library.  They can then select a target image to decode, which is then presented as a painting, starting from the background and eventually reaching the finer details of the foreground layers.  
+Scene synthesis, as it is developed in this thesis, is capable of building interactive, dynamic, and computationally generated collages.  A defining aspect of the interaction within this framework is to place a participant within the collage-generation process such that the generated collage is specific to that participant.  As a result, the learned representations are based on the participant's previous experiences or their own relationships to the stimulus material.  For instance, in one incarnation available as an iOS app, ``Memory Mosaic'', a participant experiences a real-time stream of sonic collages created automatically by the software.  The collages are generated using sounds the app has heard since the participant started the app.  By continually associating the incoming input with its stored memories, the app attempts to reveal aspects of our own perceptual processes when we listen to sound through the presented collages. 
+In an analogous fashion, visual scene synthesis aggregates representations learned from visual scenes, such as a live stream of a webcamera, in order to build a set of representations used for synthesizing any other visual scenes.  This framework is applied in an iOS application called ``PhotoSynthesizer'' where a user can encode any number of source photos in their Photo Library.  They can then select a target image to synthesize, which is then presented as a painting, starting from the background and eventually reaching the finer details of the foreground layers.  
 
-Overall, scene synthesis can be summarized by coding processes, where an \textit{encoding} stores representations of an audiovisual scene using a model of representation based on human perception, and the \textit{decoding} attempts to describe the stimuli again.  The terms encoding/decoding are certainly not without their history.  In the 1940's, Shannon mathematical formulation of a generalized communication system described the communication between a source and receiver through a transmitter and receiver, respectively.  The source encoded the message, and the transmitter would convert the message to physical phenomena, thus introducing possible noise sources effecting the message.  Finally, the message could be received and decoded finally by any destination that was capable of recovering the message.  His developments formed the basis of Information Theory, and along with developments occurring in military technology would later be incorporated by Norbert Wiener in a seminal text on communication theory entitled, Cybernetics.  
+Scene synthesis can also be summarized by coding processes, where an \textit{encoding} stores representations of an audiovisual scene using a model of representation based on human perception, and the \textit{decoding} attempts to describe the stimuli again.  The terms encoding/decoding are certainly not without their history.  In the 1940's, Shannon mathematical formulation of a generalized communication system described the communication between a source and receiver through a transmitter and receiver, respectively.  The source encoded the message, and the transmitter would convert the message to physical phenomena, thus introducing possible noise sources effecting the message.  Finally, the message could be received and decoded finally by any destination that was capable of recovering the message.  His developments formed the basis of Information Theory, and along with developments occurring in military technology would later be incorporated by Norbert Wiener in a seminal text on communication theory entitled, Cybernetics.  
 
 Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, describes a field of research denoted, cybernetics, which evolved out of military experiments in the 1940's describing feedback processes which repositioned actuators (e.g. missiles/guns) based on updated predictions (e.g. sonar/radar/filters).  As an example, a matched filter provided a template response of a radar signal (e.g. of a known target) and was matched at each radar sweep providing a new orientation towards a target.  This new orientation could then be fed back into the system which would then again perform a radar sweep, a matched filter response, and a new heading, \textit{ad infinitum}.  This process forms the basic idea of homing in missile guidance, and is a defining principle of reducing noise in the field of signal processing (i.e. it maximizes the signal-to-noise ratio of a known signal corrupted by additive noise).   
 
@@ -66,6 +66,8 @@ Collage is an arts-practice which appropriates fragments of culture for its mate
 This section situates the thesis within a lineage of collage-based practices starting with seminal developments in collage, montage, cut-up, and musique concr\`ete, before moving to an overview of modern developments in technology that radically changed collage practice in terms of its practice, publishing, distribution, and even legality.  Finally, computational methods developing procedural manipulation of content for producing collages are discussed.  
 
 \subsection{Beginnings}
+\label{sec:collage-beginnings}
+
 Though early practices of collage such as the invention of paper in China around 200 BC, calligraphers in Japan in the 10th century, the 15th and 16th century practices of adding gold leafs or other gemstones to canvases, and Giuseppe Arcimboldo's 16th century paintings of portraits composed of fruits, vegetables, and books, it was not until the first-half of the 20th century that an explosion of collage practices spanning visual, textual, and sonic mediums was exhibited.  
 
 In 1912, Pablo Picasso transformed a still-life by gluing an oilcloth to the canvas in \textit{Still Live with Chair Caning}.  Along with Georges Braque, they experimented with gluing visual fragments of culture represented by stamps, newspaper clippings, and photos to their canvases.  Shortly after in the 1920's, collage-based practice would define a major tenant of the Paris and Berlin-Dada scenes as seen in the work of George Grosz, John Heartfield, and Kurt Schwitters who would often work entirely with found objects meant to serve as representations of the city (e.g. \textit{Irgendsowas}, 1922).  Collage also found its way to purely cut-up photographic material, a technique known as photomontage, which can be seen in the work of Max Ernst's \textit{Murdering Airplane} (1920) and Hannah H\"och's \textit{Pretty Maiden} (1920).  Ernst would also later release the first collage novel in 1929, \textit{La femme 100 t\^{e}te}, which comprised of 9 plates and included an introduction by the founder of Surrealism, Andre Breton.  
@@ -76,14 +78,11 @@ In a similar vein to Exquisite Corpse, Tristan Tzara while at a Dadaist rally in
 
 Collage practices did not stop with static media, however.  In 1925, the Russian film director Sergei Eisenstein demonstrated the power of film montage in \textit{Battleship Potemkin} as he juxtaposed image sequences such as a crowd's flight down a staircase with the image sequence of a baby carriage for 7 minutes, creating viscerally new experiences and emotions than either sequence alone could have.  Walter Ruttmann would later explore the use of this practice with purely sound, in a composition in 1928 entitled, ``Wochenende'', German for weekend, in what would later be known as the first image-less film \cite{DouglasKahn1994}. Comprised of sounds of a moving train, the wind through the trees, voices of whispering lovers, and the sounds of a crowd, Ruttmann produced a montage through abstracting the fragments relating to the start of a weekend into what Hans Richter would describe as, ``a symphony of sound, speech-fragments and silence woven into a poem'' \cite{Ltd}.  Such practices, while not strictly collage as it had been known as, shared the technique of producing new meanings from the juxtaposition of individual fragments.  However, these fragments are temporally related, and thus the juxtaposition operates on an imposed temporal dimension rather than a spatial one to create a distinct image in the mind's eye.  
 
-By the end of the 1940's, radiophonic art, or the practice of producing sound for radio broadcast, had been well established.  Words, music, and noises were combined to produce radio productions of literary stories and news broadcasts.  It is no surprise then that in one studio in Paris, France, Pierre Schaeffer was also experimenting with splicing and recombining magnetic tape recordings of sound in a practice later called musique concr\`ete \cite{}.  Schaeffer argued that classical music practice begins with a set of abstractions which are notated on sheet music and then later reproduced as audible music.  Musique concr\`ete on the other hand begins with recordings of the sound outputs themselves, attempting to work from the raw sonic outputs towards any abstraction that may describe them.  \cite{Augoyard2006}
+By the end of the 1940's, radiophonic art, or the practice of producing sound for radio broadcast, had been well established.  Words, music, and noises were combined to produce radio productions of literary stories and news broadcasts.  It is no surprise then that in one studio in Paris, France, Pierre Schaeffer was also experimenting with splicing and recombining magnetic tape recordings of sound in a practice later called musique concr\`ete \cite{}.  Schaeffer argued that classical music practice begins with a set of abstractions which are notated on sheet music and then later reproduced as audible music.  Musique concr\`ete on the other hand begins with recordings of the sound outputs themselves, attempting to work from the raw sonic outputs towards any abstraction that may describe them \cite{Augoyard2006}.  
 
-Collage would also find its way into performance art.  Most notably, the works of choreographer Merce Cunningham were heavily influenced by collage-based practice.  In his 1964 work in Vienna, \textit{Events}, he takes ``splices'' of his existing works and recombines them to produce new configurations, further heavily influenced by the chance operations demonstrated in works by Marcel Duchamp and John Cage \cite{Copeland2002}.  One may also notice that Duchamp's notion of readymades (e.g., the urinal or bicycle wheel) is also apparent within his collage-based practice.  Copeland describes the influential nature context has on the interpretation of the individual fragments within \textit{Events}:
-\begin{quotationb}
-The Events though, demonstrate that "expressiveness" is by no means inherent in (or "natural" to) specific bodily movements. The "meaning" of movement- even Merce Cunningham's movement-is largely a function of the context in which that movement is performed. For example, when segments of \textit{Winterbranch} (1964) were incorporated into subsequent Events, the emotional tone of the work was no longer nightmarish or apocalyptic. Stripped of Robert Rauschenberg's disorienting lighting and LaMonte Young's aggressive, high-decibel-level sound score, what the audience saw was (merely) the act of dancers falling. Without other factors to color the emotional texture, this basic movement motif came to resemble a series of vaudevillian pratfalls; spectators tended to laugh rather than to recoil in horror.
-\flushright{\cite{Copeland2002}}
-\end{quotationb}
-Nam June Paik as well explored collage within performance in \textit{Random Access/Paper TV} (1978-1981), which payed homage to both Cage and Cunningham through silk-screened images of their performances printed on two decks of playing cards.  Paik recombined and shuffle the playing cards, creating collages through dealing the cards out on a flat surface \cite{Copeland2002}.
+Greek composer and mathematician Iannis Xenakis would also explore sound collage within his compositions.  He stated that ``all sound, even continuous musical variation, is conceived as an assemblage of a large number of elementary sounds adequately disposed in time'', and has explored a finely fragmented form of collage later denoted as Granular Synthesis (discussed in Section \ref{sec:musical-synthesis}) using analog tape splicing processes in compositions such as \textit{Analogique A-B} \cite{Roads1996}. 
+
+Collage would also find its way into performance art.  Most notably, the works of choreographer Merce Cunningham were heavily influenced by collage-based practice.  In his 1964 work in Vienna, \textit{Events}, he takes ``splices'' of his existing works and recombines them to produce new configurations, further heavily influenced by the chance operations demonstrated in works by Marcel Duchamp and John Cage \cite{Copeland2002}.  One may also notice that Duchamp's notion of readymades (e.g., the urinal or bicycle wheel) is also apparent within his collage-based practice.  Copeland describes the influential nature context has on the interpretation of the individual fragments within \textit{Events}, suggesting that ``when segments of \textit{Winterbranch} (1964) were incorporated into subsequent \texit{Events}, the emotional tone of the work was no longer nightmarish or apocalyptic [...] what the audience saw was (merely) the act of dancers falling [...] Without other factors to color the emotional texture [...] spectators tended to laugh rather than to recoil in horror'' \cite{Copeland2002}.  Nam June Paik as well explored collage within performance in \textit{Random Access/Paper TV} (1978-1981), which payed homage to both Cage and Cunningham through silk-screened images of their performances printed on two decks of playing cards.  Paik recombined and shuffled the playing cards incorporating chance operations in a similar vein to the early Dadaists and created collages through the dealing of the cards out onto a flat surface \cite{Copeland2002}.
 
 Perhaps the most sophisticated use of visual collage-practice comes from Czech surrealist animator Jan {\v S}vankmajer, who combines stop-motion and collage-based techniques within his intricately detailed and surreallist animations.  Film theorist Jan Udha describes his work as rapidmontage, ``offering amazing and original associations, a kind of kinetic collage'' \cite{Uhde}.  For example, in ``Mo{\v z}nosti Dialogu'' or, ``Dimensions of Dialogue'' (1982), {\v S}vankmajer creates a collage of two heads composed of a variety of coarsely fragmented objects in the style of Giuseppe Arcimboldo, one composed of various kitchenware and another composed of various fruits and vegetables.  Their ``dialogue'' ensues which effectively entails the one head eating the other one, chewing the head momentarily, then regurgitating it as a finer representation of objects.  The process continues in turns with one head eating the other until they resemble smooth clay-like sculpted heads. 
 
@@ -103,7 +102,7 @@ The notion of collage in the world of digital media may require pinning down, as
  
 Software for page layout, illustration, graphics, and photo/sound/ and video editing have afforded practitioners with faster and more sophisticated methods of collage.  For instance, Adobe Photoshop supports the automatic parsing of an image into object regions that can be individually manipulated enabling artists to finely segment and compose visual media.  For video, Adobe After Effects can similarly segment objects and track features across frames, making dynamic visual collages much easier to do.  Further, blending and compositing effects allow for seamless compositing in a variety of interesting scenarios.  
 
-As one example, design agency leftchannel likely made use of both Photoshop and After Effects in producing a 3D video cutout effect for the musician RJD2 in their music video for \textit{1976}.  Though the agency does not describe their technique, a similar process is described in a tutorial on videocopilot.com \footnote{\url{http://www.videocopilot.net/tutorials/virtual_3d_photos/}}. Taking still images, they could have used Photoshop for removing objects within the still frames.  The voids left from removing these objects are filled in using contextual and image replacement tools within Photoshop.  Finally, within After Effects, individual layers are placed at different z-coordinates, where each object cutout in Photoshop represents a new layer, and the filled in image representing the background.  Using this interesting reconstruction of the image within a virtual 3D environment, they then use a virtual camera to move around the scene, creating interesting dynamics that seem as though the image comes alive.  The virtual 3D scene afforded by After Effects allows the artist to create collages in a 3D space from using only 2D material.
+As one example, design agency leftchannel likely made use of both Photoshop and After Effects in producing a 3D video cutout effect for the musician RJD2 in their music video for \textit{1976}\footnote{\url{https://vimeo.com/1508709}} (2008).  Though the agency does not describe their technique, a similar process is described in a tutorial on videocopilot.com \footnote{\url{http://www.videocopilot.net/tutorials/virtual_3d_photos/}}. Taking still images, they could have used Photoshop for removing objects within the still frames.  The voids left from removing these objects are filled in using contextual and image replacement tools within Photoshop.  Finally, within After Effects, individual layers are placed at different z-coordinates, where each object cutout in Photoshop represents a new layer, and the filled in image representing the background.  Using this interesting reconstruction of the image within a virtual 3D environment, they then use a virtual camera to move around the scene, creating interesting dynamics that seem as though the image comes alive.  The virtual 3D scene afforded by After Effects allows the artist to create collages in a 3D space from using only 2D material.
 
 
 \begin{figure}
@@ -133,19 +132,13 @@ As one example, design agency leftchannel likely made use of both Photoshop and 
 \caption{}
 \label{fig:rearwindow-compositing-final}
 \end{subfigure}
-\caption{A few frames from Jeff Desom's \textit{Rear Window Timelapse} showing the compositing process in Figures \ref{fig:rearwindow-compositing-1} and \ref{fig:rearwindow-compositing-2} to produce the seamless composite in \ref{fig:rearwindow-compositing-final}}
+\caption{A few frames from Jeff Desom's \textit{Rear Window Timelapse} showing the compositing process in Figures \ref{fig:rearwindow-compositing-1} and \ref{fig:rearwindow-compositing-2} to produce the seamless composite in \ref{fig:rearwindow-compositing-final} (reproduced with permission from the artist)}
 \label{fig:rearwindow}
 \end{figure}
 
+In another variety of After Effects collaging, Jeff Desom takes individual shots within Alfred Hitchcock's \textit{Rear Window} taken by the main character in the story, Professional photographer L.B. "Jeff" Jeffries who is wheelchair bound, and reassembles them as a giant panoramic time-lapse view of his backyard in \textit{Rear Window Timelapse}\footnote{\url{https://vimeo.com/37120554}} (2012).  The compositing process is shown in Figures \ref{fig:rearwindow-compositing-1}-\ref{fig:rearwindow-compositing-2} to produce the seamless composite in Figure \ref{fig:rearwindow-compositing-final}.  As can be seen, there are no rough borders or edges where the individual frames were blended together.  The composite image plays as though the film had been shot in widescreen in the first place, though all the content came from only much smaller shots from the actual film.
 
-
-In another variety of After Effects collaging, Jeff Desom takes individual shots within Alfred Hitchcock's \textit{Rear Window} taken by the main character in the story, Professional photographer L.B. "Jeff" Jeffries who is wheelchair bound, and reassembles them as a giant panoramic time-lapse view of his backyard in \textit{Rear Window Timelapse}\footnote{\url{https://vimeo.com/37120554}}.  The compositing process is shown in Figures \ref{fig:rearwindow-compositing-1}-\ref{fig:rearwindow-compositing-2} to produce the seamless composite in Figure \ref{fig:rearwindow-compositing-final}.  As can be seen, there are no rough borders or edges where the individual frames were blended together.  The composite image plays as though the film had been shot in widescreen in the first place, though all the content came from only much smaller shots from the actual film.
-
-JK Kellers' \textit{Realigning my thoughts on Jasper Johns} synthesizes the introduction for the television animation series, \textit{The Simpsons}, using a variety of features within Adobe Illustrator.  The artist describes his process with the accompanying video, 
-
-\begin{quotationb}
-The video was created utilizing default software tools to manipulate an entire episode of the Simpsons (season 10, episode 19, "Mom and Pop Art", to be exact).  After ripping all the frames, I used software to turn the ripped images into vectors. Then I processed the files through Illustrator using the default Alignment & Distribution tools (23 different combinations). With the audio, I used a similar process, making a spectrogram image of the audio from each cut in the episode. Then I applied a variety of processes to the image to mimic the alignment/distribution used. Then took the resulting image and turned it back into audio. The result, as you will see is a frenetic mess of sight and sound.
-\end{quotationb}
+JK Kellers' \textit{Realigning my thoughts on Jasper Johns}\footnote{\url{https://vimeo.com/37127916}} (2013) creates vector-based collages of the introduction for the television animation series, \textit{The Simpsons}, using a variety of features within Adobe Illustrator to vectorize the original image.  The artist describes his process with the accompanying video as first ripping each frame, then turning the rasterized images into vectors and using a variety of alignment and distribution tools to sort the vectors spatially.  He further describes a similar process for the audio where he takes images of the spectrogram and applies similar manipulations in Illustrator.  The self-described result is a ``frenetic mess of sight and sound''.
 
 Various other software such as Adobe Director, Adobe Flash, VJamm, VDMX, Apple Quartz Composer, Cycling '74's Jitter, Resolume's Avenue, VVVV, Modul8, Algoriddim's VJay, or Processing have created greater possibilities for video-based media than standard non-linear editors such as Adobe Premiere or Apple Final Cut Pro could offer \cite{Jaeger2006}.  These tools opened video-based practices to real-time and performative practices within Visual Music and VJ cultures.  Many Visual Music and VJ artists even created their own software, releasing them to the public such as Matt Black of Coldcut, who created VJamm, Netochka Nezvanova who wrote Nato.0+55, or Miller Puckette, author of pd \cite{Jaeger2006} (we discuss more computational approaches in Section \ref{sec:background-computational-art}).  Though these practitioners did not employ collage solely, it was certainly common of VJ practice to use fragments of existing material in the form of found video footage and mix them.  
 
@@ -159,8 +152,7 @@ Various other software such as Adobe Director, Adobe Flash, VJamm, VDMX, Apple Q
 
 Collage-based video practitioners in the 1990's would often use clips of appropriated television footage such as the news footage of the motorcade leading to John F. Kennedy's assassination in Steinski's ``The Motorcade Sped On'', George H. W. Bush's news broadcasts on the Gulf War in EBN's ``We Will Rock You'', or Coldcut's use of nature videos.  However, these early examples as well as some recent artists such as Eclectic Method did not employ collage in the traditional spatial-sense, i.e. by juxtaposing fragments spatially across a single frame, and generally kept any source frames intact.  They did however experiment with the use of ``blending'', a technique with takes 2 or more images and blends the two together using a variety of functions such as: add, multiply, subtract, or difference.  
 
-Use of appropriated materials in GIF: \url{http://scorpiondagger.tumblr.com/}
-
+James Kerr appropriates images ``found here/there on the internet (a lot taken from northern and early renaissance paintings)''  within his animated digital collages \cite{Kerr2013} created using the Graphics Interchange Format (GIF), a common image format created in 1987 supporting simple frame-based animations supported by virtually all browsers \cite{Compuserve1987}.  The GIF format makes it easy to see animations anywhere in a web page as they are often embeddable in other common social networks such as Facebook and Twitter. 
  
 \subsubsection{Sound Culture}
 For sound, collage-based practices exploded with the birth of digital sampler hardware.  Similar to the practice of collage or montage, sampling refers to taking portions of existing media and using it within a performance or composition.  Digital sampling refers to sampling after an analog-to-digital process, where physical vibrations of sound are digitally sampled at equally spaced intervals, creating a discretely sampled representation of the continuous real-world phenomena.  This discrete sampling can easily be encoded by 1's and 0's in computer storage, and easily decoded back to the physical world, via an digital-to-analog process, such as through a speaker.  
@@ -179,8 +171,6 @@ Caught, now in court 'cause I stole a beat\\
 This is a sampling sport
 \end{verse}
 
-\hl{Why did I bring up Hip-hop?}
-
 %Stop Motion -> Jan Svankmajer -> Pink Freud: https://www.youtube.com/watch?v=5NPiOjFVQRc
 %Vinyl -> DJ'ing
 %VJ'ing (VDMX, Quartz Composer, Jitter, Resolume Avenue; VVVV; Modul8). EBN; Coldcut in the 90's who used nature videos such as monkeys jumping, beetles tapping, and plants opening and synchronized their motions to sound samples using VJamm. Eclectic Method using Algoriddim's VJay iPad app.
@@ -192,21 +182,31 @@ This is a sampling sport
 %Computer Graphics
 % Corel Draw, Director, Flash
 
-\section{Background in Computational Arts Practice}
+\section{Background in Computational Arts Practices}
 \label{sec:background-computational-art}
 
-Without delving too far into these expansive topics, it is important to consider some aspects of generative and glitch-based art practices that share similar processes to scene synthesis.  
+Until now, we've seen how technology has reshaped the practice of collage in interesting ways.  We now focus on collage-based practitioners that do not just make use of existing technology, but also write their own software.  Such practitioners are often the creators of algorithms and offer new ways of procedurally manipulating media.  
+
+\subsection{Synthesis}
+\label{sec:computational-arts-practice-synthesis}
+
+Synthesis, across a range of computational practices, describes a technique for creating media.  In sound, this can mean generating soundscapes (e.g. \cite{Schwarz2011}), entire phrases of music (e.g. \cite{a}), vowels (e.g. \cite{a}), or even entire phrases of speech (e.g. \cite{Moulines1990}).  For visual applications, similarly, synthesis can describe a variety of approaches for computationally generating images describing types of textures or patterns (e.g. \cite{Cohen2000}), artistic renderings (e.g. \cite{a}), or for video, dynamic textures such as clouds or fire (e.g. \cite{Schodl2000}).  In this section, we limit our review of this expansive field to approaches within arts practices specifically described by collage-based techniques which therefore also require the use of existing content.  
+
+\subsubsection{Sound practice}
+Within sound practice, a wide-number of practitioners have adopted the technique of granular synthesis.  This approach to generating sound works with an existing sound file or entire library of sounds and segments the files into ``grains'', or tiny fragments of sound generally lasting up to 50 ms.  The grains are collected and depending on the application can be time/pitch stretched/shifted, attenuated, crossfaded, looped, and distorted in any number of ways before they are reassembled based on either an interactive controller controlling the selection of grains such as a mouse or through chance operations.  Granular synthesis has seen wide-adoption since its early analog equivalents (as discussed within Iannis Xenakis' practice earlier in Section \ref{sec:collage-beginnings}) have become staples in most digital audio production tools such as Ableton Live (e.g. Robert Henke's Granulator\footnote{\url{https://www.ableton.com/en/packs/granulator/}}) or Propellerheads' Reason's Malstr\:{o}m Graintable\footnote{\url{http://www.propellerheads.se/products/reason/index.cfm?article=devices_malstrom&fuseaction=get_article}} module combining wavetable and granular synthesis.  
+
+Concatenative synthesis extends granular synthesis by increasing the grain size.  Typically these are from 50 ms - up to any number of seconds, and can be layered by any number of segments to produce complex soundscapes.  \hl{Work on talking about all of this stuff:} Zils and Pachet's Musaicing, Diemo Schwarz's CataRT, Ari Lazier's Mosievius \cite{Lazier2003a}, Michael Casey and Michael Grierson's Soundspotter/REMIX-TV \cite{CaseyICMC2007}, Michael Grierson's Plundermatics, Nick Collins' and Frederik Olofsen's KlippAV, Collins and Sturm's Dictionary Based Methods.... 
+
+
+\subsubsection{Visual practice}
+
+\hl{Should I include background on image/video synthesis including NPAR community, textures, dictionary, collage, ... etc...basically what is in the chapter on artistic stylization in previous work currently?  Or should I only focus on arts outputs here as I said I would?}
 
 \subsection{Generative Art}
-Generative art in particular ... 
 
 For instance, Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
 
-Plundermatics
-
-AV Collins
-
-Ben Bogart Dreaming Machine
+\hl{Ben Bogart and Philippe Pasquier's Context Machines, Ben Bogart's Dreaming Machine}
 
 \subsection{Glitch Art}
 
@@ -240,16 +240,16 @@ Then use it for an art show, use it for a piece \\
 ... \\
 You thought it was an accident, a video glitch \\
 I did it on purpose though... it's nothing \\
-You don't have bad Internet, I'm just datamoshing\footnote{Jake is describing how the effect resembles streaming artefacts from slow connections} \\
+You don't have bad Internet, I'm just datamoshing\footnote{the effect resembles streaming artefacts from slow connections} \\
 ... \\
 I'm on my datamosh, digital effects, man \\
-I'm moshing data, geeked up can't stand\footnote{Jake makes mention to being ``on datamosh'' and that he's ``geeked up'' and ``can't stand'', suggesting the effect of data mosh has a drug-like power.} \\
+I'm moshing data, geeked up can't stand\footnote{being ``on datamosh'', ``geeked up'', and ``can't stand'', suggests the effect has a drug-like power.} \\
 \flushright{\textsc{Yung Jake -- Datamosh}}
 \end{verse}
 
-Other techniques in glitch-based art include opening JPEG or other similarly encoded files in a normal text-pad and rewriting parts of it using normal keyboard letters.  This immediate representation (i.e. the one viewed in the textpad) is not meant to be decoded by a text parser.  However, the interaction of writing text within this format is then stored back into the file, and when read by a decoder, viewed as an image.  The parts that were changed are likely unknown by the one manipulating the file, so there may also be a trial-and-error process.  
+Other techniques in glitch-based art include ``pixel sorting'' (coined by Kim Asendorf\footnote{\url{http://www.kimasendorf.com/about/README}}), where pixels in an image are spatially sorted based on their values, or opening JPEG or other similarly encoded files in a normal text-pad and rewriting parts of it using normal keyboard letters.  This intermediate representation (i.e. the one viewed in the textpad) is not meant to be decoded by a text parser.  However, the interaction of writing text within this format is then stored back into the file, and when read by a decoder, viewed as an image.  The parts that were changed are likely unknown by the one manipulating the file, so there may also be a trial-and-error process.  
 
-Certainly, the methods built in this thesis when viewed in terms of encoding and decoding rather than typical collage-based practices can be seen to reflect similar processes.  The encoding process, leading to a particular representation, is capable of expressing the original information, though within a different method of representation (e.g. for image, typically pixels will be used; however, in this thesis, we will build an image using a set of psychologically-motivated representations resembling regions).  When distorting the immediate representation in some ways, the decoding is likely to have unexpected results.  We will see how this process can be used to a variety of effects including artistic stylization of image/video or for producing hallucinations in Chapter \ref{ch:synthesis-visual}.  
+Certainly, the methods built in this thesis when viewed in terms of encoding and decoding rather than typical collage-based practices can be seen to reflect similar processes.  The encoding processes leading to a particular representation are capable of expressing the original information, though within a different method of representation (e.g. for an image, typically pixels will be used; however, in this thesis, we will build an image using a set of psychologically-motivated representations).  When distorting the intermediate representation in some ways, the decoding is likely to have unexpected results.  We will see how this process can be used to a variety of effects including artistic stylization of image/video or for producing hallucinations in Chapter \ref{ch:synthesis-visual}.  
 
 
 
@@ -298,10 +298,6 @@ Dimensionality reduction...
 \hl{Space of collage: Andruid Kerne's Collage Machine; I/O/D's WebStalker; Mark Napier's Riot; }
 
 \hl{Aaron Hertzmann; SIGGRAPH community; }
-
-\hl{Ben Bogart's Dreaming Machine}
-
-\hl{Diemo Schwarz's CataRT; Nick Collins's BBCut and klippAV}
 
 %\subsection{Audio Information Retrieval}
 %\label{sec:background-audio-information-retrieval}
@@ -1201,9 +1197,9 @@ The juxtaposition of fragments of sound as an arts practice has roots at least a
 
 We have so far derived a conceptual framework for building auditory representations based on evidence in electrophysiology in Chapter \ref{ch:conceptual-audio} and started to develop this framework computationally in Chapter \ref{ch:analysis-audio}.  In particular, we demonstrated that our computational model described by Mel-Frequency Cepstral Coefficients (MFCCs) perform very well at encoding auditory scenes in cases where the entire scene must be integrated.  Further we demonstrated that when segregation or understanding the multiple sources in a scene is required, models based on Principal Latent Component Analysis (PLCA) perform very well and are much better suited than MFCCs.  
 
-We now turn to two practical developments using these computational models as it is within the necessary practical developments that we can better understand the applicability of these models to real-world and interactive settings, and also better understand where there are any missing pieces to our computational model and conceptual framework.  The first practical output, the Daphne Oram Browser, compares our MFCC and PLCA models within an interactive scene synthesis.  This scene synthesis is presented to a user of an audio archive in the form of a 3D virtual browser where they can select any segments of sound and hear them played back in real-time as an interactive sonic-collage.  This output attempts to discover how the representations motivated in Chapter \ref{ch:conceptual-audio} and computationally modeled with PLCA may help researchers understand any inherent content-based relationships within the content of a large audio corpus.  In other words, by using the representations built using our computational models, the relationships are not based on the content's filenames or metadata, but based on the way the content sounds.  A successful representation will ideally be able to define any inherent relationships within the archive based on purely sonic aspects.
+We now turn to two practical developments using these computational models as it is within the necessary practical developments that we can better understand the applicability of these models to real-world and interactive settings, and also better understand where there are any missing pieces to our computational model and conceptual framework.  The first practical output, \textit{The Daphne Oram Browser}, compares our MFCC and PLCA models within an interactive scene synthesis.  This scene synthesis is presented to a user of an audio archive in the form of a 3D virtual browser where they can select any segments of sound and hear them played back in real-time as an interactive sonic-collage.  This output attempts to discover how the representations motivated in Chapter \ref{ch:conceptual-audio} and computationally modeled with PLCA may help researchers understand any inherent content-based relationships within the content of a large audio corpus.  In other words, by using the representations built using our computational models, the relationships are not based on the content's filenames or metadata, but based on the way the content sounds.  A successful representation will ideally be able to define any inherent relationships within the archive based on purely sonic aspects.
 
-Finally, we describe Memory Mosaic a real-time auditory scene synthesis in the form of an iOS application.  This output will require the development of the last missing component of our conceptual framework, event detection, which explicitly defines events within a real-time stream of audio.  As motivated in our conceptual framework in Chapter \ref{ch:conceptual-audio}, event detection describes our ability to unconsciously detect change within an auditory scene.  The auditory units demarcated by this process are then encoded to produce, over time, a large database of sonic ``memories''.  Within this real-time experience, the current unit of sound is also decoded, effectively matching the segment to the closest previously encoded stream to produce a real-time scene synthesis. 
+Finally, we describe \textit{Memory Mosaic} a real-time auditory scene synthesis in the form of an iOS application.  This output will require the development of the last missing component of our conceptual framework, event detection, which explicitly defines events within a real-time stream of audio.  As motivated in our conceptual framework in Chapter \ref{ch:conceptual-audio}, event detection describes our ability to unconsciously detect change within an auditory scene.  The auditory units demarcated by this process are then encoded to produce, over time, a large database of sonic ``memories''.  Within this real-time experience, the current unit of sound is also decoded, effectively matching the segment to the closest previously encoded stream to produce a real-time scene synthesis. 
 
 \section{The Daphne Oram Browser}
 
@@ -1352,9 +1348,9 @@ Regarding (1) and (2), the form of the PLCA model (see Figure \ref{fig:oram-brow
 
 Further work should focus on issues with navigating in 3D space, as some users reported on the 3D nature as requiring practice to navigate.  One solution may be to create more intuitive control through the use of other input and display devices such as touch-screens.  As well, similar latent-analysis techniques may be applied for additional meta-data from the archive as is done in audiovisual and text corpora, e.g. \cite{Himmel1998,Christel1998}, to create more informed visualizations.  In this case, the input of text annotations as well can create a user-guided visualization, where feedback from the user reshapes the 3D visualization. 
 
-\section{Memory Mosaic}
+\section{Auditory Memory Mosaicing}
 
-We now turn to a second practical development in auditory scene synthesis: Memory Mosaic.  This app attempts to develop a real-time scene synthesis experience of sonic ``memories''.   This app will later be combined with a real-time visual scene synthesis in Chapter \ref{ch:audiovisual}.  Following our conceptual framework described in Chapter \ref{ch:conceptual-audio}, we must develop event detection in order to understand when an event of sound has occurred within a real-time stream of audio.  Further, another motivation for developing auditory scene synthesis is to be able to take the application and explore different auditory scenes (and not just an office scene), meaning we restricted our development to using a mobile platform.  
+We now turn to a second practical development in auditory scene synthesis, the freely available iOS app \textit{Memory Mosaic}.  This app attempts to develop a real-time scene synthesis experience of sonic ``memories''.   This app will later be combined with a real-time visual scene synthesis in Chapter \ref{ch:audiovisual}.  Following our conceptual framework described in Chapter \ref{ch:conceptual-audio}, we must develop event detection in order to understand when an event of sound has occurred within a real-time stream of audio.  Further, another motivation for developing auditory scene synthesis is to be able to take the application and explore different auditory scenes (and not just an office scene), meaning we restricted our development to using a mobile platform.  
 
 Following our conceptual framework, after event detection, we must encode the event using our integral (MFCC) or segregated (PLCA) computational representation, and decode it by matching to any learned representations.  In our initial tests, we developed Memory Mosaic with segregation in mind, given its greater performance for encoding as demonstrated in Chapter \ref{ch:analysis-audio}.  However, practically, running such a model in real-time and on a mobile platform is not yet possible.  We therefore restrict our discussion within this sub-chapter to using the computational model described by MFCCs, though hope this work could be expanded in the future to include segregation as well.  
 
@@ -1625,6 +1621,8 @@ The distinctions between Marr and RBC-based approaches to object representation 
 
 \hl{Neural Populations of Object Classes in Inferior Temporal Cortex... }
 
+\hl{Never discussed Dorsal/Ventral stream... is it necessary?}
+
 
 \section{Conceptual Framework}
 
@@ -1636,14 +1634,13 @@ Taking this literature forward, we are now in a position to motivate a conceptua
 
 \hl{The entropy of the motion correlates to entropy of gaze locations... use this value to drive the acuity map then... }
 
-\subsection{Visual Acuity}
 
-Behavioral evidence from change blindness studies has indicated an essential gap in our encoding of a scene, namely the precise details of a scene are only encoded at the point of fixation.  This is likely due to the computational complexity required for encoding an entire scene's high-spatial resolution information.  More importantly, it is physiologically impossible given the visual acuity limitations of the retina.  As discussed in \cite{Kalloniatis2007}, a number of factors effect visual acuity: refractive error, size of the pupil, illumination, time of exposure of the target, area of the retina stimulated, state of adaptation of the eye, and eye-movements.  Modeling each of these would be a thesis in itself.  We therefore take an overly simplified view of acuity in suggesting that a 2-degree Gaussian window describes the highly detailed regions of foveal processing, from which a logarithmic falloff is a plausible general approximation.  
+\subsection{Proto-objects}
+
+Behavioral evidence from change blindness studies has indicated an essential gap in our encoding of a scene, namely the precise details of a scene are only encoded at the point of fixation.  This is likely due to the computational complexity required for encoding an entire scene's high-spatial resolution information.  More importantly, it is physiologically impossible given the visual acuity limitations of the retina.  %As discussed in \cite{Kalloniatis2007}, a number of factors effect visual acuity: refractive error, size of the pupil, illumination, time of exposure of the target, area of the retina stimulated, state of adaptation of the eye, and eye-movements.  Modeling each of these would be a thesis in itself.  We therefore take an overly simplified view of acuity in suggesting that a 2-degree Gaussian window describes the highly detailed regions of foveal processing, from which a logarithmic falloff is a plausible general approximation.  
 
 \hl{One could design visual acuity as a method of ``focusing'', if no prior eye-movements onto a scene are known.  }
 
-
-\subsection{Proto-objects}
 
 \hl{Spatial grouping of color, motion, and luminance cues.  Builds a shape representation.}
 
@@ -1752,70 +1749,12 @@ where Ix, Iy, and It are the image derivatives, and Vx, and Vy are the component
 
 \subsection{Proto-objects}
 
-Shape recognition. Skeletonization. Level sets, Boundary value problem. Agglomerative clustering. 
+\hl{Shape recognition. Skeletonization. Level sets, Boundary value problem. Agglomerative clustering. }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hl{Acuity map -> Region detection -> Shape representation}
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\onehalfspacing
-\chapter{Computational Visual Scene Synthesis}
-\label{ch:synthesis-visual}
-\minitoc
-\doublespacing
-
-%\begin{abstract}
-%We investigate an approach to the artistic stylization of photographic images and videos that uses an understanding of the role of abstract representations in art and perception.  We first learn a database of representations from a corpus of images or image sequences.  Using this database, our approach synthesizes a target image or video by matching geometric representations in the target to the closest matches in the database based on their shape and color similarity.  We show how changing a few parameters of the synthesis process can result in stylizations that represent aesthetics associated with Impressionist, Cubist, and Abstract Expressionist paintings.  As the stylization process is fast enough to work in real-time, our approach can also be used to learn and synthesize the same camera image, even aggregating the database with each new video frame in real-time, a process we call "Memory Mosaicing". 
-%\end{abstract}
-
-
-
-\begin{figure}
- \includegraphics[width=\textwidth]{images/klimt-van-gogh-wide.png}
- \caption{Klimt's ``The Kiss'' is synthesized using 3 images of Van Gogh paintings to produce the result on the right.  Best viewed in color at 400\%.  Images representing faithful reproductions of Gustav Klimt and Van Gogh sourced from \href{http://commons.wikimedia.org}{Wikimedia Commons} are public domain.}
- %https://en.wikipedia.org/wiki/File:Gustav_Klimt_016.jpg
- %https://en.wikipedia.org/wiki/File:Vincent_van_Gogh_(1853-1890)_-_Wheat_Field_with_Crows_(1890).jpg
- %https://en.wikipedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg
- %http://www.nationalgallery.org.uk/paintings/learn-about-art/paintings-in-depth/sunflowers-symbols-of-happiness
- \label{fig:teaser}
-\end{figure}
-
-
-\section{Introduction}  
-
-Despite its apparent precision, our perception of reality is not representative of the way that we see.  For instance, the light coming to our eyes is distorted, upside-down, and constantly disrupted with each movement of the eye.  How can this noisy process ever constitute our experience of the visual world?  Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted representations of the world \cite{Marr1982}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive. As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.
-
-Artists are well aware of the role of representation in perception.  By leaving out particular details from a visual scene and accentuating others, they are able to direct a viewer's attention within a visual medium, influencing their perception \cite{Haeberli1990,Zimmer2003}.  Picasso once famously said, "I paint forms as I think them, not as I see them" \cite{Hughes1991}.  As one of the pioneers of Cubism, Picasso wanted to represent the fact that our perception of an object is based on all possible views of it.  He did so by compressing all views of an object into a synthesized one built using abstracted shape primitives.  Other movements in art can also be characterized as utilizing representations formed through geometrical primitives.  In Impressionist painting, these forms are often described by a dense number of short and visible brush strokes.  In Abstract Expressionist painting, the primitives are again dense, though tended to be of much larger strokes in an attempt to abstract away as much detail of a real scene as possible.
-
-In this paper, we investigate an approach to the artistic stylization of photographic images and videos through the use abstracted shape representations.  The representations that are built by this method can be varied in size and density using a process that allows the user to manipulate parameters in real-time.  Our system first learns a database of representations from a corpus of images.  It then synthesizes a target image or video by matching geometric representations in the target to the closest matches in the database.  We show how changing the parameters of the synthesis process results in stylizations that represent aesthetics associated with Impressionist, Cubist, and Abstract Expressionist paintings.  As the stylization process is fast enough to work in real-time, this approach can also be used to learn and synthesize the same camera image, even aggregating the database with each new video frame in real-time, a process we call "Memory Mosaicing".  
-
-\section{Related Work}  
-
-Artistic stylization has seen significant advances over the last 14 years.  Kyprianidis recently surveyed the field in \cite{Kyprianidis2012}.  The field began as filtering and clustering algorithms were applied to images, accentuating regions within an existing image to produce aesthetics associated with different styles (e.g., for Pointillism \cite{Yang2006,Seo2010}; for cartoonization \cite{Wang2004}; for oil and watercolor \cite{Meier1996,Hertzmann2000,Bousseau2007,Gooch2002}; for Impressionism \cite{Litwinowicz1997,Hertzmann1998}).  More recent approaches focused on using user-guided segmentation, where the user manually labels key frames with strokes defining how the frame is stylized (e.g. \cite{O'Donovan2012}) or uses eye-movements in deciding which aspects of a photo are most salient \cite{DeCarlo2002}.
-
-Hertzmann's seminal work in Image Analogies \cite{Hertzmann2001} presented a branch from the aforementioned approaches by allowing control of the stylization process through choosing a pair of example images.  By finding the patterns associated with an existing stylization of an image A to another image A', a user could then stylize a target image B by analogy into B' (later extended to include analogies between curved strokes \cite{Hertzmann2002}).  In the same year, \cite{Efros2001,Liang2001a} also developed methods in texture transfer and patch-based sampling, where existing image material was used to synthesize textures of arbitrary sizes.  These methods were later extended in \cite{Wang2004a}, where a user specified small blocks in an example painting that represented the style to recreate.  These blocks were then synthesized along computed paint strokes in the target image using an efficient hierarchical texture synthesis method.  Though Wang's approach and even more recent methods (e.g., \cite{Guo2006}) produces impressive results, it also relies on user interaction to select the representative patches expressing an artistic style.  Further, the aforementioned work in texture transfer as well as more recent approaches (e.g., \cite{Lee2010}) all rely on a single source image in order to transfer the style of the texture, meaning the range of stylizations possible are constrained to the information contained in a single image.  In this paper, we develop an approach that does not require the user to manually label any regions and that is not confined to a single example image while still affording a range of possible styles.  
-
-Our approach, corpus-based visual synthesis (CBVS), synthesizes a target image/video using existing pre-defined visual content.  As a result, it is also borrows methods from dictionary-based approaches (\cite{Zeng2009,Healey2004}), though our approach does not focus on developing strokes from expert training as we automatically segment a corpus of user chosen images.  It also shares methodology with collage/mosaic-based work (e.g. \cite{Kim2002,Orchard2008,Huang2011a,Miller2012}), allowing a user to work with a period of an artist's work or entire videos, for example.  Though these approaches are targeted for collage/mosaic-based purposes rather than artistic stylization, \cite{Huang2011a} describes an approach that is also motivated by an artist making use of collage.  Their approach produces what they call ``Arcimboldo-like'' collages in the style of 18th century painter Giuseppe Arcimboldo, relying on user strokes to segment the images used.  In contrast, CBVS is aimed towards producing a range of possible artistic stylizations through changing a few simple parameters.  Further, as segmentation happens without requiring user-selected patches or strokes, CBVS is also suitable for producing stylization of videos, unlike the very impressive though slow approach (15 minutes for a 300 x 400 pixel image) reported in \cite{Chang2010}.
-
-\section{Corpus-based Visual Synthesis Framework}  
-
-CBVS begins by first aggregating all frames from a user chosen corpora of images, $\mathbf{C} = \{C_1, C_2, ..., C_N\}$, containing $N$ total candidate images.  We aim to use the content solely from this corpus to artistically stylize a target image or video, $\mathbf{T} = \{T_1, T_2, ..., T_M\}$, containing $M$ total frames.  We develop a rendering procedure for image and video-based targets where parameters of the synthesis can be changed interactively.  To begin, we describe detection, tracking, description, matching, and synthesis of the abstracted shape representations.  We then describe parameters influencing each of these steps before showing our results in Section \ref{sec:results}.
 
 \subsection{Detection}
 
@@ -1854,6 +1793,14 @@ d(R_t, R_c) = d_s(R_t, R_c) + d_c(R_t, R_c)
 \label{eq:distance}
 The shape distance is simply computed as the absolute difference between the first and second order normalized central image moments of each region (i.e. the first four components of the descriptor).  For the color distance, we make use of the official CIE color-difference equation, CIEDE2000, which provides reliable color discrimination with interactive terms for lightness, chromaticity, and hue weighting \cite{Luo2001}.   This difference formula has been shown to be more perceptually accurate at determining the difference between colors than previous methods employing linear difference using RGB or LUV color values, as it is based on empirical evidence of perceived color difference.  For our tests, we use the default parameters described in \cite{Luo2001} for the weighting terms.
 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/ciede2000.png}
+\caption{Demonstration of how the CIEDE2000 distance formula re-weights distances between colors.  On the left, a hue-wheel is presented as a mesh.  Notice what we can perceive as sharp edges as the colors change.  The mesh is warped on the right, based on the relative distances between colors using the CIEDE2000 distance formula, presenting a perceptually linear and gradual change across any color.}
+\label{fig:ciede2000}
+\end{figure}
+  
+
 \subsection{Synthesis}
 
 To ensure regions are drawn from their background to the foreground, we synthesize each target region in order from the largest to smallest area sizes.  In contrast to methods that place brush strokes based on the stroke direction at each pixel on the medial axis (e.g.,\cite{Wang2004a}), we find the affine geometric transform describing the transformation from $R_{C_i}$ to $R_{T_i}$.  This can be described by a translation, rotation, and scaling.  The translation component is simply the difference in each region's centroid.  The rotation can be found using the central image moments: 
@@ -1863,18 +1810,89 @@ To ensure regions are drawn from their background to the foreground, we synthesi
 Finally, scaling is simply the ratio of the target to candidate region's bounding box.  This process has the benefit of being very fast using graphics hardware as it can be computed by a single matrix multiplication.  Each region is then layered above the previous one before creating a synthesized image.  In image-based stylization, multiple syntheses created with changing parameters can be blended together to create more detailed and expressive styles which may require many ``layers'' of ``paint''.  We discuss these parameters in greater detail in the next section.
 
 
-\section{Parameters}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\onehalfspacing
+\chapter{Computational Visual Scene Synthesis}
+\label{ch:synthesis-visual}
+\minitoc
+\doublespacing
+
+%\begin{abstract}
+%We investigate an approach to the artistic stylization of photographic images and videos that uses an understanding of the role of abstract representations in art and perception.  We first learn a database of representations from a corpus of images or image sequences.  Using this database, our approach synthesizes a target image or video by matching geometric representations in the target to the closest matches in the database based on their shape and color similarity.  We show how changing a few parameters of the synthesis process can result in stylizations that represent aesthetics associated with Impressionist, Cubist, and Abstract Expressionist paintings.  As the stylization process is fast enough to work in real-time, our approach can also be used to learn and synthesize the same camera image, even aggregating the database with each new video frame in real-time, a process we call "Memory Mosaicing". 
+%\end{abstract}
+
+
+\section{Introduction}
+
+Despite its apparent precision, our perception of reality is not representative of the way that we see.  For instance, the light coming to our eyes is distorted, upside-down, and constantly disrupted with each movement of the eye.  How can this noisy process ever constitute our experience of the visual world?  Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted representations of the world \cite{Marr1982}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive. As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.
+
+\hl{Talk about the different sections}
+
+
+\section{Artistic Stylization}
+
+\begin{figure}
+ \includegraphics[width=\textwidth]{images/klimt-van-gogh-wide.png}
+ \caption{Klimt's ``The Kiss'' is synthesized using 3 images of Van Gogh paintings to produce the result on the right.  Best viewed in color at 400\%.  Images representing faithful reproductions of Gustav Klimt and Van Gogh sourced from \href{http://commons.wikimedia.org}{Wikimedia Commons} are public domain.}
+ %https://en.wikipedia.org/wiki/File:Gustav_Klimt_016.jpg
+ %https://en.wikipedia.org/wiki/File:Vincent_van_Gogh_(1853-1890)_-_Wheat_Field_with_Crows_(1890).jpg
+ %https://en.wikipedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg
+ %http://www.nationalgallery.org.uk/paintings/learn-about-art/paintings-in-depth/sunflowers-symbols-of-happiness
+ \label{fig:teaser}
+\end{figure}
+
+
+\subsection{Introduction}  
+
+Artists are well aware of the role of representation in perception.  By leaving out particular details from a visual scene and accentuating others, they are able to direct a viewer's attention within a visual medium, influencing their perception \cite{Haeberli1990,Zimmer2003}.  Picasso once famously said, "I paint forms as I think them, not as I see them" \cite{Hughes1991}.  As one of the pioneers of Cubism, Picasso wanted to represent the fact that our perception of an object is based on all possible views of it.  He did so by compressing all views of an object into a synthesized one built using abstracted shape primitives.  Other movements in art can also be characterized as utilizing representations formed through geometrical primitives.  In Impressionist painting, these forms are often described by a dense number of short and visible brush strokes.  In Abstract Expressionist painting, the primitives are again dense, though tended to be of much larger strokes in an attempt to abstract away as much detail of a real scene as possible.
+
+In this section, we investigate an approach to the artistic stylization of photographic images and videos through the use abstracted shape representations.  The representations that are built by this method can be varied in size and density using a process that allows the user to manipulate parameters in real-time.  Our system first learns a database of representations from a corpus of images.  It then synthesizes a target image or video by matching geometric representations in the target to the closest matches in the database.  We show how changing the parameters of the synthesis process results in stylizations that represent aesthetics associated with Impressionist, Cubist, and Abstract Expressionist paintings.  %As the stylization process is fast enough to work in real-time, this approach can also be used to learn and synthesize the same camera image, even aggregating the database with each new video frame in real-time, a process we call "Memory Mosaicing".  
+
+\subsection{Related Work}  
+
+Artistic stylization has seen significant advances over the last 14 years.  Kyprianidis recently surveyed the field in \cite{Kyprianidis2012}.  The field began as filtering and clustering algorithms were applied to images, accentuating regions within an existing image to produce aesthetics associated with different styles (e.g., for Pointillism \cite{Yang2006,Seo2010}; for cartoonization \cite{Wang2004}; for oil and watercolor \cite{Meier1996,Hertzmann2000,Bousseau2007,Gooch2002}; for Impressionism \cite{Litwinowicz1997,Hertzmann1998}).  More recent approaches focused on using user-guided segmentation, where the user manually labels key frames with strokes defining how the frame is stylized (e.g. \cite{O'Donovan2012}) or uses eye-movements in deciding which aspects of a photo are most salient \cite{DeCarlo2002}.
+
+Hertzmann's seminal work in Image Analogies \cite{Hertzmann2001} presented a branch from the aforementioned approaches by allowing control of the stylization process through choosing a pair of example images.  By finding the patterns associated with an existing stylization of an image A to another image A', a user could then stylize a target image B by analogy into B' (later extended to include analogies between curved strokes \cite{Hertzmann2002}).  In the same year, \cite{Efros2001,Liang2001a} also developed methods in texture transfer and patch-based sampling, where existing image material was used to synthesize textures of arbitrary sizes.  These methods were later extended in \cite{Wang2004a}, where a user specified small blocks in an example painting that represented the style to recreate.  These blocks were then synthesized along computed paint strokes in the target image using an efficient hierarchical texture synthesis method.  Though Wang's approach and even more recent methods (e.g., \cite{Guo2006}) produces impressive results, it also relies on user interaction to select the representative patches expressing an artistic style.  Further, the aforementioned work in texture transfer as well as more recent approaches (e.g., \cite{Lee2010}) all rely on a single source image in order to transfer the style of the texture, meaning the range of stylizations possible are constrained to the information contained in a single image.  In this paper, we develop an approach that does not require the user to manually label any regions and that is not confined to a single example image while still affording a range of possible styles.  
+
+Our approach, corpus-based visual synthesis (CBVS), synthesizes a target image/video using existing pre-defined visual content.  As a result, it is also borrows methods from dictionary-based approaches (\cite{Zeng2009,Healey2004}), though our approach does not focus on developing strokes from expert training as we automatically segment a corpus of user chosen images.  It also shares methodology with collage/mosaic-based work (e.g. \cite{Kim2002,Orchard2008,Huang2011a,Miller2012}), allowing a user to work with a period of an artist's work or entire videos, for example.  Though these approaches are targeted for collage/mosaic-based purposes rather than artistic stylization, \cite{Huang2011a} describes an approach that is also motivated by an artist making use of collage.  Their approach produces what they call ``Arcimboldo-like'' collages in the style of 18th century painter Giuseppe Arcimboldo, relying on user strokes to segment the images used.  In contrast, CBVS is aimed towards producing a range of possible artistic stylizations through changing a few simple parameters.  Further, as segmentation happens without requiring user-selected patches or strokes, CBVS is also suitable for producing stylization of videos, unlike the very impressive though slow approach (15 minutes for a 300 x 400 pixel image) reported in \cite{Chang2010}.
+
+\subsection{Methods}
+
+CBVS begins by first aggregating all frames from a user chosen corpora of images, $\mathbf{C} = \{C_1, C_2, ..., C_N\}$, containing $N$ total candidate images.  We aim to use the content solely from this corpus to artistically stylize a target image or video, $\mathbf{T} = \{T_1, T_2, ..., T_M\}$, containing $M$ total frames.  We develop a rendering procedure for image and video-based targets where parameters of the synthesis can be changed interactively.  To begin, we describe detection, tracking, description, matching, and synthesis of the abstracted shape representations.  We then describe parameters influencing each of these steps before showing our results in Section \ref{sec:results}.
+
+
+\subsection{Parameters}  
 
 Parameters influencing the region detection algorithm are set independently for the corpus and the target, as their function differs.
 
-\subsection{Corpus Parameters}
+\subsubsection{Corpus Parameters}
 \label{sec:parameters}
 
 For the corpus, we define the \textit{timesteps}, \textit{minimum region area}, and \textit{maximum region area} of the detected regions.  We use a set of parameters that learns the widest range of possible regions covering both small and large regions.  In some cases, as in more abstract styles, it may be desirable to learn a very small number of regions, limiting the range of expressiveness to a few possible primitives.  As the timesteps parameter influences the number of evolutions allowed in the MSCR algorithm, the higher this number, the more regions will be discovered.  Similarly, lowering the minimum region size and increasing the maximum region size reduces the number of region that are pruned.  In our tests, we found a single set of parameters to be sufficient for defining a varied corpus: 100 for the timesteps, 35 pixels for the minimum region area, and 50\% of the image's size for maximum region area.
 
 When learning a corpus from many images, we restrict learning regions that are within a distance threshold (using Equation \ref{eq:distance}) of all regions in the existing database.  For our examples, we set this parameter to 50.  This value is low enough to include many regions, though high enough to avoid detecting duplicate regions.  A higher number for this parameter will lead to very discriminative regions.  In our tests, when setting this number higher, we found that our corpus had less variety of regions to synthesize from, leading to stronger shape or color mismatches.  
 
-\subsection{Target Parameters}
+\subsubsection{Target Parameters}
 
 \begin{figure}
   \centering
@@ -1932,11 +1950,13 @@ For the target, we allow the user to interactively define a few parameters affec
 
 For image-based targets, the aforementioned parameters effect the frame-to-frame compositing, meaning the same image is rendered over itself.  For video-based targets, however, only a single iteration is used for each frame, as much of the information required for building styles requiring more detailed composites can be extracted over the first 1 or 2 frames.  We demonstrate how these parameters can influence a wide range of stylizations in the next section.
 
-\section{Results}\label{sec:results}
+\subsection{Results}\label{sec:results}
 
 We use the presented framework to produce artistic stylizations of photo-realistic images and videos.  In this section, we show our results in image-based stylization using a landscape, abstract, and painterly scene. We then show how the same framework can be used with video targets, including an abstract and portrait video.  As well, we show a particular case where the source material is aggregated from a live-stream of the target, i.e. the source and target are the same, a process we call ``Memory Mosaicing''.  
 
-\subsection{Image: Landscape}
+\subsubsection{Images}
+
+\paragraph{Landscape}
 
 \begin{figure}
   \centering
@@ -1950,7 +1970,7 @@ We use the presented framework to produce artistic stylizations of photo-realist
 
 In Figure-\ref{fig:cows-klee}, we synthesize a landscape photo of cows grazing using Expressionist painter Paul Klee.  We turn off spatial blending and use a small value for the minimum region size.  We also allow the maximum region size to be very large.  This results in a relatively smaller region being matched to the sky and stretched to fill the top-half of the image.  The synthesized region happens to look like a rainbow, though the original region itself was very abstract (see the first image in the second row of the Klee corpus).  
 
-\subsection{Image: Abstract}
+\paragraph{Abstract}
 
 \begin{figure}
   \centering
@@ -1962,7 +1982,7 @@ In Figure-\ref{fig:cows-klee}, we synthesize a landscape photo of cows grazing u
 
 In Figure-\ref{fig:blanket-klimt}, we synthesize a close-up picture of a blanket using Klimt's The Kiss.  The target this time is very abstract and we will not need to synthesize parameters that force an abstract quality rendering such as large region sizes.  As such, we allow the minimum region size to be very small producing more details, though retaining a style associated with Abstract Expressionism.
 
-\subsection{Image: Painterly}
+\paragraph{Painterly}
 
 \begin{figure}
   \centering
@@ -1979,8 +1999,18 @@ We demonstrate how CBVS can stylize existing painterly images into other styles.
 
 In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom using 3 images of Monet's Water Lilies series.  Here, we ensure we detect many small regions by increasing the timesteps and setting the minimum region size to be very small.  Further, we turn on spatial blending as we decrease the minimum region size, as we want to avoid rendering any strong edges, retaining an Impressionist quality.
 
-\subsection{Video: Portrait}
+\subsubsection{Videos}
 
+\paragraph{Surrealist}
+
+\hl{Jan Svankmajer}
+
+
+\paragraph{Animation}
+
+\hl{70k views and Vimeo Staff Pick, and selected for exhibition twice, once at the Tin Shed Gallery in London, UK, and again at the Media Art Histories conference during the ART+COMMUNICATION: SAVE AS Exhibition in Riga, Latvia.}
+
+\paragraph{Portrait}
 
 \begin{figure}
   	\centering
@@ -1996,27 +2026,26 @@ In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom u
   	\label{fig:blanket-video}
 \end{figure}
    
+\hl{Two examples in video-based stylization are presented: one of a subject rowing a boat and another of abstract imagery.}  In Figure-\ref{fig:rowing}, we can see 4 frames taken from a video stylization.  We use the same corpus as in Figure-\ref{fig:cows-klee} and allow the minimum region size to be very small, resulting in a more Expressionist style.  The first frame is not as composed as the later frames, as there will have only been 1 frame of compositing.  As a result, the first frame in video-based Expressionist stylization may not be a consistent style with its later frames.
 
-
-Two examples in video-based stylization are presented: one of a subject rowing a boat and another of abstract imagery.  In Figure-\ref{fig:rowing}, we can see 4 frames taken from a video stylization.  We use the same corpus as in Figure-\ref{fig:cows-klee} and allow the minimum region size to be very small, resulting in a more Expressionist style.  The first frame is not as composed as the later frames, as there will have only been 1 frame of compositing.  As a result, the first frame in video-based Expressionist stylization may not be a consistent style with its later frames.
-
-\subsection{Video: Abstract}
+\paragraph{Abstract}
 
 In Figure-\ref{fig:blanket-video}, we stylize a video using the same corpus as in Figure-\ref{fig:cows-klee} and set the minimum region size to be very large.  Thus, instead of producing an Expressionist style as in Figure-\ref{fig:rowing}, less details are synthesized resulting in a more abstract style.  The first frame in this video does not necessarily require more than 1 iteration as it is synthesizing very large regions that often also overlap.
 
-\subsection{Video: The Simpsons vs. Family Guy}
-
-70k views and Vimeo Staff Pick, and selected for exhibition twice, once at the Tin Shed Gallery in London, UK, and again at the Media Art Histories conference during the ART+COMMUNICATION: SAVE AS Exhibition in Riga, Latvia.
-
-\section{Extensions}
-
-\subsection{Memory Mosaicing}
-% picture of memory mosaicing as video thumbnails
-
-The artistic stylization process can be used in a real-time context without an explicit corpus.  In this case, we aggregate representations learned from the ongoing stream of target frames.  Parameters are generally set by the user interacting with the process, or contained to a single preset.  In particular, restricting the total number of representations as first-in-first-out queue allows the process to continue in real-time with a simple linear search index.  In the examples shown in Figure \ref{fig:memory-mosaicing}, we show two example outputs from the same camera stream.  In the left image, we aim for large region sizes and low timesteps, resulting in a more abstract style, reminiscent of Cubist style paintings.  In the right example, we allow higher timesteps and only small region sizes, resulting in a more expressive style similar to paintings in Abstract Expressionism.  
+\subsection{Discussion}
+We have presented a framework for producing artistic stylizations of images or videos.  A corpus of image material is automatically segmented, defining the possible strokes effecting the possible colors and textures in the stylization.  Using a simple set of parameters, we have shown that many stylizations of a target image or video are possible, ranging from Impressionism, Expressionism, and Abstract Expressionism.  By allowing the interactive refinement of an image's stylization, we allow the user to experiment with a range of stylizations through simple parameters.  This interactive refinement affords compositing, the ability to blend together stylizations from different parameters over time.  We also demonstrate the extension of this framework to video-based stylization using simple motion tracking.  As in image-based stylization, the user can influence the stylization through the same set of parameters in real-time to interactively refine the stylization.  
 
 
-\subsection{Photosynthesizer iOS Application}
+\section{Photosynthesizer iOS Application}
+
+\subsection{Introduction}
+
+\subsection{Interface}
+
+\subsection{Examples}
+
+\subsection{Feedback}
+
 Since the release of Photosynthesizer (henceforth ``the app'') in August 2012, the iTunes App Store has recorded 6,640 downloads for 2012, and 1,843 downloads for 2013 up to August 30th for a total of 8483 downloads in 13 months.  During this time, it also reached the iTunes Top 50 for Photo and Video Apps in 8 different countries (including US and UK) and the Top 500 in 26 different countries.  A large number of reviews are also recorded on the App Store, with an average rating of 3/5 for both the US (of 32 reviews) and UK (of 15 reviews).    As there are nearly 100 in 26 different countries, only a few of the English ones representing different views are reproduced here:
 
 \begin{quotationb}
@@ -2050,8 +2079,26 @@ Picasso in an app. Smart download.
 The latest updates have really improved final results of your selected image. Only drawback is how long it takes to complete the image synthesis. Of course, you can always capture the image at less than 100\%, amd [\textit{sic}] you will still have a fine image for your collection. Biggest portion of the wait time seems to be with the finer details. I'll definitely be using this app more often now.
 \end{quotationb}
 
-\section{Discussion and Future Works}
-We have presented a framework for producing artistic stylizations of images or videos.  A corpus of image material is automatically segmented, defining the possible strokes effecting the possible colors and textures in the stylization.  Using a simple set of parameters, we have shown that many stylizations of a target image or video are possible, ranging from Impressionism, Expressionism, and Abstract Expressionism.  By allowing the interactive refinement of an image's stylization, we allow the user to experiment with a range of stylizations through simple parameters.  This interactive refinement affords compositing, the ability to blend together stylizations from different parameters over time.  We also demonstrate the extension of this framework to video-based stylization using simple motion tracking.  As in image-based stylization, the user can influence the stylization through the same set of parameters in real-time to interactively refine the stylization.  
+\subsection{Discussion}
+
+
+\section{Visual Memory Mosaicing}
+% picture of memory mosaicing as video thumbnails
+
+
+\subsection{Introduction}
+
+Visual synthesis can be used in a real-time context without an explicit corpus.  In this case, we aggregate representations learned from the ongoing stream of target frames.  Parameters are generally set by the user interacting with the process, or contained to a single preset.  In particular, restricting the total number of representations as first-in-first-out queue allows the process to continue in real-time with a simple linear search index.  In the examples shown in Figure \ref{fig:memory-mosaicing}, we show two example outputs from the same camera stream.  In the left image, we aim for large region sizes and low timesteps, resulting in a more abstract style, reminiscent of Cubist style paintings.  In the right example, we allow higher timesteps and only small region sizes, resulting in a more expressive style similar to paintings in Abstract Expressionism.  
+
+\subsection{Interface}
+
+\subsection{Examples}
+
+\subsection{Discussion}
+
+
+\section{Conclusion}
+
 
 The extension of video-based stylization is also particularly suited for real-time contexts as shown in ``Memory Mosaicing'', where a database is aggregated from learning representations in a target frame over time. 
 
@@ -2104,14 +2151,14 @@ A number of issues could be addressed in future versions.  For instance, synthes
 
 \begin{figure}
   \centering
-\begin{subfigure}[b]{0.45\textwidth}
+\begin{subfigure}[t]{0.475\textwidth}
   \centering
   \includegraphics[width=\textwidth]{images/vam.png}
   \caption{A few participants of the installation wearing the AR goggles.  Photos by the author.  Participants gave written consent to be photographed.}
   \label{fig:vam}
 \end{subfigure}
 \hspace{5.5pt}
-\begin{subfigure}[b]{0.45\textwidth}
+\begin{subfigure}[t]{0.475\textwidth}
   \centering
   \includegraphics[width=\textwidth]{images/vam-graphics-bar-resize-01.png}
   \caption{Feedback where 21 participants were asked to rate different aspects of the visual synthesis.  Error bars depict +/- 1 S.E.}
