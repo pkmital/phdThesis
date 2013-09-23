@@ -178,11 +178,22 @@ Selina Chu, Shrikanth Narayanan and C.C.J. Kuo.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~17, no.~6, pages 1142--1158, 2009.
 
+\bibitem[Cohen~2003]{Cohen2000}
+MF~Cohen, J~Shade, S~Hiller and O~Deussen.
+\newblock {\em {Wang tiles for image and texture generation}}.
+\newblock In ACM SIGGRAPH 2003 Papers, 2003.
+
 \bibitem[Collins~2004]{Collins2004}
 Nick Collins.
 \newblock {\em {On onsets on-the-fly: Real-time event segmentation and
   categorisation as a compositional effect}}.
 \newblock In Perception. Citeseer, 2004.
+
+\bibitem[Compuserve~1987]{Compuserve1987}
+Compuserve.
+\newblock {\em {GIF (tm) Graphics Interchange Format (tm) A standard defining a
+  mechanism for the storage and transmission of raster-based graphics
+  information}}, 1987.
 
 \bibitem[Copeland~2002]{Copeland2002}
 Roger Copeland.
@@ -482,16 +493,16 @@ D.~Kahneman and A.~Treisman.
 \newblock In R.~Parasuraman and R.~Davies, editeurs, Varieties of Attention,
   pages 29--61. New York: Academic Press, 1984.
 
-\bibitem[Kalloniatis~2007]{Kalloniatis2007}
-Michael Kalloniatis and Charles Luu.
-\newblock {\em {Visual Acuity}}, 2007.
-
 \bibitem[Kanoh~2001]{Kanoh2001}
 S~Kanoh, Toshinori Arai, R.~Futami and N.~Hoshimiya.
 \newblock {\em {Properties of auditory temporal integration revealed by
   mismatch negativity}}.
 \newblock Engineering in Medicine and Biology Society, 2001. Proceedings of the
   23rd Annual International Conference of the IEEE, vol.~1, 2001.
+
+\bibitem[Kerr~]{Kerr2013}
+James Kerr.
+\newblock {\em scorpion dagger}.
 
 \bibitem[Kim~2002]{Kim2002}
 Junhwan Kim and Fabio Pellacini.
@@ -605,6 +616,13 @@ M.~R. Luo, G.~Cui and B.~Rigg.
 \newblock Color Research \& Application, vol.~26, no.~5, pages 340--350,
   October 2001.
 
+\bibitem[Macon~1996]{Macon1996}
+M.W. Macon and M.a. Clements.
+\newblock {\em {Speech concatenation and synthesis using an overlap-add
+  sinusoidal model}}.
+\newblock 1996 IEEE International Conference on Acoustics, Speech, and Signal
+  Processing Conference Proceedings, pages 361--364, 1996.
+
 \bibitem[Manjunath~2002]{Manjunath2002}
 BS~Manjunath, P~Salembier and Thomas Sikora, editeurs.
 \newblock {Introduction to MPEG-7: Multimedia Content Description Interface}.
@@ -698,6 +716,12 @@ Tirin Moore and KM~Armstrong.
 \newblock {\em {Selective gating of visual signals by microstimulation of
   frontal cortex}}.
 \newblock Nature, vol.~421, no.~January, pages 370--373, 2003.
+
+\bibitem[Moulines~1990]{Moulines1990}
+E.~Moulines and F.~Charpentier.
+\newblock {\em {Pitch-synchronous waveform processing techniques for
+  text-to-speech synthesis using diphones}}.
+\newblock Speech communication, vol.~9, no.~5-6, pages 453--467, 1990.
 
 \bibitem[N\"{a}\"{a}t\"{a}nen~1978]{Naatanen1978}
 R~N\"{a}\"{a}t\"{a}nen, AWK Gaillard and S~M\"{a}ntysalo.
@@ -875,6 +899,10 @@ RA~Rensink.
 \newblock {\em {Change detection}}.
 \newblock Annual review of psychology, vol.~53, pages 245--77, January 2002.
 
+\bibitem[Rhodes~1967]{Rhodes1967}
+Richard Rhodes.
+\newblock {\em {Cutting-Up}}, June 1967.
+
 \bibitem[Rhodes~2010]{Rhodes2010}
 Christophe Rhodes, Tim Crawford and Michael Casey.
 \newblock {\em {Investigating music collections at different scales with
@@ -887,6 +915,11 @@ T~Rinne, G~Gratton, M~Fabiani, N~Cowan, E~Maclin, a~Stinard, J~Sinkkonen,
 \newblock {\em {Scalp-recorded optical signals make sound processing in the
   auditory cortex visible?}}
 \newblock NeuroImage, vol.~10, no.~5, pages 620--4, November 1999.
+
+\bibitem[Roads~1996]{Roads1996}
+C~Roads.
+\newblock {Computer Music Tutorial}.
+\newblock The MIT Press, 1996.
 
 \bibitem[Rosenholtz~1999]{Rosenholtz1999}
 Ruth Rosenholtz.
@@ -910,6 +943,17 @@ Fabienne Samson, Thomas~a Zeffiro, Alain Toussaint and Pascal Belin.
   cortex: an activation likelihood estimation meta-analysis.}}
 \newblock Frontiers in psychology, vol.~1, no.~January, page 241, January 2010.
 
+\bibitem[Sch\"{o}dl~2000]{Schodl2000}
+A~Sch\"{o}dl, Richard Szeliski, DH~Salesin and Irfan Essa.
+\newblock {\em {Video textures}}.
+\newblock Proceedings of the 27th annual \ldots, 2000.
+
+\bibitem[Schwarz~2000]{Schwarz2000}
+D~Schwarz.
+\newblock {\em {A System for Data-Driven Concatenative Sound Synthesis}}.
+\newblock In Proc. COST G-6 Conf. on Digital Audio Effects, Verona, Italy,
+  2000.
+
 \bibitem[Schwarz~2006]{Schwarz2006}
 D~Schwarz.
 \newblock {\em {Concatenative Sound Synthesis: The Early Years}}.
@@ -920,6 +964,17 @@ Diemo Schwarz, Roland Cahen and Sam Britton.
 \newblock {\em {Principles and applications of interactive corpus-based
   concatenative synthesis}}.
 \newblock Journ\'{e}es d'Informatique Musicale (JIM), GMEA, Albi, France, 2008.
+
+\bibitem[Schwarz~2010]{Schwarz2010}
+Diemo Schwarz and Norbert Schnell.
+\newblock {\em {Descriptor-based sound texture sampling}}.
+\newblock Proceedings of SMC Conference 2010, no.~July, 2010.
+
+\bibitem[Schwarz~2011]{Schwarz2011}
+Diemo Schwarz.
+\newblock {\em {State of the Art in Sound Texture Synthesis}}.
+\newblock International Conference on Digital Audio Effects (DAFx) 2011, pages
+  1--10, 2011.
 
 \bibitem[Schyns~1994]{Schyns1994}
 Philippe~G Schyns and Aude Oliva.
