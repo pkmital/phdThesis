@@ -297,10 +297,32 @@ urlcolor=linkcol %couleur des liens pour les url
 \floatname{program}{Program}
 \newenvironment{abstract}{\rightskip1in\itshape}{}
 
-
 \usepackage[yyyymmdd,hhmmss]{datetime}
 \usepackage{setspace}
 \onehalfspacing
 \usepackage{soul}
 %\newcommand{\hl}[1]{\colorbox{yellow}{#1}}
 \usepackage[strict]{changepage}
+
+%Place line under Figure caption
+\DeclareCaptionFormat{myformat}{#1#2#3\hrulefill}
+%\captionsetup[figure]{format=myformat}
+
+%%% Define a new caption separator
+\definecolor{mybluecolor}{rgb}{.204,.486,.741}
+\DeclareCaptionLabelSeparator*{newlinerule}{\par\kern2pt\hrule\kern1pt}
+% set up labelformat and labelsep for figure
+%\captionsetup[figure]{labelformat=parens, labelsep=newline}
+% set up labelformat and labelsep for subfigure
+
+\captionsetup[figure]{%
+%  figurename=FIGURE,
+%  font=small,
+%  format=plain,
+  labelformat=simple,
+%  labelsep=newlinerule,
+  singlelinecheck=off,
+  format=myformat
+  %labelfont={color=mybluecolor,bf},
+}
+\captionsetup[subfigure]{singlelinecheck=on,format=plain}

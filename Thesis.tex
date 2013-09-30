@@ -37,22 +37,12 @@ Most of us are brought up to feel that what we see out in front of us is somethi
 
 Though perhaps a bit lyrical, Watts describes the feeling of the inside of our heads as the one that we often mistakenly describe as what is ``out there''.  Many theories of perception suggest that we encode the sensations entering our sensory mechanisms into a set of internal representations inaccessible to our consciousness\footnote{This thesis uses consciousness and awareness interchangeably.  Awareness denotes the ability to report something.  Consequently, unconsciousness denotes things of which we are not aware, and things that we cannot report.}.  Across numerous literature these representations are theorized to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  As we do not have conscious access to them, what are the representations supporting these processes?  How are they modeled, what do they look like, what can they explain, and what can they not explain?  
 
-It is the aim of this thesis to develop a better understanding of questions such as these through a computational arts practice defined by a process called \textit{scene synthesis}.  Scene synthesis is a computationally generated collage process that begins by representing existing scenes such as images, videos, or sounds into a set of representations using computational processes modeled by our own early perceptual machinery.  Once a set of representations have been learned, scene synthesis attempts to synthesize a target scene such as an existing sound clip, image, video, or for interactive experiences, a real-time video feed and/or microphone using the set of previously learned internal representations. 
+It is the aim of this thesis to develop a better understanding of questions such as these through a computational arts practice defined by a process called \textit{scene synthesis}.  Scene synthesis is a computationally generated collage process that begins by representing existing scenes such as images, videos, or sounds into a set of representations using algorithms modeled by our own early perceptual machinery.  Once a set of representations have been learned, scene synthesis attempts to synthesize a target scene such as an existing sound clip, image, video, or for interactive experiences, a real-time video feed and/or microphone using the set of previously learned internal representations. 
 
 Scene synthesis, as it is developed in this thesis, is capable of building interactive, dynamic, and computationally generated collages.  A defining aspect of the interaction within this framework is to place a participant within the collage-generation process such that the generated collage is specific to that participant.  As a result, the learned representations are based on the participant's previous experiences or their own relationships to the stimulus material.  For instance, in one incarnation available as an iOS app, ``Memory Mosaic'', a participant experiences a real-time stream of sonic collages created automatically by the software.  The collages are generated using sounds the app has heard since the participant started the app.  By continually associating the incoming input with its stored memories, the app attempts to reveal aspects of our own perceptual processes when we listen to sound through the presented collages. 
 In an analogous fashion, visual scene synthesis aggregates representations learned from visual scenes, such as a live stream of a webcamera, in order to build a set of representations used for synthesizing any other visual scenes.  This framework is applied in an iOS application called ``PhotoSynthesizer'' where a user can encode any number of source photos in their Photo Library.  They can then select a target image to synthesize, which is then presented as a painting, starting from the background and eventually reaching the finer details of the foreground layers.  
 
-Scene synthesis can also be summarized by coding processes, where an \textit{encoding} stores representations of an audiovisual scene using a model of representation based on human perception, and the \textit{decoding} attempts to describe the stimuli again.  The terms encoding/decoding are certainly not without their history.  In the 1940's, Shannon mathematical formulation of a generalized communication system described the communication between a source and receiver through a transmitter and receiver, respectively.  The source encoded the message, and the transmitter would convert the message to physical phenomena, thus introducing possible noise sources effecting the message.  Finally, the message could be received and decoded by any destination that was capable of recovering the message.  His developments formed the basis of Information Theory, and along with developments occurring in military technology would later be incorporated by Norbert Wiener in a seminal text on communication theory entitled, Cybernetics.  
-
-Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, describes a field of research denoted, cybernetics, which evolved out of military experiments in the 1940's describing feedback processes which repositioned actuators (e.g. missiles/guns) based on updated predictions (e.g. sonar/radar/filters).  As an example, a matched filter provided a template response of a radar signal (e.g. of a known target) and was matched at each radar sweep providing a new orientation towards a target.  This new orientation could then be fed back into the system which would then again perform a radar sweep, a matched filter response, and a new heading, \textit{ad infinitum}.  This process forms the basic idea of homing in missile guidance, and is a defining principle of reducing noise in the field of signal processing (i.e. it maximizes the signal-to-noise ratio of a known signal corrupted by additive noise).   
-
-It has also been likened to processes of active perception by Wiener himself.  Wiener suggests that each movement of the eye and neuronal levels of processing leads towards an invariant object representation (discussed in greater detail in Chapter \ref{ch:conceptual-visual}).  This entire process, in Wiener's own words, ``brings [visual] information one step nearer to the form in which it is used and is preserved in the memory.''  Wiener's early insights into the function of the eye, neuronal processing stages, and internal representations supporting perception will be expanded upon more in this thesis, as I attempt to motivate and model a similar perceptual process in both auditory and visual domain and use the model within a collage-based practice.
-
-Cybernetics provided a vehicle for mathematicians and biologists in the coming years (e.g. Ross Ashby, Gregory Bateson).  It treated individual humans, animals, machines, or in cybernetic terms, \textit{systems}, as individual entities whose inner functions were not measured by their own capacities, but only in relation to what could be communicated by its own outputs to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  
-
-Early cyberneticians, information theorists, and others at the time would eventually form the basis for modern day Information Sciences, where encoding and decoding are still very much used.  For instance, it is used to describe the processes of information compression, where a very large file such as an image, document, or video must be transmitted or stored more efficiently.  To achieve this process, it is first encoded to a different representation by an encoder, only to later be decoded back into its uncompressed original form when it is retrieved or accessed.  Decoding occurs every time you listen to an (encoded) MP3 file, where the MP3-codec describes the representation for compression and the procedures for encoding/decoding to/from it.  These terms are also commonly used within the field of Neural Coding, where encoding attempts to describe the neural populations representing brain-based representations of an external stimuli and decoding attempts to work from the neural populations back to describing the stimuli as a whole again.  The field has grown significantly in the last 10 years due to its successes with decoding images, video, and sound, as well as the recent developments within brain imaging and pattern recognition technologies.  
-
-Ideally, the representations motivated and built in this thesis will allow for a synthesis indistinguishable from its target.   However, what happens when representations used by the encoder come from a set of representations that are unlike the stimuli?  For instance, what if my encoder only knows what the world of 'trees' and 'birds' sounds like?  How would it then decode a Michael Jackson recording?  Or in the visual case, what if my encoder only ever saw the animation ``The Family Guy'', and had to decode ``The Simpsons''?  This thesis asks these very same questions when discussing audio scene synthesis in Chapter \ref{ch:synthesis-audio} and visual scene synthesis in Chapter \ref{ch:synthesis-visual}.  More generally, these questions are framed as ``how does experience shape perception?'', suggesting that perception is not a one-to-one relationship with the world but one experienced based on our prior notions of it.  
+Ideally, the representations motivated and built in this thesis will allow for a synthesis indistinguishable from its target.   However, what happens when representations used in the synthesis come from a set of representations that are unlike the stimuli?  For instance, what if I have only learned about the sonic world of 'trees' and 'birds'.  How would it then synthesize a Michael Jackson recording?  Or in the visual case, what if I only ever saw the animation ``The Family Guy'', and had to interpret ``The Simpsons''?  This thesis asks these very same questions when discussing audio scene synthesis in Chapter \ref{ch:synthesis-audio} and visual scene synthesis in Chapter \ref{ch:synthesis-visual}.  More generally, these questions are framed as ``how does experience shape perception?'', suggesting that perception is not a one-to-one relationship with the world but one experienced based on our prior notions of it.  
 
 We will discuss these and more experiments along the way to our final aim, the combination of both auditory and visual modalities in two outputs: (1) ``Augmented Reality Hallucinations'', exhibited during the London Design Festival at the V\&A Digital Design Weekend, which uses an augmented reality headset originally built for immersive gaming environments delivering the visual experience and headphones to produce the sonic experience; and (2), ``YouTube Smash Up'', which synthesizes the number 1 video on YouTube of the week using the top 2 - 10 videos of the week. 
 
@@ -96,7 +86,7 @@ As well, Polaroid's introduction of instant film allowed photographers to instan
 
 1963 saw pivotal developments for the field of interaction with computers and in particular with computer graphics: Douglas Englebart's computer mouse and Ivan Sutherland's sketchpad (an extension of Robert Everett's light pen for the TX-2).  Both allowed a user to isolate and drag pixels on a screen, moving them from one data-space to another.  DJ Spooky remarks on the transformations these and other pioneers in human-computer interfacing technologies would have on the arts: ``Douglas Engelbert and Ivan Sutherland pioneered graphical user interfaces...but what they accomplished was even more profound than that, their work let us move into the screen world itself'' (quoted in \ref{Jaeger2006}).  
 
-It is in the 'screen world' that a wealth of new technologies would be developed in the coming years to allow the manipulation of data representing media.  As a result, perhaps the most significant deviation from early collage practice comes from the advent of digital media.  As media was no longer contained to the physical world, but a virtual screen-based one, where only software could manipulate the media, collage practice was intimately tied to the capabilities of software. 
+It is in the ``screen world'' that a wealth of new technologies would be developed in the coming years to allow the manipulation of data representing media.  As a result, perhaps the most significant deviation from early collage practice comes from the advent of digital media.  As media was no longer contained to the physical world, but a virtual screen-based one, where only software could manipulate the media, collage practice was intimately tied to the capabilities of software. 
 
 The notion of collage in the world of digital media may require pinning down, as a variety of new techniques can afford new kinds of compositions.  One theorist claims that collage will proliferate so long as ``cut'' and ``paste'' operations persist, as described by Taylor in \textit{Collage} \cite{Taylor2006b}.   Cut-and-paste, in the digital realm, implies an operation of copying a digitally stored representation (i.e. 1's and 0's in machine code) from a source to a target.  However, for most computers, a copy operation is carried out whenever information is simply accessed.  That is, a digital piece of information is first kept stored in a permanent storage location such as a hard disk, before being copied by software.  For example, when a sound or image is required for display or decoding (e.g. from an MP3-file to one that can be played as -1 to +1 values through the speakers, or a JPEG-file to one that can be displayed as RGB values in a monitor), the permanent file must be copied into a temporary high-speed memory storage, and used within the appropriate software making use of that information.  Even for lossless file formats, such as a WAVE audio file or RAW image file, most software will require the file to first be copied into high-speed memory to allow it to be manipulated, displayed (e.g. as a waveform or image), and possibly copied again in order to interface with hardware.  As a result, copyright laws have likened the pure access and interfacing of digitally stored information as falling within the domain of copyright, leading to several attempts to digitally manage content (e.g. Digital Rights Management, or DRM).  The implications of the interpretation of copyright within digital media will be explored more in Chapter~\ref{ch:audiovisual}, when discussing YouTube Smash Up, a project that explores an audiovisual collage within short films through the use of existing copyrighted material hosted on YouTube.  
  
@@ -190,11 +180,19 @@ Until now, we've seen how technology has reshaped the practice of collage in int
 \subsubsection{Sound practices}
 Within sound practice, a wide-number of practitioners have adopted the technique of granular synthesis.  This approach to generating sound works with an existing sound file or entire library of sounds and segments the files into ``grains'', or tiny fragments of sound generally lasting up to 50 ms.  The grains are collected and depending on the application can be time/pitch stretched/shifted, attenuated, crossfaded, looped, and/or distorted in any number of ways before they are reassembled based on either an interactive controller controlling the selection of grains such as a mouse or through chance operations.  Granular synthesis has seen wide-adoption since its early analog equivalents (as discussed within Iannis Xenakis' practice earlier in Section \ref{sec:collage-beginnings}) and have become staples in most digital audio production tools such as Ableton Live (e.g. Robert Henke's \textit{Granulator}\footnote{\url{https://www.ableton.com/en/packs/granulator/}}) or Propellerheads' Reason's \textit{Malstr\"{o}m Graintable}\footnote{\url{http://www.propellerheads.se/products/reason/index.cfm?article=devices_malstrom&fuseaction=get_article}} module combining wavetable and granular synthesis.  
 
-Concatenative synthesis extends granular synthesis by increasing the grain size thus also increasing the discernability of the original source.  Typically these are from 50 ms - up to any number of seconds, and can be layered by any number of segments to produce complex soundscapes, thus resembling the analog work of Schafer and Oswald (discussed in \ref{sec:collage-beginnings}).  First developed for the application of speech production \cite{Macon1996}, concatenate synthesis requires an analysis of sound segments where the analysis produces a description of each segment.  When creating a new phrase of speech, short samples of speech are matched to the phonetic text fragments to produce whole phrases.  
+Concatenative synthesis extends granular synthesis by increasing the grain size thus also increasing the discernability of the original source.  Typically these are from 50 ms - up to any number of seconds, and can be layered by any number of segments to produce complex soundscapes, thus resembling the analog work of Schafer and Oswald (discussed in \ref{sec:collage-beginnings}).  First developed for the application of speech production \cite{Macon1996}, concatenative synthesis requires an analysis of sound segments where the analysis produces a description of each segment.  When creating a new phrase of speech, short samples of speech are matched to the phonetic text fragments to produce whole phrases.  
 
 Concatenative synthesis was eventually extended to a range of applications within performance based settings.  Instead of using a text-to-speech approach, Diemo Schwarz used a mouse cursor to performatively select the individual segments within his custom interface \textit{CataRT} \cite{Schwarz2008}, allowing him to create soundscapes in real-time \cite{Schwarz2010,Schwarz2011}, or use another audio file's analysis as input to drive the concatenatation process \cite{Schwarz2000}.  Other examples include the use of matching an input sound source to a database of a video's audio file, thus driving video playback, as in Sven K\"{o}nig's \textit{sCrAmBlEd?HaCkZ!} performance using a live microphone to drive Michael Jackson\footnote{\url{https://www.youtube.com/watch?v=eRlhKaxcKpA}}\footnote{\url{http://www.popmodernism.com}}, or Remix-TV which could use a live violin to drive Alfred Hitchcock's Vertigo and accompanying musical score \cite{CaseyICMC2007}.  Nick Collins as well used the technique with an on-the-fly onset detector during musical performances allowing him to create rhythmic structures resembling breakbeats or dance music \cite{Collins2004} and paired it with a live visual performance using similar concatenatations with Frederik Olofsen in their 2007 performance \textit{Klipp AV}.  A chronological chart of performance systems can be found up to 2006 in \cite{Schwarz2006} which has since expanded on an online website\footnote{\url{http://imtr.ircam.fr/imtr/Corpus-Based_Sound_Synthesis_Survey}}.  %As well, Nick Collins recently reviewed musical applications of the approach and we therefore refer the reader to his thesis for more information.
 
-%digital form interaction within the process has afforded interesting new \hl{Work on talking about all of this stuff:} Zils and Pachet's Musaicing, Diemo Schwarz's CataRT, Ari Lazier's Mosievius \cite{Lazier2003a}, Michael Casey and Michael Grierson's Soundspotter/REMIX-TV \cite{CaseyICMC2007}, Michael Grierson's Plundermatics, Nick Collins' and Frederik Olofsen's KlippAV, Collins and Sturm's Dictionary Based Methods.... 
+\hl{Zils and Pachet's Musaicing}
+
+\hl{Ari Lazier's Mosievius} \cite{Lazier2003a}
+
+\hl{Michael Grierson's Plundermatics}
+
+\hl{Collins and Sturm's Dictionary Based Methods}
+
+%digital form interaction within the process has afforded interesting new \hl{Work on talking about all of this stuff:} , Diemo Schwarz's CataRT, , Michael Casey and Michael Grierson's Soundspotter/REMIX-TV \cite{CaseyICMC2007}, , Nick Collins' and Frederik Olofsen's KlippAV, .... 
 
 
 \subsubsection{Visual practices}
@@ -203,9 +201,9 @@ Concatenative synthesis was eventually extended to a range of applications withi
 
 %\subsection{Generative Art}
 
-For instance, Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
+Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
 
-\hl{Ben Bogart and Philippe Pasquier's Context Machines, Ben Bogart's Dreaming Machine}
+Ben Bogart's development of \textit{Context Machines} similarly resembles a collage of procedures, one which he describes as metacreation: ``the artist manifests the concept in a system whose output is presented to the audience. This is a process of metacreation: the building of systems that create media artifacts'' \cite{Bogart2013}.  His work combines computational models informed by cognitive models and creativity theory in order to generate artworks deemed ``creative''.  His works explore computational models of ``conceptual spaces'' through the use of pattern recognition techniques such as self-organizing maps applied to large corpora of images.  The resulting outputs resemble dream-like collages creating surprising associations within everyday scenes.
 
 %\subsection{Glitch Art}
 
@@ -248,6 +246,44 @@ I'm moshing data, geeked up can't stand\footnote{being ``on datamosh'', ``geeked
 
 Other techniques in glitch-based art include ``pixel sorting'' (coined by Kim Asendorf\footnote{\url{http://www.kimasendorf.com/about/README}}), where pixels in an image are spatially sorted based on their values, or opening JPEG or other similarly encoded files in a normal text-pad and rewriting parts of it using normal keyboard letters.  This intermediate representation (i.e. the one viewed in the textpad) is not meant to be decoded by a text parser.  However, the interaction of writing text within this format is then stored back into the file, and when read by a decoder, viewed as an image.  The parts that were changed are likely unknown by the one manipulating the file, so there may also be a trial-and-error process.  
 
+
+\hl{Computational dictionary-based approaches for image stylization} \cite{Zeng2009,Healey2004}.  
+
+\hl{Collage/mosaic-based work allowing a user to work with a period of an artist's work or entire videos, for example} \cite{Kim2002,Orchard2008,Huang2011a,Miller2012}.  
+
+\cite{Huang2011a} \hl{describes an approach that is also motivated by an artist making use of collage.  Their approach produces what they call ``Arcimboldo-like'' collages in the style of 18th century painter Giuseppe Arcimboldo, relying on user strokes to segment the images used.}
+
+\hl{Also} \cite{Chang2010}.
+
+\hl{Lev Manovich's Soft Cinema} see \url{https://en.wikipedia.org/wiki/Database_cinema}
+
+%\hl{Computer Graphics -> boundaries of collage become less clear: https://www.youtube.com/watch?v=fw3XyOyl47Q}
+
+\hl{Space of collage: Andruid Kerne's Collage Machine; I/O/D's WebStalker; Mark Napier's Riot; }
+
+%\hl{Aaron Hertzmann; SIGGRAPH community; }
+
+%\subsection{Audio Information Retrieval}
+%\label{sec:background-audio-information-retrieval}
+
+
+
+%By the 1950's, artists and composers would also engage with cybernetic approaches.  Ross Ashby's \textit{Homeostat} for instance created a ... Bruce Lacey ... Thus, it appeared with the advent of robotics and increasingly more prevalent control structures, most notably the computer, making art through collections or fragments of processes would become a defining aspect of computational practices.
+
+
+
+\section{Coding Processes}
+
+Scene synthesis can also be summarized by coding processes, where an \textit{encoding} stores representations of an audiovisual scene using a model of representation based on human perception, and the \textit{decoding} attempts to describe the stimuli again.  We've also discussed these terms in relation to digital media formats.  Though, the terms encoding/decoding are certainly not without their history.   In the 1940's, Shannon mathematical formulation of a generalized communication system described the communication between a source and receiver through a transmitter and receiver, respectively.  The source encoded the message, and the transmitter would convert the message to physical phenomena, thus introducing possible noise sources effecting the message.  Finally, the message could be received and decoded by any destination that was capable of recovering the message.  His developments formed the basis of Information Theory, and along with developments occurring in military technology would later be incorporated by Norbert Wiener in a seminal text on communication theory entitled, Cybernetics.  
+
+Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, describes a field of research denoted, cybernetics, which evolved out of military experiments in the 1940's describing feedback processes which repositioned actuators (e.g. missiles/guns) based on updated predictions (e.g. sonar/radar/filters).  As an example, a matched filter provided a template response of a radar signal (e.g. of a known target) and was matched at each radar sweep providing a new orientation towards a target.  This new orientation could then be fed back into the system which would then again perform a radar sweep, a matched filter response, and a new heading, \textit{ad infinitum}.  This process forms the basic idea of homing in missile guidance, and is a defining principle of reducing noise in the field of signal processing (i.e. it maximizes the signal-to-noise ratio of a known signal corrupted by additive noise).   
+
+It has also been likened to processes of active perception by Wiener himself.  Wiener suggests that each movement of the eye and neuronal levels of processing leads towards an invariant object representation (discussed in greater detail in Chapter \ref{ch:conceptual-visual}).  This entire process, in Wiener's own words, ``brings [visual] information one step nearer to the form in which it is used and is preserved in the memory.''  Wiener's early insights into the function of the eye, neuronal processing stages, and internal representations supporting perception will be expanded upon more in this thesis, as I attempt to motivate and model a similar perceptual process in both auditory and visual domain and use the model within a collage-based practice.
+
+Cybernetics provided a vehicle for mathematicians and biologists in the coming years (e.g. Ross Ashby, Gregory Bateson).  It treated individual humans, animals, machines, or in cybernetic terms, \textit{systems}, as individual entities whose inner functions were not measured by their own capacities, but only in relation to what could be communicated by its own outputs to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  
+
+Early cyberneticians, information theorists, and others at the time would eventually form the basis for modern day Information Sciences, where encoding and decoding are still very much used.  For instance, it is used to describe the processes of information compression, where a very large file such as an image, document, or video must be transmitted or stored more efficiently.  To achieve this process, it is first encoded to a different representation by an encoder, only to later be decoded back into its uncompressed original form when it is retrieved or accessed.  Decoding occurs every time you listen to an (encoded) MP3 file, where the MP3-codec describes the representation for compression and the procedures for encoding/decoding to/from it.  These terms are also commonly used within the field of Neural Coding, where encoding attempts to describe the neural populations representing brain-based representations of an external stimuli and decoding attempts to work from the neural populations back to describing the stimuli as a whole again.  The field has grown significantly in the last 10 years due to its successes with decoding images, video, and sound, as well as the recent developments within brain imaging and pattern recognition technologies.  
+
 Certainly, the methods built in this thesis when viewed in terms of encoding and decoding rather than typical collage-based practices can be seen to reflect similar processes.  The encoding processes leading to a particular representation are capable of expressing the original information, though within a different method of representation (e.g. for an image, typically pixels will be used; however, in this thesis, we will build an image using a set of psychologically-motivated representations).  When distorting the intermediate representation in some ways, the decoding is likely to have unexpected results.  We will see how this process can be used to a variety of effects including artistic stylization of image/video or for producing hallucinations in Chapter \ref{ch:synthesis-visual}.  
 
 % in order to trick the decoder into thinking a new refresh of the image content isn't necessary.  
@@ -278,30 +314,6 @@ Certainly, the methods built in this thesis when viewed in terms of encoding and
 %Ranked list, Clustering, Tree maps, Cone trees, Hyperbolic trees,... 
 
 %\subsection{Image/Video Information Retrieval}
-
-
-%Computational dictionary-based approaches (\cite{Zeng2009,Healey2004}) for image stylization.  
-
-%Collage/mosaic-based work (e.g. \cite{Kim2002,Orchard2008,Huang2011a,Miller2012}), allowing a user to work with a period of an artist's work or entire videos, for example.  
-
-%\cite{Huang2011a} describes an approach that is also motivated by an artist making use of collage.  Their approach produces what they call ``Arcimboldo-like'' collages in the style of 18th century painter Giuseppe Arcimboldo, relying on user strokes to segment the images used. 
-
-%Also \cite{Chang2010}.
-
-%\hl{Lev Manovich's Soft Cinema} see \url{https://en.wikipedia.org/wiki/Database_cinema}
-
-%\hl{Computer Graphics -> boundaries of collage become less clear: https://www.youtube.com/watch?v=fw3XyOyl47Q}
-
-%\hl{Space of collage: Andruid Kerne's Collage Machine; I/O/D's WebStalker; Mark Napier's Riot; }
-
-%\hl{Aaron Hertzmann; SIGGRAPH community; }
-
-%\subsection{Audio Information Retrieval}
-%\label{sec:background-audio-information-retrieval}
-
-
-
-%By the 1950's, artists and composers would also engage with cybernetic approaches.  Ross Ashby's \textit{Homeostat} for instance created a ... Bruce Lacey ... Thus, it appeared with the advent of robotics and increasingly more prevalent control structures, most notably the computer, making art through collections or fragments of processes would become a defining aspect of computational practices.
 
 
 
@@ -659,7 +671,7 @@ Practically, one can use a fixed number of iterations of EM and assume convergen
 The basic algorithm is simple to implement and is shown as functional Matlab/Octave code in Program \ref{pg:plca}: 
 
 
-\begin{program}
+\begin{program}[!ht]
   \begin{verbatim}
 function [f,t,k] = plca_basic(X,K)
 % Initialize
@@ -774,233 +786,233 @@ With our computational frameworks developed, we now turn to evaluating them with
 % add this after blind review 
 Sounds were sourced from both the Sound Ideas\footnote{Courtesy of Ianis Lallemand, \url{http://imtr.ircam.fr/imtr/Environmental\_Sound\_Dataset}} archive and the BBC Sound Library and selected based on whether the sound file consistently represented a single sound class, thus being consisted with our specific definition of an acoustic event.  We removed any beginning or ending silences or envelopes of sound, and constrained examples that were not at least 10 seconds long.  In total, we were left with a single example of $N = 37$ classes: \textit{airplane, arcade, booing, bubbles, bus, cheering, chickens, clapping, clock-ticking, conversation, copier, crickets, dirt-drive, fan, fire, fire-gas, geiger, hair-dryer, jet-engine, laughing-audience, laughing-man, motor, race, rain, refrigerator, shouting, sink, spray-can, steam, swamp, sword, train, treads, trees, typing, waterfall, and wooden-gears}.  
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=0.99\textwidth]{images/models.pdf}
-%\caption{Overview of the different models}
-%\label{fig:models}
-%\end{figure}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.5\textwidth]{images/models.pdf}
+\caption{Overview of the different models}
+\label{fig:models}
+\end{figure}
 
-\begin{figure}
-\begin{adjustwidth}{-6em}{-6em}
+\begin{figure}[!ht]
+\begin{adjustwidth}{-12em}{-12em}
 	\centering
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/airplane.pdf}
                 \caption*{Airplane}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/arcade.pdf}
                 \caption*{Arcade}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/booing.pdf}
                 \caption*{Booing}
         \end{subfigure}%        
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/bubbles.pdf}
                 \caption*{Bubbles}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/bus.pdf}
                 \caption*{Bus}
         \end{subfigure}%
         \hspace{0.1pt}        
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/cheering.pdf}
                 \caption*{Cheering}
         \end{subfigure}%
-        
-        \begin{subfigure}[b]{0.19\textwidth}
+
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/chickens.pdf}
                 \caption*{Chickens}
-        \end{subfigure}%        
-        \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \end{subfigure}%      
+        \hspace{0.1pt}                
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/clapping.pdf}
                 \caption*{Clapping}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/clock-ticking.pdf}
                 \caption*{Clock Ticking}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/conversation.pdf}
                 \caption*{Conversation}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/copier.pdf}
                 \caption*{Copier}
         \end{subfigure}%        
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/crickets.pdf}
                 \caption*{Crickets}
         \end{subfigure}%
-        
-        \begin{subfigure}[b]{0.19\textwidth}
+
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/dirt-drive.pdf}
                 \caption*{Dirt Drive}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/fan.pdf}
                 \caption*{Fan}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/fire-gas.pdf}
                 \caption*{Fire Gas}
         \end{subfigure}%       
         \hspace{0.1pt} 
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/fire.pdf}
                 \caption*{Fire}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/geiger.pdf}
                 \caption*{Geiger}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/hair-dryer.pdf}
                 \caption*{Hair Dryer}
         \end{subfigure}%
-        
-        \begin{subfigure}[b]{0.19\textwidth}
+
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/jet-engine.pdf}
                 \caption*{Jet Engine}
         \end{subfigure}%        
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/laughing-audience.pdf}
                 \caption*{Laugh. Aud.}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/laughing-man.pdf}
                 \caption*{Laugh. Man}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/motor.pdf}
                 \caption*{Motor}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/race.pdf}
                 \caption*{Race}
         \end{subfigure}%        
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/rain.pdf}
                 \caption*{Rain}
         \end{subfigure}%
-        
-        \begin{subfigure}[b]{0.19\textwidth}
+
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/refridgerator.pdf}
                 \caption*{Refridge.}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/shouting.pdf}
                 \caption*{Shouting}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/sink.pdf}
                 \caption*{Sink}
         \end{subfigure}%        
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/spray-can.pdf}
                 \caption*{Spray.}
         \end{subfigure}%  
-        \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \hspace{0.1pt}        
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/steam.pdf}
                 \caption*{Steam}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/swamp.pdf}
                 \caption*{Swamp}
         \end{subfigure}%
-        
-        \begin{subfigure}[b]{0.19\textwidth}
+   
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/sword.pdf}
                 \caption*{Sword}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/train.pdf}
                 \caption*{Train}
         \end{subfigure}%
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/treads.pdf}
                 \caption*{Treads}
         \end{subfigure}%        
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/trees.pdf}
                 \caption*{Trees}
         \end{subfigure}%  
         \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/typing.pdf}
                 \caption*{Typing}
         \end{subfigure}%
-        \hspace{0.1pt}
-        \begin{subfigure}[b]{0.19\textwidth}
+        \hspace{0.1pt}     
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/waterfall.pdf}
                 \caption*{Waterfall}
         \end{subfigure}%
-        
-        \begin{subfigure}[b]{0.19\textwidth}
+	\hspace{0.1pt}
+        \begin{subfigure}[b]{0.15\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{images/single/wooden-gears.pdf}
                 \caption*{Wood. Gears}
@@ -1518,6 +1530,8 @@ From these early studies describing logical rules for grouping, visual perceptio
 
 Going away from the fovea (the \textit{parafovea}), resolution for spatial detail drops logarithmically, while resolution for motion detail increases.  This relationship is explained (1) by the refractivity of light afforded by the lens of the eye itself, (2), the distribution or density of cells in the fovea is more tightly clustered than in the parafovea, and (3), the response properties of the individual cells (also defined as ``receptive fields'' \cite{Sherrington1906}) of photo-receptive cells including retinal ganglion and their connections along the optic tract to lateral geniculate nucleus (LGN) cells \cite{Curcio1990}.  Other connections from the ganglion cells in the eye extend along the optic tract to the superior colliculus where it is thought that encoding of the control of eye-movements in retinotopic coordinates occurs \cite{Klier2001}.  
 
+\hl{Stuff about color here... }
+
 Connections from the ganglion cells travel along the optic tract eventually extending all the way to the back of the brain to the occipital lobe where the visual cortex resides.  Seminal research demonstrating physiological evidence of the receptive fields and the discovery of 'simple' receptive field cells in the early visual cortex (the first of six cortical layers, denoted as V1) of cats \cite{Hubel1962} and monkeys \cite{Hubel1968} has helped to better understand the early processing  occurring in the brain (for which David Hubel and Torston Wiesel later won the Nobel Prize in 1982).  The authors explain that: 
 \begin{quotationb}
 These fields were termed 'simple' because like retinal and geniculate fields (1) they were subdivided into distinct excitatory and inhibitory regions; (2) there was summation within the separate excitatory and inhibitory parts; (3) there was antagonism between excitatory and inhibitory regions; and (4) it was possible to predict responses to stationary or moving spots of various shapes from a map of the excitatory and inhibitory areas.
@@ -1549,21 +1563,21 @@ Early saliency models focused their investigation of attentional biases towards 
 
 Despite significant efforts, some researchers have claimed that the attentional biases within early saliency models would not translate to the real-world \cite{Henderson2003,Tatler2009a,Tatler2011}.  One reason is suggested by the fact that the stimuli used to motivate the early saliency models were composed of randomly placed letters such as t's and l's.  Certainly the responses within V1 may describe a priority map within such simple scenes, as one misplaced letter would create a strong center-surround response in V1.  In fact, it has even led some researchers to suggest that V1, V2, or V4 may be the site of the saliency map, despite only ever testing their hypothesis on simple psychophysical stimuli \cite{Li2002,Soltani2010a,Zhang2012a}.  Further, endogenous influences to saliency as modeled in early saliency maps were primarily based on the notion of inhibition of return in static picture arrays \cite{Posner1984,Posner1985,Itti1998,Itti2001}.  However recent research suggests this inhibiting effect does not occur in dynamic scenes \cite{Wang2010} or given the presence of sudden onsets \cite{Smith2009a}.  Essentially, the real-world is not composed of simple statistical features and is in fact much more complex and certainly dynamic, if not even for our own motions within it.  As a result, there has been a trend to move away from understanding behavior in simple psychophysical scenes and to use eye-tracking within real-world complex scenes to better understand behavior \cite{Henderson2003,Tatler2009a,Tatler2011}.
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\textwidth]{images/diem-lab-space.png}
 \caption{Left to right: (a) Original image of frame 1975 of video 24(\textit{Video Republic}: \url{http://www.demos.co.uk/publications/videorepublic}); (b) L* image depicting luminance (Lum); (c) a* image depicting red/green opponent colors (RG); (d) b* image depicting blue/yellow opponent colors (BY)}
 \label{fig:diem-lab-space}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \begin{subfigure}[t]{\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/diem-gabor-construction.png}
 \caption*{The process for creating a log-Gabor kernel for 0 degrees (left to right): (a) the radial map computed from multiplying a sinusoid with a Gaussian kernel; (b) the orientation of the kernel set for 0 degrees; (c) the result of multiplying the radial (a) and orientation (b) maps; (d) the even symmetric component of the log-Gabor filter taken from the real part of the inverse Fourier transform of the kernel; (e) the corresponding odd symmetric component taken from the imaginary component of the kernel.}
 \end{subfigure}
-
+\vspace*{5pt}
 \begin{subfigure}[t]{\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/diem-gabor-edges.png}
@@ -1573,21 +1587,21 @@ Despite significant efforts, some researchers have claimed that the attentional 
 \label{fig:diem-gabor-construction}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\textwidth]{images/diem-motion.png}
-\caption{Left to right: (a) High pass flicker (Flicker); (b) Low pass flicker (Flicker-N); (c) Horizontal optical flow (U-Flow); (d) Vertical optical flow (V-Flow) for the frame in Figure 1(a)}
+\caption{Left to right: (a) High pass flicker (Flicker); (b) Low pass flicker (Flicker-N); (c) Horizontal optical flow (U-Flow); (d) Vertical optical flow (V-Flow) for the frame in Figure \ref{fig:diem-lab-space}}
 \label{fig:diem-motion}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\textwidth]{images/diem-2x2-baseline-fixations.png}
 \caption{Example of actual (cross) and baseline (circle) subject fixations.  Baseline fixations are created by randomly sampling the distribution of all fixations in a given movie for each frame.}
 \label{fig:diem-baseline-fixations}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\textwidth]{images/diem-auc.png}
 \caption{Area Under ROC Curves (AUC) as a function of weighted cluster covariance (bins=75).  The results here demonstrate the ability for motion features (top-most lines) to discriminate actual and baseline fixations better than any other feature.  Further, as participants are more tightly clustered (going left on the x-axis), the discriminability of most visual features goes up.}
@@ -1606,12 +1620,16 @@ Certainly, behavioral evidence demonstrating exogenous attentional biases within
 
 Despite the overwhelming influences of certain visual features such as motion to attract our attention, simple task manipulations can easily override these biases.  One of the first demonstrations of an endogenous influence on eye-movement behavior investigated eye-movements during static scene viewing \cite{Yarbus1967}, Yarbus tracked the eye-movements of participants viewing a painting entitled, ``An Unexpected Visitor.''  His study showed that when participants viewed the painting and were given a task such as to determine the ages of the people in the painting, they looked more at the faces of each person.  When asked to determine what they were wearing, their eye-movements strayed away from faces, and looked more towards the clothing of people.  Yarbus further describes 7 different tasks and shows how the eye-movements of each participant reflects the information required for processing the task at hand.  Since then, numerous studies have expanded on their results, suggesting endogenous influence that can override exogenous influences \cite{Tatler2009}.
 
-In a similar study though with dynamic scenes instead of a static painting, we investigated task-based effects on viewers' eye-movements looking at unedited videos of natural scenes from a camera mounted on a tripod \cite{Smith2011a,Smith2013}.  Participants were natives to the city of Edinburgh and viewed a variety of indoor and outdoor scenes from the city.  Our study revealed that during free-viewing, i.e. not given any task other than to look at the video, participants looked at mostly moving objects such as people moving across the frame or cars.  However, when given the task to identify the location of the presented scene, participants had to concentrate their gaze towards the elements of a scene depicting landmarks such as buildings, signs, and trees and showed a remarkable ability to distract away from moving objects.  After viewers pressed a button indicating recognition of the location, their viewing behavior reverted to resembling the free-viewing task, fixating on moving objects such as people and cars again.  Our study also re-asserted the findings of Yarbus, though for a dynamic time-course.  Further, it also provided evidence of default viewing conditions during the time-course of viewing, as participants were able to ``return'' to the free-viewing task after having finished the task of recognizing the location of the scene.  
+In a similar study though with dynamic scenes instead of a static painting, we investigated task-based effects on viewers' eye-movements looking at unedited videos of natural scenes from a camera mounted on a tripod \cite{Smith2011a,Smith2013}.  Participants were natives to the city of Edinburgh and viewed a variety of indoor and outdoor scenes from the city.  Our study revealed that during free-viewing, i.e. not given any task other than to look at the video, participants looked at mostly moving objects such as people moving across the frame or cars, as described by a computational model of flicker or optical flow.  However, when given the task to identify the location of the presented scene, participants had to concentrate their gaze towards the elements of a scene depicting landmarks such as buildings, signs, and trees and showed a remarkable ability to distract away from moving objects.  As a result, flicker and optical flow were far less likely to predict gaze locations.  Though, after viewers pressed a button indicating recognition of the location, their viewing behavior reverted to resembling the free-viewing task, fixating on moving objects such as people and cars again.  Our study also re-asserted the findings of Yarbus, though for a dynamic time-course.  Further, it also provided evidence of default viewing conditions during the time-course of viewing, as participants were able to ``return'' to the free-viewing task after having finished the task of recognizing the location of the scene.  
+
+The manipulation of the task in our previous study demonstrates the ability for us to build up a representation of a scene by focusing on the details of the scene.  In the free-viewing case, this entails looking at moving elements.  However, it is likely not the moving elements in of themselves that are necessary for scene understanding, but rather the social figures that are moving.  In this case, the understanding of the scene is likely depicted by activities occurring in the scenes, and these happen to require movements.  In the case that our task is not focused on social understanding of the scene, as in the spot the location task, we must draw our attention away from the social elements.  In this case, the background elements and their arrangement are more likely to have details about the scene's location, as they may provide landmarks to discovering the location.  
+
+\hl{Discovering social or contextual biases towards a scene is not an easy one, considering the great amount of possible tasks.  Some work depicting street scenes has shown that a simple horizontal filter can increase predictability of gaze (Torrabla.. .)... more stuff like this?  }
 
 %\hl{Discuss use of attentional synchrony paradigm in smith paper and in Melissa's paper too...}
-\hl{attention is indexed by proto-objects, reference roi analysis, ante's study jov 2010}
-\hl{building up representation .. fd/sa}
-\hl{binding attention to maintain.}
+%\hl{attention is indexed by proto-objects, reference roi analysis, ante's study jov 2010}
+%\hl{building up representation .. fd/sa}
+%\hl{binding attention to maintain.}
 
 \subsection{Gist}
 \label{sec:gist}
@@ -1658,34 +1676,30 @@ Biederman's Recognition-By-Components (RBC) offers another framework towards und
 
 The distinctions between Marr and RBC-based approaches to object representation have continued to present day, labeling one camp as view-based, and the other as object-based.  It is likely that the human visual system is capable of discovering objects in either case, though discovering this is beyond the scope of this thesis.  What can be gained from this discussion, however, is the importance of shape to early object representation in either case.  
 
-\hl{Shape in cortex...}
+%\hl{Shape in cortex...}
 
-\hl{Object in cortex...}
+%\hl{Object in cortex...}
 
-\hl{Neural Populations of Object Classes in Inferior Temporal Cortex... }
+%\hl{Neural Populations of Object Classes in Inferior Temporal Cortex... }
 
-\hl{Never discussed Dorsal/Ventral stream... is it necessary?}
+%\hl{Never discussed Dorsal/Ventral stream... is it necessary?}
 
 
 \section{Conceptual Framework}
 
-Taking this literature forward, we are now in a position to motivate a conceptual framework for a computational model of visual scene synthesis.  In particular, this literature has demonstrated the importance of an active viewing of a scene.  However, as we may not have eye-movement information about a scene, we will need to build a model of where people are most likely to attend, allowing us to describe any realistic visual scene in terms of higher spatial acuity at a point likely to be fixated.  In other words, we will only encode details of a scene that are likely to be attended.  Following Rensink, we assume a representation for encoding and decoding described by volatile units of proto-objects within the scene.  Finally, these units will be described by representations encoding properties of their shape, color, and luminance.
+Taking this literature forward, we are now in a position to motivate a conceptual framework for a computational model of visual scene synthesis.  In particular, this literature has demonstrated the importance of an active viewing of a scene.  Though, in practice, accessing eye-movement information about a scene is not possible without an eye-tracker.  Thus, if we want to build a visual scene syntheses modeled by perceptual processes, we must develop a model of attention describing where we are likely to attend to.  This will allow us to describe any realistic visual scene in terms of higher spatial acuity at a point likely to be fixated.  In other words, we will encode details of a scene that are likely to be attended, where finer resolution details are encoded in parts of a scene more likely to fixated, and coarser details are encoded outside of these parts.  Following Rensink's Coherence Theory, we assume a representation for encoding and decoding described by volatile units of proto-objects within the scene.  Finally, these units will be described by representations encoding properties of their shape, color, and luminance.  The summarization of this model is below:
 
-\subsection{Exogenous Attention Model}
+\begin{enumerateb}
+\item \textbf{Exogenous Attention Model} Defines where one is likely to look in a dynamic visual scene.  Following our previous studies, \cite{Mital2011,Smith2013}, in free-viewing cases, this can be described by temporal irregularities within the visual scene (e.g. points of high contrasting flicker or optical flow).  This point will then define the computationally modeled ``fixation'';
+\item \textbf{Visual Acuity} Physiologically, we have higher spatial acuity at the point of fixation than outside.  This means we should only encode coarser details outside of a fixation rather than try to encode an entire scene's high spatial resolution;
+\item \textbf{Proto-Objects} Finally, the description of the scene can be defined by a collection of volatile units.  These will likely be described by color and shape-based representations taking into account the coarser resolutions outside of fixation due to visual acuity.  Further, the encoding should not be a color space where color are given equal weighting, but based on the response properties of cones versus rods.
+\end{enumerateb}
 
-\hl{How this is a proxy for a very simple estimation of change, but we are very much capable of encoding higher order regularities... An example of how this is not true, a case where motion patters are learned, but some static pattern appears as being very unregular... No sense of semantic or contextual relevance, but this could be added by discovering scene layout... prioritize gaze to horizon... people... text... faces...}
+%\hl{How this is a proxy for a very simple estimation of change, but we are very much capable of encoding higher order regularities... An example of how this is not true, a case where motion patters are learned, but some static pattern appears as being very unregular... No sense of semantic or contextual relevance, but this could be added by discovering scene layout... prioritize gaze to horizon... people... text... faces...}
 
-\hl{The entropy of the motion correlates to entropy of gaze locations... use this value to drive the acuity map then... }
+%\hl{The entropy of the motion correlates to entropy of gaze locations... use this value to drive the acuity map then... }
 
-
-\subsection{Proto-objects}
-
-Behavioral evidence from change blindness studies has indicated an essential gap in our encoding of a scene, namely the precise details of a scene are only encoded at the point of fixation.  This is likely due to the computational complexity required for encoding an entire scene's high-spatial resolution information.  More importantly, it is physiologically impossible given the visual acuity limitations of the retina.  %As discussed in \cite{Kalloniatis2007}, a number of factors effect visual acuity: refractive error, size of the pupil, illumination, time of exposure of the target, area of the retina stimulated, state of adaptation of the eye, and eye-movements.  Modeling each of these would be a thesis in itself.  We therefore take an overly simplified view of acuity in suggesting that a 2-degree Gaussian window describes the highly detailed regions of foveal processing, from which a logarithmic falloff is a plausible general approximation.  
-
-\hl{One could design visual acuity as a method of ``focusing'', if no prior eye-movements onto a scene are known.  }
-
-
-\hl{Spatial grouping of color, motion, and luminance cues.  Builds a shape representation.}
+%\hl{Spatial grouping of color, motion, and luminance cues.  Builds a shape representation.}
 
 \section{Discussion}
 
@@ -1707,7 +1721,7 @@ Proto-objects act as an indexical reference to a conceptual referent.  How proto
 
 Considering both the implicit, unmediated representation and the attentional and contextual mechanisms, at least three critical layers should be built into any computational model based on the evidence presented here:  (1), a pre-conceptual representation which takes into account different possible spatial configurations, composed of either band-passed edge-oriented filters or proto-objects, (2), where this representation is affected by a logarithmic filter around the point of fixation based on the evidence of response properties of photo-receptors (visual acuity); and (3), an attentional and contextual influence supported by the ongoing experiences of the subject such that parafoveal information becomes unstable without ongoing attention and is only inferred by through the context of the scene.  The intentions of an agent within this model are still not well-understood, as the variety of possible endogenous influences that may be possible are too great.  
 
-Similar computational models have been developed to explain visual perception machinery \cite{Walther2006,Orabona2007a}, however they each suffer from a number of problems: (1) they lack the inclusion of the evidence of the response properties of photoreceptors in the retina as there is no indication of the current or ongoing attention within the visual scene; (2) they infer context based on solely a static image whereas the real-world is dynamic; and (3), they cannot distinguish groupings of proto-objects and instead create discrete maps which are thresholded as attention or saliency maps.  Furthermore, the interest in the previously cited models of visual perception is in predicting attention towards a scene, rather than allowing an agent in the world to explicitly define this.  In such a case, these models are unsuitable for applications in augmented or virtual reality where the agent already provides attention within a scene.  
+Similar computational models have been developed to explain visual perception machinery \cite{Walther2006,Orabona2007a}, however they each suffer from a number of problems: (1) they lack the inclusion of the evidence of the response properties of photoreceptors in the retina as there is no indication of the current or ongoing attention within the visual scene; (2) they infer context based on solely a static image whereas the real-world is dynamic; and (3), they cannot distinguish groupings of proto-objects and instead create discrete maps which are thresholded as attention or saliency maps.  %Furthermore, the interest in the previously cited models of visual perception is in predicting attention towards a scene, rather than allowing an agent in the world to explicitly define this.  In such a case, these models are unsuitable for applications in augmented or virtual reality where the agent already provides attention within a scene.  
 
 
 
@@ -1740,34 +1754,115 @@ Similar computational models have been developed to explain visual perception ma
 
 \section{Introduction}  
 
-Despite its apparent precision, our perception of reality is not representative of the way that we see.  For instance, the light coming to our eyes is distorted, upside-down, and constantly disrupted with each movement of the eye.  How can this noisy process ever constitute our experience of the visual world?  Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted representations of the world \cite{Marr1982}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive. As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.
 
-Explain assumptions... Difficult problem... future work to make it plausible/evaluate it... just setting groundwork for next chapter... 
+Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted representations of the world, e.g. \cite{Marr1982}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive.  As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.  
 
-Flicker provides an exogenous attention cue during dynamic scene viewing.  However, attention must act on groupings of proto-objects, rather than a pixel-based notion of change.  As a result, it is likely that the flicker is modulated by spatial grouping cues.  
+%Behavioral evidence from change blindness studies has indicated an essential gap in our encoding of a scene, namely the precise details of a scene are only encoded at the point of fixation.  This is likely due to the computational complexity required for encoding an entire scene's high-spatial resolution information.  More importantly, it is physiologically impossible given the visual acuity limitations of the retina.  
 
-A. get flicker for a frame
-B. get objects for a frame
-C. modulate objects based on flicker
-D. recompute flicker based on aggregated proto-object flow
+In this Chapter, we build a computational implementation of visual scene analysis.  This aims to encode any number of visual scenes, represent them using representations motivated in our conceptual framework in Chapter \ref{ch:conceptual-visual}, and decode any target visual scene.  This process will be used within a collage-based arts practice to open a dialogue surrounding the nature of perception in the Chapter \ref{ch:synthesis-visual} and combined with a similar model of audio in Chapter \ref{ch:audiovisual}.  
 
-\hl{Where do I put a background of computational visual models?  I haven't done this yet.. .shit.}
+\section{Related Work}
+
+\hl{Background of computational visual models.}
+
+\section{Methods}
 
 \subsection{Exogenous Attention Model}
 
-Cortical analysis of motion shows that the majority of V1 cells have selective response to motion in different orientations before sending their output to the medial temporal cortex [68].  It thus does not seem surprising to find that evidence based on search efficiency has shown that our visual system is able to notice moving objects even if we are not looking for them. Phenomena associated with parts of a scene that attract our attention are often given the label ``pop out''. Rosenholtz [75] has investigated these phenomena in the context of motion by creating a measure of saliency based on the extent to which the motion of a scene differed from the general pattern of the scene.  She showed that a simple model measuring motion outliers can detect motion pop out phenomena reliably. As well, Itti et al. has incorporated measures of motion into the most recent versions of the iLab Neuromorphic Vision C++ Toolkit for their saliency computations [77]. 
+As discussed in our previous study \cite{Mital2011}, motion features are highly predictive of gaze across viewers when gaze is tightly coordinated.  We therefore incorporate the model of optical flow used in this previous study in developing a model of exogenous attention.  Certainly, this is an overly simplified model as it can only explain frame-to-frame differences or irregularities.  It therefore assumes the world is dynamic, and does not indicate attentional preference in scenes that do not have motion.  Further, endogenous influences that, as discussed in Section \ref{sec:endogenous-influences}, can entirely negate these influences, are not modeled.  Implementing even a tiny percentage of these influences would be a significant step forward in future implementations.  
 
-Horn and Schunck [96] optical flow is a differential method for calculating motion vectors in a brightness image. The flow of an image, I, is defined by:
+\subsubsection{Optical Flow}
+
+Optical flow estimates the apparent motion of brightness patterns in a dynamic sequence of images.  We employ an existing variational method for determining optical flow, a standard in calculating optical flow since its introduction in 1981 \cite{Horn1981}.  Horn and Schunck's \cite{Horn1981} seminal description of optical flow is a variational method for calculating motion vectors in a brightness image.  Their formulation describes optical flow in terms of a sequence of images $E$, where each pixel at a time $t$ moves with a vector described by $(x,y)$.  We denote their derivatives as $(u = \frac{\mathtt{d}x}{\mathtt{d}t},v=\frac{\mathtt{d}y}{\mathtt{d}t})$.  Following \cite{Horn1981}, the flow of an image is assumed to have small displacements and constant brightness:
 
 \begin{equationb}
-I(x,y) = I
-\end{equationb} 
+I(x + u, \, y + v, \, t + 1) - I(x,\, y,\, t) = 0
+\end{equationb}
 
-where $I_x$, $I_y$, and $I_t$ are the image derivatives, and $V_x$, and $V_y$ are the components of optical flow in the $x$ ($U$ in vector notation) and $y$ ($V$ in vector notation) direction, respectively.  This method is often referred to as a global method for calculating the optical flow, as the energy constraint (the first term in Equation 3) assumes gray value constancy and does not depend on local image patches [e.g. 97]. The energy equation includes a second term known as the “smoothing” term in order to smooth flow where distortions in the flow occur. This leads to better performance at filling in “gaps” left from moving objects with similarly textured regions than local methods. 
+If $u$ and $v$ are small and $I$ is smooth, then we can linearize this assumption using a first-order Taylor expansion around the point $(x,y,t)$:
+
+\begin{leftbar}\begin{eqnarray}
+\nonumber I(x+u, \; y+v, \; t+1) & \approx & I(x, \;y, \;t) \; + \; I_{x}(x, \;y, \;t)u \; + \; I_{y}(x, \;y, \;t)v \; + \; I_{t}(x, \;y, \;t) \\
+& \rightarrow & I_{x}u \; + \; I_{y}v \; + \; I_{t} \; = \; 0
+\end{eqnarray}\end{leftbar}
+
+where $I_{x}$, $I_{y}$, and $I_{t}$ are the derivatives of the image intensity values along the x, y and time dimensions, respectively.  This equation however has 2 unknowns, $u$ and $v$, meaning the problem is ill-posed, and there are infinitely many solutions.  In fact, only the flow component in the direction of the gradient can be computed.  This is also denoted as the normal flow:
+
+\begin{equationb}
+(u,v)_{n}^{\top} = \frac{-I_{t}\;\nabla I}{|\nabla f| \; |\nabla I |}
+\end{equationb}
+
+Using only the normal flow, we would suffer from gross irregular flow-fields.  To illustrate the problem, consider a barber-pole with stripes rotating horizontally.  If we look through a tiny lens, we can estimate the normal at the fixation point, though cannot see the ``overall picture'' of the flow.  The normal would therefore estimate flow as moving vertically, whereas the actual flow is horizontal.  In order to get the overall picture, Horn and Schunck devised a regularization of the flow vectors attempting to smooth the flow vectors and penalize any deviations from smooth solutions.  
+
+Before getting into the details of their variational approach, it is important to have some basic understanding of variational calculus.  In variational calculus, we aim to find extrema of a functional, or a function of functions.  This is analogous to ``regular'' calculus, where we often want to find the extrema of a function.  In regular calculus, our extrema equates to a point.  In variational calculus, however, our extrema maps to another function.  This allows us to devise an equation enforcing certain assumptions which penalize deviations from these assumptions.  We can then search the space of all functions by minimizing the functional incorporating this energy equation, and find an optimal equation describing our solution.  In mathematical terms, for our case in determining optical flow, we will search the space of all functions and minimize a functional described by an energy, $E$:
+
+\begin{equationb}
+u^{*} = \min\limits_{u}E(u) \, \mathrm{d}x
+\end{equationb}
+
+In computer vision, we often treat images as equations so that we may use formulations as above.  In order to do so, we consider the pixels of an image as a subset of a number space, i.e.: $I : \Omega \rightarrow \mathbb{R}, \; \Omega \subset \mathbb{R}^{2}$, where $I$ describes our image.  However, we can only differentiate a smooth, continuous function.  The pixels in an image are discrete and jagged, as they are digitally sampled representations of the continuous phenomena.  We must therefore consider our equations as a proxy for the continuous phenomena of light, and discover methods of differentiating the discrete function.  In practice, this often equates to first blurring the image using something like a Gaussian filter and using iterative solutions (e.g. Gauss-Siedel).  
+
+Knowing that we can use variational calculus, we now describe a functional whose solution describes the optimal optical flow.   In practice, we often replace our function $E$ with two terms, modeled similarly to Bayesian logic, where we have a term for our prior beliefs (prior, $p(u)$) and one which updates our assumptions using the data (likelihood, $p(f|u)$), e.g. $p(u|f) \propto p(f|u)p(u)$:
+
+\begin{equationb}
+u^{*} = \min\limits_{u} \Bigg\{ \int_{\Omega} \big[ \underbrace{\mathcal{D}(u,f)}_{\text{Likelihood/Data}} \; + \; \underbrace{\mathcal{R}(u)}_{\text{Prior/Regularizer}} \; \mathrm{d}x\big] \Bigg\}
+\end{equationb}
+
+This allows us to use probability to enforce certain assumptions about our image.  For optical flow, our prior assumption attempts to smooth the flow field, while our data term penalizes changes in brightness.  Building these assumptions into $E$, our original functional can be rewritten as:
+
+\begin{equationb}
+E(u,v) = \min\limits_{u,v}\Bigg\{\int_{\Omega} \Bigg[ \underbrace{\Big(I_{x}u \; + \; I_{y}v \; + \; I_{t}\Big)^{2}}_{\text{brightness constancy}} \; \; + \; \; \alpha \underbrace{\Big(||\nabla{u}||^{2} + ||\nabla{v}||^{2}\Big)}_{\text{smoothness constraint}}  \Bigg] \, \mathrm{d}x \, \mathrm{d}y \Bigg\}
+\end{equationb}
+
+This method is often referred to as a global method for calculating the optical flow, as the energy constraint assumes gray value constancy and does not depend on local image patches. The ``smoothing'' term attempts to penalize deviations in the flow field, where $\alpha$ controls the amount of smoothing. This additional term allows us to fill in ``gaps'' left from moving objects with similarly textured regions than local methods.  Consider for example a highly homogeneous region such as the palm of a hand moving horizontally (see Figure \ref{fig:flow}).  At the edges of the palm, we have information of the flow coming from the data, due to the changes in brightness.  However, within the palm of the hand, the flow coming from the data terms is computed to have a small displacement, as the brightness is likely very similar in the neighborhood.  As a result, our flow field would likely have very noisy normals in many different directions.  By enforcing the additional smoothness constraint, the large flow displacements coming from the boundaries of the hand regularize the small flow displacements within the palm of the hand, creating a dense and regularized flow field.  This technique is therefore also denoted as a dense method for computing optical flow.
+
+
+\subsubsection{Attention Map}
+
+We require a distribution describing where a fixation is likely to occur in an image sequence.  Until now, we have only calculated the direction of flow as vectors for every pixel in an image, $(u,v)$.  Computing a probability map from these vectors requires combining the $u,v$ optical flow vectors into one map.  This is easily computed using the normalized vector magnitude of the flow:
+\begin{equationb}\label{eq:attention}
+p(x,y) \; = \; \frac{||\text{flow}||}{\sum\big(||flow||\big)} \; = \; \frac{\sqrt{u^{2} \; + \; v^{2} \; + \; \epsilon}}{\sum\big(\sqrt{u^{2} \; + \; v^{2} \; + \; \epsilon}\big)}
+\end{equationb}
+
+
+The most likely focal point of attention can then be described by the maximum point in this distribution.  We can also describe our ``confidence'' in this measure by looking at the distribution of probability values.  In order to model certainty, we use the entropy of our attention map:
+
+\begin{equationb}
+H(X) = -\sum_{i,j}p(x_{i},y_{j}) \, \text{log}_{b}\,p(x_{i},y_{j})
+\end{equationb}
+
+This value treats our attentional map as a probability distribution.  If our attentional map ``really knows'' where we are likely to fixate, then the entropy will be very small.  Otherwise, if our attentional map has a more or less uniform guess about where we are likely to fixate, then it is really uncertain, and the entropy will be very high.  Such a value has also been shown to correspond with the entropy of eye-movements, in our previous study \cite{Mital2011}.  
 
 \subsection{Visual Acuity}
 
-\begin{figure}
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth,height=130px]{images/flow-1.png}
+\end{subfigure}%
+\hspace*{5pt}
+\begin{subfigure}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth,height=130px]{images/flow-2.png}
+\end{subfigure}%
+\vspace*{5pt}
+\begin{subfigure}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth,height=130px]{images/flow-3.png}
+\end{subfigure}%
+\hspace*{5pt}
+\begin{subfigure}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth,height=130px]{images/flow-4.png}
+\end{subfigure}
+\caption{The output of the visual acuity filter on an example scene is shown.  In the top left corner inlayed in each image is the attention map created from the magnitude of the optical flow.  The maximum point in this attention map is registered to the original image (drawn as a black/white circle), and along with the entropy of this distribution, is used to create a visual acuity filter.  The images shown here are the resulting filtered images.  Note that the images are not blurred because of the camera focus.  These are computationally created by blurring the image with respect to where the attention map determines the point of focus is likely to be.  Also notice how the width of the blurring changes depending on how much entropy is in the attentional map.  Another example is shown in Figure \ref{fig:acuity}.}
+\label{fig:flow}
+\end{figure}
+
+
+\begin{figure}[!ht]
 \centering
 \begin{subfigure}[b]{0.48\textwidth}
 \centering
@@ -1788,33 +1883,54 @@ where $I_x$, $I_y$, and $I_t$ are the image derivatives, and $V_x$, and $V_y$ ar
 \centering
 \includegraphics[width=\textwidth]{images/acuity-example2.png}
 \end{subfigure}
-\caption{The output of the visual acuity filter on two example frames from an idealized scene depicting a man standing up are demonstrated.  (Left): Original frames; (Right): Examples of how the exogenous attention map (inlayed in the image) is used to simulate the point of fixation (drawn as a black/white circle as seen over the man potting).  This point along with the entire map's entropy, is then fed to visual acuity filter.  As the entropy is low, the blurring is quite substantial, removing many of the details more likely to be unattended such as the high frequency edges in the bricks, grass, and leaves.}
+\caption{The output of the visual acuity filter on two example frames from an idealized scene depicting a man standing up are demonstrated.  (Left): Original frames; (Right): Examples of how the exogenous attention map (inlayed in the image) is used to simulate the point of fixation (drawn as a black/white circle as seen over the man potting).  This point along with the entire map's entropy, is then fed to visual acuity filter.  As the entropy is low, the blurring is quite substantial, removing many of the details more likely to be unattended such as the high frequency edges in the bricks, grass, and leaves.  Another example is shown in Figure \ref{fig:flow}.}
+\label{fig:acuity}
 \end{figure}
+
+As discussed in \cite{Kalloniatis2007}, a number of factors effect visual acuity: refractive error, size of the pupil, illumination, time of exposure of the target, area of the retina stimulated, state of adaptation of the eye, and eye-movements.  Modeling each of these would be a thesis in itself.  The important consideration here is to be able to encode finer details at the point of a likely fixation, while encoding only coarser details outside of fixation.  This process appears to be a biological development in order to reduce the amount of processing, rather than necessary for functioning.  In other words, a computational implementation of this module attempts to reduce the amount of processing while keeping high resolution details in parts of a scene likely to be attended to.  
+
+In order to blur a scene modeled by a logarithmic fall off in spatial resolution, we use a popular technique in first person shooter games for creating a radial blur.  This technique samples a concentric circle at a radial distance from that point determined by the distance to fixation.  Let $B$ describe an original image to be filtered with a size of $(W,H)$ whose pixels are indexed by the location $(x,y)$.   We will sample (i.e. look up the color values) at points around this location in order to create a logarithmic falloff in spatial acuity.  To do this, we must also be given the distance, $d$, to the fixation point, $(f_{x},f_{y})$, such that $d = \sqrt{(f_{x} - x)^{2} + (f_{y} - y)^{2}}$.  Then the visual acuity map can be described by:
+%\forall (x,y) \; \text{in} \; \mathbb{R}^{2}; 
+\begin{equationb}
+B^{'}(x,y,d) = \sum_{i}^{N} B\Big(\frac{d}{W} \, * \, \cos(\frac{2i\pi}{N}), \; \frac{d}{H} \, * \, \sin(\frac{2i\pi}{N})\Big)
+\end{equationb}
+
+This formula may be also extended to sample more than 1 concentric ring.  Let $C$ be the number of concentric rings to sample from.  Then the updated equation becomes:
+\begin{equationb}
+B^{''}(x,y,d) = \sum_{j}^{C}B^{'}(x,y,\frac{dj}{C})
+\end{equationb}
+
+In our work, we use 32 samples (i.e. $N=32$) and 2 rings (i.e. $C=2$).   
+
+In effect, we create a radial filter around every pixel where the size of the filter is based on the distance to the fixation point.  This is in contrast to many radial blur filters which may only try to sample radially from the fixation point.  This results in stretching the image at points far away from the focal point and is undesirable for our purposes.
+
+In order to depict the point of fixation, we can use the maximum value in our attentional map.  We could set the width of our fixation's resolution based on likely evidence (e.g. we have used a $2^{o}$ window as an approximation of foveal resolution before \cite{Mital2011}).  However, as we do not explicitly have the point of fixation, but a best guess from our probability map, we can use our \textit{certainty} in the measure to modulate our blur kernel.  Once we have both the maximum location of the attentional map and its entropy, we can use our radial blur as $B^{''}(x,y,e*d)$, where $e$ is our entropy value. 
+
+In Figures \ref{fig:flow} and \ref{fig:acuity}, we show two example scenes of this output.  Notice how in Figure \ref{fig:acuity}, the details on the original high resolution image, notable the bricks and grass leaves, are blurred to produce only coarse blob-like information, while the man planting flowers is still in high resolution.
 
 \subsection{Proto-objects}
 
-\hl{Shape recognition. Skeletonization. Level sets, Boundary value problem. Agglomerative clustering. }
+In this section, we develop our computational implementation of a mid-level object representation denoted as proto-objects.  Following our conceptual framework in Chapter \ref{ch:conceptual-vision}, this representation will be described by shape, color, and luminance.  Moreover, these must be capable of describing shapes invariant to location, scale, and rotation.  For this purpose, we make use of maximally stable color regions (MSCR) \cite{Forssen2007}.   The input to this algorithm will be the image described by our visual acuity map.  
 
-\hl{Acuity map -> Region detection -> Shape representation}
+\subsection{Detection}
 
-\hl{Rewrite following sections within general context and not artistic stylization}
+The algorithm described in \cite{Forssen2007} uses agglomerative clustering to group similar neighboring pixels.   Similarity is described by a distance measure which takes into account the inherent camera noise and the probability distribution of each RGB color channel.  Considering this distance manifold, the algorithm first applies multiple thresholds at fixed distance intervals.  Regions are denoted as maximally stable if they do not grow larger than a minimum area rate after a fixed number of time-steps.  The algorithm can also be thought of in terms of level sets, where each level set describes slices of the manifold described by the distance function.  In either case, this algorithm is capable of determining an implicit ordering of coarse-to-fine regions, where a larger cluster can consist of many smaller ones. 
 
+Previous techniques employing posterization, filtering, or watershed have had to apply their algorithm at multiple scales in order to discover regions that are superimposed or overlapped, increasing their computational complexity.  MSCR therefore benefits over these previous techniques as it provides an implicit ordering of superimposed regions discovered through successive time-steps of the clustering algorithm.  Further, it allows us to prune regions by restricting their area to a range of minimum and maximum sizes.  This will be desirable when applying synthesis for artistic purposes, as we do in Chapter \ref{ch:synthesis-visual}.
 
-\subsubsection{Detection}
-
-For both the candidate and target frames, we aim to detect abstracted shape primitives described by coherent image regions.  For this purpose, we make use of maximally stable color regions (MSCR) \cite{Forssen2007}.  The algorithm described in \cite{Forssen2007} successively clusters neighboring pixels with similar colors described by multiple thresholds of a distance measure which takes into account the inherent camera noise and the probability distribution of each RGB color channel.  Regions are denoted as maximally stable if they do not grow larger than a minimum margin for certain number of time-steps.  Previous techniques employing posterization, filtering, or watershed have had to apply their algorithm at multiple scales in order to discover regions that are superimposed or overlapped, increasing their computational complexity.  MSCR has the benefit over these previous techniques as it provides an implicit ordering of superimposed regions discovered through successive time-steps of the clustering algorithm.  Further, it allows us to prune regions by restricting their area to a range of minimum and maximum sizes.  In Section \ref{sec:parameters}, we discuss these parameters in greater detail in relation to the styles they can produce. 
-We use MSCR to detect the set of all regions in each candidate and target frame, denoted as $\mathbf{R_C} = \{R_1, R_2, ..., R_{N_C}\}$ and $\mathbf{R_T} = \{R_1, R_2, ..., R_{N_T}\}$ where $N_C$ is the number of regions detected in all candidate frames and $N_T$ is the number of target regions.  
+We use MSCR to detect the set of all regions in either candidate or target frames, denoted as $\mathbf{R_C} = \{R_1, R_2, ..., R_{N_C}\}$ and $\mathbf{R_T} = \{R_1, R_2, ..., R_{N_T}\}$ where $N_C$ is the number of regions detected in all candidate frames and $N_T$ is the number of target regions.  
 
 \subsubsection{Tracking}
 
-It is often desirable to produce temporally coherent stylizations, meaning if a region within a target video frame has not moved, it is not re-stylized.  This is especially the case in noisy or compressed videos, where artifacts may appear that should not be stylized.  One approach would be to track regions using a GPU-based Optical Flow measure.  This would likely produce reasonable temporal coherence without sparing real-time interaction.  However, we simply follow \cite{Hertzmann2000} in using the flicker for detecting the change in the original target video, as this approach is fast and easy to compute.  Let the flicker for a pixel at location $(i,j)$ be described by:
+We use our attentional map to indicate whether a new blob has disappeared.  This coincides with Rensink's notion of a ``volatile'' unit, as we do not wish to have blobs persist forever, but rather that they are replaced due to changes in the visual world (e.g. as discussed in Section \ref{} when looking at Change Blindness).
+
+To model volatility and therefore updates in our proto-objects, we only re-detect proto-objects when a blobs average attentional value exceeds a threshold.  Using Equation \ref{eq:attention} as our attentional map, and $\mathbf{R}$ as the set of proto-objects currently detected, we redirect proto-objects within an already detected proto-object if:
+
 \begin{equationb}
-f(i,j) = I_t(i,j) - I_{t-1}(i,j)
-\end{equationb} 
-where $I$ is the image luminance at time $t$.  Then, if the flicker at the region's centroid, $f(C_{R_i})$, between the current and previous frame is greater than a threshold, $threshold$, we remove the region from the set of detected regions to synthesize:
-\begin{equationb}
-R_T = \{ R_i \suchthat f(C_{R_i}) > threshold, \forall i = 1...N_T \}
+\frac{1}{N_{x}N_{y}}\sum_{R_x}^{N_{x}}\sum_{R_y}^{N_{y}}p(R_x,R_y) \; > \; \tau
 \end{equationb}
+
+where $N$ is the number of pixels in the proto-object $R$, $R \subset \mathbf{R}$, $R_{x}$ and $R_{y}$ are short hand for the pixel locations of the indexed region, and $0.0 \, \leq \, \tau \, \leq \, 1.0$ is a small threshold, often set to $0.05 - 0.10$.  This means our attentional map indicates where to recompute a proto-object.   Practically, this produces temporal coherence across frames, meaning proto-objects that aren't being attended to do not need to be recompute.
 
 \subsubsection{Description}
 
@@ -1830,19 +1946,19 @@ Centralizing the moments allows us to compare regions with translation-invarianc
 
 \subsubsection{Matching}
 
-We match each region in the target to its nearest neighbors in the database using a metric combining distances from each region's shape and color, $d_s(R_t, R_c)$ and $d_c(R_t, R_c)$, respectively:  
+We match each region in a set of target regions to its nearest neighbors in the database regions using a metric combining distances from each region's shape and color, $d_s(R_t, R_c)$ and $d_c(R_t, R_c)$, respectively:  
 \begin{equationb}
 d(R_t, R_c) = d_s(R_t, R_c) + d_c(R_t, R_c)
 \end{equationb}
 \label{eq:distance}
-The shape distance is simply computed as the absolute difference between the first and second order normalized central image moments of each region (i.e. the first four components of the descriptor).  For the color distance, we make use of the official CIE color-difference equation, CIEDE2000, which provides reliable color discrimination with interactive terms for lightness, chromaticity, and hue weighting \cite{Luo2001}.   This difference formula has been shown to be more perceptually accurate at determining the difference between colors than previous methods employing linear difference using RGB or LUV color values, as it is based on empirical evidence of perceived color difference.  For our tests, we use the default parameters described in \cite{Luo2001} for the weighting terms.
+The shape distance is simply computed as the absolute difference between the first and second order normalized central image moments of each region (i.e. the first four components of the descriptor).  For the color distance, a series of developments since a seminal study in the perception of color pigments (Munsell 1944) have led to an industry standard, the official CIE color-difference equation, CIEDE2000, which provides reliable color discrimination with interactive terms for lightness, chromaticity, and hue weighting (details can be found in \cite{Luo2001} and are not repeated here).   This difference formula has been shown to be more perceptually accurate at determining the difference between colors than previous methods employing linear difference using RGB or LUV color values, as it is based on empirical evidence of perceived color difference.  For our tests, we use the default parameters described in \cite{Luo2001} for the weighting terms.
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{images/ciede2000.png}
-\caption{Demonstration of how the CIEDE2000 distance formula re-weights distances between colors.  On the left, a hue-wheel is presented as a mesh.  Notice what we can perceive as sharp edges as the colors change.  The mesh is warped on the right, based on the relative distances between colors using the CIEDE2000 distance formula, presenting a perceptually linear and gradual change across any color.}
-\label{fig:ciede2000}
-\end{figure}
+%\begin{figure}[!ht]
+%\centering
+%\includegraphics[width=\textwidth]{images/ciede2000.png}
+%\caption{Demonstration of how the CIEDE2000 distance formula re-weights distances between colors.  On the left, a hue-wheel is presented as a mesh.  Notice what we can perceive as sharp edges as the colors change.  The mesh is warped on the right, based on the relative distances between colors using the CIEDE2000 distance formula, presenting a perceptually linear and gradual change across any color.}
+%\label{fig:ciede2000}
+%\end{figure}
   
 
 \subsubsection{Synthesis}
@@ -1852,6 +1968,9 @@ To ensure regions are drawn from their background to the foreground, we synthesi
 \Theta = \frac{1}{2} * \arctan  \dfrac{ 2 * \frac{\mu_{11}}{\mu_{00}} } { \frac{\mu_{20}}{\mu_{00}} - \frac{\mu_{02}}{\mu_{00}} }
 \end{equationb}
 Finally, scaling is simply the ratio of the target to candidate region's bounding box.  This process has the benefit of being very fast using graphics hardware as it can be computed by a single matrix multiplication.  Each region is then layered above the previous one before creating a synthesized image.  In image-based stylization, multiple syntheses created with changing parameters can be blended together to create more detailed and expressive styles which may require many ``layers'' of ``paint''.  We discuss these parameters in greater detail in the next section.
+
+\section{Discussion}
+
 
 
 
@@ -1889,14 +2008,17 @@ Finally, scaling is simply the ratio of the target to candidate region's boundin
 \section{Introduction}
 
 
-
-\hl{Talk about the different sections}
+This chapter explores three practical developments of visual scene synthesis: (1) in Section \ref{sec:artistic-stylization}, an automated method for artistically stylizing an image or video (e.g. using representations in a corpus of Van Gogh paintings to stylize a home video); (2) in Section \ref{sec:photosynthesizer}, an iOS application \textit{PhotoSynthesizer} which allows one to use visual scene synthesis with the photos from their mobile device; and (3), in Section \ref{sec:visual-memory-mosaicing}, a real-time visual scene synthesis which learns visual representations from the same scene it attempts to synthesize (visual memory mosaicing).  This last output is modeled similarly to audio memory mosaicing (discussed in Section \ref{sec:audio-memory-mosaicing}), and will be combined with it in the final practical chapter of this thesis.
 
 
 \section{Artistic Stylization}
+\label{sec:artistic-stylization}
 
-\begin{figure}
- \includegraphics[width=\textwidth]{images/klimt-van-gogh-wide.png}
+\begin{figure}[!ht]
+\begin{adjustwidth}{-12em}{-12em}
+\centering
+ \includegraphics[width=1.2\textwidth]{images/klimt-van-gogh-wide.png}
+ \end{adjustwidth}
  \caption{Klimt's ``The Kiss'' is synthesized using 3 images of Van Gogh paintings to produce the result on the right.  Best viewed in color at 400\%.  Images representing faithful reproductions of Gustav Klimt and Van Gogh sourced from \href{http://commons.wikimedia.org}{Wikimedia Commons} are public domain.}
  %https://en.wikipedia.org/wiki/File:Gustav_Klimt_016.jpg
  %https://en.wikipedia.org/wiki/File:Vincent_van_Gogh_(1853-1890)_-_Wheat_Field_with_Crows_(1890).jpg
@@ -2017,8 +2139,10 @@ In Figure-\ref{fig:cows-klee}, we synthesize a landscape photo of cows grazing u
 \paragraph{Abstract}
 
 \begin{figure}
+\begin{adjustwidth}{-12em}{-12em}
   \centering
-  \includegraphics[width=\textwidth]{images/blanket-klimt.png}
+  \includegraphics[width=1.2\textwidth]{images/blanket-klimt.png}
+  \end{adjustwidth}
   \caption{A close-up picture of a blanket is synthesized using Klimt's The Kiss to produce the image on the right. Best viewed in the color manuscript at 200\%. Images representing faithful reproductions of Gustav Klimt sourced from \href{http://commons.wikimedia.org}{Wikimedia Commons} are public domain.  Photorealistic scene of blanket taken by the author.}
   %https://en.wikipedia.org/wiki/File:Gustav_Klimt_016.jpg
   \label{fig:blanket-klimt}
@@ -2080,17 +2204,34 @@ In Figure-\ref{fig:blanket-video}, we stylize a video using the same corpus as i
 We have presented a framework for producing artistic stylizations of images or videos.  A corpus of image material is automatically segmented, defining the possible strokes effecting the possible colors and textures in the stylization.  Using a simple set of parameters, we have shown that many stylizations of a target image or video are possible, ranging from Impressionism, Expressionism, and Abstract Expressionism.  By allowing the interactive refinement of an image's stylization, we allow the user to experiment with a range of stylizations through simple parameters.  This interactive refinement affords compositing, the ability to blend together stylizations from different parameters over time.  We also demonstrate the extension of this framework to video-based stylization using simple motion tracking.  As in image-based stylization, the user can influence the stylization through the same set of parameters in real-time to interactively refine the stylization.  
 
 
-\section{Photosynthesizer iOS Application}
-
+\section{PhotoSynthesizer iOS Application}
+\label{sec:photosynthesizer}
 \subsection{Introduction}
+
+\hl{Explain its motivations}
+
+\subsection{Related Work}
+
+\hl{Camera Pro, Instagram, Paint/photo apps... other apps that have similar ``filtering'' things...}
 
 \subsection{Interface}
 
+\begin{figure}
+\begin{adjustwidth}{-12em}{-12em}
+\centering
+\includegraphics[width=1.2\textwidth]{images/photosynthesizer-layout-01.png}
+\end{adjustwidth}
+\caption{(a) Opening screen of \textit{PhotoSynthesizer}; (b) User selects a target photo (they could have taken a new image from the camera too); (c) After selecting a target image, the user is taken to this screen; (d) The user selects some photos for source material; (e) They are shown the photos they selected; (f) When the user goes to the next screen, the synthesis begins with the coarsest layers; (g) Gradually building up finer layers; (h) And the finest layers; (i) Before the final synthesis is presented}
+\label{fig:photosynthesizer-layout}
+\end{figure}
+
 \subsection{Examples}
+
+\hl{Some of my outputs, and ones sent to me... there is also an artist in Canada that used it}
 
 \subsection{Feedback}
 
-Since the release of Photosynthesizer (henceforth ``the app'') in August 2012, the iTunes App Store has recorded 6,640 downloads for 2012, and 1,843 downloads for 2013 up to August 30th for a total of 8483 downloads in 13 months.  During this time, it also reached the iTunes Top 50 for Photo and Video Apps in 8 different countries (including US and UK) and the Top 500 in 26 different countries.  A large number of reviews are also recorded on the App Store, with an average rating of 3/5 for both the US (of 32 reviews) and UK (of 15 reviews).    As there are nearly 100 in 26 different countries, only a few of the English ones representing different views are reproduced here:
+Since the release of PhotoSynthesizer (henceforth ``the app'') in August 2012, the iTunes App Store has recorded 6,640 downloads for 2012, and 1,843 downloads for 2013 up to August 30th for a total of 8483 downloads in 13 months.  During this time, it also reached the iTunes Top 50 for Photo and Video Apps in 8 different countries (including US and UK) and the Top 500 in 26 different countries.  A large number of reviews are also recorded on the App Store, with an average rating of 3/5 for both the US (of 32 reviews) and UK (of 15 reviews).    As there are nearly 100 in 26 different countries, only a few of the English ones representing different views are reproduced here:
 
 \begin{quotationb}
 Like the way you can watch art materialize before you're eyes. First image important. Colors are fun to try and predict where the images go. Can't remove pics when added to pallet. Other than that. Awesome
@@ -2127,6 +2268,7 @@ The latest updates have really improved final results of your selected image. On
 
 
 \section{Visual Memory Mosaicing}
+\label{sec:visual-memory-mosaicing}
 % picture of memory mosaicing as video thumbnails
 
 
@@ -2223,96 +2365,23 @@ a
 a
 \section{YouTube Smash Up}
 
-\subsection{Videos}
+For 5 weeks starting in late September of 2012, we synthesized the number 1 most viewed video on YouTube after learning the audiovisual content from the remaining top 10 videos.  The idea was to continue to do so until one of the synthesized videos ended up in the top 10, thus resynthesizing itself.  However, after week 5, I was no longer able to log into my YouTube account and was redirected to a page\footnote{\url{http://www.youtube.com/copyright_school}} with an animation of \textit{Happy Tree Friends} explaining what copyright is and how to avoid risking copyright infringement.   Accompanying the animation was a quiz testing my knowledge of copyright which I had to correctly complete in order to use my account.  
 
-\subsubsection{Week 1 | Justin Bieber - As Long As You Love Me ft. Big Sean}
+I had been redirected to the copyright school since each one of my videos were claimed to infringe on the rights of the copyright holders.  
+
+\begin{figure}
+\begin{adjustwidth}{-12em}{-12em}
+\centering
+\includegraphics[width=\textwidth]{images/copyright-school.png}
+\end{adjustwidth}
+\caption{YouTube's Copyright School where an animation of \textit{Happy Tree Friends} teaches the infringer about copyright law and tests their knowledge in a short quiz.}
+\end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{images/week1-3x3.jpg}
-\caption{Week 1: Justin Bieber - As Long As You Love Me ft. Big Sean: 3 example frames showing the original frames (left) and smash up (right). }
-\label{fig:week1}
+\includegraphics[width=0.6\textwidth]{images/copyright-school-img.png}
+\caption{An example still from the animation of \textit{Happy Tree Friends} teaching the infringer about copyright law.}
 \end{figure}
-
-\begin{quotationb}
-2 Flo Rida - Whistle [Official Video] \\
-3 Carly Rae Jepsen - Call Me Maybe \\
-4 Luan Santana - Te Vivo (Clipe Oficial) \\
-5 Reik - Creo En Ti
-\end{quotationb}
-
-
-\subsubsection{Week 2 | Call Me Maybe - Carly Rae Jepsen (Chatroulette Version)}
-
-\begin{quotationb}
-2 La Educacioacute;n Prohibida - Peliacute;cula Completa HD \\
-3 Carly Rae Jepsen - Call Me Maybe \\
-4 Justin Bieber - As Long As You Love Me ft. Big Sean \\
-5 Flo Rida - Whistle [Official Video] \\
-6 will.i.am - This Is Love ft. Eva Simons \\
-7 We Are Never Ever Getting Back Together (Lyric Video) \\
-8 Gotye - Somebody That I Used To Know (feat. Kimbra) - official video \\
-9 Rihanna - Where Have You Been \\
-10 Jennifer Lopez - Dance Again ft. Pitbull
-\end{quotationb}
-
-
-\subsubsection{Week 3 | Call Me Maybe - Carly Rae Jepsen}
-\begin{quotationb}
-2 Flo Rida - Whistle [Official Video] \\
-3 Call Me Maybe - Carly Rae Jepsen (Chatroulette Version) \\
-4 G-DRAGON - ONE OF A KIND M/V \\
-5 I Was Here (United Nations World Humanitarian Day Perform… \\
-6 Justin Bieber - As Long As You Love Me ft. Big Sean \\
-7 Muse - Madness (Lyric Video) \\
-8 LEAKED Official Apple iPhone 5 Promo Video - Keynote 2012 \\
-9 will.i.am - This Is Love ft. Eva Simons \\
-10 Rihanna - Where Have You Been
-\end{quotationb}
-
-
-\subsubsection{Week 4 | 11 Month Old Twins Dancing to Daddy's Guitar}
-\begin{quotationb}
-2 News Anchor FAIL Compilation 2012 || PC \\
-3 Flo Rida - Whistle [Official Video] \\
-4 Carly Rae Jepsen - Call Me Maybe \\
-5 Jennifer Lopez - Goin' In ft. Flo Rida \\
-6 Taylor Swift - We Are Never Ever Getting Back Together \\
-7 will.i.am - This Is Love ft. Eva Simons \\
-8 Call Me Maybe - Carly Rae Jepsen (Chatroulette Version) \\
-9 Justin Bieber - As Long As You Love Me ft. Big Sean \\
-10 Rihanna - Where Have You Been
-\end{quotationb}
-
-
-\subsubsection{Week 5 | PSY - GANGNAM STYLE (?????) M/V (YouTube SmashUp)}
-\begin{quotationb}
-2 ADELE - Skyfall \\
-3 [Live HD 720p] 120715 - PSY - Gangnam style (Comeback stage) - Inkigayo \\
-4 The Ohio State University Marching Band - TBDBITL Halftime 10-6-12 Video games Nebraska \\
-5 PSY Gangnam Style Sub Español Official Video \\
-6 David Guetta - She Wolf (Falling To Pieces) ft. Sia \\
-7 Maroon 5 - One More Night \\
-8 PSY Gangnam Style ?? ?? ??? Seoul Concert for Fans Seoul City Hall Korea \\
-9 Martyn Ashton - Road Bike Party \\
-10 PSY (ft. HYUNA) ?? ? ? ???
-\end{quotationb}
-
-
-\subsubsection{Week 6 | Miley Cyrus - Wrecking Ball}
-\begin{quotationb}
-2 Ylvis - The Fox [Official music video HD] \\
-3 Phonebloks \\
-4 Tomorrowland 2013 | official aftermovie \\
-5 Katy Perry - Roar (Official) \\
-6 Eminem - Berzerk (Official) (Explicit) \\
-7 Passenger - Let Her Go [Official Video] \\
-8 ?????? ??? ” ?????? ???????????????????????? ” TrueMove H : Giving \\
-9 Evanescence - My Immortal \\
-10 Prince Royce - Darte un Beso
-\end{quotationb}
-
-
 
 \subsection{YouTube Content ID}
 a
@@ -2378,6 +2447,10 @@ Similar to the browser developed for the Daphne Oram archive, it would be intere
 
 Ideally, the representations here of a simple shape and color vector could be extended.  These could be incorporated to include co-occurrences, or how proto-objects are likely to occur with other proto-objects.  This would likely be a histogram based vector, and would require some pre-training in order to build a vocabulary.  Such a measure would likely bring the representation closer to a semantic object-ness and afford very interesting applications in collage-based applications using similar objects rather than proto-objects.
 
+3D scanning also presents an interesting new technology that could be exploited for creative uses.  
+
+Within medical imaging, fMRI has already been used for decoding audio and visual scenes.  
+
 \section{Final Discussion}
 
 Thank fuck it's over!
@@ -2404,7 +2477,98 @@ Thank fuck it's over!
 
 
 \appendix
-\include{Appendix1}
+\chapter{Appendix1: YouTube Smash Up Videos}
+
+\section{Week 1 | Justin Bieber - As Long As You Love Me ft. Big Sean}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/week1-3x3.jpg}
+\caption{Week 1: Justin Bieber - As Long As You Love Me ft. Big Sean: 3 example frames showing the original frames (left) and smash up (right). }
+\label{fig:week1}
+\end{figure}
+
+\begin{enumerateb}
+\item Flo Rida - Whistle [Official Video] 
+\item Carly Rae Jepsen - Call Me Maybe 
+\item Luan Santana - Te Vivo (Clipe Oficial) 
+\item Reik - Creo En Ti
+\end{enumerateb}
+
+
+\section{Week 2 | Call Me Maybe - Carly Rae Jepsen (Chatroulette Version)}
+
+\begin{enumerateb}
+\item La Educacioacute;n Prohibida - Peliacute;cula Completa HD 
+\item Carly Rae Jepsen - Call Me Maybe 
+\item Justin Bieber - As Long As You Love Me ft. Big Sean 
+\item Flo Rida - Whistle [Official Video] 
+\item will.i.am - This Is Love ft. Eva Simons
+\item We Are Never Ever Getting Back Together (Lyric Video)
+\item Gotye - Somebody That I Used To Know (feat. Kimbra) - official video 
+\item Rihanna - Where Have You Been 
+\item Jennifer Lopez - Dance Again ft. Pitbull
+\end{enumerateb}
+
+
+\section{Week 3 | Call Me Maybe - Carly Rae Jepsen}
+\begin{enumerateb}
+\item Flo Rida - Whistle [Official Video] 
+\item Call Me Maybe - Carly Rae Jepsen (Chatroulette Version) 
+\item G-DRAGON - ONE OF A KIND M/V 
+\item I Was Here (United Nations World Humanitarian Day Perform… 
+\item Justin Bieber - As Long As You Love Me ft. Big Sean 
+\item Muse - Madness (Lyric Video) 
+\item LEAKED Official Apple iPhone 5 Promo Video - Keynote 2012 
+\item will.i.am - This Is Love ft. Eva Simons 
+\item Rihanna - Where Have You Been
+\end{enumerateb}
+
+
+\section{Week 4 | 11 Month Old Twins Dancing to Daddy's Guitar}
+\begin{enumerateb}
+\item News Anchor FAIL Compilation 2012 || PC 
+\item Flo Rida - Whistle [Official Video] 
+\item Carly Rae Jepsen - Call Me Maybe 
+\item Jennifer Lopez - Goin' In ft. Flo Rida 
+\item Taylor Swift - We Are Never Ever Getting Back Together 
+\item will.i.am - This Is Love ft. Eva Simons 
+\item Call Me Maybe - Carly Rae Jepsen (Chatroulette Version) 
+\item Justin Bieber - As Long As You Love Me ft. Big Sean 
+\item Rihanna - Where Have You Been
+\end{enumerateb}
+
+
+\section{Week 5 | PSY - GANGNAM STYLE (?????) M/V (YouTube SmashUp)}
+\begin{enumerateb}
+\item ADELE - Skyfall 
+\item [Live HD 720p] 120715 - PSY - Gangnam style (Comeback stage) - Inkigayo 
+\item The Ohio State University Marching Band - TBDBITL Halftime 10-6-12 Video games Nebraska 
+\item PSY Gangnam Style Sub Espanol Official Video 
+\item David Guetta - She Wolf (Falling To Pieces) ft. Sia 
+\item Maroon 5 - One More Night 
+\item PSY Gangnam Style Seoul Concert for Fans Seoul City Hall Korea 
+\item Martyn Ashton - Road Bike Party 
+\item PSY (ft. HYUNA) 
+\end{enumerateb}
+
+
+\section{Week 6 | Miley Cyrus - Wrecking Ball}
+\begin{enumerateb}
+\item Ylvis - The Fox [Official music video HD] 
+\item Phonebloks 
+\item Tomorrowland 2013 | official aftermovie 
+\item Katy Perry - Roar (Official) 
+\item Eminem - Berzerk (Official) (Explicit) 
+\item Passenger - Let Her Go [Official Video] 
+\item TrueMove H : Giving 
+\item Evanescence - My Immortal 
+\item Prince Royce - Darte un Beso
+\end{enumerateb}
+
+
+
+
 \bibliographystyle{ThesisStyle}
 \bibliography{library}
 %\printnomenclature
