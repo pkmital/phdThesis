@@ -80,6 +80,17 @@ I~Biederman.
   understanding.}}
 \newblock Psychological Review, vol.~94, no.~2, pages 115--147, 1987.
 
+\bibitem[Bishop~2006]{Bishop2006}
+CM~Bishop.
+\newblock {Pattern recognition and machine learning}.
+\newblock 2006.
+
+\bibitem[Bogart~2013]{Bogart2013}
+Benjamin David~Robert Bogart and Philippe Pasquier.
+\newblock {\em {Context Machines: A Series of Situated and Self-Organizing
+  Artworks}}.
+\newblock Leonardo, vol.~46, no.~2, pages 114--122, April 2013.
+
 \bibitem[Bousseau~2007]{Bousseau2007}
 Adrien Bousseau, Fabrice Neyret, Jo\"{e}lle Thollot and David Salesin.
 \newblock {\em {Video watercolorization using bidirectional texture
@@ -178,16 +189,17 @@ Selina Chu, Shrikanth Narayanan and C.C.J. Kuo.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~17, no.~6, pages 1142--1158, 2009.
 
-\bibitem[Cohen~2003]{Cohen2000}
-MF~Cohen, J~Shade, S~Hiller and O~Deussen.
-\newblock {\em {Wang tiles for image and texture generation}}.
-\newblock In ACM SIGGRAPH 2003 Papers, 2003.
-
 \bibitem[Collins~2004]{Collins2004}
 Nick Collins.
 \newblock {\em {On onsets on-the-fly: Real-time event segmentation and
   categorisation as a compositional effect}}.
 \newblock In Perception. Citeseer, 2004.
+
+\bibitem[Collins~2011]{Collins2011}
+Nick Collins and B~Sturm.
+\newblock {\em {Sound cross-synthesis and morphing using dictionary-based
+  methods}}.
+\newblock In Proceedings of ICMC 2011, 2011.
 
 \bibitem[Compuserve~1987]{Compuserve1987}
 Compuserve.
@@ -212,6 +224,11 @@ CA~Curcio and KA~Allen.
 \newblock {\em {Topography of ganglion cells in human retina}}.
 \newblock Journal of Comparative Neurology, vol.~300, pages 5--25, 1990.
 
+\bibitem[{Danielle O'Steen}~2007]{DanielleOSteen2007}
+{Danielle O'Steen} and Danielle O'Steen.
+\newblock {Artist Dossier: Joseph Cornell}.
+\newblock ART+AUCTION, 2007.
+
 \bibitem[Davis~1939]{Davis1939}
 P.~A. Davis.
 \newblock {\em {Effects of Acoustic Stimuli on the Waking Human Brain}}.
@@ -235,9 +252,15 @@ L~Dominik and Matthias Jarke.
 \newblock Proceedings of the 10th International Society for Music Information
   Retrieval Conference, no.~Ismir, pages 195--200, 2009.
 
+\bibitem[Donoho~2006]{Donoho2006c}
+DL~Donoho.
+\newblock {\em {Compressed sensing}}.
+\newblock IEEE Transactions on Information Theory, vol.~52, no.~4, pages 1289
+  -- 1306, 2006.
+
 \bibitem[Duan~2012]{Duan2012}
 Zhiyao Duan, Gautham~J Mysore and Paris Smaragdis.
-\newblock {\em {Online PLCA for Real-time Semi-supervised}}.
+\newblock {\em {Online PLCA for Real-time Semi-supervised Source Separation}}.
 \newblock Proceedings of the international conference on Latent Variable
   Analysis / Independent Component Analysis, pages 1--8, 2012.
 
@@ -252,6 +275,17 @@ AJ~Eronen, VT~Peltonen and JT~Tuomi.
 \newblock {\em {Audio-based context recognition}}.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~14, no.~1, pages 321--329, 2006.
+
+\bibitem[Fassler~2011]{Fassler2011}
+Joe Fassler.
+\newblock {\em {How Copyright Law Hurts Music, From Chuck D to Girl Talk}},
+  April 2011.
+
+\bibitem[Feuerstein~1998]{Feuerstein1998}
+PL~Feuerstein.
+\newblock {\em {Collage, Technology, and Creative Process Collage, tecnologia e
+  processo creativo}}.
+\newblock International Conference on Generative Art, 1998.
 
 \bibitem[Findlay~2003a]{Findlay2003}
 John~M. Findlay and Iain~D. Gilchrist.
@@ -276,6 +310,11 @@ Per-Erik Forss\'{e}n.
 \newblock {\em {Maximally stable colour regions for recognition and matching}}.
 \newblock Computer Vision and Pattern Recognition 2007, (CVPR07)., 2007.
 
+\bibitem[Furht~1995]{Furht1995}
+Borko Furht.
+\newblock {\em {A Survery of Multimedia Compression Techniques and Standards}}.
+\newblock Real-Time Imaging, vol.~1, pages 49--67, 1995.
+
 \bibitem[Garrido~2009]{Garrido2009}
 Marta~I Garrido, James~M Kilner, Klaas~E Stephan and Karl~J Friston.
 \newblock {\em {The mismatch negativity: a review of underlying mechanisms.}}
@@ -295,6 +334,10 @@ J~P Gottlieb, M~Kusunoki and M~E Goldberg.
 \newblock {\em {The representation of visual salience in monkey parietal
   cortex.}}
 \newblock Nature, vol.~391, no.~6666, pages 481--4, January 1998.
+
+\bibitem[Grierson~2013]{MickGrierson2013}
+Mick Grierson and Chris Kiefer.
+\newblock {\em {Maximilian}}, 2013.
 
 \bibitem[Griffiths~2004]{Griffiths2004}
 Timothy~D Griffiths and Jason~D Warren.
@@ -493,6 +536,10 @@ D.~Kahneman and A.~Treisman.
 \newblock In R.~Parasuraman and R.~Davies, editeurs, Varieties of Attention,
   pages 29--61. New York: Academic Press, 1984.
 
+\bibitem[Kalloniatis~2007]{Kalloniatis2007}
+Michael Kalloniatis and Charles Luu.
+\newblock {\em {Visual Acuity}}, 2007.
+
 \bibitem[Kanoh~2001]{Kanoh2001}
 S~Kanoh, Toshinori Arai, R.~Futami and N.~Hoshimiya.
 \newblock {\em {Properties of auditory temporal integration revealed by
@@ -573,6 +620,11 @@ Dominique Lamy, Hannah Segal and Lital Ruderman.
 \newblock Perception \& psychophysics, vol.~68, no.~1, pages 17--31, January
   2006.
 
+\bibitem[Lazier~2003]{Lazier2003a}
+Ari Lazier.
+\newblock {\em {MoSievius: Interactive Audio Mosaicing}}.
+\newblock PhD thesis, 2003.
+
 \bibitem[Lee~2010]{Lee2010}
 Hochang Lee, S~Seo, S~Ryoo and K~Yoon.
 \newblock {\em {Directional texture transfer}}.
@@ -627,6 +679,10 @@ M.W. Macon and M.a. Clements.
 BS~Manjunath, P~Salembier and Thomas Sikora, editeurs.
 \newblock {Introduction to MPEG-7: Multimedia Content Description Interface}.
 \newblock John Wiley and Sons, 2002.
+
+\bibitem[Manovich~1996]{LevManovich1996}
+Lev Manovich.
+\newblock {\em {Essays : What is Digital Cinema?}}, 1996.
 
 \bibitem[Marr~1978]{Marr1978}
 D~Marr and H~K Nishihara.
@@ -717,12 +773,6 @@ Tirin Moore and KM~Armstrong.
   frontal cortex}}.
 \newblock Nature, vol.~421, no.~January, pages 370--373, 2003.
 
-\bibitem[Moulines~1990]{Moulines1990}
-E.~Moulines and F.~Charpentier.
-\newblock {\em {Pitch-synchronous waveform processing techniques for
-  text-to-speech synthesis using diphones}}.
-\newblock Speech communication, vol.~9, no.~5-6, pages 453--467, 1990.
-
 \bibitem[N\"{a}\"{a}t\"{a}nen~1978]{Naatanen1978}
 R~N\"{a}\"{a}t\"{a}nen, AWK Gaillard and S~M\"{a}ntysalo.
 \newblock {\em {Early selective-attention effect on evoked potential
@@ -768,6 +818,11 @@ Juhan Nam, Gautham Mysore and Paris Smaragdis.
 \newblock {\em {Sound Recognition in Mixtures}}.
 \newblock Latent Variable Analysis and Signal, Lecture Notes in Computer
   Science, vol.~7191, pages 405--413, 2012.
+
+\bibitem[Naselaris~2011]{Naselaris2011}
+Thomas Naselaris, Kendrick~N Kay, Shinji Nishimoto and Jack~L Gallant.
+\newblock {\em {Encoding and decoding in fMRI.}}
+\newblock NeuroImage, vol.~56, no.~2, pages 400--10, May 2011.
 
 \bibitem[O'Donovan~2012]{O'Donovan2012}
 Peter O'Donovan and Aaron Hertzmann.
@@ -909,6 +964,11 @@ Christophe Rhodes, Tim Crawford and Michael Casey.
   AudioDB}}.
 \newblock Journal of New Music, pages 1--19, 2010.
 
+\bibitem[Richardson~2010]{Richardson2010}
+Iain~E Richardson.
+\newblock {The H.264 Advanced Video Compression Standard}.
+\newblock John Wiley and Sons, 2nd editio \'edition, 2010.
+
 \bibitem[Rinne~1999]{Rinne1999}
 T~Rinne, G~Gratton, M~Fabiani, N~Cowan, E~Maclin, a~Stinard, J~Sinkkonen,
   K~Alho and R~N\"{a}\"{a}t\"{a}nen.
@@ -942,11 +1002,6 @@ Fabienne Samson, Thomas~a Zeffiro, Alain Toussaint and Pascal Belin.
 \newblock {\em {Stimulus complexity and categorical effects in human auditory
   cortex: an activation likelihood estimation meta-analysis.}}
 \newblock Frontiers in psychology, vol.~1, no.~January, page 241, January 2010.
-
-\bibitem[Sch\"{o}dl~2000]{Schodl2000}
-A~Sch\"{o}dl, Richard Szeliski, DH~Salesin and Irfan Essa.
-\newblock {\em {Video textures}}.
-\newblock Proceedings of the 27th annual \ldots, 2000.
 
 \bibitem[Schwarz~2000]{Schwarz2000}
 D~Schwarz.
@@ -1332,6 +1387,12 @@ K~Zeng, M~Zhao, C~Xiong and SC~Zhu.
 Xilin Zhang, Li~Zhaoping, Tiangang Zhou and Fang Fang.
 \newblock {\em {Neural activities in v1 create a bottom-up saliency map.}}
 \newblock Neuron, vol.~73, no.~1, pages 183--92, January 2012.
+
+\bibitem[Zils~2001]{Zils2001}
+A~Zils and F~Pachet.
+\newblock {\em {Musical Mosaicing}}.
+\newblock In Proc. COST G-6 Conf. Digital Audio Effects, Limerick, Ireland,
+  2001.
 
 \bibitem[Zimmer~2003]{Zimmer2003}
 Robert Zimmer.
