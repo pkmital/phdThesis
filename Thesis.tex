@@ -24,28 +24,22 @@ synthesis, scene analysis, encoding, decoding
 \minitoc
 \doublespacing
 
+% psycho-physiology. fechner who stared at the sun in search of quantitative laws in psychophysics.  gonzo phenomenology.
+
 \epigraph{\flushright{These fragments I have shored against my ruins.}}%
 {-- \textsc{T.S. Eliot}, excerpt from \textit{The Waste Land}}%
 
 \section{Motivation}
 
-The world in front of us is measured by the various sensory mechanisms we have available to us.  These mechanisms enable us to convert physical phenomena into electrical signals which we use to construct a perception of the world.  However, we are often taught that the world we perceive is exactly as it is in front of us.  Philosopher Alan Watts describes the situation:
-\begin{quotationb}
-Most of us are brought up to feel that what we see out in front of us is something that lies beyond our eyes, out there. That the colors and the shapes that you see in this room are out there. In fact, that is not so. In fact, all that you see is a state of affairs inside your head. All these colors, all these lights, are conditions of the optical nervous system. There are, outside the eyes, quanta, electronic phenomena, vibrations, but these are not light, they are not colors until they are translated into states of the human nervous system. So if you want to know how the inside of your head feels, open your eyes and look. That is how the inside of your head feels.
-\flushright{\textsc{Alan Watts}}
-\end{quotationb}
+The world in front of us is measured by the various sensory mechanisms we have available to us.  These mechanisms enable us to convert physical phenomena into electrical signals which we use to construct a perception of the world.  Many theories of perception suggest that we encode the sensations entering our sensory mechanisms into a set of internal representations inaccessible to our consciousness\footnote{This thesis uses consciousness and awareness interchangeably.  Awareness denotes the ability to report something.  Consequently, unconsciousness denotes things of which we are not aware, and things that we cannot report.}.  Across numerous literature these representations are theorized to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  As we do not have conscious access to them, what are the representations supporting these processes?  How are they modeled, what do they look like, what can they explain, and what can they not explain?  
 
-Though perhaps a bit lyrical, Watts describes the feeling of the inside of our heads as the one that we often mistakenly describe as what is ``out there''.  Many theories of perception suggest that we encode the sensations entering our sensory mechanisms into a set of internal representations inaccessible to our consciousness\footnote{This thesis uses consciousness and awareness interchangeably.  Awareness denotes the ability to report something.  Consequently, unconsciousness denotes things of which we are not aware, and things that we cannot report.}.  Across numerous literature these representations are theorized to be the latest stage of pre-attentive processing and the earliest stage of representation acted upon by attentional machinery.  As a result, they also do not require semantics or language in order to be represented, but rather provide a basis for understanding objects and events in the world.  As we do not have conscious access to them, what are the representations supporting these processes?  How are they modeled, what do they look like, what can they explain, and what can they not explain?  
+It is the aim of this thesis to develop a better understanding of questions such as these through a computational arts practice defined by a process called \textit{scene synthesis}.  Scene synthesis is a computationally generated collage process that begins by representing existing scenes such as images, videos, or sounds into a set of representations using algorithms modeled by our own early perceptual machinery.  Once a set of representations have been learned, scene synthesis interprets a target scene such as an existing sound clip, image, video, or for interactive experiences, a real-time video feed and/or microphone using the set of previously learned internal representations.  The resulting interpretation is capable of building interactive, dynamic, and computationally generated collages.  A defining aspect of the interaction within this framework is to place a participant within the collage-generation process such that the generated collage is specific to that participant.  As a result, the learned representations are based on the participant's previous experiences or their own relationships to the stimulus material.  Our final aim will be manifested in a synthesis process called \textit{Memory Mosaic}, where a participant experiences a real-time stream of sonic and visual collages created automatically by the software (see Chapter \ref{ch:memory-mosaic}).  The collages are generated using sounds and visual representations the app has previously heard and seen.  By continually associating the incoming input with its stored memories, the app attempts to reveal aspects of our own perceptual processes through the presented collages.  
 
-It is the aim of this thesis to develop a better understanding of questions such as these through a computational arts practice defined by a process called \textit{scene synthesis}.  Scene synthesis is a computationally generated collage process that begins by representing existing scenes such as images, videos, or sounds into a set of representations using algorithms modeled by our own early perceptual machinery.  Once a set of representations have been learned, scene synthesis attempts to synthesize a target scene such as an existing sound clip, image, video, or for interactive experiences, a real-time video feed and/or microphone using the set of previously learned internal representations. 
+Ideally, the representations motivated and built in this thesis will allow for a synthesis indistinguishable from its target.   However, what happens when representations used in the synthesis come from a set of representations that are unlike the stimuli?  For instance, what if I have only learned about the sonic world of 'trees' and 'birds'.  How would it then synthesize a Michael Jackson recording?  Or in the visual case, what if I only ever saw the animation ``The Family Guy'', and had to interpret ``The Simpsons''?  This thesis asks these very same questions when discussing early experiments in audio scene synthesis in Chapter \ref{ch:synthesis-audio} and visual scene synthesis in Chapter \ref{ch:synthesis-visual}.  More generally, these questions are framed as ``how does experience shape perception?'', suggesting that perception is not a one-to-one relationship with the world but one experienced based on our prior notions of it.  
 
-Scene synthesis, as it is developed in this thesis, is capable of building interactive, dynamic, and computationally generated collages.  A defining aspect of the interaction within this framework is to place a participant within the collage-generation process such that the generated collage is specific to that participant.  As a result, the learned representations are based on the participant's previous experiences or their own relationships to the stimulus material.  For instance, in one incarnation, ``Memory Mosaic'', a participant experiences a real-time stream of sonic and visual collages created automatically by the software (see Chapter \ref{ch:memory-mosaic}).  The collages are generated using sounds and visual regions the app has previously heard and seen.  By continually associating the incoming input with its stored memories, the app attempts to reveal aspects of our own perceptual processes through the presented collages.  
+We will discuss these and more experiments along the way to our final aim, the combination of both auditory and visual modalities in two outputs: (1) \textit{YouTube Smash Up}, which synthesizes the number 1 video on YouTube of the week using the Top 2-10 videos of the week; and (2), \textit{Augmented Reality Hallucinations}, exhibited during the London Design Festival at the V\&A Digital Design Weekend, which combines \textit{Memory Mosaic} with an augmented reality headset originally built for immersive gaming environments delivering the visual experience and headphones to produce the sonic experience.  
 
-Ideally, the representations motivated and built in this thesis will allow for a synthesis indistinguishable from its target.   However, what happens when representations used in the synthesis come from a set of representations that are unlike the stimuli?  For instance, what if I have only learned about the sonic world of 'trees' and 'birds'.  How would it then synthesize a Michael Jackson recording?  Or in the visual case, what if I only ever saw the animation ``The Family Guy'', and had to interpret ``The Simpsons''?  This thesis asks these very same questions when discussing audio scene synthesis in Chapter \ref{ch:synthesis-audio} and visual scene synthesis in Chapter \ref{ch:synthesis-visual}.  More generally, these questions are framed as ``how does experience shape perception?'', suggesting that perception is not a one-to-one relationship with the world but one experienced based on our prior notions of it.  
-
-We will discuss these and more experiments along the way to our final aim, the combination of both auditory and visual modalities in two outputs: (1) ``Augmented Reality Hallucinations'', exhibited during the London Design Festival at the V\&A Digital Design Weekend, which uses an augmented reality headset originally built for immersive gaming environments delivering the visual experience and headphones to produce the sonic experience; and (2), ``YouTube Smash Up'', which synthesizes the number 1 video on YouTube of the week using the top 2 - 10 videos of the week. 
-
-We first discuss background in collage-based practices in Section \ref{sec:background-collage} starting with more traditional forms of collage before discussing technological-based developments which altered the practice.  These fields serve to build a better context of the process of scene synthesis within associated practice-based domains.  Ideally, we would also include background specific to the theoretical aspects of perceptual representation as well as their computational modeling inside this introductory chapter.  However, for fear of overloading the reader too soon, we save these background for the later chapters.  After this introductory review, we move onto discussing the relationship between scene synthesis and coding processes in Section \ref{sec:coding}, as this field offers the notion of encoding/decoding, which are useful terms for understanding the processes of perception we aim to model in both humans and in computation.  Finally, we recap the goals and give and overview of the remainder of this thesis in Section \ref{sec:overview}.
+We first discuss background in collage-based practices in Section \ref{sec:background-collage} starting with more traditional forms of collage before discussing technological-based developments which altered the practice.  These fields serve to build a better context of the process of scene synthesis within associated practice-based domains.  Ideally, we would also include background specific to the theoretical aspects of perceptual representation as well as their computational modeling inside this introductory chapter.  However, we save these background for the later chapters.  After this introductory review, we move onto discussing the relationship between scene synthesis and coding processes in Section \ref{sec:coding}, as the field of information coding offers the notion of encoding/decoding, which are useful terms for understanding the processes of perception we aim to model in both humans and in computation.  Finally, we recap the goals and give and overview of the remainder of this thesis in Section \ref{sec:overview}.
 
 \section{Background in Collage-based Practices}
 \label{sec:background-collage}
@@ -67,13 +61,13 @@ In a similar vein to Exquisite Corpse, Tristan Tzara while at a Dadaist rally in
 
 Collage practices did not stop with static media, however.  In 1925, the Russian film director Sergei Eisenstein demonstrated the power of film montage in \textit{Battleship Potemkin} as he juxtaposed image sequences such as a crowd's flight down a staircase with the image sequence of a baby carriage for 7 minutes, creating viscerally new experiences and emotions than either sequence alone could have.  Walter Ruttmann would later explore the use of this practice with purely sound, in a composition in 1928 entitled, ``Wochenende'', German for weekend, in what would later be known as the first image-less film \cite{DouglasKahn1994}. Comprised of sounds of a moving train, the wind through the trees, voices of whispering lovers, and the sounds of a crowd, Ruttmann produced a montage through abstracting the fragments relating to the start of a weekend into what Hans Richter would describe as, ``a symphony of sound, speech-fragments and silence woven into a poem'' \cite{Ltd}.  Such practices, while not strictly collage as it had been known as, shared the technique of producing new meanings from the juxtaposition of individual fragments.  However, these fragments are temporally related, and thus the juxtaposition operates on an imposed temporal dimension rather than a spatial one to create a distinct image in the mind's eye.  
 
-By the end of the 1940's, radiophonic art, or the practice of producing sound for radio broadcast, had been well established.  Words, music, and noises were combined to produce radio productions of literary stories and news broadcasts.  It is no surprise then that in one studio in Paris, France, Pierre Schaeffer was also experimenting with splicing and recombining magnetic tape recordings of sound in a practice later called musique concr\`ete \cite{}.  Schaeffer argued that classical music practice begins with a set of abstractions which are notated on sheet music and then later reproduced as audible music.  Musique concr\`ete on the other hand begins with recordings of the sound outputs themselves, attempting to work from the raw sonic outputs towards any abstraction that may describe them \cite{Augoyard2006}.  
+By the end of the 1940's, radiophonic art, or the practice of producing sound for radio broadcast, had been well established.  Words, music, and noises were combined to produce radio productions of literary stories and news broadcasts.  It is no surprise then that in one studio in Paris, France, Pierre Schaeffer was also experimenting with splicing and recombining magnetic tape recordings of sound in a practice later called musique concr\`ete \cite{Augoyard2006}.  Schaeffer argued that classical music practice begins with a set of abstractions which are notated on sheet music and then later reproduced as audible music.  Musique concr\`ete on the other hand begins with recordings of the sound outputs themselves, attempting to work from the raw sonic outputs towards any abstraction that may describe them \cite{Augoyard2006}.  
 
-Greek composer and mathematician Iannis Xenakis would also explore sound collage within his compositions.  He stated that ``all sound, even continuous musical variation, is conceived as an assemblage of a large number of elementary sounds adequately disposed in time'', and has explored a finely fragmented form of collage later denoted as Granular Synthesis (discussed in Section \ref{sec:background-computational-art}) using analog tape splicing processes in compositions such as \textit{Analogique A-B} \cite{Roads1996}. 
+Greek composer and mathematician Iannis Xenakis would also explore sound collage within his compositions.  He stated that ``all sound, even continuous musical variation, is conceived as an assemblage of a large number of elementary sounds adequately disposed in time'', and has explored a finely fragmented form of collage later denoted as Granular Synthesis (discussed in Section \ref{sec:sound-technology}) using analog tape splicing processes in compositions such as \textit{Analogique A-B} \cite{Roads1996}. 
 
-Collage film as well may describe a range of practices combining the practice of found objects/materials and montage.  Early surrealist experiments such as Joseph Cornell's 19-minute \textit{Rose Hobart} (1936) reassembled \textit{East of Borneo} (1931) together with a documentary film of an eclipse \cite{DanielleOSteen2007}.  Bruce Conner's \textit{A Movie} (1958) which can now be found in the U.S. Library of Congress combined together pornography, B-rated movies, and newsreels, amongst other found footage items.  Arthur Lipsett also experimented with found footage practices taking snippets of unused sound and film discarded during editing processes as seen in \textit{Very Nice, Very Nice} (1961) and \textit{21-87} (1963).  In a slightly different vein, Stan Brakhage experimented with placing actual objects between two layers of 16 mm transparent film, chosen to be slightly translucent such as moths, flower petals, and grass, and are seen in \textit{Mothlight} (1963) and \textit{The Garden of Earthly Delights} (1981).
+Collage film as well may describe a range of practices combining the practice of found objects/materials and montage.  Early surrealist experiments such as Joseph Cornell's 19-minute \textit{Rose Hobart} (1936) reassembled \textit{East of Borneo} (1931) together with a documentary film of an eclipse \cite{DanielleOSteen2007}.  Bruce Conner's \textit{A Movie} (1958) which can now be found in the U.S. Library of Congress combined together pornography, B-rated movies, and newsreels, amongst other found footage items.  Arthur Lipsett also experimented with found footage practices taking snippets of unused sound and film discarded during editing processes as seen in \textit{Very Nice, Very Nice} (1961) and \textit{21-87} (1963).  In a slightly different vein, Stan Brakhage experimented with placing actual objects between two layers of 16 mm transparent film, chosen to be slightly translucent such as moths, flower petals, and grass, and are seen in \textit{Mothlight} (1963) and \textit{The Garden of Earthly Delights} (1981).  These early experiments demonstrated the power of an abstract narrative juxtaposing fragments both across the frame and time to portray powerful meanings.
 
-Collage would also find its way into performance art.  Most notably, the works of choreographer Merce Cunningham were heavily influenced by collage-based practice.  In his 1964 work in Vienna, \textit{Events}, he takes ``splices'' of his existing works and recombines them to produce new configurations, further heavily influenced by the chance operations demonstrated in works by Marcel Duchamp and John Cage \cite{Copeland2002}.  One may also notice that Duchamp's notion of readymades (e.g., the urinal or bicycle wheel) is also apparent within his collage-based practice.  Copeland describes the influential nature context has on the interpretation of the individual fragments within \textit{Events}, suggesting that ``when segments of \textit{Winterbranch} (1964) were incorporated into subsequent \textit{Events}, the emotional tone of the work was no longer nightmarish or apocalyptic [...] what the audience saw was (merely) the act of dancers falling [...] Without other factors to color the emotional texture [...] spectators tended to laugh rather than to recoil in horror'' \cite{Copeland2002}.  Nam June Paik as well explored collage within performance in \textit{Random Access/Paper TV} (1978-1981), which payed homage to both Cage and Cunningham through silk-screened images of their performances printed on two decks of playing cards.  Paik recombined and shuffled the playing cards incorporating chance operations in a similar vein to the early Dadaists and created collages through the dealing of the cards out onto a flat surface \cite{Copeland2002}.
+Collage would also find its way into performance art.  Most notably, the works of choreographer Merce Cunningham were heavily influenced by collage-based practice.  In his 1964 work in Vienna, \textit{Events}, he takes ``splices'' of his existing works and recombines them to produce new configurations, further heavily influenced by the chance operations demonstrated in works by Marcel Duchamp and John Cage \cite{Copeland2002}.  One may also notice that Duchamp's notion of readymades (e.g., the urinal or bicycle wheel) is also apparent within his collage-based practice.  Copeland describes the influential nature context has on the interpretation of the individual fragments within \textit{Events}, suggesting that ``when segments of \textit{Winterbranch} (1964) were incorporated into subsequent \textit{Events}, the emotional tone of the work was no longer nightmarish or apocalyptic [...] what the audience saw was (merely) the act of dancers falling [...] Without other factors to color the emotional texture [...] spectators tended to laugh rather than to recoil in horror'' \cite{Copeland2002}.  Nam June Paik as well explored collage within performance in \textit{Random Access/Paper TV} (1978-1981), which payed homage to both Cage and Cunningham through silk-screened images of their performances printed on two decks of playing cards.  Paik recombined and shuffled the playing cards incorporating chance operations in a similar vein to the early Dadaists and created collages through the dealing of the cards out onto a flat surface \cite{Copeland2002}.  
 
 Perhaps the most sophisticated use of visual collage-practice comes from Czech surrealist animator Jan {\v S}vankmajer, who combines stop-motion and collage-based techniques within his intricately detailed and surreallist animations.  Film theorist Jan Udha describes his work as rapidmontage, ``offering amazing and original associations, a kind of kinetic collage'' \cite{Uhde}.  For example, in ``Mo{\v z}nosti Dialogu'' or, ``Dimensions of Dialogue'' (1982), {\v S}vankmajer creates a collage of two heads composed of a variety of coarsely fragmented objects in the style of Giuseppe Arcimboldo, one composed of various kitchenware and another composed of various fruits and vegetables.  Their ``dialogue'' ensues which effectively entails the one head eating the other one, chewing the head momentarily, then regurgitating it as a finer representation of objects.  The process continues in turns with one head eating the other until they resemble smooth clay-like sculpted heads. 
 
@@ -89,17 +83,13 @@ For instance, the Xerox Corporations development of the photocopier led to a sur
 As well, Polaroid's introduction of instant film allowed photographers to instantly see their developed film without the need for mixing chemicals.  David Hockney explored their use creating patchwork collages (for instance, using as many as 63 Polaroids in \textit{Still Life Blue Guitar}, 1982) which he called ``joiners''.  The individual patches comprised of individual photos that were taken at different times effectively creating different exposures, lighting conditions, and vantage points.  Hockney's interest in the joiner's were intimately tied to human perception, stating that they made ``things closer to the truth of the way we see things'' \cite{Joyce1988}, i.e. perception constructed through the fragments of many perspectives.
 
 \paragraph{Digital media}
-1963 saw pivotal developments for the field of interaction with computers and in particular with computer graphics: Douglas Englebart's computer mouse and Ivan Sutherland's sketchpad (an extension of Robert Everett's light pen for the TX-2).  Both allowed a user to isolate and drag pixels on a screen, moving them from one data-space to another.  DJ Spooky remarks on the transformations these and other pioneers in human-computer interfacing technologies would have on the arts: ``Douglas Engelbert and Ivan Sutherland pioneered graphical user interfaces...but what they accomplished was even more profound than that, their work let us move into the screen world itself'' (quoted in \ref{Jaeger2006}).  
+1963 saw pivotal developments for the field of interaction with computers and in particular with computer graphics: Douglas Englebart's computer mouse and Ivan Sutherland's sketchpad (an extension of Robert Everett's light pen for the TX-2).  Both allowed a user to isolate and drag pixels on a screen, moving them from one data-space to another.  DJ Spooky remarks on the transformations these and other pioneers in human-computer interfacing technologies would have on the arts: ``Douglas Engelbert and Ivan Sutherland pioneered graphical user interfaces...but what they accomplished was even more profound than that, their work let us move into the screen world itself'' (quoted in \cite{Jaeger2006}).  
 
-It is in the ``screen world'' that a wealth of new technologies would be developed in the coming years to allow the manipulation of data representing media.  As a result, perhaps the most significant deviation from early collage practice comes from the advent of digital media.  As media was no longer contained to the physical world, but a virtual screen-based one, where only software could manipulate the media, collage practice was intimately tied to the capabilities of software. 
+It is in the ``screen world'' that a wealth of new technologies would be developed in the coming years to allow the manipulation of data representing media.  As a result, perhaps the most significant deviation from early collage practice comes from the advent of digital media.  As media was no longer contained to the physical world, but a virtual screen-based one where only software could manipulate the media, collage practice was intimately tied to the capabilities of software.  For instance, software for page layout, illustration, graphics, and photo/sound/ and video editing afforded practitioners with faster and more sophisticated methods of collage.  Adobe Photoshop supports the automatic parsing of an image into object regions that can be individually manipulated enabling artists to finely segment and compose visual media.  For video, Adobe After Effects can similarly segment objects and track features across frames, making dynamic visual collages much easier to do.  Further, blending and compositing effects allow for seamless compositing in a variety of interesting scenarios.  
 
-The notion of collage in the world of digital media may require pinning down, as a variety of new techniques can afford new kinds of compositions.  One theorist claims that collage will proliferate so long as ``cut'' and ``paste'' operations persist, as described by Taylor in \textit{Collage} \cite{Taylor2006b}.   Cut-and-paste, in the digital realm, implies an operation of copying a digitally stored representation (i.e. 1's and 0's in machine code) from a source to a target.  However, for most computers, a copy operation is carried out whenever information is simply accessed.  That is, a digital piece of information is first kept stored in a permanent storage location such as a hard disk, before being copied by software.  For example, when a sound or image is required for display or decoding (e.g. from an MP3-file to one that can be played as -1 to +1 values through the speakers, or a JPEG-file to one that can be displayed as RGB values in a monitor), the permanent file must be copied into a temporary high-speed memory storage, and used within the appropriate software making use of that information.  Even for lossless file formats, such as a WAVE audio file or RAW image file, most software will require the file to first be copied into high-speed memory to allow it to be manipulated, displayed (e.g. as a waveform or image), and possibly copied again in order to interface with hardware.  As a result, copyright laws have likened the pure access and interfacing of digitally stored information as falling within the domain of copyright, leading to several attempts to digitally manage content (e.g. Digital Rights Management, or DRM).  The implications of the interpretation of copyright within digital media will be explored more in Chapter~\ref{ch:audiovisual}, when discussing YouTube Smash Up, a project that explores an audiovisual collage within short films through the use of existing copyrighted material hosted on YouTube.  
- 
-Software for page layout, illustration, graphics, and photo/sound/ and video editing have afforded practitioners with faster and more sophisticated methods of collage.  For instance, Adobe Photoshop supports the automatic parsing of an image into object regions that can be individually manipulated enabling artists to finely segment and compose visual media.  For video, Adobe After Effects can similarly segment objects and track features across frames, making dynamic visual collages much easier to do.  Further, blending and compositing effects allow for seamless compositing in a variety of interesting scenarios.  
+Examples of these advances can be seen in Hollywood.  For instance, the opening sequence to Robert Zemeckis' \textit{Forest Gump} (1994) combines a shot of a feather falling against a blue-screen with a shot of a landscape.  The blue-screen allowed special effects company Industrial Light and Magic (ILM) to apply digital post-processing using a threshold, where all values near blue became transparent, and the remaining values added or blended to the landscape video.  The final effect produces ``a new kind of realism, which can be described as 'something which looks is intended to look exactly as if it could have happened, although it really could not''' \cite{LevManovich1996}. ILM, owned by The Walt Disney Company which acquired the company when buying LucasFilm in 2012, are also responsible for earlier films such as \textit{Star Wars} (1974), to more recent ones including \textit{Jurassic Park}, the entire series of \textit{Harry Potter}, and \textit{Avatar}, amongst nearly 300 others.  In many of these films, compositing afforded an entirely new type of collage process, where computer animations or models could be placed within another scene (possibly also computer generated).  
 
-Many of these advances can be seen in Hollywood.  For instance, the opening sequence to Robert Zemeckis' \textit{Forest Gump} (1994) combines a shot of a feather falling against a blue-screen with a shot of a landscape.  The blue-screen allowed special effects company Industrial Light and Magic (ILM) to apply digital post-processing using a threshold, where all values near blue became transparent, and the remaining values added or blended to the landscape video.  The final effect produces ``a new kind of realism, which can be described as 'something which looks is intended to look exactly as if it could have happened, although it really could not''' \cite{LevManovich1996}. ILM, owned by The Walt Disney Company which acquired the company when buying LucasFilm in 2012, are also responsible for earlier films such as \textit{Star Wars} (1974), to more recent ones including \textit{Jurassic Park}, the entire series of \textit{Harry Potter}, and \textit{Avatar}, amongst nearly 300 others.  In many of these films, compositing afforded an entirely new type of collage process, where computer animations or models could be placed within another scene (possibly also computer generated).  
-
-As a more obscure example, design agency leftchannel likely made use of both Photoshop and After Effects in producing a 3D video cutout effect for the musician RJD2 in their music video for \textit{1976}\footnote{\url{https://vimeo.com/1508709}} (2008).  Though the agency does not describe their technique, a similar process is described in a tutorial on videocopilot.com \footnote{\url{http://www.videocopilot.net/tutorials/virtual_3d_photos/}}. Taking still images, they could have used Photoshop for removing objects within the still frames.  The voids left from removing these objects are filled in using contextual and image replacement tools within Photoshop.  Finally, within After Effects, individual layers are placed at different z-coordinates, where each object cutout in Photoshop represents a new layer, and the filled in image representing the background.  Using this interesting reconstruction of the image within a virtual 3D environment, they then use a virtual camera to move around the scene, creating interesting dynamics that seem as though the image comes alive.  The virtual 3D scene afforded by After Effects allows the artist to create collages in a 3D space from using only 2D material.
+As a more obscure example, design agency leftchannel likely made use of both Photoshop and After Effects in producing a 3D video cutout effect for the musician RJD2 in their music video for \textit{1976}\footnote{\url{https://vimeo.com/1508709}} (2008).  Though the agency does not describe their technique, a similar process is described in a tutorial on videocopilot.com\footnote{\url{http://www.videocopilot.net/tutorials/virtual_3d_photos/}}. Taking still images, they could have used Photoshop for removing objects within the still frames.  The voids left from removing these objects are filled in using contextual and image replacement tools within Photoshop.  Finally, within After Effects, individual layers are placed at different z-coordinates, where each object cutout in Photoshop represents a new layer, and the filled in image representing the background.  Using this interesting reconstruction of the image within a virtual 3D environment, they then use a virtual camera to move around the scene, creating interesting dynamics that seem as though the image comes alive.  The virtual 3D scene afforded by After Effects allows the artist to create collages in a 3D space from using only 2D material.
 
 
 \begin{figure}
@@ -153,63 +143,33 @@ Collage-based video practitioners in the 1990's would often use clips of appropr
 James Kerr appropriates images ``found here/there on the internet (a lot taken from northern and early renaissance paintings)''  within his animated digital collages \cite{Kerr2013} created using the Graphics Interchange Format (GIF), a common image format created in 1987 supporting simple frame-based animations supported by virtually all browsers \cite{Compuserve1987}.  The GIF format makes it easy to see animations anywhere in a web page as they are often embeddable in other common social networks such as Facebook and Twitter. 
 
 
-\paragraph{Generative Art} \\
+\paragraph{Algorithmic/Computational/Generative Art} \\
 
-Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
+Early computational artist Freider Nake recently said of algorithmic artwork that it is ``thinking of infinities'', referencing an early work by A. Michael Noll, \textit{Gaussian Quadratic} (1965) which shows a line drawing output of an algorithm attempting to create all possible polygons, or his own work, \textit{Matrix Multiplication} (1968) which is described by an algorithm for matrix multiplication.  In algorithmic artwork, he states, the artwork is separated by its ``surface'' and ``subface'', where the procedural or computable definitions of the artwork are the subface, and the object exhibited or viewed by a participant is the surface.  At the risk of being sloppy, we will temporarily suspend distinctions between the terms algorithmic, computational, and generative artworks, to collectively refer to artworks using the distinction offered by Nake.  Such artwork are then described by subfaces consisting of procedural definitions capable of computing multiple surfaces.   %Importantly, this distinction raises concerns for describing artworks, as there are the procedures themselves which one could describe and the outputs they produce.  
+
+As an example, Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
 
 Ben Bogart's development of \textit{Context Machines} similarly resembles a collage of procedures, one which he describes as metacreation: ``the artist manifests the concept in a system whose output is presented to the audience. This is a process of metacreation: the building of systems that create media artifacts'' \cite{Bogart2013}.  His work combines computational models informed by cognitive models and creativity theory in order to generate artworks deemed ``creative''.  His works explore computational models of ``conceptual spaces'' through the use of pattern recognition techniques such as self-organizing maps applied to large corpora of images.  The resulting outputs resemble dream-like collages creating surprising associations within everyday scenes.
-
-\paragraph{Glitch Art}
-
-In glitch art, artifacts exposed by procedural errors are exploited in creative and interesting ways.  For instance, \textit{datamoshing} refers to the practice of intentionally altering information within encoded file formats so as to produce distorted interpretations of that file when it is decoded.  The technique itself can be applied in many different ways depending on the codec used.  As an example, when using Motion-JPEG, a popular video codec, artists often remove a particular kind of ``keyframe'' which tells the decoder when it should update all of its pixels.  In between these keyframes, the decoder will not use the actual content of the video, but instead track the individual pixels from the previous keyframe so that new image content does not need to be created.  This effectively helps keep the file size down while maintaining the important parts of the content.  When an artist removes these keyframes intentionally, the image content is tracked into a new video frame where much of the content should have been updated, effectively tricking the decoder into thinking it does not need to update all of its pixels.  This has the effect of one frame bleeding into the other in what Peter Kirn describes as causing ``frames to melt into one another like wax'' \cite{Kirn2009}.   Perhaps one interesting feature of the effect is that many people are already familiar with compression artifacts (e.g. from poor bandwidth streaming where network packets encoding the keyframes may have been lost).  When the artifacts are appropriated for creative use, however, they can create subtle and targeted effects.  Artist Yung Jake demonstrates a variety of these in his music video for ``Datamosh''.  See Figure \ref{fig:datamosh} for an example where he moves Justin Bieber's face  with the motion of the next few frames.   He further explains the technique in his lyrics for the song:
-
-\begin{figure}
-\centering
-\begin{subfigure}[b]{0.325\textwidth}
-\centering
-\includegraphics[width=\textwidth]{images/datamosh-1.png}
-\caption*{Frame 1}
-\end{subfigure}
-\begin{subfigure}[b]{0.325\textwidth}
-\centering
-\includegraphics[width=\textwidth]{images/datamosh-2.png}
-\caption*{Frame 2}
-\end{subfigure}
-\begin{subfigure}[b]{0.325\textwidth}
-\centering
-\includegraphics[width=\textwidth]{images/datamosh-3.png}
-\caption*{Frame 3}
-\end{subfigure}
-\caption{3 example frames demonstrating datamoshing from Yung Jake's ``Datamosh'' Music Video located at  \url{https://www.youtube.com/watch?v=nS7QvOX8LVk}.  In Frame 1, Justin Bieber is displayed.  By removing a keyframe, Yung Jake is able to move Bieber with his own motions in the later frames, as shown in Frames 2 and 3.}
-\label{fig:datamosh}
-\end{figure}
-
-\begin{verse}
-Datamoshing cool, datamoshing great \\
-Justin Bieber move him with my face\footnote{Jake is describing the effect from removing a keyframe where before there was a picture of Justin Bieber, and after there is Jake's own face.  The effect of removing the keyframe allows him to move Bieber's face with his own movements} \\
-Then use it for an art show, use it for a piece \\
-... \\
-You thought it was an accident, a video glitch \\
-I did it on purpose though... it's nothing \\
-You don't have bad Internet, I'm just datamoshing\footnote{the effect resembles streaming artefacts from slow connections} \\
-... \\
-I'm on my datamosh, digital effects, man \\
-I'm moshing data, geeked up can't stand\footnote{being ``on datamosh'', ``geeked up'', and ``can't stand'', suggests the effect has a drug-like power.} \\
-\flushright{\textsc{Yung Jake -- Datamosh}}
-\end{verse}
-
-Other techniques in glitch-based art include \textit{pixel sorting} (coined by Kim Asendorf\footnote{\url{http://www.kimasendorf.com/about/README}}), where pixels in an image are spatially sorted based on their values, or opening JPEG or other similarly encoded files in a normal text-pad and rewriting parts of it using normal keyboard letters.  This intermediate representation (i.e. the one viewed in the textpad) is not meant to be decoded by a text parser.  However, the interaction of writing text within this format is then stored back into the file, and when read by a decoder, viewed as an image.  The parts that were changed are likely unknown by the one manipulating the file, so there may also be a trial-and-error process.  
+% GLTCH and Satromizer (Ben Syverson) iOS apps
+% Dan Tempkin. Glitch and Esolangs.  Brainfuck, Urban Muller, 1993. 
 
 %\paragraph{Database Cinema
 %\hl{Lev Manovich's Soft Cinema} see \url{https://en.wikipedia.org/wiki/Database_cinema}
 %\hl{Computer Graphics -> boundaries of collage become less clear: https://www.youtube.com/watch?v=fw3XyOyl47Q}
 %\hl{Space of collage: Andruid Kerne's Collage Machine; I/O/D's WebStalker; Mark Napier's Riot; }
+\paragraph{Visualization}
+
+Phototrails\footnote{\url{http://phototrails.net/exhibition/?utm_source=buffer&utm_campaign=Buffer&utm_content=buffer14d97&utm_medium=twitter}} 
+
+Google Street View offers a unique collection of imagery that has been appropriated in Hyperlapse, a project exploring the possibilities of the vast amount of visual information\url{http://hyperlapse.tllabs.io/}.
+
 
  
 \subsubsection{Sound Culture}
+\label{sec:sound-technology}
 
 \paragraph{Sampling} \\
-For sound, collage-based practices exploded with the birth of digital sampler hardware.  Similar to the practice of collage or montage, sampling refers to taking portions of existing media and using it within a performance or composition.  Digital sampling refers to sampling after an analog-to-digital process, where physical vibrations of sound are digitally sampled at equally spaced intervals, creating a discretely sampled representation of the continuous real-world phenomena.  This discrete sampling can easily be encoded by 1's and 0's in computer storage, and easily decoded back to the physical world, via an digital-to-analog process, such as through a speaker.  
+For sound, collage-based practices exploded with the birth of digital sampler hardware, coming only a few years after the mellotron, a similar machine which used analog tape instead of digital media.  Similar to the practice of collage or montage, sampling refers to taking portions of existing media and using it within a performance or composition.  Digital sampling refers to sampling after an analog-to-digital process, where physical vibrations of sound are digitally sampled at equally spaced intervals, creating a discretely sampled representation of the continuous real-world phenomena.  This discrete sampling can easily be encoded by 1's and 0's in computer storage, and easily decoded back to the physical world, via an digital-to-analog process, such as through a speaker.  
 
 Early digital samplers such as the Fairlight CMI to more recent non-linear editors such as Logic and Ableton Live have made multi-track and cut-and-paste operations trivial to accomplish, while visualizing sound waves has made finding relevant parts of an audio file relatively easier than listening to an entire tape reel.  Early adopters of digital sampler technology include Herbie Hancock and Public Enemy.  Founders of Dub, Lee ``Scratch'' Perry and King Tubby, also made use of existing recorded material.  Though not strictly sampling, they created the famous Dub sound by infinitely collaging the same sound, creating intense reverberations that echoed with greater magnitude on each bounce until the sound was cut.  
 
@@ -241,7 +201,7 @@ Other examples include the use of matching an input sound source to a database o
 Lastly, a more recent synthesis technique, atomic synthesis, describes a reconstruction of an audio signal using a dictionary of simpler signals.  This technique falls under the blanket of compressive sensing \cite{Donoho2006c}, which attempts to describe any signal using a sparse representation of orthonormal basis functions.  This method is also denoted in the literature by dictionary-based methods/sparse approximation/sparse signal reconstruction, and has significant advantages for producing meaningful passages of sound (or images), as the sparsity enforces continuity of sound localized at a point in time.  The process attempts to build a dictionary of time-based signal atoms, essentially short fragments of sound with simple timbres, such that when they are added at sparse temporal locations, they resemble the target signal to approximate.   Though it has rarely been used for artistic purposes, it is described in \cite{Collins2011} for morphing and cross-synthesis, where a dictionary is learned from one set of sounds and used to synthesize another, and is also implemented in a C++ creative-coding toolkit for sound practice, Maximilian \cite{MickGrierson2013}.   
 
 
-%Stop Motion -> Jan Svankmajer -> Pink Freud: https://www.youtube.com/watch?v=5NPiOjFVQRc
+%Stop Motion -> Jan {\v S}vankmajer -> Pink Freud: https://www.youtube.com/watch?v=5NPiOjFVQRc
 %Vinyl -> DJ'ing
 %VJ'ing (VDMX, Quartz Composer, Jitter, Resolume Avenue; VVVV; Modul8). EBN; Coldcut in the 90's who used nature videos such as monkeys jumping, beetles tapping, and plants opening and synchronized their motions to sound samples using VJamm. Eclectic Method using Algoriddim's VJay iPad app.
 
@@ -278,16 +238,18 @@ Lastly, a more recent synthesis technique, atomic synthesis, describes a reconst
 
 
 
-\section{Relationship to Existing Coding/Compression Processes}
+\section{Relationship to Coding/Compression Practices}
 \label{sec:coding}
 
-Scene synthesis can also be summarized by coding processes.  In the context of this thesis, an \textit{encoding} attempts to store representations of an audiovisual scene using a model of representation based on human perception, and a \textit{decoding} attempts to describe the stimuli again.  The terms encoding/decoding are certainly not without their history.  We've discussed these terms in relation to digital media formats.   In the 1940's, Shannon mathematical formulation of a generalized communication system described the communication between a source and receiver through a transmitter and receiver, respectively.  The source encoded the message, and the transmitter would convert the message to physical phenomena, thus introducing possible noise sources effecting the message.  Finally, the message could be received and decoded by any destination that was capable of recovering the message.  His developments formed the basis of Information Theory, and along with developments occurring in military technology would later be incorporated by Norbert Wiener in a seminal text on communication theory entitled, Cybernetics.  
+Scene synthesis can also be summarized by coding processes.  In the context of this thesis, an \textit{encoding} attempts to store representations of an audiovisual scene using a model of representation based on human perception, and a \textit{decoding} attempts to describe the stimuli again (i.e. as a collage).  The terms encoding/decoding are certainly not without their history.  
+
+In the 1940's, Shannon mathematical formulation of a generalized communication system described the communication between a source and receiver through a transmitter and receiver, respectively.  The source encoded the message, and the transmitter would convert the message to physical phenomena, thus introducing possible noise sources effecting the message.  Finally, the message could be received and decoded by any destination that was capable of recovering the message.  His developments formed the basis of Information Theory, and along with developments occurring in military technology would later be incorporated by Norbert Wiener in a seminal text on communication theory entitled, Cybernetics.  
 
 Norbert Wiener's seminal text, ``Cybernetics; or control and communication in the animal and the machine'' \cite{Wiener1948}, describes a field of research denoted, cybernetics, which evolved out of military experiments in the 1940's describing feedback processes which repositioned actuators (e.g. missiles/guns) based on updated predictions (e.g. sonar/radar/filters).  As an example, a matched filter provided a template response of a radar signal (e.g. of a known target) and was matched at each radar sweep providing a new orientation towards a target.  This new orientation could then be fed back into the system which would then again perform a radar sweep, a matched filter response, and a new heading, \textit{ad infinitum}.  This process forms the basic idea of homing in missile guidance, and is a defining principle of reducing noise in the field of signal processing (i.e. it maximizes the signal-to-noise ratio of a known signal corrupted by additive noise).   
 
 It has also been likened to processes of active perception by Wiener himself.  Wiener suggests that each movement of the eye and neuronal levels of processing leads towards an invariant object representation (discussed in greater detail in Chapter \ref{ch:conceptual-visual}).  This entire process, in Wiener's own words, ``brings [visual] information one step nearer to the form in which it is used and is preserved in the memory.''  Wiener's early insights into the function of the eye, neuronal processing stages, and internal representations supporting perception will be expanded upon more in this thesis, as I attempt to motivate and model a similar perceptual process in both auditory and visual domain and use the model within a collage-based practice.
 
-Cybernetics provided a vehicle for mathematicians and biologists in the coming years (e.g. Ross Ashby, Gregory Bateson).  It treated individual humans, animals, machines, or in cybernetic terms, \textit{systems}, as individual entities whose inner functions were not measured by their own capacities, but only in relation to what could be communicated by its own outputs to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  
+Cybernetics provided a vehicle for mathematicians and biologists in the coming years (e.g. Ross Ashby, Gregory Bateson).  It treated individual humans, animals, machines, or in cybernetic terms, \textit{systems}, as individual entities whose inner functions were not measured by their own capacities, but only in relation to what could be communicated by its own outputs to other systems.  It offered a new way of thinking about complex systems in terms of the information that was measurable outside of the contained systems.  Cybernetics was also adopted by artists, as demonstrated by the gathering of scientists, technologists, and artists in the ICA exhibition \textit{Cybernetic Serendipity} (1968) \hl{which included influential artists such as Roy Ascott ... }
 
 Early cyberneticians, information theorists, and others at the time would eventually form the basis for modern day Information Sciences, where encoding and decoding are still very much used.  For instance, it is used to describe the processes of information compression, where a very large file such as an image, document, or video must be transmitted or stored more efficiently.  To achieve this process, it is first encoded to a different, often more compact, representation by an encoder, only to later be decoded back into its uncompressed original form when it is retrieved or accessed.  Decoding occurs every time you listen to an (encoded) MP3 file, where the MP3-codec describes the representation for compression and the procedures for encoding/decoding to/from it (e.g. see \cite{Richardson2010} for MPEG/H.264 coding processes or \cite{Furht1995} for an early surgery including JPEG/MPEG/H.261 specifications).  A significant part of compression and coding processes is dimensionality reduction.  That is, moving from one representation to another which has less dimensions, while attempting to retain as much of the original content's meaning (for a review see \cite{Bishop2006}).  Of course, meaning is entirely subjective, or dependent on the task for which one is reducing the data.   We will see how this process occurs for both audio, image, and video data in the coming chapters for the purposes of describing perceptual processes through an arts practice, as it will be necessary to make sense of large amounts of data and interact with it in a real-time manner.  
 
@@ -295,6 +257,54 @@ These terms are also commonly used within the field of Neural Coding, where enco
 
 Certainly, the methods built in this thesis when viewed in terms of encoding and decoding rather than typical collage-based practices can be seen to reflect coding/compression processes.  The encoding processes leading to a particular representation are capable of expressing the original information, though within a different method of representation (e.g. for an image, typically pixels will be used; however, in this thesis, we will build an image using a set of psychologically-motivated representations).  When distorting the intermediate representation in some ways, the decoding is likely to have unexpected results.  We will see how this process can be used to a variety of effects including artistic stylization of image/video or for producing hallucinations in Chapter \ref{ch:synthesis-visual}.  
 
+% Moradi 2004
+% Rosa Menkman 2010
+% 
+Similar practices have explored distortion within computational representations of media.  In glitch art, artifacts exposed by procedural errors are exploited in creative and interesting ways.  For instance, \textit{datamoshing} refers to the practice of intentionally altering information within encoded file formats so as to produce distorted interpretations of that file when it is decoded.  The technique itself can be applied in many different ways depending on the codec used.  As an example, when using Motion-JPEG, a popular video codec, artists often remove a particular kind of ``keyframe'' which tells the decoder when it should update all of its pixels.  In between these keyframes, the decoder will not use the actual content of the video, but instead track the individual pixels from the previous keyframe so that new image content does not need to be created.  This effectively helps keep the file size down while maintaining the important parts of the content.  When an artist removes these keyframes intentionally, the image content is tracked into a new video frame where much of the content should have been updated, effectively tricking the decoder into thinking it does not need to update all of its pixels.  This has the effect of one frame bleeding into the other in what Peter Kirn describes as causing ``frames to melt into one another like wax'' \cite{Kirn2009}.   Perhaps one interesting feature of the effect is that many people are already familiar with compression artifacts (e.g. from poor bandwidth streaming where network packets encoding the keyframes may have been lost).  When the artifacts are appropriated for creative use, however, they can create subtle and targeted effects.  Artist Yung Jake demonstrates a variety of these in his music video for ``Datamosh''.  See Figure \ref{fig:datamosh} for an example where he moves Justin Bieber's face  with the motion of the next few frames.   He further explains the technique in his lyrics for the song:
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.325\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/datamosh-1.png}
+\caption*{Frame 1}
+\end{subfigure}
+\begin{subfigure}[b]{0.325\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/datamosh-2.png}
+\caption*{Frame 2}
+\end{subfigure}
+\begin{subfigure}[b]{0.325\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/datamosh-3.png}
+\caption*{Frame 3}
+\end{subfigure}
+\caption{3 example frames demonstrating datamoshing from Yung Jake's ``Datamosh'' Music Video located at  \url{https://www.youtube.com/watch?v=nS7QvOX8LVk}.  In Frame 1, Justin Bieber is displayed.  By removing a keyframe, Yung Jake is able to move Bieber with his own motions in the later frames, as shown in Frames 2 and 3.}
+\label{fig:datamosh}
+\end{figure}
+
+\begin{verse}
+Datamoshing cool, datamoshing great \\
+Justin Bieber move him with my face\footnote{Jake is describing the effect from removing a keyframe where before there was a picture of Justin Bieber, and after there is Jake's own face.  The effect of removing the keyframe allows him to move Bieber's face with his own movements} \\
+Then use it for an art show, use it for a piece \\
+... \\
+You thought it was an accident, a video glitch \\
+I did it on purpose though... it's nothing \\
+You don't have bad Internet, I'm just datamoshing\footnote{the effect resembles streaming artefacts from slow connections} \\
+... \\
+I'm on my datamosh, digital effects, man \\
+I'm moshing data, geeked up can't stand\footnote{being ``on datamosh'', ``geeked up'', and ``can't stand'', suggests the effect has a drug-like power.} \\
+\flushright{\textsc{Yung Jake -- Datamosh}}
+\end{verse}
+
+Other techniques in glitch-based are wide reaching, and covering them all would require much more space.  Though to name a few, \textit{pixel sorting} (coined by Kim Asendorf\footnote{\url{http://www.kimasendorf.com/about/README}}) describes a technique where pixels in an image are spatially sorted based on their values, or opening JPEG or other similarly encoded files in a normal text-pad and rewriting parts of it using normal keyboard letters.  This intermediate representation (i.e. the one viewed in the textpad) is not meant to be decoded by a text parser.  However, the interaction of writing text within this format is then stored back into the file, and when read by a decoder, viewed as an image.  The parts that were changed are likely unknown by the one manipulating the file, so there may also be a trial-and-error process.  
+
+\hl{relationship to virus?, transmediale 2003}
+
+\hl{Data tragedy (2012)}
+
+% data tragedy, memory of a broken dimension, 2012.  Ian Bogost.  Politics of game design is post-hoc.  Procedural representation and memory of representation as a gap.  
+% Esoteric languages; Brainfuck.  Whitespace.  Unnecessary (keymaker 2005).  
 % compressed sensing \cite{Donoho2006c}
 
 % in order to trick the decoder into thinking a new refresh of the image content isn't necessary.  
@@ -366,16 +376,15 @@ Certainly, the methods built in this thesis when viewed in terms of encoding and
 \section{Overview}
 \label{sec:overview}
 
-This thesis attempts to work towards a better understanding of the representations we build to support our ongoing scene perception through a collage-based arts practice.  Working in both auditory and visual modalities, the approach of this thesis is to first motivate a theory, computationally model it, and then work through an arts practice in order to better understand the shortcomings and successes of the model.  As designing a computational model of our perceptual systems within even one modality is a significant task, the goal of this model is not to accurately represent all possible levels of processing, but rather to focus on earlier levels thought to be unconscious or inaccessible to our conscious awareness. 
+This thesis attempts to work towards a better understanding of the representations we build to support our ongoing scene perception through a collage-based arts practice.  Working in both auditory and visual modalities, the approach of this thesis is to first motivate a theory for how we as humans support our perception through unconscious representations, computationally model it, and then work through an arts practice in order to better understand the shortcomings and successes of the model while opening a discussion around the nature of perception.  As designing a computational model of our perceptual systems within even one modality is a significant task, the goal of this model is not to accurately represent all possible levels of processing, but rather to focus on earlier levels thought to be unconscious or inaccessible to our conscious awareness. 
 
 In the following chapters, numerous literature will be reviewed that has motivated such a representation.  Within audition, we will see these representations are defined by \textit{streams}, and within vision, \textit{proto-objects}.  Despite their theorization, little attempt has been made to understand what an entire auditory or visual scene would sound and look like to our conscious awareness if represented in such a way.  This thesis therefore investigates their development within a computational method for audiovisual scene synthesis, an automated collage generation where the units of the collage are based on psychologically-motivated representations in perception.  
 
-To produce such a collage, two basic computational processes will need to be developed: \textit{encoding}, or storing learned representations into memory; and \textit{decoding}, or matching stored representations to the ongoing sensorial world.  The resulting outputs created by these models attempt to demonstrate how the current stream of audiovisual information coming to a participant could be interpreted by our own perceptual systems.  After developing the model for both sound and visual mediums, two artistic mediums will be explored in the final practice chapters (see Chapters \ref{ch:memory-mosaic} and \ref{ch:audiovisual}): a real-time hallucinatory experience using augmented reality goggles and headphones and a series of short films generated from the YouTube Top 10.
+To produce such a collage, two basic computational processes will need to be developed: \textit{encoding}, or storing learned representations of scenes such as images, videos, or sound files into memory; and \textit{decoding}, or matching stored representations to another set of scenes.  After developing the model for both sound and visual mediums, two artistic mediums will be explored in the final practice chapters.  These two chapters are separated by their functioning as an \textit{offline} and \textit{online} model.  Simply, offline means the process can occur over many hours and produce a result at a later given time.  Online, however, denotes a real-time experience, where the result is interactively produced based on the ongoing environment.  We will see how an offline scene synthesis can produce complex films using large databases from YouTube to produce \textit{YouTube Smash Up} in Chapter \ref{ch:audiovisual}.  The online model attempts to demonstrate how the current stream of audiovisual information coming to a participant could be interpreted by our own perceptual systems using an immersive augmented reality to produce \textit{Augmented Reality Hallucinations} in Chapter \ref{ch:memory-mosaic}.  
 
 This thesis will work through a modular approach.  At first, it may seem that a single architecture may suffice for both audio and vision.  However, these are fundamentally different domains that require individual treatment.  This means the thesis will first focus on developing scene synthesis for audio and then move on to developing another framework for vision.  Finally, the outputs of the two modalities will be combined, though still as separate modular frameworks in the hopes that their deeper connections (e.g. cross-modal and multisensory influences) could be explored in the future.  
 
-To begin either module (i.e. audio and vision), a conceptual framework for unconscious representations in perception will be developed based on theory in behavioral psychology and electrophysiology (Chapter \ref{ch:conceptual-audio} and \ref{ch:conceptual-visual}).  This conceptual framework will then be modeled computationally (Chapter \ref{ch:analysis-audio} and \ref{ch:analysis-visual}) and developed into a scene synthesis framework for the purposes of developing automated collages (Chapter \ref{ch:synthesis-audio} and \ref{ch:synthesis-visual}).  The two modules will later be combined within an augmented reality (Chapter \ref{ch:memory-mosaic}) and film (Chapter \ref{ch:audiovisual}).  Finally, concluding thoughts on the contribution of this work, limitations, and future will be discussed (Chapter \ref{ch:conclusion}).  
-
+To begin either module (i.e. audio and vision), a conceptual framework for unconscious representations in perception will be developed based on theory in behavioral psychology and electrophysiology (Chapter \ref{ch:conceptual-audio} and \ref{ch:conceptual-visual}).  This conceptual framework will then be modeled computationally (Chapter \ref{ch:analysis-audio} and \ref{ch:analysis-visual}) and developed into a scene synthesis framework for the purposes of developing automated collages (Chapter \ref{ch:synthesis-audio} and \ref{ch:synthesis-visual}).  The two modules will later be combined within film to produce \textit{YouTube Smash Up} (Chapter \ref{ch:audiovisual}) and an augmented reality to produce \textit{Augmented Reality Hallucinations} (Chapter \ref{ch:memory-mosaic}).  Finally, concluding thoughts on the contribution of this work, limitations, and future will be discussed (Chapter \ref{ch:conclusion}).  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -432,7 +441,7 @@ To understand how coding processes may occur, numerous theories have proposed a 
 
 This chapter is thus dedicated to (1) reviewing what is known about how representations in auditory perception may be coded and (2) describe a basic conceptual framework for their encoding and decoding using computation.  As the number of approaches to understanding perception are incredibly vast with many non-overlapping research areas, this review will sacrifice brevity for more depth in fewer areas of research, primarily describing research making use of electrophysiological techniques within cognitive neuroscience.  It should be noted that this thesis does not aim to replicate or extend these findings, as it does not use electrophyiosiological methods in its practice.  Rather, the intention is to only review this literature to motivate a few key concepts that will inform the implementation of a computational model.
 
-In this chapter, we first begin describing the problem of describing objects within auditory perception in order to understand what is entailed by a model of its processing.  From here, we will review a presiding theoretical approach for understanding objects: auditory scene analysis.  Within this theory, objects are known as streams, and do not necessarily relate to the objects we perceive visually.  We then discuss some key literature using electrophysiology which provide supporting evidence for brain-based representations of stream formations.  After reviewing this literature, we will be in a position to outline 4 key components describing a general conceptual framework for the implementation a computational scene analysis model.  These will include: event detection, segregation, integration, and template matching.  We will develop these components conceptually in this chapter, model them computationally in Chapter \ref{ch:analysis-audio}, and use them in practice in Chapter \ref{ch:synthesis-audio}.
+In this chapter, we first begin describing the problem of describing objects within auditory perception in order to understand what is entailed by a model of its processing.  From here, we will review a presiding theoretical approach for understanding objects: auditory scene analysis.  Within this theory, objects are known as streams, and do not necessarily relate to the objects we perceive visually.  We then discuss some key literature using electrophysiology which provide supporting evidence for brain-based representations of stream formations.  After reviewing this literature, we will be in a position to outline 4 key components describing a general conceptual framework for the implementation a computational scene analysis model.  These will include: event detection, segregation, integration, and template matching.  We will develop these components conceptually in this chapter, model them computationally in Chapter \ref{ch:analysis-audio}.
 
 %We will see that literature describing basic components present in the brain, as measured by electrophysiology, gives rise to a understanding of a few basic components of processing.  These will be set forth in conceptual framework in the following chapter.
 
@@ -555,7 +564,7 @@ The conceptual framework presented here aims to build event-related units throug
 
 Future models should consider, at the very least: the numerous influences of stream formation by attention (e.g. \cite{Shamma2011}), whether integration should occur before or after segregation (e.g. \cite{Sussman2005}), categorical effects on low-level neuronal representations (e.g. \cite{Samson2010}), how encoded summary statistics from contextual influences may effect stream formation (e.g. \cite{Piazza2013}), and how this research may possibly translate to real-world natural sounds (e.g. \cite{Moerel2013}).  However, any one of these questions are all very active areas of research.  As a result, the basic set of components laid down in this Chapter can at least provide a plausible model from which a representation of auditory objects, or streams, may be built.  
 
-The presented framework has given us the notion of the auditory unit of perception that can be used within a collage-based practice: namely, the auditory stream determined by auditory scene analysis as an integrated or segregated stream.  Further, during selective attention tasks, it has given us a notion of matching through a processing negativity, and that this matching process should occur within the timeframe of an onset.  We will develop these concepts into a computational framework in the next chapter, Chapter \ref{ch:analysis-audio}, demonstrating its use as a method for online source separation, browsing of a large corpus of audio, and for classifying auditory scenes.  This computational framework will then be developed for use within a collage-based practice in Chapter \ref{ch:synthesis-audio}, and combined with a visual collage-based practice producing computational audiovisual collages in Chapter \ref{ch:audiovisual}.
+The presented framework has given us the notion of the auditory unit of perception that can be used within a collage-based practice: namely, the auditory stream determined by auditory scene analysis as an integrated or segregated stream.  Further, during selective attention tasks, it has given us a notion of matching through a processing negativity, and that this matching process should occur within the timeframe of an onset.  We will develop these concepts into a computational framework in the next chapter, Chapter \ref{ch:analysis-audio}, demonstrating its use as a method for online source separation, browsing of a large corpus of audio, and for classifying auditory scenes.  This computational framework will then be developed for use within a collage-based practice in Chapter \ref{ch:synthesis-audio}, and combined with a visual collage-based practice producing computational audiovisual collages in Chapters \ref{ch:audiovisual}-\ref{ch:memory-mosaic} when discussing \textit{YouTube Smash Up} and \textit{Memory Mosaic}.
 
 %Teki's recent work in 2011 and 2013 on complex scenes.
 
@@ -623,9 +632,9 @@ In this chapter, we develop the conceptual framework laid down in Chapter \ref{c
 \item \textbf{Matching}: Decodes the encoded stream by matching to a known template.
 \end{enumerateb}
 
-For now, we only work with fixed-length units of sound, and therefore already have explicit event boundaries.  In a real-time setting, we would not have this luxury, and would instead need to use event detection to discover the segmented units of sound.  In Chapter \ref{ch:synthesis-audio}, we will see how combining this framework with event detection affords a real-time experience for encoding and decoding when discussing Memory Mosaic.  
+In the next two chapters, we work with fixed-length units of sound, and therefore explicitly define event boundaries.  In a real-time setting or for a corpus described by varying segment lengths, we would not have this luxury, and would instead need to use event detection to computationally discover the segmented units of sound.  In Chapters \ref{ch:audiovisual}-\ref{ch:memory-mosaic}, we will see how combining this framework with event detection affords greater expressivity for encoding and decoding when discussing \textit{YouTube Smash Up} and \textit{Memory Mosaic}.  
 
-In any case, our units of sound must still be encoded, represented, and decoded.  If the entire sound stream is to be integrated, then the unit defined by the event detection is encoded without further manipulations. However, if the unit requires segregation, then the unit is separated into a foreground and background stream, where the foreground stream denotes the stream that is integrated as a result of being ``selected'' by attention.  Finally, matching determines whether the current stream matches a previously learned target encoding, effectively allowing us to decode a stream based on prior learning.
+Our units of sound must still be encoded, represented, and decoded.  If the entire sound stream is to be integrated, then the unit defined by the event detection is encoded without further manipulations. However, if the unit requires segregation, then the unit is separated into a foreground and background stream, where the foreground stream denotes the stream that is integrated as a result of being ``selected'' by attention.  Finally, matching determines whether the current stream matches a previously learned target encoding, effectively allowing us to decode a stream based on prior learning.
 
 %\hl{Really need to talk about existing auditory models, different frequency transformations, leaky integrators, phase, slaney, lyons,... }
 
@@ -1372,11 +1381,13 @@ Each researcher had prior knowledge of many aspects of the Archive and Daphne Or
 
 Regarding (1) and (2), the form of the PLCA model (see Figure \ref{fig:oram-browser-plca}) is a result of the probabilistic nature of the component weights needing to sum to 1.  In 3D space, this space is defined by a 3-simplex or tetrahedron.  In comparison, MFCCs may have energy explained in all bands as there is no normalization procedure.  Plotting the first three dimensions of the MFCC model thus produces similar distributions of energy in all dimensions, creating what users called both a ``glob like'' and ``blob like'' sphere (see Figure \ref{fig:oram-browser-mfcc}).    Navigating inside and around a sphere presents unique challenges for a 3D browser, namely, it is difficult to select elements within the sphere and understanding the orientation of the sphere is difficult as there are no identifying features.  Thus, exploring visualizations in 3D seems to require landmarks for useful navigation.  In regards to point (3), this may be due to the greater classification and recognition performance of PLCA over MFCCs as shown in Chapter \ref{ch:analysis-audio}.  
 
-Further work should focus on issues with navigating in 3D space, as some users reported on the 3D nature as requiring practice to navigate.  One solution may be to create more intuitive control through the use of other input and display devices such as touch-screens.  As well, similar latent-analysis techniques may be applied for additional meta-data from the archive as is done in audiovisual and text corpora, e.g. \cite{Himmel1998,Christel1998}, to create more informed visualizations.  In this case, the input of text annotations as well can create a user-guided visualization, where feedback from the user reshapes the 3D visualization. 
+Further work should focus on issues with navigating in 3D space, as some users reported on the 3D nature as requiring practice to navigate.  One solution may be to create more intuitive control through the use of other input and display devices such as touch-screens.  As well, similar latent-analysis techniques may be applied for additional meta-data from the archive as is done in audiovisual and text corpora, e.g. \cite{Himmel1998,Christel1998}, to create more informed visualizations.  In this case, the input of text annotations as well can create a user-guided visualization, where feedback from the user reshapes the 3D visualization.  
 
-%\section{Conclusion}
+Lastly, incorporating event detection, as motivated in our conceptual framework in Chapter \ref{ch:conceptual-audio}, would provide automatic segment lengths, rather than fixed half-second segments as used here.  Such a framework would be capable of describing latent factors based on temporal windows of uniform spectrums rather than arbitrary segments.  This arbitrary segmentation may include multiple events or incorrectly cut off an existing event, thus reducing the power for PLCA to describe its latent factors when building the dictionary.  
 
-%This chapter has discussed two practical outputs employing auditory scene synthesis: (1) The Daphne Oram Browser, which displays The Oram Archive as a 3D interactive visualization allowing for real-time scene synthesis via a simple mouse cursor; and (2) Memory Mosaic, a mobile application for iOS allowing one to create real-time scene synthesis aggregated from a microphone or songs from the iTunes Library.  
+\section{Conclusion}
+
+This chapter has discussed a practical output towards employing auditory scene synthesis in the form of The Daphne Oram Browser.  This displays The Oram Archive as a 3D interactive visualization allowing for real-time scene synthesis via a simple mouse cursor.  We will later see how incorporating a computational model of event detection for analyzing a large audio corpus can be used for creating auditory scene syntheses in Chapter \ref{ch:audiovisual} and used for creating real-time auditory scene syntheses in Chapter \ref{ch:memory-mosaic}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1625,9 +1636,11 @@ Proto-objects act as an indexical reference to a conceptual referent.  How proto
 
 \section{Conclusion}
 
+Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted, pre-attentive representations of the world, e.g. \cite{Marr1982,Rensink2002}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive.  As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.  
+
 Considering both the implicit, unmediated representation and the attentional and contextual mechanisms, at least three critical layers should be built into any computational model based on the evidence presented here:  (1), a pre-conceptual representation which takes into account different possible spatial configurations, composed of either band-passed edge-oriented filters or proto-objects, (2), where this representation is affected by a logarithmic filter around the point of fixation based on the evidence of response properties of photo-receptors (visual acuity); and (3), an attentional and contextual influence supported by the ongoing experiences of the subject such that parafoveal information becomes unstable without ongoing attention and is only inferred by through the context of the scene.  
 
-We will see how this model can be implemented using computer vision techniques in Chapter \ref{ch:analysis-visual}, and used within an arts practice attempting to interrogate the process of perception as it has been conceptually modeled here in Chapter \ref{ch:synthesis-visual} and finally in Chapters \ref{ch:audiovisual}-\ref{ch:memory-mosaic} when it is combined with a similar model for audio.
+We will see how this model can be implemented using computer vision techniques in Chapter \ref{ch:analysis-visual}, and used within an arts practice attempting to interrogate the process of perception as it has been conceptually modeled here in Chapter \ref{ch:synthesis-visual} and finally in Chapters \ref{ch:audiovisual}-\ref{ch:memory-mosaic} when it is combined with auditory scene synthesis.
 
 %
 
@@ -1660,15 +1673,48 @@ We will see how this model can be implemented using computer vision techniques i
 
 \section{Introduction}  
 
-Numerous theories have argued that in order to perceive the world as a continuous and richly detailed one, our vision system must use abstracted, pre-attentive representations of the world, e.g. \cite{Marr1982,Rensink2002}.  It is argued that these representations are created by grouping together coherent visual features that resemble abstract forms - such as geometrical primitives. Grouping such primitives together eventually leads to the formation of semantic representations such as objects. Importantly, the representations used in vision are not necessarily what we perceive, but are what we use in order to help us perceive.  As a result, these representations are likely to remove details that are unimportant to a person's ongoing task while making other details more explicit.  
-
-%Behavioral evidence from change blindness studies has indicated an essential gap in our encoding of a scene, namely the precise details of a scene are only encoded at the point of fixation.  This is likely due to the computational complexity required for encoding an entire scene's high-spatial resolution information.  More importantly, it is physiologically impossible given the visual acuity limitations of the retina.  
-
-In this Chapter, we build a computational implementation of the conceptual framework built in Chapter \ref{ch:conceptual-visual}.  This model aims to encode any number of visual scenes, describe them using the representations motivated in our conceptual framework in Chapter \ref{ch:conceptual-visual}, and use them for decoding any target visual scene.  For now, we simply describe the computational elements required for encoding and decoding.  In Chapter \ref{ch:synthesis-visual}, these procedures will be used within a collage-based arts practice to open a dialogue surrounding the nature of perception and finally combined with a similar model of audio in Chapter \ref{ch:audiovisual}.  
+The conceptual framework motivated in Chapter \ref{ch:conceptual-visual} describes an approach to building representations of a visual scene using a mid-level perception denoted as proto-objects.  These volatile units are meant to serve as an intermediate representation between low-level feature processing and high-level scene semantics and object recognition.  In this Chapter, we build a computational implementation of the conceptual framework.  This model aims to encode any number of visual scenes, describe them using a computational implementation of proto-objects, and use them for decoding any target visual scene.  For now, we simply describe the computational elements required for encoding and decoding.  In Chapter \ref{ch:synthesis-visual}, these procedures will be used for encoding/decoding visual scenes within a collage-based arts practice where their results are demonstrated within the individual applications.  Finally,this model will be combined with auditory scene synthesis in Chapters \ref{ch:audiovisual} and \ref{ch:memory-mosaicing}.  
 
 \section{Related Work}
 
-Similar computational models have been developed to explain visual perception machinery. (e.g. \cite{Walther2006,Orabona2007a}).   They each suffer from a number of problems: (1) they lack the inclusion of the evidence of the response properties of photoreceptors in the retina as there is no indication of the current or ongoing attention within the visual scene; (2) they infer context based on solely a static image whereas the real-world is dynamic; and (3), they cannot distinguish groupings of proto-objects and instead create discrete maps which are thresholded as attention or saliency maps.  Furthermore, the interest in the previously cited models of visual perception is in predicting attention towards a scene, rather than simulating aspects of perception within an arts-based practice.
+Many computational models have been developed to explain visual perception machinery.  The aims within these models vary greatly.  For instance, saliency models attempt to discover attentional biases towards a visual scene, either a static or dynamic one, either discussing only exogenous influences \cite{Itti1998,Zhang2008}, or by also incorporating endogenous ones such as the influence of task or contextual influences in well-known scenes \cite{Torralba2006}.  
+
+Some models attempt to go as far as a complete object or scene understanding.  Within the computer vision literature, these models attempt to describe a computational approach for discovering different elements of a scene or their objects: detection, classification, annotation, tracking, and/or recognition.  Our work however does not go as far as describing objects, and instead sits just below the level of object recognition.  Many models of object recognition attempt to discover an entire labeling of a static or dynamic scene in terms of its objects and where they are located.  Using this information, some model have built scene recognition by understanding the likelihood of seeing co-occurring objects in a scene.  
+
+Models of visual cortex (Serre, Poggio, 
+
+Model of aspects of perception such as shape, color, light, ... CIELAB...  texture perception by matching natural image statistics (Simoncelli)
+
+Serre
+Poggio
+Koch
+Ullman
+Walther
+Orabona
+Rensink
+Wolfe
+Biederman
+Rosenholtz
+Fei-Fei Li
+Torralba
+Oliva
+Hoeim
+Ballard
+
+Serre, T., G. Kreiman, M. Kouh, C. Cadieu, U. Knoblich and T. Poggio. (2007) "A quantitative theory of immediate visual recognition." In: Progress in Brain Research, Computational Neuroscience: Theoretical Insights into Brain Function, 165, pp. 33-56.
+
+Serre, T., A. Oliva and T. Poggio (2007). "A feedforward architecture accounts for rapid categorization." Proc Natl Acad Sci U S A 104(15): 6424-9.
+
+Serre, T., & Poggio, T. (2010). A neuromorphic approach to computer vision. Communications of the ACM, 53(10), 54. doi:10.1145/1831407.1831425
+
+Simoncelli, E.P. and B.A. Olshausen (2001). "Natural image statistics and neural representation." Annu Rev Neurosci 24:1193-216.
+
+Rao, R.P.N. and D.H. Ballard (1999). "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects." Nat Neurosci 2:79-87.
+Riesenhuber, M. and T. Poggio (1999). "Hierarchical models of object recognition in cortex." Nat Neurosci 2:1019Ð1025.
+
+%(e.g. \cite{Walther2006,Orabona2007a}).   
+
+%They each suffer from a number of problems: (1) they lack the inclusion of the evidence of the response properties of photoreceptors in the retina as there is no indication of the current or ongoing attention within the visual scene; (2) they infer context based on solely a static image whereas the real-world is dynamic; and (3), they cannot distinguish groupings of proto-objects and instead create discrete maps which are thresholded as attention or saliency maps.  Furthermore, the interest in the previously cited models of visual perception is in predicting attention towards a scene, rather than simulating aspects of perception within an arts-based practice.
 
 %The majority of these models are situated within the Computer Vision or Computational Cognitive Neuroscience communities.  The aims within these communities is to be able to recognize objects or scene classes.  That is, given a set of semantic classes, does it exist in an image or video?  This basic problem is denoted as ``detection'', and is superseded by tracking, which is capable of persistent detection in a dynamic scene.  Finally, recognition extends detection by being able to understand different instances of the same class (e.g. I can detect 2 faces, but recognize one face depicting X, and another face depicting Y).  
 
@@ -1676,7 +1722,7 @@ Similar computational models have been developed to explain visual perception ma
 
 \subsection{Exogenous Attention Model}
 
-As discussed in our previous study \cite{Mital2011}, motion features are highly predictive of gaze across viewers when gaze is tightly coordinated.  We therefore incorporate the model of optical flow used in this previous study in developing a model of exogenous attention.  Certainly, this is an overly simplified model as it can only explain frame-to-frame differences or irregularities.  It therefore assumes the world is dynamic, and does not indicate attentional preference in scenes that do not have motion.  Further, endogenous influences that, as discussed in Section \ref{sec:endogenous-influences}, can entirely negate these influences, are not modeled.  Implementing even a tiny percentage of these influences would be a significant step forward in future implementations.  
+As discussed in our previous study \cite{Mital2011}, motion features are highly predictive of gaze across viewers when gaze is tightly coordinated.  We therefore incorporate the model of optical flow used in this previous study in developing a model of exogenous attention.  In an ideal case then, visual scenes as have been used in our previous study will be used in building visual scene syntheses.  These scenes are generally described by television adverts, movie trailers, and music videos in \cite{Mital2011}, and by unedited street scenes in \cite{Smith2013}. Certainly, this is an overly simplified model as it can only explain frame-to-frame differences or irregularities.  It also assumes the world is dynamic, and does not indicate attentional preference in scenes that do not have motion.  Further, endogenous influences that, as discussed in Section \ref{sec:endogenous-influences}, can entirely negate these influences, are not modeled.  Implementing even a tiny percentage of these influences would be a significant step forward in future implementations.  
 
 \subsubsection{Optical Flow}
 
@@ -1822,27 +1868,78 @@ In this section, we develop our computational implementation of a mid-level obje
 
 \subsubsection{Detection}
 
-The algorithm described in \cite{Forssen2007} uses agglomerative clustering to group similar neighboring pixels.   Similarity is described by a distance measure which takes into account the inherent camera noise and the probability distribution of each RGB color channel.  Considering this distance manifold, the algorithm first applies multiple thresholds at fixed distance intervals.  Regions are denoted as maximally stable if they do not grow larger than a minimum area rate after a fixed number of time-steps.  The algorithm can also be thought of in terms of level sets, where each level set describes slices of the manifold described by the distance function.  In either case, this algorithm is capable of determining an implicit ordering of coarse-to-fine regions, where a larger cluster can consist of many smaller ones. 
+The algorithm described in \cite{Forssen2007} uses agglomerative clustering to group similar neighboring pixels.   An image is denoted by its 3-component color space, i.e. $I : \Omega \rightarrow \mathbb{R}^{3}$.  In other words, the image is described by a function which describes any pixel by 3 values describing its color.   MSCR builds a graph, $G$, such that all pixels become vertices in the graph.  Edges connect all neighboring pixels and their weights are described by a distance measure which takes into account the inherent camera noise and the probability distribution of each RGB color channel.  This is described by the Chi-squared measure:
+\begin{equation}
+g^{2}(x,y) = \sum_{k = 1}^{3}\frac{(I_{k}(x) - I_{k}(y))^{2}}{(I_{k}(x) + I_{k}(y))}
+\end{equation}
+Considering this distance manifold, the algorithm applies multiple thresholds at fixed distance intervals.   Regions are denoted as maximally stable if their subgraphs do not grow larger than a minimum area rate after a fixed number of time-steps.  The algorithm can also be thought of in terms of level sets, where each level set describes slices of the manifold described by the distance function.  In either case, this algorithm is capable of determining an implicit ordering of coarse-to-fine regions, where a larger cluster can consist of many smaller ones. 
 
-Previous techniques employing posterization, filtering, or watershed have had to apply their algorithm at multiple scales in order to discover regions that are superimposed or overlapped, increasing their computational complexity.  MSCR therefore benefits over these previous techniques as it provides an implicit ordering of superimposed regions discovered through successive time-steps of the clustering algorithm.  Further, it allows us to prune regions by restricting their area to a range of minimum and maximum sizes.  This will be desirable when applying synthesis for artistic purposes, as we do in Chapter \ref{ch:synthesis-visual}.
+\begin{figure}
+\centering
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/van-gogh-wheatfields-mscr-1.png}
+\caption{}
+\label{fig:van-gogh-mscr-1}
+\end{subfigure}
+\hspace*{2pt}
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/van-gogh-wheatfields-mscr-2.png}
+\caption{}
+\end{subfigure}
+\vspace*{2pt}
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/van-gogh-wheatfields-mscr-3.png}
+\caption{}
+\end{subfigure}
+\hspace*{2pt}
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/van-gogh-wheatfields-mscr-4.png}
+\caption{}
+\end{subfigure}
+\vspace*{2pt}
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/van-gogh-wheatfields-mscr-5.png}
+\caption{}
+\label{fig:van-gogh-mscr-5}
+\end{subfigure}
+\hspace*{2pt}
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/van-gogh-wheatfields.png}
+\caption{Original image}
+\label{fig:van-gogh-mscr-original}
+\end{subfigure}
+\caption{Increasing the timesteps of the MSCR algorithm produces finer region detection.  The first image shown in \ref{fig:van-gogh-mscr-1} produces very large coarse proto-objects, as the distance manifold is segregated by a very coarse evolution.  Increasing the timesteps allows the algorithm to more finely segregate the manifold, producing more interesting and finer scale proto-objects in \ref{fig:van-gogh-mscr-5}.}
+\label{fig:van-gogh-mscr}
+\end{figure}
 
-We use MSCR to detect the set of all regions in either candidate or target frames, denoted as $\mathbf{R_C} = \{R_1, R_2, ..., R_{N_C}\}$ and $\mathbf{R_T} = \{R_1, R_2, ..., R_{N_T}\}$ where $N_C$ is the number of regions detected in all candidate frames and $N_T$ is the number of target regions.  
+An example of the algorithm running on an image of Van Gogh's \textit{Wheatfield with Crows} is shown in Figure \ref{fig:van-gogh-mscr}.  To demonstrate the algorithm, we draw the detected regions using elliptical approximations and whose colors are set to the average color of the detected region.  We draw the regions in order of the largest area size to the smallest area size in order to preserve drawing the subsets of regions as they are aggregated in later timesteps of the algorithm.  In Figure \ref{fig:van-gogh-mscr-1}, the timesteps of the algorithm are set to be very low (i.e. 1-5); increasing this number eventually leads to a finer scale representation (see Figure \ref{fig:van-gogh-mscr-5}) of the original image shown in Figure \ref{fig:van-gogh-mscr-original}.
+
+Previous techniques employing posterization, filtering, or watershed have had to apply their algorithm at multiple scales in order to discover regions that are superimposed or overlapped, increasing their computational complexity.  MSCR therefore benefits over these previous techniques as it provides an implicit ordering of superimposed regions discovered through successive time-steps of the clustering algorithm and a simple sorting of their areas.  Further, it allows us to prune regions by restricting their area to a range of minimum and maximum area sizes.  This will be desirable when applying synthesis for artistic purposes, as we do in Chapter \ref{ch:synthesis-visual}.
+
+For a general purpose visual scene synthesis framework, we use MSCR to detect the set of all proto-objects in either candidate (i.e. the set of scenes that have already been encoded) or target frames (i.e. the set of scenes to be interpreted or decoded using the previously learned representations), denoted as $\mathbf{R_C} = \{R_1, R_2, ..., R_{N_C}\}$ and $\mathbf{R_T} = \{R_1, R_2, ..., R_{N_T}\}$ where $N_C$ is the number of proto-objects detected in all candidate frames and $N_T$ is the number of target proto-objects.  
 
 \subsubsection{Tracking}
 
-We use our attentional map to indicate whether a new blob has disappeared.  This coincides with Rensink's notion of a ``volatile'' unit, as we do not wish to have blobs persist forever, but rather that they are replaced due to changes in the visual world (e.g. as discussed in Section \ref{} when looking at Change Blindness).
+We use our attentional map to indicate whether a new proto-object has disappeared.  This coincides with Rensink's notion of a ``volatile'' unit, as we do not wish to have proto-object persist forever, but rather that they are replaced due to changes in the visual world (e.g. as discussed in Section \ref{sec:change-blindness} when looking at Change Blindness).
 
-To model volatility and therefore updates in our proto-objects, we only re-detect proto-objects when a blobs average attentional value exceeds a threshold.  Using Equation \ref{eq:attention} as our attentional map, and $\mathbf{R}$ as the set of proto-objects currently detected, we redirect proto-objects within an already detected proto-object if:
+To model volatility and therefore updates in our proto-objects, we only detect and synthesize a proto-object if the region of the visual scene's average attentional value exceeds a threshold.  Using Equation \ref{eq:attention} as our attentional map, and $\mathbf{R}$ as the set of proto-objects currently detected, we re-detect proto-objects within an already detected proto-object if:
 
 \begin{equationb}
 \frac{1}{N_{x}N_{y}}\sum_{R_x}^{N_{x}}\sum_{R_y}^{N_{y}}p(R_x,R_y) \; > \; \tau
 \end{equationb}
 
-where $N$ is the number of pixels in the proto-object $R$, $R \subset \mathbf{R}$, $R_{x}$ and $R_{y}$ are short hand for the pixel locations of the indexed region, and $0.0 \, \leq \, \tau \, \leq \, 1.0$ is a small threshold, often set to $0.05 - 0.10$.  This means our attentional map indicates where to recompute a proto-object.   Practically, this produces temporal coherence across frames, meaning proto-objects that aren't being attended to do not need to be recompute.
+where $N$ is the number of pixels in the proto-object $R$, $R \subset \mathbf{R}$, $R_{x}$ and $R_{y}$ are short hand for the pixel locations of the indexed region, and $0.0 \, \leq \, \tau \, \leq \, 1.0$ is a small threshold, often set to $0.05 - 0.10$.  This means our attentional map indicates where to recompute a proto-object.   Practically, this produces temporal coherence across frames, meaning proto-objects that aren't being attended to do not need to be recomputed.
 
 \subsubsection{Description}
+\label{sec:mscr-description}
 
-We form a descriptor comprised of shape and color values.  The shape descriptor for each region, $d_{R_i}$, is composed of the normalized central moments up to order 2.  The average color of the region is converted from RGB to the 3-channel CIELAB color space, $L, a^{*}, b^{*}$.  These form the final descriptor: 
+We describe every proto-object using its approximate shape and color values.  The shape descriptor for each region, $d_{R_i}$, is composed of the normalized central moments up to order 2.  The average color of the proto-object is converted from RGB to the more perceptually linear 3-channel CIELAB color space, $L, a^{*}, b^{*}$ \cite{Luo2001}.  These form the final descriptor: 
 \begin{equationb}
 d_{R_i} = \Big(\mu_{00}, \eta_{11}, \eta_{20}, \eta_{02}, L, a^{*}, b^{*}\Big)
 \end{equationb}
@@ -1850,16 +1947,16 @@ where $\mu_{ij}$ is the central image moment of order $i$ and $j$, i.e. $\mu_{00
 \begin{equationb}
 \eta_{ij} = \frac{\mu_{ij}}{\mu_{00}^{\left(1 + \frac{i+j}{2}\right)}}
 \end{equationb}
-Centralizing the moments allows us to compare regions with translation-invariance, while normalizing the first and second order moment allows us to compare regions with scale-invariance.  We include the area as the first term as this ensures regions are not distorted too much when matching.  Further, employing CIELAB allows us to define the region in a color space where we can then use perceptual metrics for matching.  We describe this metric in greater detail in the next section.
+Centralizing the moments allows us to compare proto-objects with translation-invariance, while normalizing the first and second order moment allows us to compare proto-objects with scale-invariance.  We include the area as the first term as this ensures proto-objects are not distorted too much when matching.  Further, employing CIELAB allows us to define the proto-objects in a color space where we can then use perceptual metrics for matching.  We describe this metric in greater detail in the next section.
 
 \subsubsection{Matching}
 
-We match each region in a set of target regions to its nearest neighbors in the database regions using a metric combining distances from each region's shape and color, $d_s(R_t, R_c)$ and $d_c(R_t, R_c)$, respectively:  
+We match each proto-object in a set of target proto-objects to its nearest neighbors in the candidate database of proto-objects using a metric combining distances from their shape and color, $d_s(R_t, R_c)$ and $d_c(R_t, R_c)$, respectively:  
 \begin{equationb}
 d(R_t, R_c) = d_s(R_t, R_c) + d_c(R_t, R_c)
 \end{equationb}
 \label{eq:distance}
-The shape distance is simply computed as the absolute difference between the first and second order normalized central image moments of each region (i.e. the first four components of the descriptor).  For the color distance, a series of developments since a seminal study in the perception of color pigments (Munsell 1944) have led to an industry standard, the official CIE color-difference equation, CIEDE2000, which provides reliable color discrimination with interactive terms for lightness, chromaticity, and hue weighting (details can be found in \cite{Luo2001} and are not repeated here).   This difference formula has been shown to be more perceptually accurate at determining the difference between colors than previous methods employing linear difference using RGB or LUV color values, as it is based on empirical evidence of perceived color difference.  For our tests, we use the default parameters described in \cite{Luo2001} for the weighting terms.
+The shape distance is simply computed as the absolute difference between the first and second order normalized central image moments of each region (i.e. the first four components of the descriptor).  For the color distance, a series of developments since a seminal study in the perception of color pigments (Munsell 1944) has led to an industry standard, the official CIE color-difference equation, CIEDE2000, which provides reliable color discrimination with interactive terms for lightness, chromaticity, and hue weighting (details can be found in \cite{Luo2001} and are not repeated here).   This difference formula has been shown to be more perceptually accurate at determining the difference between colors than previous methods employing linear difference using RGB, LUV, or CIELAB color values, as it is based on empirical evidence of perceived color difference, parametrically weighting terms of hue, saturation, and lightness.  For our tests, we use the default parameters described in \cite{Luo2001} for the weighting terms.
 
 %\begin{figure}[!ht]
 %\centering
@@ -1871,14 +1968,18 @@ The shape distance is simply computed as the absolute difference between the fir
 
 \subsubsection{Synthesis}
 
-To ensure regions are drawn from their background to the foreground, we synthesize each target region in order from the largest to smallest area sizes.  In contrast to methods that place brush strokes based on the stroke direction at each pixel on the medial axis (e.g.,\cite{Wang2004a}), we find the affine geometric transform describing the transformation from $R_{C_i}$ to $R_{T_i}$.  This can be described by a translation, rotation, and scaling.  The translation component is simply the difference in each region's centroid.  The rotation can be found using the central image moments: 
+Synthesis, or decoding, places a matched proto-object in place of the target proto-object.  As the proto-object may have a different position, scale, or orientation, we must define an affine transformation to place the proto-object.  We also must ensure that proto-objects maintain some semblance of layering, that is, that the proto-objects are drawn from their background to the foreground.   In order to achieve this, we synthesize each target proto-object in order from the largest to smallest area sizes.  In contrast to methods that place brush strokes based on the stroke direction at each pixel on the medial axis (e.g.,\cite{Wang2004a}), we find the affine geometric transform describing the transformation from $R_{C_i}$ to $R_{T_i}$.  This can be described by a translation, rotation, and scaling.  The translation component is simply the difference in each proto-object's centroid.  The rotation can be found using the central image moments: 
 \begin{equationb}
 \Theta = \frac{1}{2} * \arctan  \dfrac{ 2 * \frac{\mu_{11}}{\mu_{00}} } { \frac{\mu_{20}}{\mu_{00}} - \frac{\mu_{02}}{\mu_{00}} }
 \end{equationb}
-Finally, scaling is simply the ratio of the target to candidate region's bounding box.  This process has the benefit of being very fast using graphics hardware as it can be computed by a single matrix multiplication.  Each region is then layered above the previous one before creating a synthesized image.  In image-based stylization, multiple syntheses created with changing parameters can be blended together to create more detailed and expressive styles which may require many ``layers'' of ``paint''.  We discuss these parameters in greater detail in the next section.
+Finally, scaling is simply the ratio of the target to candidate proto-object's bounding box.  This process has the benefit of being very fast using graphics hardware as it can be computed by a single matrix multiplication.  Each proto-object is then layered above the previous one before creating a synthesized image.  
 
 \section{Discussion}
 
+This chapter has developed the conceptual framework in Chapter \ref{ch:conceptual-visual} into a computational implementation.  Underscoring the representation of the visual scene is a computer vision algorithm for detecting regions, MSCR.  The scale of these regions are affected by a visual acuity map filter which creates a blurred version of the image at parts of a scene unlikely to be attended.  
+
+% glitchhystores joncates
+% nick bris, apple computers
 
 
 
@@ -1916,7 +2017,7 @@ Finally, scaling is simply the ratio of the target to candidate region's boundin
 \section{Introduction}
 
 
-This chapter uses the computational framework developed in Chapter \ref{ch:analysis-visual} and explores two practical developments of it within the context of visual scene synthesis: (1) in Section \ref{sec:artistic-stylization}, an semi-automated method for artistically stylizing an image or video (e.g. using representations in a corpus of Van Gogh paintings to stylize a home video); and (2) in Section \ref{sec:photosynthesizer}, an iOS application \textit{PhotoSynthesizer} which allows one to use visual scene synthesis with the photos from their mobile device to produce generative paintings.  These outputs can be seen as experiments in leading to the final output of a combined audiovisual scene synthesis in Chapters \ref{ch:audiovisual}-\ref{ch:memory-mosaicing}.  
+This chapter uses the computational framework developed in Chapter \ref{ch:analysis-visual} and explores two practical developments of it within the context of visual scene synthesis: (1) in Section \ref{sec:artistic-stylization}, an semi-automated method for artistically stylizing an image or video (e.g. using representations in a corpus of Van Gogh paintings to stylize a home video); and (2) in Section \ref{sec:photosynthesizer}, an iOS application \textit{PhotoSynthesizer} which allows one to use visual scene synthesis with the photos from their mobile device to produce generative paintings.  These outputs can be seen as experiments leading towards the final output of a combined audiovisual scene synthesis in Chapters \ref{ch:audiovisual}-\ref{ch:memory-mosaicing}.  
 
 \section{Artistic Stylization}
 \label{sec:artistic-stylization}
@@ -1951,7 +2052,7 @@ Our approach synthesizes a target image/video using existing pre-defined visual 
 
 \subsection{Methods}
 
-We begin by first aggregating all frames from a user chosen corpora of images, $\mathbf{C} = \{C_1, C_2, ..., C_N\}$, containing $N$ total candidate images.  We aim to use the content solely from this corpus to artistically stylize a target image or video, $\mathbf{T} = \{T_1, T_2, ..., T_M\}$, containing $M$ total frames.   We develop a rendering procedure for image and video-based targets where parameters of the synthesis can be changed interactively.  Using our computational model described in Section \ref{sec:proto-objects}, we can detect proto-objects regions in both the candidate and target frames, match regions in the target to the closest ones in the candidate frames, and synthesize them through a simple geometric transformation.  This approach treats every proto-object as an abstract representation where the matching occurs based on color and shape similarity.  The goal is to interactively manipulate this process in order to produce a range of possible stylizations.  We describe parameters influencing each of these steps before showing our results in Section \ref{sec:results}.
+We begin by first aggregating all frames from a user chosen corpora of images, $\mathbf{C} = \{C_1, C_2, ..., C_N\}$, containing $N$ total candidate images.  We aim to use the content solely from this corpus to artistically stylize a target image or video, $\mathbf{T} = \{T_1, T_2, ..., T_M\}$, containing $M$ total frames.   We develop a rendering procedure for image and video-based targets where parameters of the synthesis can be changed interactively.  Using our computational model described in Section \ref{sec:proto-objects}, we can detect proto-objects regions in both the candidate and target frames, match regions in the target to the closest ones in the candidate frames, and synthesize them through a simple geometric transformation.  This approach treats every proto-object as an abstract representation where the matching occurs based on color and shape similarity.  The goal is to interactively manipulate this process in order to produce a range of possible stylizations.  In image-based stylization, multiple syntheses created with changing parameters can be blended together to create more detailed and expressive styles which may require many ``layers'' of ``paint''.   We describe parameters influencing each of these steps before showing our results in Section \ref{sec:results}.
 
 \subsection{Parameters}  
 
@@ -1960,44 +2061,44 @@ Parameters influencing the proto-object detection algorithm are set independentl
 \subsubsection{Corpus Parameters}
 \label{sec:parameters}
 
-For the corpus, we define the \textit{timesteps}, \textit{minimum region area}, and \textit{maximum region area} of the detected regions.  We use a set of parameters that learns the widest range of possible regions covering both small and large regions.  In some cases, as in more abstract styles, it may be desirable to learn a very small number of regions, limiting the range of expressiveness to a few possible primitives.  As the timesteps parameter influences the number of evolutions allowed in the MSCR algorithm, the higher this number, the more regions will be discovered.  Similarly, lowering the minimum region size and increasing the maximum region size reduces the number of region that are pruned.  In our tests, we found a single set of parameters to be sufficient for defining a varied corpus: 100 for the timesteps, 35 pixels for the minimum region area, and 50\% of the image's size for maximum region area.
+For the corpus, we define the \textit{timesteps}, \textit{minimum region area}, and \textit{maximum region area} of the detected proto-objects.  We use a set of parameters that learns the widest range of possible proto-objects covering both small and large regions.  In some cases, as in more abstract styles, it may be desirable to learn a very small number of proto-objects, limiting the range of expressiveness to a few possible primitives.  As the timesteps parameter influences the number of evolutions allowed in the MSCR algorithm, the higher this number, the more proto-objects will be discovered.  Similarly, lowering the minimum region size and increasing the maximum region size reduces the number of proto-object that are pruned.  In our tests, we found a single set of parameters to be sufficient for defining a varied corpus: 100 for the timesteps, 35 pixels for the minimum region area, and 50\% of the image's size for maximum region area.
 
-When learning a corpus from many images, we restrict learning regions that are within a distance threshold (using Equation \ref{eq:distance}) of all regions in the existing database.  For our examples, we set this parameter to 50.  This value is low enough to include many regions, though high enough to avoid detecting duplicate regions.  A higher number for this parameter will lead to very discriminative regions.  In our tests, when setting this number higher, we found that our corpus had less variety of regions to synthesize from, leading to stronger shape or color mismatches.  
+When learning a corpus from many images, we restrict learning proto-objects that are within a distance threshold (using Equation \ref{eq:distance}) of all proto-objects in the existing database.  For our examples, we set this parameter to 50.  This value is low enough to include many proto-objects, though high enough to avoid detecting duplicate proto-objects.  A higher number for this parameter will lead to very discriminative proto-objects.  In our tests, when setting this number higher, we found that our corpus had less variety of proto-objects to synthesize from, leading to stronger shape or color mismatches.  
 
 \subsubsection{Target Parameters}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/spatial-blending-3.png}
-  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, we show an example stylization with (first image) and without (second image) spatial blending.  We also draw the region's orientation depicted by red/green axes in order to better show the regions (best viewed in the color manuscript at 200\%).}
+  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, we show an example stylization with (first image) and without (second image) spatial blending.  We also draw the proto-object's orientation depicted by red/green axes in order to better show the proto-objects (best viewed in the color manuscript at 200\%).}
   \label{fig:spatial-blending}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/increasing-timesteps-2.png}
-  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the timesteps are increased over time.  This allows the user to detect more regions and develop a denser and higher contrast stylization.}
+  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the timesteps are increased over time.  This allows the user to detect more proto-objects and develop a denser and higher contrast stylization.}
   \label{fig:timesteps}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/decreasing-minimum-size-2.png}
-  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the minimum region size is decreased over time, allowing the user to detect smaller regions and produce finer detailed stylizations.}
+  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the minimum region size is decreased over time, allowing the user to detect smaller proto-objects and produce finer detailed stylizations.}
   \label{fig:minimum-size}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/blending-radius-2.png}
-  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the blending radius is increased over time.  This parameter influences the overall size of the drawn regions.  Setting this number smaller can help to produce finer details on top of existing layers, often associated with both Impressionist and Abstract Expressionist styles.}
+  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, the blending radius is increased over time.  This parameter influences the overall size of the drawn proto-objects.  Setting this number smaller can help to produce finer details on top of existing layers, often associated with both Impressionist and Abstract Expressionist styles.}
   \label{fig:blending-radius}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/temporal-blending.png}
-  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, we increase the temporal blending factor.  This influences the opacity of every region drawn. }
+  \caption{Using the target image and database shown in Figure-\ref{fig:teaser}, we increase the temporal blending factor.  This influences the opacity of every proto-object drawn. }
   \label{fig:temporal-blending}
 \end{figure}
 
@@ -2012,12 +2113,12 @@ For the target, we allow the user to interactively define a few parameters affec
 
 \begin{itemize}
 \item \textit{Spatial blending}: Allows the user to use feathered elliptical regions instead of rectangular ones (see Figure-\ref{fig:spatial-blending}).  When stylizing finer details of an image, this parameter is very useful for removing hard edges produced by rectangular regions.  
-\item \textit{Timesteps}: Increasing this produces more regions, making the image denser (see Figure-\ref{fig:timesteps}).  As well, this will also produce more regions that coincide with each other.  As a result, when synthesizing with a high number for the timesteps, the result resembles an overpainting effect.  For styles that require many ``layers'' of ``paint'', we use a higher number for the timesteps.  When used in combination with blending, increasing this can also increase the contrast.
-\item \textit{Minimum region size}: This parameter determines the minimum allowed region size for synthesis.  Setting this number very low (e.g. below 100 pixels) produces styles more similar to Impressionism, as many small regions are detected (see Figure-\ref{fig:minimum-size}).  
-\item \textit{Maximum region size}: Similar to the minimum region size parameter, this parameter determines the largest allowed region size. Generally setting this number as high as possible will be sufficient.  However, it may be desirable to interactively change this parameter over time, allowing for large regions to be drawn at first, then only allowing smaller ones. 
-\item \textit{Temporal blending}: Uses alpha blending to composite regions over time (see Figure-\ref{fig:temporal-blending}).  Together with an increased number of timesteps, this parameter can be used to change the contrast of the overall image (as shown in Figure-\ref{fig:temporal-blending-changing-parameters}).  
-\item \textit{Attention Model}: Allows regions to be drawn only if the exogenous attention model has a value higher than a fixed threshold.  For our experiments, we set this number to 0.1.  Recall from our computational framework that the attention model also effects the scale of built regions, as the highest point of attention will denote the point of spatial acuity (see Section \ref{sec:visual-acuity}).
-\item \textit{Blending radius}: Influences the feathering radius of the detected region (see Figure-\ref{fig:blending-radius}).  Normally, each detected region is matched to one in the database and then through an affine transformation placed where the detected region was using the same scale and rotation.  However, it may be desirable to change the scale of this region using the blending radius to produce different effects.  When scaling this region down, a user confines drawing to only small regions being painted, often produces styles associated with Abstract Expressionism.
+\item \textit{Timesteps}: Increasing this produces more proto-objects, making the image denser (see Figure-\ref{fig:timesteps}).  As well, this will also produce more proto-objects that coincide with each other.  As a result, when synthesizing with a high number for the timesteps, the result resembles an overpainting effect.  For styles that require many ``layers'' of ``paint'', we use a higher number for the timesteps.  When used in combination with blending, increasing this can also increase the contrast.
+\item \textit{Minimum region size}: This parameter determines the minimum allowed region size for synthesis.  Setting this number very low (e.g. below 100 pixels) produces styles more similar to Impressionism, as many small proto-objects are detected (see Figure-\ref{fig:minimum-size}).  
+\item \textit{Maximum region size}: Similar to the minimum region size parameter, this parameter determines the largest allowed proto-object size. Generally setting this number as high as possible will be sufficient.  However, it may be desirable to interactively change this parameter over time, allowing for large proto-objects to be drawn at first, then only allowing smaller ones. 
+\item \textit{Temporal blending}: Uses alpha blending to composite proto-objects over time (see Figure-\ref{fig:temporal-blending}).  Together with an increased number of timesteps, this parameter can be used to change the contrast of the overall image (as shown in Figure-\ref{fig:temporal-blending-changing-parameters}).  
+\item \textit{Attention Model}: Allows proto-objects to be drawn only if the exogenous attention model has a value higher than a fixed threshold.  For our experiments, we set this number to 0.1.  Recall from our computational framework that the attention model also effects the scale of built proto-objects, as the highest point of attention will denote the point of spatial acuity (see Section \ref{sec:visual-acuity}).
+\item \textit{Blending radius}: Influences the feathering radius of the detected proto-object (see Figure-\ref{fig:blending-radius}).  Normally, each detected proto-object is matched to one in the database and then through an affine transformation placed where the detected proto-object was using the same scale and rotation.  However, it may be desirable to change the scale of this proto-object using the blending radius to produce different effects.  When scaling this proto-object down, a user confines drawing to only small proto-objects being painted, often produces styles associated with Abstract Expressionism.
 \end{itemize}
 
 For image-based targets, the aforementioned parameters effect the frame-to-frame compositing, meaning the same image is rendered over itself.  For video-based targets, however, only a single iteration is used for each frame, as much of the information required for building styles requiring more detailed composites can be extracted over the first 1 or 2 frames.  We demonstrate how these parameters can influence a wide range of stylizations in the next section.
@@ -2040,7 +2141,7 @@ We use the presented framework to produce artistic stylizations of photo-realist
   \label{fig:cows-klee}
 \end{figure}
 
-In Figure-\ref{fig:cows-klee}, we synthesize a landscape photo of cows grazing using Expressionist painter Paul Klee.  We turn off spatial blending and use a small value for the minimum region size.  We also allow the maximum region size to be very large.  This results in a relatively smaller region being matched to the sky and stretched to fill the top-half of the image.  The synthesized region happens to look like a rainbow, though the original region itself was very abstract (see the first image in the second row of the Klee corpus).  
+In Figure-\ref{fig:cows-klee}, we synthesize a landscape photo of cows grazing using Expressionist painter Paul Klee.  We turn off spatial blending and use a small value for the minimum region size.  We also allow the maximum region size to be very large.  This results in a relatively smaller proto-object being matched to the sky and stretched to fill the top-half of the image.  The synthesized proto-object happens to look like a rainbow, though the original proto-object itself was very abstract (see the first image in the second row of the Klee corpus).  
 
 \paragraph{Abstract}
 
@@ -2071,16 +2172,49 @@ In Figure-\ref{fig:blanket-klimt}, we synthesize a close-up picture of a blanket
 
 Our approach can also stylize existing painterly images into other styles.  In the teaser graphic in Figure-\ref{fig:teaser}, we use three paintings by Van Gogh to stylize Klimt's The Kiss.  Here, we set the minimum region size to be small, allowing finer details and smaller brush strokes, and allow the timesteps to be high as we want to bring out as much contrast as possible.  
 
-In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom using 3 images of Monet's Water Lilies series.  Here, we ensure we detect many small regions by increasing the timesteps and setting the minimum region size to be very small.  Further, we turn on spatial blending as we decrease the minimum region size, as we want to avoid rendering any strong edges, retaining an Impressionist quality.
+In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom using 3 images of Monet's Water Lilies series.  Here, we ensure we detect many small proto-objects by increasing the timesteps and setting the minimum region size to be very small.  Further, we turn on spatial blending as we decrease the minimum region size, as we want to avoid rendering any strong edges, retaining an Impressionist quality.
 
 \subsubsection{Videos}
 
 \paragraph{Surrealist}
 
-\hl{Jan Svankmajer}
+\hl{Jan {\v S}vankmajer}
 
+\begin{figure}
+\centering
+\begin{subfigure}{0.85\textwidth}
+\includegraphics[width=\textwidth]{images/{\v S}vankmajer-1.png}
+\end{subfigure}
+\vspace*{2pt}
+\begin{subfigure}{0.85\textwidth}
+\includegraphics[width=\textwidth]{images/{\v S}vankmajer-2.png}
+\end{subfigure}
+\vspace*{2pt}
+\begin{subfigure}{0.85\textwidth}
+\includegraphics[width=\textwidth]{images/{\v S}vankmajer-3.png}
+\end{subfigure}
+\caption{Examples of the input frame (left) and synthesized frame (right) of video surrealist animator Jan {\v S}vankmajer's \textit{Dimensions of Dialogues}.  The candidate proto-objects have been learned from Jan {\v S}vankmajer's \textit{Food}.}
+\end{figure}
 
 \paragraph{Animation}
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.85\textwidth}
+\includegraphics[width=\textwidth]{images/simpsons-1.png}
+\end{subfigure}
+\vspace*{2pt}
+\begin{subfigure}{0.85\textwidth}
+\includegraphics[width=\textwidth]{images/simpsons-2.png}
+\end{subfigure}
+\vspace*{2pt}
+\begin{subfigure}{0.85\textwidth}
+\includegraphics[width=\textwidth]{images/simpsons-3.png}
+\end{subfigure}
+\caption{Examples of the input frame (left) and synthesized frame (right) of the introduction to the television animation series, \texit{The Simpsons}.  Candidate proto-objects have been learned from another television animation series, \textit{The Family Guy}.}
+\end{figure}
+
 
 \hl{70k views and Vimeo Staff Pick, and selected for exhibition twice, once at the Tin Shed Gallery in London, UK, and again at the Media Art Histories conference during the ART+COMMUNICATION: SAVE AS Exhibition in Riga, Latvia.}
 
@@ -2104,10 +2238,10 @@ In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom u
 
 \paragraph{Abstract}
 
-In Figure-\ref{fig:blanket-video}, we stylize a video using the same corpus as in Figure-\ref{fig:cows-klee} and set the minimum region size to be very large.  Thus, instead of producing an Expressionist style as in Figure-\ref{fig:rowing}, less details are synthesized resulting in a more abstract style.  The first frame in this video does not necessarily require more than 1 iteration as it is synthesizing very large regions that often also overlap.
+In Figure-\ref{fig:blanket-video}, we stylize a video using the same corpus as in Figure-\ref{fig:cows-klee} and set the minimum region size to be very large.  Thus, instead of producing an Expressionist style as in Figure-\ref{fig:rowing}, less details are synthesized resulting in a more abstract style.  The first frame in this video does not necessarily require more than 1 iteration as it is synthesizing very large proto-objects that often also overlap.
 
 \subsection{Discussion}
-We have presented a framework for producing artistic stylizations of images or videos using our computational model for visual scene synthesis.  A corpus of image material is automatically segmented, defining the possible strokes effecting the possible colors and textures in the stylization.  Using a simple set of parameters, we have shown that many stylizations of a target image or video are possible, ranging from Impressionism, Expressionism, and Abstract Expressionism.  By allowing the interactive refinement of an image's stylization, we allow the user to experiment with a range of stylizations through simple parameters.  This interactive refinement affords compositing, the ability to blend together stylizations from different parameters over time.  We also demonstrate the extension of this framework to video-based stylization using an exogenous model of attention to prioritize where regions are drawn, and effect the size of the regions drawn.  As in image-based stylization, the user can influence the stylization through the same set of parameters in real-time to interactively refine the stylization.  
+We have presented a framework for producing artistic stylizations of images or videos using our computational model for visual scene synthesis.  A corpus of image material is automatically segmented, defining the possible strokes effecting the possible colors and textures in the stylization.  Using a simple set of parameters, we have shown that many stylizations of a target image or video are possible, ranging from Impressionism, Expressionism, and Abstract Expressionism.  By allowing the interactive refinement of an image's stylization, we allow the user to experiment with a range of stylizations through simple parameters.  This interactive refinement affords compositing, the ability to blend together stylizations from different parameters over time.  We also demonstrate the extension of this framework to video-based stylization using an exogenous model of attention to prioritize where proto-objects are drawn, and effect the size of the proto-objects drawn.  As in image-based stylization, the user can influence the stylization through the same set of parameters in real-time to interactively refine the stylization.  
 
 
 \section{PhotoSynthesizer iOS Application}
@@ -2143,8 +2277,9 @@ Since the release of PhotoSynthesizer (henceforth ``the app'') in August 2012, t
 
 \textit{PhotoSynthesizer} demonstrated positive results, as the app reached the iTunes Top 50 applications for Photo and Video Apps in 8 different countries including the US and UK.  It would be much more interesting to devote more time to development and design of the application, allowing users more control and to fix the numerous bugs present in the application.  Many users were dissatisfied with the resolution of the images.  This could easily be fixed by rendering to an offscreen framebuffer object.  Other users were dissatisfied by not having the ability to remove an image, or memory errors due to having too many images in the database.  These issues are certainly minor and due to the design of the application and do no suggest the process or results of the synthesis itself as being unsatisfactory.  The reviews that do discuss the output syntheses are overwhelmingly positive.
 
-
 \section{Conclusion}
+
+This chapter has applied the computational framework for visual scene synthesis in two applications: artistic stylization of images or videos and an iOS application, \textit{PhotoSynthesizer}.  These applications have shown the promise of visual scene synthesis for producing novel and engaging experiences in the form of painterly rendering and interaction.  We will later see how this framework can be combined with auditory scene synthesis within our final goals in developing the film mashup, \textit{YouTube Smash Up} (see Chapter \ref{ch:audiovisual}), and in a real-time setting combined with augmented reality goggles to produce \textit{Augmented Reality Hallucinations} (see Chapter \ref{ch:memory-mosaic}).
 
 %\section*{Acknowledgements}
 %Thanks to Baptiste Caramiaux and Atau Tanaka for their comments on an earlier draft.  Also thanks to Enrica Cassentini for her help in creating a children's painting and earlier tests in stylization.  
@@ -2197,7 +2332,32 @@ I had been redirected to the copyright school since each one of my videos were c
 
 In response, I attached a letter describing my process and claimed fair use of the content that was actually used (see Appendix \ref{ap:copyright-letter}).
 
-\subsection{Example stills}
+\section{Methods}
+
+
+
+\section{Extensions}
+Numerous extensions have been explored during the course of the Smash Ups since its beginning in August 2012 to September 2013.  
+
+\subsection{Development of Visual Methods}
+
+Ellipse verus Rectangle
+
+Feather radius increased
+
+\subsection{Development of Audio Methods}
+
+Frame versus Segment
+
+Euclidean versus Cosine Distance versus Dynamic Time Warping
+
+Z-Normalization
+
+Normal speed versus Constant warping versus Time-Stretching via Maximilian versus Time-Stretching via Dirac LE
+
+Enveloping
+
+\section{Example stills}
 
 
 \begin{figure}[!ht]
@@ -2265,8 +2425,9 @@ In response, I attached a letter describing my process and claimed fair use of t
 \label{fig:youtube-copyright-school-smashup}
 \end{figure}
 
-\subsection{YouTube Content ID}
+\section{YouTube Content ID}
 
+The notion of collage in the world of digital media may require pinning down, as a variety of new techniques can afford new kinds of compositions.  One theorist claims that collage will proliferate so long as ``cut'' and ``paste'' operations persist, as described by Taylor in \textit{Collage} \cite{Taylor2006b}.   Cut-and-paste, in the digital realm, implies an operation of copying a digitally stored representation (i.e. 1's and 0's in machine code) from a source to a target.  However, for most computers, a copy operation is carried out whenever information is simply accessed.  That is, a digital piece of information is first kept stored in a permanent storage location such as a hard disk, before being copied by software.  For example, when a sound or image is required for display or decoding (e.g. from an MP3-file to one that can be played as -1 to +1 values through the speakers, or a JPEG-file to one that can be displayed as RGB values in a monitor), the permanent file must be copied into a temporary high-speed memory storage, and used within the appropriate software making use of that information.  Even for lossless file formats, such as a WAVE audio file or RAW image file, most software will require the file to first be copied into high-speed memory to allow it to be manipulated, displayed (e.g. as a waveform or image), and possibly copied again in order to interface with hardware.  As a result, copyright laws have likened the pure access and interfacing of digitally stored information as falling within the domain of copyright, leading to several attempts to digitally manage content (e.g. Digital Rights Management, or DRM).  The implications of the interpretation of copyright within digital media will be explored more in Chapter~\ref{ch:audiovisual}, when discussing YouTube Smash Up, a project that explores an audiovisual collage within short films through the use of existing copyrighted material hosted on YouTube.  
 
 \begin{figure}[!ht]
 \centering
@@ -2331,11 +2492,11 @@ Though one month after the 2012 fall democratic convention speech featuring firs
 
 \section{Introduction}
 
-This chapter develops our previously developed synthesis frameworks for real-time scenarios.
+This chapter develops our previously developed synthesis frameworks for real-time scenarios.  We discuss extensions for making both auditory and visual memory mosaicing work in real-time individually in Sections \ref{sec:auditory-memory-mosaicing} and \ref{sec:visual-memory-mosaicing} before combining them using augmented reality in Section \ref{sec:audiovisual}.  
 
 \section{Auditory Memory Mosaicing}
 
-We now turn to the real-time development of auditory scene synthesis, the freely available iOS app \textit{Memory Mosaic}.  This app attempts to develop a scene synthesis experience of sonic ``memories'' which will later be combined with a real-time visual scene synthesis in Section \ref{sec:audiovisual}.  Following our conceptual framework described in Chapter \ref{ch:conceptual-audio}, we must develop event detection in order to understand when an event of sound has occurred within a real-time stream of audio.  Further, another motivation for developing auditory scene synthesis is to be able to take the application and explore different auditory scenes (and not just an office scene), meaning we restricted our development to using a mobile platform.  
+We now turn to the real-time development of auditory scene synthesis, the freely available iOS app \textit{Memory Mosaic}.  Following our conceptual framework described in Chapter \ref{ch:conceptual-audio}, we must develop event detection in order to understand when an event of sound has occurred within a real-time stream of audio.  Further, another motivation for developing auditory scene synthesis is to be able to take the application and explore different auditory scenes (and not just an office scene), meaning we restricted our development to using a mobile platform.  
 
 Following our conceptual framework, after event detection, we must encode the event using our integral (MFCC) or segregated (PLCA) computational representation, and decode it by matching to any learned representations.  In our initial tests, we developed Memory Mosaic with segregation in mind, given its greater performance for encoding as demonstrated in Chapter \ref{ch:analysis-audio}.  However, practically, running such a model in real-time and on a mobile platform is not yet possible.  We therefore restrict our discussion within this sub-chapter to using the computational model described by MFCCs, though hope this work could be expanded in the future to include segregation as well.  
 
@@ -2457,7 +2618,7 @@ Memory Mosaic presents a significant step towards the final aim of this thesis, 
 
 \subsection{Introduction}
 
-Visual synthesis can be used in a real-time context without an explicit corpus.  In this case, we aggregate representations learned from the ongoing stream of target frames.  Parameters are generally set by the user interacting with the process, or contained to a single preset.  In particular, restricting the total number of representations as first-in-first-out queue allows the process to continue in real-time with a simple linear search index.  In the examples shown in Figure \ref{fig:memory-mosaicing}, we show two example outputs from the same camera stream.  In the left image, we aim for large region sizes and low timesteps, resulting in a more abstract style, reminiscent of Cubist style paintings.  In the right example, we allow higher timesteps and only small region sizes, resulting in a more expressive style similar to paintings in Abstract Expressionism.  
+Visual synthesis can be used in a real-time context without an explicit corpus.  In this case, we aggregate representations learned from the ongoing stream of target frames.  Parameters are generally set by the user interacting with the process, or contained to a single preset.  As well, restricting the total number of representations as first-in-first-out queue allows the process to continue in real-time with a simple linear search index.  In the examples shown in Figure \ref{fig:memory-mosaicing}, we show two example outputs from the same camera stream.  In the left image, we aim for large region sizes and low timesteps, resulting in a more abstract style, reminiscent of Cubist style paintings.  In the right example, we allow higher timesteps and only small region sizes, resulting in a more expressive style similar to paintings in Abstract Expressionism.  
 
 \subsection{Interface}
 
@@ -2466,7 +2627,7 @@ Visual synthesis can be used in a real-time context without an explicit corpus. 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\textwidth]{images/visual-memory-mosaic-1.png}
-\caption{An example of visual memory mosaicing.  The content is coarsely re-synthesized, sacrificing smaller blobs to produce a more abstract almost cubist synthesis.}
+\caption{An example of visual memory mosaicing.  The content is coarsely re-synthesized, sacrificing smaller proto-objects to produce a more abstract almost cubist synthesis.}
 \end{figure}
 
 \begin{figure}[!ht]
@@ -2489,7 +2650,7 @@ Visual synthesis can be used in a real-time context without an explicit corpus. 
 
 The extension of video-based stylization is also particularly suited for real-time contexts as shown in ``Memory Mosaicing'', where a database is aggregated from learning representations in a target frame over time. 
 
-A number of issues could be addressed in future versions.  For instance, synthesized regions with poor shape matches can be heavily distorted in a resulting synthesis.  In these cases, it is likely that the database did not include any other matches with more similar shapes, or the shape descriptor had been weighted too low.  As well, the speed of the synthesis in a real-time context can be greatly improved with other search methods such as tree or hash-table based indexes.  As well, our approach to addressing the temporal coherence of the resulting stylization may be improved with investigating incorporating more recent models of optical flow, keyframe detection, and possibly spatiotemporal detection of representations rather than purely spatial ones.   
+A number of issues could be addressed in future versions.  For instance, synthesized proto-objects with poor shape matches can be heavily distorted in a resulting synthesis.  In these cases, it is likely that the database did not include any other matches with more similar shapes, or the shape descriptor had been weighted too low.  As well, the speed of the synthesis in a real-time context can be greatly improved with other search methods such as tree or hash-table based indexes.  As well, our approach to addressing the temporal coherence of the resulting stylization may be improved with investigating incorporating more recent models of optical flow, keyframe detection, and possibly spatiotemporal detection of representations rather than purely spatial ones.   
 
 \section{Augmented Reality Hallucination}
 \label{sec:audiovisual}
@@ -2563,6 +2724,8 @@ motivations, each chapter, what i did, and how i used them in practice,
 \section{Limitations}
 Domain specific.  No cross-modal/multi-sensory.  Could have explored other data types, text, motion, etc...
 
+Lossless versus Lossy compression.
+
 \section{Future Work}
 Shocking the mind, adding noise to the stored representations, exploring really massive data sets, better model selection, sparse coding, stochastic sampling.
 
@@ -2610,7 +2773,7 @@ Like the way you can watch art materialize before you're eyes. First image impor
 Yeah pretty cool... Be nice to have a bit of control over the process though...worth every penny.( a few days later)...i love this app and the amazing pic it creates. it does tend to crash off and on .. I thinkitsgreat [\textit{sic}] though but i also se lots more potential... ( a few days later) i must say am i getting a little tired of what i can only describe as the "digital Poonsification" that is the resultant image (google Larry Poons art of the 60's to see what i'm talking about) . It would be cool if you could get say a more planar/cubist kind of thing revisualization... As opposed to tinier and tinier "eyelike ellipses" that are always generated . M thinking of a slighlty [\textit{sic}] more collage like result. Say like the work of Schwitters. Pretty cool app still.
 \end{quotationb}
 \begin{quotationb}
-Instructions say 'pick a few pictures'. Four pictures: 'insufficient memory'. Three pictures: 'insufficient memory'. Two: 'insufficient memory'.... (I don't think you can 'synthesise' [\textit{sic}] fewer than two things??). Guess I'll wait for the update (it's coming, right?)
+Instructions say 'pick a few pictures'. Four pictures: 'insufficient memory'. Three pictures: 'insufficient memory'. Two: 'insufficient memory'.... (I don't think you can 'synthesise' fewer than two things??). Guess I'll wait for the update (it's coming, right?)
 \end{quotationb}
 \begin{quotationb}
 ... [\textit{sic}] Reading the description for this app I thought WOW, but after the initial excitement ..... [\textit{sic}] I suggest, the programmer(s) change the drugs they are being subscribed for serious delusions. They don't work, neither does the program, unless you call an indistinguishable mess being produced from your photos a synthesis, which I don't. I am going to throw some leftover food onto a canvas .... [\textit{sic}] It is more exiting..... [\textit{sic}] The star I had to give so someone may read this lines.
