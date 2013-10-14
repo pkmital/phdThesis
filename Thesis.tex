@@ -140,7 +140,7 @@ Various other software such as Adobe Director, Adobe Flash, VJamm, VDMX, Apple Q
 %\hl{William Burrough's Electronic Revolution}
 
 %\hl{Scratch Video of British 1980's}
-\paragraph{Appropriation} \\
+%\paragraph{Appropriation} \\
 
 Collage-based video practitioners in the 1990's would often use clips of appropriated television footage such as the news footage of the motorcade leading to John F. Kennedy's assassination in Steinski's ``The Motorcade Sped On'', George H. W. Bush's news broadcasts on the Gulf War in EBN's ``We Will Rock You'', or Coldcut's use of nature videos.  However, these early examples as well as some recent artists such as Eclectic Method did not employ collage in the traditional spatial-sense, i.e. by juxtaposing fragments spatially across a single frame, and generally kept any source frames intact.  They did however experiment with the use of ``blending'', a technique with takes 2 or more images and blends the two together using a variety of functions such as: add, multiply, subtract, or difference.  
 
@@ -151,7 +151,7 @@ James Kerr appropriates images ``found here/there on the internet (a lot taken f
 
 Early computational artist Freider Nake recently said of algorithmic artwork that it is ``thinking of infinities'', referencing an early work by A. Michael Noll, \textit{Gaussian Quadratic} (1965) which shows a line drawing output of an algorithm attempting to create all possible polygons, or his own work, \textit{Matrix Multiplication} (1968) which is described by an algorithm for matrix multiplication.  In algorithmic artwork, he states, the artwork is separated by its ``surface'' and ``subface'', where the procedural or computable definitions of the artwork are the subface, and the object exhibited or viewed by a participant is the surface.  
 
-At the risk of being sloppy, we will temporarily suspend distinctions between the terms algorithmic, computational, and generative artworks, to collectively refer to artworks using the distinction of surface/subface offered by Nake.  Such artwork are then described by subfaces consisting of procedural definitions capable of computing multiple surfaces.   The interested reader may be curious to research their distinctions and more recent ones such as computer art, digital art, pixel-based art, electronic art, media art, processual media, or new media art, which we do not extend upon within this thesis.%Importantly, this distinction raises concerns for describing artworks, as there are the procedures themselves which one could describe and the outputs they produce.  
+At the risk of being sloppy, we will temporarily overlook distinctions between the terms algorithmic, computational, and generative artworks, to collectively refer to artworks using the distinction offered by Nake.  Such artwork are then described by subfaces consisting of procedural definitions capable of computing multiple surfaces.   Generally, this work will also refer to artists writing code to create new software rather than only using the defined capabilities of existing software.   The interested reader may be curious to research their distinctions and more recent ones such as computer art, digital art, pixel-based art, electronic art, media art, processual media, or new media art, which we do not extend upon within this thesis.%Importantly, this distinction raises concerns for describing artworks, as there are the procedures themselves which one could describe and the outputs they produce.  
 
 As an example, Joseph Nechvatal's computer-robotic assisted paintings such as \textit{Birth of the Viractual} (2001) contains elements of a portrait being ``eaten'' away by computational processes.  The individual generative ``viruses'' create distinct boundaries that could easily have been individual pasted elements, though are only created through the dynamic time course of the individual processes.  Thus, more often than collage, the notion of generative or viral painting applies to Nechvatal's work.  However, one may be able to argue that the paintings are a collage of procedures (i.e. the generative processes, or individual viruses), modeled through their own collage-based set of rules (i.e. each individual virus will ``eat'' another pixel by copy-and-pasting from other ones).  
 
@@ -174,8 +174,10 @@ Google Street View offers a unique collection of imagery that has been appropria
 \subsubsection{Sound Culture}
 \label{sec:sound-technology}
 
+% berliner 1887; edison phonograph, as archival, recording technique; gramophone; russolo, intonarumori; laszlo moholy-nagy 1923; lomax 1930's; fischinger 1932; levin 2003 ... 
+
 \paragraph{Sampling} \\
-For sound, collage-based practices exploded with the birth of digital sampler hardware, coming only a few years after the mellotron, a similar machine which used analog tape instead of digital media.  Similar to the practice of collage or montage, sampling refers to taking portions of existing media and using it within a performance or composition.  Digital sampling refers to sampling after an analog-to-digital process, where physical vibrations of sound are digitally sampled at equally spaced intervals, creating a discretely sampled representation of the continuous real-world phenomena.  This discrete sampling can easily be encoded by 1's and 0's in computer storage, and easily decoded back to the physical world, via an digital-to-analog process, such as through a speaker.  
+For sound, collage-based practices exploded with the birth of digital sampler hardware, coming only a few years after the mellotron, a similar machine which used analog tape instead of digital representations.  Similar to the practice of collage or montage, sampling\footnote{though refer to \cite{Navas2012} or \cite{Manovich2001} for a greater history of the term} refers to taking portions of existing media and using it within a performance or composition.  Digital sampling refers to sampling after an analog-to-digital process, where physical vibrations of sound are digitally sampled at equally spaced intervals, creating a discretely sampled representation of the continuous real-world phenomena.  This discrete sampling can easily be encoded by 1's and 0's in computer storage, and easily decoded back to the physical world, via an digital-to-analog process, such as through a speaker.  
 
 Early digital samplers such as the Fairlight CMI to more recent non-linear editors such as Logic and Ableton Live have made multi-track and cut-and-paste operations trivial to accomplish, while visualizing sound waves has made finding relevant parts of an audio file relatively easier than listening to an entire tape reel.  Early adopters of digital sampler technology include Herbie Hancock and Public Enemy.  Founders of Dub, Lee ``Scratch'' Perry and King Tubby, also made use of existing recorded material.  Though not strictly sampling, they created the famous Dub sound by infinitely collaging the same sound, creating intense reverberations that echoed with greater magnitude on each bounce until the sound was cut.  
 
@@ -1681,13 +1683,13 @@ We will see how this model can be implemented using computer vision techniques i
 
 \section{Introduction}  
 
-The conceptual framework motivated in Chapter \ref{ch:conceptual-visual} describes an approach to building representations of a visual scene using a mid-level perception denoted as proto-objects.  These volatile units are meant to serve as an intermediate representation between low-level feature processing and high-level scene semantics and object recognition.  In this Chapter, we build a computational implementation of the conceptual framework.  This model aims to encode any number of visual scenes, describe them using a computational implementation of proto-objects, and use them for decoding any target visual scene.  For now, we simply describe the computational elements required for encoding and decoding.  In Chapter \ref{ch:synthesis-visual}, these procedures will be used for encoding/decoding visual scenes within a collage-based arts practice where their results are demonstrated within the individual applications.  Finally,this model will be combined with auditory scene synthesis in Chapters \ref{ch:audiovisual} and \ref{ch:memory-mosaicing}.  
+The conceptual framework motivated in Chapter \ref{ch:conceptual-visual} describes an approach to building representations of a visual scene using a mid-level perception denoted as proto-objects.  These volatile units are meant to serve as an intermediate representation between low-level feature processing and high-level scene semantics and object recognition.  In this Chapter, we build a computational implementation of the conceptual framework.  This model aims to encode any number of visual scenes, represent them using a computational implementation of proto-objects, and finally use them for decoding any target visual scene.  For now, we simply describe the computational elements required for encoding and decoding.  In Chapter \ref{ch:synthesis-visual}, these procedures will be used for encoding/decoding visual scenes within a collage-based arts practice where their results are demonstrated within the individual applications.  Finally,this model will be combined with auditory scene synthesis in Chapters \ref{ch:audiovisual} and \ref{ch:memory-mosaicing}.  
 
 \section{Related Work}
 
-Many computational models have been developed to explain visual perception machinery.  The aims within these models vary greatly.  For instance, saliency models attempt to discover attentional biases towards a visual scene, either a static or dynamic one, either discussing only exogenous influences \cite{Itti1998,Zhang2008}, or by also incorporating endogenous ones such as the influence of task or contextual influences in well-known scenes \cite{Torralba2006}.  
+Many computational models have been developed to explain visual perception machinery.  Within the visual cognition literature, saliency models attempt to discover attentional biases towards a visual scene, either a static or dynamic one, either discussing only exogenous influences \cite{Itti1998,Zhang2008}, or by also incorporating endogenous ones such as the influence of task or contextual influences in well-known scene layouts \cite{Torralba2006} or gist-based processing \cite{Oliva2001}.  As well, \cite{Wischnewski2010} encodes attentional units using proto-object representations.  Our work does not attempt to solely describe attentional influences, but also encode proto-objects for future decodings.  
 
-Some models attempt to go as far as a complete object or scene understanding.  Within the computer vision literature, these models attempt to describe a computational approach for discovering different elements of a scene or their objects: detection, classification, annotation, tracking, and/or recognition.  Our work however does not go as far as describing objects, and instead sits just below the level of object recognition.  Many models of object recognition attempt to discover an entire labeling of a static or dynamic scene in terms of its objects and where they are located.  Using this information, some model have built scene recognition by understanding the likelihood of seeing co-occurring objects in a scene.  
+In order to encode proto-objects in a scene, we will need to describe them using a computational representation resembling blob-like entities.  Representations have been studied widely in the field of computer vision and have extended from early edge detection algorithms \cite{Canny1986} to complex interactions of edges (interest points) \cite{Lowe2004a,Dalal2005}, to regions or blob detection algorithms \cite{Comaniciu2001,Matas2002,Forssen2007a}.  Using these ``low-to-mid level'' algorithms, many models within the computer vision community attempt to describe a computational approach for discovering different elements of a scene or their objects: detection, classification, annotation, tracking, and/or recognition.  Our work however does not go as far as describing objects, and instead sits just below the level of object detection.  As a result, our technique is more closely aligned with the methods used in finally discovering objects or scenes, i.e. the low-to-mid level features, though is combined with early attentional models more commonly found in the visual cognition literature. In other words, our model attempts to borrow from both the visual cognition and computer vision communities to develop a streamlined model for encoding and decoding visual scenes. 
 
 Models of visual cortex (Serre, Poggio, 
 
@@ -1818,7 +1820,7 @@ This value treats our attentional map as a probability distribution.  If our att
 \centering
 \includegraphics[width=\textwidth,height=130px]{images/flow-4.png}
 \end{subfigure}
-\caption{The output of the visual acuity filter on an example scene is shown.  In the top left corner inlayed in each image is the attention map created from the magnitude of the optical flow.  The maximum point in this attention map is registered to the original image (drawn as a black/white circle), and along with the entropy of this distribution, is used to create a visual acuity filter.  The images shown here are the resulting filtered images.  Note that the images are not blurred because of the camera focus.  These are computationally created by blurring the image with respect to where the attention map determines the point of focus is likely to be.  Also notice how the width of the blurring changes depending on how much entropy is in the attentional map.  Another example is shown in Figure \ref{fig:acuity}.}
+\caption{The output of the visual acuity filter on an example scene is shown.  In the top left corner inlayed in each image is the attention map created from the magnitude of the optical flow (black/white denotes low/high probabilities).  The maximum point in this attention map is registered to the original image (drawn as a black/white circle), and along with the entropy of this distribution, is used to create a visual acuity filter.  The images shown here are the resulting filtered images.  Note that the images are not blurred because of the camera focus.  These are computationally created by blurring the image with respect to where the attention map determines the point of focus is likely to be.  Also notice how the width of the blurring changes depending on how much entropy is in the attentional map.  Another example is shown in Figure \ref{fig:acuity}.}
 \label{fig:flow}
 \end{figure}
 
@@ -1848,12 +1850,12 @@ This value treats our attentional map as a probability distribution.  If our att
 \label{fig:acuity}
 \end{figure}
 
-As discussed in \cite{Kalloniatis2007}, a number of factors effect visual acuity: refractive error, size of the pupil, illumination, time of exposure of the target, area of the retina stimulated, state of adaptation of the eye, and eye-movements.  Modeling each of these would be a thesis in itself.  The important consideration here is to be able to encode finer details at the point of a likely fixation, while encoding only coarser details outside of fixation.  This process appears to be a biological development in order to reduce the amount of processing, rather than necessary for functioning.  In other words, a computational implementation of this module attempts to reduce the amount of processing while keeping high resolution details in parts of a scene likely to be attended to.  
+As discussed in \cite{Kalloniatis2007}, a number of factors effect visual acuity: refractive error, size of the pupil, illumination, time of exposure of the target, area of the retina stimulated, state of adaptation of the eye, and eye-movements.  Modeling each of these would be a thesis in itself.  The important consideration here is to be able to encode finer details at the point of the most likely fixation, while encoding only coarser details outside of it.  This process appears to be a biological development in order to reduce the amount of processing, rather than necessary for functioning.  In other words, a computational implementation of this module attempts to reduce the amount of processing while keeping high resolution details in parts of a scene likely to be attended to.  
 
-In order to blur a scene modeled by a logarithmic fall off in spatial resolution, we use a popular technique in first person shooter games for creating a radial blur.  This technique samples a concentric circle at a radial distance from that point determined by the distance to fixation.  Let $B$ describe an original image to be filtered with a size of $(W,H)$ whose pixels are indexed by the location $(x,y)$.   We will sample (i.e. look up the color values) at points around this location in order to create a logarithmic falloff in spatial acuity.  To do this, we must also be given the distance, $d$, to the fixation point, $(f_{x},f_{y})$, such that $d = \sqrt{(f_{x} - x)^{2} + (f_{y} - y)^{2}}$.  Then the visual acuity map can be described by:
+In order to blur a scene modeled by a logarithmic fall off in spatial resolution, we use a popular technique in first person shooter games for creating a radial blur.  This technique samples a concentric circle at a radial distance from that point determined by the distance to fixation.  Let $B$ describe an original image to be filtered with a size of $(\text{W},\text{H})$ whose pixels are indexed by the location $(x,y)$.   We will sample (i.e. look up the color values) at points around this location in order to create a logarithmic falloff in spatial acuity.  To do this, we must also be given the distance, $d$, to the fixation point, $(f_{x},f_{y})$, such that $d = \sqrt{(f_{x} - x)^{2} + (f_{y} - y)^{2}}$.  Then the visual acuity map can be described by:
 %\forall (x,y) \; \text{in} \; \mathbb{R}^{2}; 
 \begin{equationb}
-B^{'}(x,y,d) = \sum_{i}^{N} B\Big(\frac{d}{W} \, * \, \cos(\frac{2i\pi}{N}), \; \frac{d}{H} \, * \, \sin(\frac{2i\pi}{N})\Big)
+B^{'}(x,y,d) = \sum_{i}^{N} B\Big(\frac{d}{\text{W}} \, * \, \cos(\frac{2i\pi}{N}), \; \frac{d}{\text{H}} \, * \, \sin(\frac{2i\pi}{N})\Big)
 \end{equationb}
 
 This formula may be also extended to sample more than 1 concentric ring.  Let $C$ be the number of concentric rings to sample from.  Then the updated equation becomes:
@@ -2074,6 +2076,7 @@ For the corpus, we define the \textit{timesteps}, \textit{minimum region area}, 
 When learning a corpus from many images, we restrict learning proto-objects that are within a distance threshold (using Equation \ref{eq:distance}) of all proto-objects in the existing database.  For our examples, we set this parameter to 50.  This value is low enough to include many proto-objects, though high enough to avoid detecting duplicate proto-objects.  A higher number for this parameter will lead to very discriminative proto-objects.  In our tests, when setting this number higher, we found that our corpus had less variety of proto-objects to synthesize from, leading to stronger shape or color mismatches.  
 
 \subsubsection{Target Parameters}
+\label{sec:target-parameters}
 
 \begin{figure}
   \centering
@@ -2186,22 +2189,21 @@ In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom u
 
 \paragraph{Surrealist}
 
-\hl{Jan {\v S}vankmajer}
+In the example in Figure \ref{fig:dimensions-of-dialogue}, Jan {\v S}vankmajer's \textit{Dimensions of Dialogue} is synthesized using material from the entire short film of {\v S}vankmajer's \textit{Food}.  The sub-commentary in this particular output was to suggest that ongoing dialogue between the two characters in \textit{Dimensions of Dialogue} were eating and regurgitating themselves using other material, namely, \textit{Food}.  Here we let the minimum region size to be fairly large, compared to our other examples, and also did not allow for any spatial or temporal blending.  The resulting frame-to-frame composition therefore has less temporal synchrony (or greater motion across frames), and is very high contrast, as every proto-object is drawn with full opacity over the last one.  
 
 \begin{figure}
 \centering
 \begin{subfigure}{0.85\textwidth}
-\includegraphics[width=\textwidth]{images/{\v S}vankmajer-1.png}
+\includegraphics[width=\textwidth]{images/svankmajer-1.png}
 \end{subfigure}
-\vspace*{2pt}
 \begin{subfigure}{0.85\textwidth}
-\includegraphics[width=\textwidth]{images/{\v S}vankmajer-2.png}
+\includegraphics[width=\textwidth]{images/svankmajer-2.png}
 \end{subfigure}
-\vspace*{2pt}
 \begin{subfigure}{0.85\textwidth}
-\includegraphics[width=\textwidth]{images/{\v S}vankmajer-3.png}
+\includegraphics[width=\textwidth]{images/svankmajer-3.png}
 \end{subfigure}
 \caption{Examples of the input frame (left) and synthesized frame (right) of video surrealist animator Jan {\v S}vankmajer's \textit{Dimensions of Dialogues}.  The candidate proto-objects have been learned from Jan {\v S}vankmajer's \textit{Food}.}
+\label{fig:dimensions-of-dialogue}
 \end{figure}
 
 \paragraph{Animation}
@@ -2221,10 +2223,10 @@ In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom u
 \includegraphics[width=\textwidth]{images/simpsons-3.png}
 \end{subfigure}
 \caption{Examples of the input frame (left) and synthesized frame (right) of the introduction to the television animation series, \texit{The Simpsons}.  Candidate proto-objects have been learned from another television animation series, \textit{The Family Guy}.}
+\label{fig:simpsons-vs-familyguy}
 \end{figure}
 
-
-\hl{70k views and Vimeo Staff Pick, and selected for exhibition twice, once at the Tin Shed Gallery in London, UK, and again at the Media Art Histories conference during the ART+COMMUNICATION: SAVE AS Exhibition in Riga, Latvia.}
+In Figure \ref{fig:simpsons-vs-familyguy}, we learn a corpus from the entire introduction of the television animation series \textit{The Family Guy}.  Using this material alone, we synthesize an introduction to \textit{The Simpsons}.  This video went on to receive over 70,000 views online, was also selected as a Vimeo Staff Pick, and was selected for exhibition twice, once at the Tin Shed Gallery in London, UK, and again at the Media Art Histories conference during the ART+COMMUNICATION: SAVE AS Exhibition in Riga, Latvia (curated by Riatis Smits).}  As in the surrealist example, we again let the minimum region size to be fairly large.  Though we now incorporated temporal blending producing more seamless edges across proto-objects.  
 
 \paragraph{Portrait}
 
@@ -2242,14 +2244,14 @@ In Figure-\ref{fig:van-gogh-monet}, we try synthesizing Van Gogh's The Bedroom u
   	\label{fig:blanket-video}
 \end{figure}
    
-\hl{Two examples in video-based stylization are presented: one of a subject rowing a boat and another of abstract imagery.}  In Figure-\ref{fig:rowing}, we can see 4 frames taken from a video stylization.  We use the same corpus as in Figure-\ref{fig:cows-klee} and allow the minimum region size to be very small, resulting in a more Expressionist style.  The first frame is not as composed as the later frames, as there will have only been 1 frame of compositing.  As a result, the first frame in video-based Expressionist stylization may not be a consistent style with its later frames.
+In Figure-\ref{fig:rowing}, we can see 4 frames taken from a video stylization.  We use the set of images in Figure-\ref{fig:cows-klee} as our corpus and allow the minimum region size to be very small, resulting in a more Expressionist style.  The first frame is not as composed as the later frames, as there will have only been 1 frame of compositing.  As a result, the first frame in video-based Expressionist stylization may not be a consistent style with its later frames.
 
 \paragraph{Abstract}
 
-In Figure-\ref{fig:blanket-video}, we stylize a video using the same corpus as in Figure-\ref{fig:cows-klee} and set the minimum region size to be very large.  Thus, instead of producing an Expressionist style as in Figure-\ref{fig:rowing}, less details are synthesized resulting in a more abstract style.  The first frame in this video does not necessarily require more than 1 iteration as it is synthesizing very large proto-objects that often also overlap.
+In Figure-\ref{fig:blanket-video}, we stylize a video using the image corpus in Figure-\ref{fig:cows-klee} and set the minimum region size to be very large.  Thus, instead of producing an Expressionist style as in Figure-\ref{fig:rowing}, less details are synthesized resulting in a more abstract style.  The first frame in this video does not necessarily require more than 1 iteration as it is synthesizing very large proto-objects that often also overlap.
 
 \subsection{Discussion}
-We have presented a framework for producing artistic stylizations of images or videos using our computational model for visual scene synthesis.  A corpus of image material is automatically segmented, defining the possible strokes effecting the possible colors and textures in the stylization.  Using a simple set of parameters, we have shown that many stylizations of a target image or video are possible, ranging from Impressionism, Expressionism, and Abstract Expressionism.  By allowing the interactive refinement of an image's stylization, we allow the user to experiment with a range of stylizations through simple parameters.  This interactive refinement affords compositing, the ability to blend together stylizations from different parameters over time.  We also demonstrate the extension of this framework to video-based stylization using an exogenous model of attention to prioritize where proto-objects are drawn, and effect the size of the proto-objects drawn.  As in image-based stylization, the user can influence the stylization through the same set of parameters in real-time to interactively refine the stylization.  
+We have presented a framework for producing artistic stylizations of images or videos using our computational model for visual scene synthesis.  A corpus of image material is automatically segmented into a set of proto-objects, defining the possible strokes effecting the possible colors and textures in the stylization.  Using a simple set of parameters, we have shown that many stylizations of a target image or video are possible, ranging from Impressionism, Expressionism, and Abstract Expressionism.  By allowing the interactive refinement of an image's stylization, we allow the user to experiment with a range of stylizations through simple parameters.  This interactive refinement affords compositing, the ability to blend together stylizations from different parameters over time.  We also demonstrate the extension of this framework to video-based stylization using an exogenous model of attention to prioritize where proto-objects are drawn, and effect the size of the proto-objects drawn.  As in image-based stylization, the user can influence the stylization through the same set of parameters in real-time to interactively refine the stylization.  
 
 
 \section{PhotoSynthesizer iOS Application}
@@ -2267,11 +2269,27 @@ The iTunes App Store has become an ideal place for testing prototypes of researc
 \begin{figure}
 \begin{adjustwidth}{-12em}{-12em}
 \centering
+\includegraphics[width=1.2\textwidth]{images/ps-ipad.png}
+\end{adjustwidth}
+\caption{Another example of the workflow for PhotoSynthesizer.  In this early example, the regions were not rectangular as the current version has, but were instead spatially blended with elliptical regions (see Section \ref{sec:target-parameters} for more details).  The final panel shows the ability to upload the picture to Twitter or to save it in the user's Photo Library.}
+\label{fig:photosynthesizer-early}
+\end{figure}
+
+\begin{figure}
+\begin{adjustwidth}{-12em}{-12em}
+\centering
 \includegraphics[width=1.2\textwidth]{images/photosynthesizer-layout-01.png}
 \end{adjustwidth}
 \caption{(a) Opening screen of \textit{PhotoSynthesizer}; (b) User selects a target photo (they could have taken a new image from the camera too); (c) After selecting a target image, the user is taken to this screen; (d) The user selects some photos for source material; (e) They are shown the photos they selected; (f) When the user goes to the next screen, the synthesis begins with the coarsest layers; (g) Gradually building up finer layers; (h) And the finest layers; (i) Before the final synthesis is presented}
 \label{fig:photosynthesizer-layout}
 \end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/photosynthesizer-10.png}
+\caption{Another example output of the same target as in Figure \ref{fig:photosynthesizer-layout}, but using a more colorful corpus}
+\end{figure}
+
 
 \subsection{Examples}
 
@@ -2324,21 +2342,15 @@ This chapter has applied the computational framework for visual scene synthesis 
 
 
 
-This chapter describes the first practical output combining both auditory and visual scene synthesis.  For 5 weeks starting in late September of 2012, we synthesized the number 1 most viewed video on YouTube after learning the audiovisual content from the remaining top 10 videos (see Appendix \ref{ap:smashup} for the names of the original videos used).  The idea was to continue to do so until one of the synthesized videos ended up in the top 10, thus resynthesizing itself.  However, after week 5, I was no longer able to log into my YouTube account and was redirected to a page\footnote{\url{http://www.youtube.com/copyright_school}} with an animation of \textit{Happy Tree Friends} explaining what copyright is and how to avoid risking copyright infringement (see Figure \ref{fig:copyright-school}.   Accompanying the animation was a quiz testing my knowledge of copyright which I had to correctly complete in order to use my account.  
+This chapter describes the first practical output combining both auditory and visual scene synthesis.  For 5 weeks starting in late September of 2012, we synthesized the number 1 most viewed video of the week on YouTube after learning the audiovisual content from the remaining top 10 videos (see Appendix \ref{ap:smashup} for the names of the original videos used).  The idea was to continue to do so until one of the synthesized videos ended up in the top 10, thus resynthesizing itself.  
 
-Happy Tree Friends is, according to Wikipedia, ``extremely violent, with almost every episode featuring blood, pain, and gruesome deaths [...] depicting bloodshed and dismemberment in a vivid manner.''  
+A number of ideas were to be explored: the notion of copyright within digital media; exploring the representation of proto-object as something in-between object and pixel and being able to manipulate this representation; learning popular cultural patterns; jamming popular culture with experimental abstract film; 
 
-I had been redirected to the copyright school since each one of my videos were claimed to infringe on the rights of the copyright holders.  
 
-In response, I attached a letter describing my process and claimed fair use of the content that was actually used (see Appendix \ref{ap:copyright-letter}).
+However, after week 5, I was no longer able to log into my YouTube account and was redirected to a page\footnote{\url{http://www.youtube.com/copyright_school}} with an animation of \textit{Happy Tree Friends} explaining what copyright is and how to avoid risking copyright infringement (see Figure \ref{fig:copyright-school}.   Accompanying the animation was a quiz testing my knowledge of copyright which I had to correctly complete in order to use my account.  The sequences of events uncovered an underlying aspect of copyright within large digital media collections, namely, that what is perceived by a computer is not what is perceived by a human.  
 
-\section{Audiovisual Perception}
+We discuss this in more detail in the following sections.  First, we go over some related work in video art and mash up culture, then describe a number of extensions developed for this output specifically, and then show some stills from some of the videos, before going over the resulting copyright infringement notices and YouTube's Copyright School. 
 
-\hl{Talk about attempts to combine models in perception and practice.   DIEM model, how do you combine two modalities.}
-
-\hl{Classic effects in crossmodal/multisensory perception}
-
-\hl{Unresolved scientific questions... hence parallel...}
 
 \section{Related Work}
 
@@ -2460,10 +2472,13 @@ Enveloping
 \end{figure}
 
 
-
 \section{YouTube Content ID}
 
-Cut-and-paste, in the digital realm, implies an operation of copying a digitally stored representation (i.e. 1's and 0's in machine code) from a source to a target.  However, for most computers, a copy operation is carried out whenever information is simply accessed.  That is, a digital piece of information is first kept stored in a permanent storage location such as a hard disk, before being copied by software.  For example, when a sound or image is required for display or decoding (e.g. from an MP3-file to one that can be played as -1 to +1 values through the speakers, or a JPEG-file to one that can be displayed as RGB values in a monitor), the permanent file must be copied into a temporary high-speed memory storage, and used within the appropriate software making use of that information.  Even for lossless file formats, such as a WAVE audio file or RAW image file, most software will require the file to first be copied into high-speed memory to allow it to be manipulated, displayed (e.g. as a waveform or image), and possibly copied again in order to interface with hardware.  As a result, copyright laws have likened the pure access and interfacing of digitally stored information as falling within the domain of copyright, leading to several attempts to digitally manage content (e.g. Digital Rights Management, or DRM).  The implications of the interpretation of copyright within digital media will be explored more in Chapter~\ref{ch:audiovisual}, when discussing YouTube Smash Up, a project that explores an audiovisual collage within short films through the use of existing copyrighted material hosted on YouTube.  
+I had been redirected to the copyright school since each one of my videos were claimed to infringe on the rights of the copyright holders.  
+
+In response, I attached a letter describing my process and claimed fair use of the content that was actually used (see Appendix \ref{ap:copyright-letter}).
+
+
 
 \begin{figure}[!ht]
 \centering
@@ -2498,7 +2513,7 @@ Though one month after the 2012 fall democratic convention speech featuring firs
 
 \subsection{YouTube Copyright School}
 
-\hl{Happy Tree Friends... }
+Happy Tree Friends is, according to Wikipedia, ``extremely violent, with almost every episode featuring blood, pain, and gruesome deaths [...] depicting bloodshed and dismemberment in a vivid manner.''  
 
 \section{Discussion}
 
@@ -2759,6 +2774,16 @@ motivations, each chapter, what i did, and how i used them in practice,
 ...Err...?
 
 \section{Limitations}
+
+
+\subsection{Audiovisual Perception}
+
+\hl{Talk about attempts to combine models in perception and practice.   DIEM model, how do you combine two modalities.}
+
+\hl{Classic effects in crossmodal/multisensory perception}
+
+\hl{Unresolved scientific questions... hence parallel...}
+
 Domain specific.  No cross-modal/multi-sensory.  Could have explored other data types, text, motion, etc...
 
 Lossless versus Lossy compression.
@@ -2773,6 +2798,8 @@ Ideally, the representations here of a simple shape and color vector could be ex
 3D scanning also presents an interesting new technology that could be exploited for creative uses.  
 
 Within medical imaging, fMRI has already been used for decoding audio and visual scenes.  
+
+Deep Learning to automatically discover features (NIME2013)
 
 \section{Final Discussion}
 
