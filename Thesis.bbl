@@ -336,6 +336,12 @@ PL~Feuerstein.
   processo creativo}}.
 \newblock International Conference on Generative Art, 1998.
 
+\bibitem[Filipe~2013]{Filipe2013}
+S\'{\i}lvio Filipe and Lu\'{\i}s~a. Alexandre.
+\newblock {\em {From the human visual system to the computational models of
+  visual attention: a survey}}.
+\newblock Artificial Intelligence Review, January 2013.
+
 \bibitem[Findlay~2003a]{Findlay2003}
 John~M. Findlay and Iain~D. Gilchrist.
 \newblock {Active Vision: The Psychology of Looking and Seeing (Oxford
@@ -504,6 +510,11 @@ Dave Himmel, Mark Greaves, Anne Kao and Steve Poteet.
 \newblock {\em {Visualization for large collections of multimedia
   information}}.
 \newblock Content Visualization and Intermedia Representations, 1998.
+
+\bibitem[Hochman~2013]{Hochman2013}
+Nadav Hochman and Lev Manovich.
+\newblock {\em {Zooming into an Instagram City: Reading the local through
+  social media}}, June 2013.
 
 \bibitem[Hofmann~1999]{Hofmann1999}
 Thomas Hofmann.
@@ -746,6 +757,9 @@ M.W. Macon and M.a. Clements.
   sinusoidal model}}.
 \newblock 1996 IEEE International Conference on Acoustics, Speech, and Signal
   Processing Conference Proceedings, pages 361--364, 1996.
+
+\bibitem[Man~]{Manovich2008}
+{\em {Software Studies: Cultural Analytics}}.
 
 \bibitem[Manjunath~2002]{Manjunath2002}
 BS~Manjunath, P~Salembier and Thomas Sikora, editeurs.
@@ -1406,6 +1420,13 @@ Antonio Torralba, Aude Oliva, Monica~S Castelhano and John~M Henderson.
 \newblock {\em {Contextual guidance of eye movements and attention in
   real-world scenes: the role of global features in object search.}}
 \newblock Psychological review, vol.~113, no.~4, pages 766--86, October 2006.
+
+\bibitem[Torralba~2008]{Torralba2008}
+Antonio Torralba, Rob Fergus and William~T Freeman.
+\newblock {\em {80 Million Tiny Images: a Large Data Set for Nonparametric
+  Object and Scene Recognition.}}
+\newblock IEEE transactions on pattern analysis and machine intelligence,
+  vol.~30, no.~11, pages 1958--70, November 2008.
 
 \bibitem[Treisman~1980]{Treisman1980}
 AM~Treisman and Garry Gelade.
