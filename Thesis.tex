@@ -2347,7 +2347,7 @@ This chapter develops our previously developed synthesis frameworks for real-tim
 
 \section{Auditory Memory Mosaicing}
 \label{sec:auditory-memory-mosacing}
-
+\subsection{Introduction}
 We now turn to the real-time development of auditory scene synthesis, the freely available iOS app \textit{Memory Mosaic}.  The development on a mobile platform was chosen as one motivation for developing scene synthesis is to be able to explore different scenes.  Developing for a desktop application restricts our scene types to primarily indoor office/bedroom spaces.  We therefore targeted our development towards mobile platforms, meaning the computational power that was offered was also a limitation in our design.  
 
 Following our conceptual framework described in Chapter \ref{ch:conceptual-audio}, we have developed segregation, integration, and template matching thus far in Chapter \ref{ch:analysis-audio}.   We now require that last component of our framework, event detection.  This will allow us to understand when an event of sound has occurred within a real-time stream of audio.  %Another motivation for developing auditory scene synthesis is to be able to take the application and explore different auditory scenes (and not just an office scene), meaning we restricted our development to using a mobile platform.  
@@ -2464,7 +2464,11 @@ The interface of the iOS application is shown in Figure \ref{fig:memory-mosaic-i
 
 As well as releasing the app to the public, I have explored the app in a series of sonic collages.  These pay homage to John Oswald's own experiments with sonic collage, as they use Michael Jackson's ``Beat It'' for the target.   The first of these had the app learn a nature recording by Chris Watson.  Afterwards, I set the app to stop learning, and had it listen to ``Beat It'' while I recorded the resulting synthesis.  Birds, leaves, squeaks, and other fragments of nature sounds are mashed into a cacophony strangely resembling the original ``Beat It'' track.  Likely, the rhythmic features of ``Beat It'' are the strongest indication of the original track.  Another possible indication may come from a simple hallucination of hearing a voice which certainly cannot possibly be there.  The track has so far amassed only 76 plays.  Other experiments in the same series all used ``Beat It'' for the target, and include ``Michael Jackson versus Liszt's Hungarian Rhapsodies'' (37 plays), ``Michael Jackson versus Rachmoninov's Piano Concerto No 2 and 3'' (431 plays), and ``Michael Jackson versus Michael Jackson'' (1946 plays).  These can all be found online at: \url{https://soundcloud.com/pkmital/sets/michael-jackson-experiments}.
 
-In another experiment, I explored the synthesis of a Chris Watson's recording of the lyre bird.  The input track of the lyre bird recording was encoded and decoded in real-time, with the purpose of seeing how later parts of the recording would be decoded after having encoded earlier parts of it.  The lyre bird recording is personally an interesting example as the lyre bird itself is capable of recalling memories.  In the example recording by David Attenborough, the lyre bird recalls sounds of camera shutters and car alarms and is able to reproduce the sounds using its own vocal tract.  The original clip narrated by David Attenborough also incorporates an interesting sonic environment including lyre bird sounds, human voice, and rustling nature sounds.  The individual fragments of lyre bird song are incredibly unique, and this becomes even more apparent when viewed through a spectral visualization.  In Figure \ref{}, we visualize parts of the original recording of the lyre bird and similarly demonstrate the memory mosaicing of it.  
+In another experiment, I explored the synthesis of a Chris Watson's recording of the lyre bird.  The input track of the lyre bird recording was encoded and decoded in real-time, with the purpose of seeing how later parts of the recording would be decoded after having encoded earlier parts of it.  The lyre bird recording is personally an interesting example as the lyre bird itself is capable of recalling memories.  In the example recording by David Attenborough, the lyre bird recalls sounds of camera shutters and car alarms and is able to reproduce the sounds using its own vocal tract.  The original clip narrated by David Attenborough also incorporates an interesting sonic environment including lyre bird sounds, human voice, and rustling nature sounds.  The individual fragments of lyre bird song are incredibly unique, and this becomes even more apparent when viewed through a spectral visualization.  
+
+In Figures \ref{fig:lyre-spectrum-closeup} and \ref{fig:lyre-spectrum-closeup-2}, we visualize parts of the original recording of the lyre bird and similarly demonstrate the memory mosaicing of it.  To appreciate the resulting collage, it is ideal to be able to listen to the input and then the resulting output.  In my experiments, having prior knowledge of what the input sounded like gave a greater sense of understanding of the output (this could likely be explained by classic psychological effects of priming, and were discussed previously in Section \ref{sec:gist} in relation to gist perception).  
+
+%Through my experiments, I would often run the same process on a number of different parameters. As one example, how many frames the Gaussian mixture model should store, as this is an open parameter.  The threshold for defining events as well defines another open parameter.  Setting this number very low (i.e. < 1.0) allows one to create a very accurate reconstruction.  However, the fragments stored and detected during decoding are then very small and indiscernible, along the lines of granular synthesis techniques (discussed in Section \ref{sec:sound-technology}).  
 
 \begin{figure}
 \centering
@@ -2525,7 +2529,7 @@ In another experiment, I explored the synthesis of a Chris Watson's recording of
 \centering
 \includegraphics[width=\textwidth]{images/lyre-spectrum-closeup-2.png}
 \caption{Spectrums}
-\label{fig:lyre-spectrum-closeup}
+\label{fig:lyre-spectrum-closeup-2}
 \end{subfigure}
 
 \caption{Another closeup of the waveforms (\ref{fig:lyre-waveform-closeup}) and spectrums (\ref{fig:lyre-spectrum-closeup}) (input on top, output on bottom) of the Lyre bird example from about 1:38 - 1:45.  An interesting aspect of memory mosaicing can be seen towards then ending part of the spectrum display.  At 1:44, a lyre bird creates a downward pitch then upward pitch excitation.  This is the first time the app had heard anything like this and did a poor job of resynthesizing it, from the looks of the spectrum at least.  Interestingly, the lyre bird repeats the downward and upward pitch excitation at 1:45.  This time, the app is able to synthesize the upward pitch excitation using the previously learned upward excitation from 1:44.  The downward excitation however was not faithfully reconstructed.}
@@ -2567,18 +2571,33 @@ The sound app.  I actually quite liked this one in the sense that, very quickly,
 
 \subsection{Discussion}
 
-Auditory Memory Mosaicing presents a significant step towards the final practical outputs of this thesis by completing the conceptual framework described in Chapter \ref{ch:conceptual-audio} by incorporating Event Detection.  One important issue was discovered in moving the framework towards a practical implementation, namely, segregation in real-time could not be achieved due to limitations in CPU power.  Ideally, a better implementation or faster processor could afford such an interaction.
+Auditory Memory Mosaicing presents a significant step towards the final practical outputs of this thesis.  In order to develop a real-time version of auditory synthesis, we incorporated event detection as motivated in the conceptual framework described in Chapter \ref{ch:conceptual-audio}. This was developed through the use of a Gaussian mixture model storing a set of descriptors describing the acoustic scene in terms of MFCCs and their velocities and accelerations.  Events were then defined in an audio signal by thresholding the posterior probability of explaining incoming audio frames in terms of its standard deviations away from the mean.  Segregation in real-time could not be achieved due to limitations in CPU power.  Ideally, a better implementation or faster processor could afford such an interaction, though it is still unknown how well this would work for real-time applications. 
 
 \section{Visual Memory Mosaicing}
 \label{sec:visual-memory-mosaicing}
 
 \subsection{Introduction}
 
-Visual synthesis can be used in a real-time context without an explicit corpus.  In this case, we aggregate representations learned from the ongoing stream of target frames.  Parameters are generally set by the user interacting with the process, or contained to a single preset.  Restricting the total number of representations as a first-in-first-out queue also allows the process to continue in real-time with a simple linear search index.  In the examples shown in Figure \ref{fig:memory-mosaicing}, we show two example outputs from the same camera stream.  In the left image, we aim for large region sizes and low timesteps, resulting in a more abstract style, reminiscent of Cubist style paintings.  In the right example, we allow higher timesteps and only small region sizes, resulting in a more expressive style similar to paintings in Abstract Expressionism.  
+We have seen in Chapters \ref{ch:analysis-visual} how to encode visual scenes into a set of proto-object like representations, using these to decode any target visual scene.  In chapter \ref{ch:synthesis-visual}, we used this framework for artistically stylizing images and videos, and in an iOS application for synthesizing a user's photo collection.  In this chapter, we take these developments forward in trying to develop a real-time visual scene synthesis capable of aggregating representations as it sees them.  In a similar vein to auditory memory mosaicing, visual memory mosaicing can be used in a real-time context without an explicit corpus.  In this case, we aggregate representations learned from the ongoing stream of target frames.  
+
+In this section, we describe how we developed our previous computational framework for a real-time setting, the application's interface, and a few examples, before concluding this section.
+
+\subsection{Methods}
+
+In order to use our framework in Chapter \ref{ch:synthesis-visual} for real-time settings, we generally had to sacrifice large timesteps and low minimum regions sizes for smaller timesteps and larger minimum region sizes.  Parameters, as described in Section \ref{sec:target-parameters}, are generally set by the user interacting with the process, or contained to a single preset.  Restricting the total number of representations as a first-in-first-out queue also allows the process to continue in real-time with a simple linear search index.  This additional parameter is described within the design of the interface in the next section.
 
 \subsection{Interface}
 
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{images/synthesis-gui.png}
+\caption{The interface for the visual memory mosaicing program.  There are many options that allow the user to control the synthesis process.  Many have already been described in the context of artistic stylization in Section \ref{sec:artistic-stylization}.  The new ones to discuss here are \textit{Memory Mosaicing}, which toggles between an aggregated database and a pre-defined one and \textit{Max Objects}, which allows one to change the maximum number of proto-objects remembered.}
+\label{fig:synthesis-gui}
+\end{figure}
+
 \subsection{Examples}
+
+In the examples shown in Figure \ref{fig:memory-mosaicing}, we show two example outputs from the same camera stream.  In the left image, we aim for large region sizes and low timesteps, resulting in a more abstract style, reminiscent of Cubist style paintings.  In the right example, we allow higher timesteps and only small region sizes, resulting in a more expressive style similar to paintings in Abstract Expressionism. 
 
 \begin{figure}[!ht]
 \centering
