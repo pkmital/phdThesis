@@ -1732,7 +1732,7 @@ Another category of models stem from computational cognition/neuroscience litera
 As discussed in our previous study \cite{Mital2011}, motion features are highly predictive of gaze across viewers when gaze is tightly coordinated.  We therefore incorporate the model of optical flow used in this previous study in developing a model of exogenous attention.  In an ideal case then, visual scenes as have been used in our previous study will be used in building visual scene syntheses.  These scenes are generally described by television adverts, movie trailers, and music videos in \cite{Mital2011}, and by unedited street scenes in \cite{Smith2013}. Certainly, this is an overly simplified model as it can only explain frame-to-frame differences or irregularities.  It also assumes the world is dynamic, and does not indicate attentional preference in scenes that do not have motion.  Further, endogenous influences that, as discussed in Section \ref{sec:endogenous-influences}, can entirely negate these influences, are not modeled.  Implementing even a tiny percentage of these influences would be a significant step forward in future implementations.  
 
 \subsubsection{Optical Flow}
-
+\label{sec:optical-flow}
 Optical flow estimates the apparent motion of brightness patterns in a dynamic sequence of images.  We employ an existing variational method for determining optical flow, a standard in calculating optical flow since its introduction in 1981 \cite{Horn1981}.  Horn and Schunck's \cite{Horn1981} seminal description of optical flow is a variational method for calculating motion vectors in a brightness image.  Their formulation describes optical flow in terms of a sequence of images $E$, where each pixel at a time $t$ moves with a vector described by $(x,y)$.  We denote their derivatives as $(u = \frac{\mathtt{d}x}{\mathtt{d}t},v=\frac{\mathtt{d}y}{\mathtt{d}t})$.  Following \cite{Horn1981}, the flow of an image is assumed to have small displacements and constant brightness:
 
 \begin{equationb}
@@ -2582,11 +2582,51 @@ We have seen in Chapters \ref{ch:analysis-visual} how to encode visual scenes in
 
 In this section, we describe how we developed our previous computational framework for a real-time setting, the application's interface, and a few examples, before concluding this section.
 
-\subsection{Methods}
+\subsection{Methods and Graphical User Interface}
 
-In order to use our framework in Chapter \ref{ch:synthesis-visual} for real-time settings, we generally had to sacrifice large timesteps and low minimum regions sizes for smaller timesteps and larger minimum region sizes.  Parameters, as described in Section \ref{sec:target-parameters}, are generally set by the user interacting with the process, or contained to a single preset.  Restricting the total number of representations as a first-in-first-out queue also allows the process to continue in real-time with a simple linear search index.  This additional parameter is described within the design of the interface in the next section.
+% Our computational implementation begins with an attention model built using optical flow.  Up until now, we have only needed this model to run in non-realtime settings.  Running optical flow in realtime is possible using GPU-based implementations.  However, the only publicly available implementations are for NVidia based graphics cards, as they make use of CUDA-based architecture\footnote{For a great library, see \url{http://gpu4vision.icg.tugraz.at/}}.  As I was developing on an ATI graphics card, I resorted to implementing a simpler model of motion which simply calculated the frame-to-frame differences in luminance.  This model suffers from not being able to understand the motions within highly homogenous textures (previously discussed in Section \ref{sec:optical-flow} in relation to developing a smoothness constraint for optical flow), though can easily be run in real-time.
 
-\subsection{Interface}
+The interface for the real-time version of visual scene synthesis is shown in Figure \ref{fig:synthesis-gui}.  Most of the parameters of the visual scene synthesis algorithm have been described in Section \ref{sec:target-parameters}.  In order to use our framework in Chapter \ref{ch:synthesis-visual} for real-time settings, we also sacrificed larger timesteps and lower minimum regions sizes for smaller timesteps and larger minimum region sizes.  
+
+Restricting the total number of representations as a first-in-first-out queue also allows the process to continue in real-time with a simple linear search index.  This additional parameter is shown in Figure \ref{fig:synthesis-gui}, and allows one to move between synthesizing the entire scene with only 1 object, or up to an infinite number of objects.  Increasing the maximum objects past ~1000 objects significantly decreases the ability to draw each frame at a real-time speed.  
+
+\begin{figure}
+\centering
+\begin{adjustwidth}{-12em}{-12em}
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/visual-memory-mosaic-01.png}
+\caption{Input image}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/visual-memory-mosaic-02.png}
+\caption{Attention map}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/visual-memory-mosaic-03.png}
+\caption{Visual acuity map}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/visual-memory-mosaic-04.png}
+\caption{Proto-object image}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/visual-memory-mosaic-05.png}
+\caption{Synthesized image}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/visual-memory-mosaic-06.png}
+\caption{Synthesized image}
+\end{subfigure}
+\end{adjustwidth}
+\caption{Example of the processing routines for producing visual memory mosaics.}
+\end{figure}
 
 \begin{figure}
 \centering
@@ -2650,7 +2690,7 @@ A number of issues could be addressed in future versions.  For instance, synthes
 
 An interesting case of ``Memory Mosaicing'' is when a participant can actively explore a visual scene.  By using augmented reality goggles, we allowed participants to explore their environment through the our proposed stylization process during an exhibition called ``Augmented Reality Hallucinations'' held at the Victoria and Albert Museum in London.  Participants were invited to wear the goggles where two small CRT screens presented the same output of a ``Memory Mosaicing'' of a single camera mounted on the goggles right eye that faced the scene in front of them (see Figure \ref{fig:vam}).  As the only user interaction was in exploring a scene, a single preset was defined based on large region sizes and low number of timesteps.  
 
-Participants were also invited to give quantitative and qualitative feedback on their experience.  The summary of the quantitative feedback is shown in Figure \ref{fig:vam-graphics-bar}.  On the feedback form, when participants were asked, ``Did this experience make you think of anything you had seen or heard before?'', three participants made references to their experiences on hallucinogens and two to dreams.  Also of note in the qualitative feedback was references to art styles such as, ``It reminded me of Francis Bacon's Figurative style'' and ``The movement was Impressionistic, almost painterly''.  When asked, ``What did you dislike most about the experience?'', of note were the responses, ``Would have liked more depth in colour'', ``Not sure what I was seeing at first with the goggles'', and ``Hard to understand how it works.''  The lack of understanding of the process may also be revealed in the quantitative analysis in the second bar of the graph.  However, on average, this number is still quite high across participants, though there is also no baseline to compare to.  
+Participants were also invited to give quantitative and qualitative feedback on their experience (see Appendix \ref{ap:vam-form} for the original forms and Appendix \ref{ap:vam-results} for fully detailed responses).  The summary of the quantitative feedback is shown in Figure \ref{fig:vam-graphics-bar}.  On the feedback form, when participants were asked, ``Did this experience make you think of anything you had seen or heard before?'', three participants made references to their experiences on hallucinogens and two to dreams.  Also of note in the qualitative feedback was references to art styles such as, ``It reminded me of Francis Bacon's Figurative style'' and ``The movement was Impressionistic, almost painterly''.  When asked, ``What did you dislike most about the experience?'', of note were the responses, ``Would have liked more depth in colour'', ``Not sure what I was seeing at first with the goggles'', and ``Hard to understand how it works.''  The lack of understanding of the process may also be revealed in the quantitative analysis in the second bar of the graph.  However, on average, this number is still quite high across participants, though there is also no baseline to compare to.  
 
 \subsection{Hardware}
 a
@@ -2731,8 +2771,7 @@ The number 1 video of the week is to be synthesized after learning the content f
 
 For audio, we must be able to perform a similar feat as in the visual synthesis, learning from the number 2 - 10 video's audio content, and using this information alone to decode the audio of the number 1 video.  In order to do so, we must extend our auditory scene synthesis work developed in Chapters \ref{ch:analysis-audio} and \ref{ch:synthesis-audio} by incorporating event detection.  We have seen how this works for a real-time setting in Chapter \ref{ch:memory-mosaic}.  In the first weeks of YouTube Smash Up, the same model was applied to producing the auditory scene syntheses.  It however became apparent that more powerful processing could take place, and this was subsequently explored.  In particular, sequence matching, previously employed in \cite{CaseyICMC2007} appeared to provide a more rigorous template matching than the single frame of information our algorithm employed.  
 
-\section{Extensions}
-Numerous extensions have been explored during the course of the Smash Ups since its beginning in August 2012 to September 2013.  
+Numerous extensions have also been explored during the course of the Smash Ups since its beginning in August 2012 to September 2013.  
 
 \subsection{Development of Visual Methods}
 
@@ -3012,6 +3051,7 @@ The latest updates have really improved final results of your selected image. On
 \doublespacing
 
 \chapter{Augmented Reality Hallucinations Exhibition Questionnaire}
+\label{ap:vam-form}
 
 \begin{figure}
 \begin{adjustwidth}{-12em}{-12em}
@@ -3025,6 +3065,24 @@ The latest updates have really improved final results of your selected image. On
 \vspace*{-10pt}
 \centering
 \includegraphics[width=1.5\textwidth]{images/vam-questionnaire-2.png}
+\end{adjustwidth}
+\end{figure}
+
+\chapter{Augmented Reality Hallucinations Exhibition Questionnaire Results}
+\label{ap:vam-results}
+
+\begin{figure}
+\begin{adjustwidth}{-12em}{-12em}
+\vspace*{-10pt}
+\centering
+\includegraphics[width=1.5\textwidth]{images/vam-results-quantitative.pdf}
+\end{adjustwidth}
+\end{figure}
+\begin{figure}
+\begin{adjustwidth}{-12em}{-12em}
+\vspace*{-10pt}
+\centering
+\includegraphics[width=1.5\textwidth]{images/vam-results-qualitative.pdf}
 \end{adjustwidth}
 \end{figure}
 
