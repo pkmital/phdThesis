@@ -186,6 +186,13 @@ Michael~A Casey, Remco Veltkamp, Masataka Goto, Marc Leman, Christophe Rhodes
   and Future Challenges}}.
 \newblock Proceedings of the IEEE, vol.~96, no.~4, 2008.
 
+\bibitem[Casey~2009]{Casey2009}
+Michael Casey.
+\newblock {\em {Soundspotting: a new kind of process?}}
+\newblock In R.~Dean, editeur, The Oxford Handbook of Computer Music and
+  Digital Sound Culture, pages 421--453. Oxford University Press, New York,
+  2009.
+
 \bibitem[Celsis~1999]{Celsis1999}
 P~Celsis, K~Boulanouar, B~Doyon, J~P Ranjeva, I~Berry, J~L Nespoulous and
   F~Chollet.
@@ -200,6 +207,11 @@ IC~Chang, YM~Peng, YS~Chen and SC~Wang.
   Sampling Method}}.
 \newblock Journal of Information Science and Engineering, vol.~26, pages
   1443--1458, 2010.
+
+\bibitem[Chen~2013]{Chen2013}
+Tao Chen, Zhe Zhu, Ariel Shamir and Shi-min~Hu Daniel.
+\newblock {\em {3-Sweep: Extracting Editable Objects from a Single Photo}}.
+\newblock ACM Transactions on Graphics (TOG), vol.~32, no.~5, 2013.
 
 \bibitem[Christel~1998]{Christel1998}
 Michael Christel and David Martin.
@@ -396,6 +408,17 @@ J~P Gottlieb, M~Kusunoki and M~E Goldberg.
   cortex.}}
 \newblock Nature, vol.~391, no.~6666, pages 481--4, January 1998.
 
+\bibitem[Grierson~2005]{Grierson2005}
+Mick Grierson.
+\newblock {\em {Audiovisual Composition}}.
+\newblock PhD thesis, University of Kent, 2005.
+
+\bibitem[Grierson~2009]{Grierson2009}
+Mick Grierson.
+\newblock {\em {Plundermatics: Real-time Interactive Media Segmentation for
+  Audiovisual Analysis, Composition and Performance}}.
+\newblock In EVA 2009 London Conference, pages 276--284, 2009.
+
 \bibitem[Grierson~2013]{MickGrierson2013}
 Mick Grierson and Chris Kiefer.
 \newblock {\em {Maximilian}}, 2013.
@@ -438,6 +461,12 @@ A~Harma and MF~McKinney.
   environment}}.
 \newblock Multimedia and Expo, 2005 IEEE International Conference on, vol.~1,
   no.~1, 2005.
+
+\bibitem[Harold~2004]{Harold2004}
+Christine Harold.
+\newblock {\em {Pranking rhetoric: “culture jamming” as media activism}}.
+\newblock Critical Studies in Media Communication, vol.~21, no.~3, pages
+  189--211, September 2004.
 
 \bibitem[Harris~1988]{Harris1988}
 C.~Harris and M.~Stephens.
@@ -811,11 +840,25 @@ MF~McKinney.
 \newblock {\em {Features for audio and music classification}}.
 \newblock Proc. ISMIR, vol.~4, 2003.
 
-\bibitem[McLeod~2011]{McLeod2011}
+\bibitem[McLeod~2011a]{McLeod2011b}
+Kembrew McLeod.
+\newblock {\em {Crashing the Spectacle}}.
+\newblock In Kembrew McLeod and Rudolf Kuenzli, editeurs, Cutting Across Media.
+  Appropriation Art, Interventionist Collage, and Copyright Law, pages
+  164--177. Duke University Press, 2011.
+
+\bibitem[McLeod~2011b]{McLeod2011}
 Kembrew McLeod.
 \newblock {Cutting Across Media: Appropriation Art, Interventionist Collage,
   and Copyright Law}.
 \newblock Duke University Press Books, 2011.
+
+\bibitem[McLeod~2011c]{McLeod2011a}
+Kembrew McLeod and Rudolf Kuenzli.
+\newblock {\em {I Collage, Therefore I Am}}.
+\newblock In Kembrew McLeod and Rudolf Kuenzli, editeurs, Cutting Across Media.
+  Appropriation Art, Interventionist Collage, and Copyright Law, pages 1--23.
+  Duke University Press, 2011.
 
 \bibitem[Meier~1996]{Meier1996}
 Barbara~J. Meier.
@@ -1414,6 +1457,13 @@ Kirk~G Thompson, Keri~L Biscoe and Takashi~R Sato.
   field.}}
 \newblock The Journal of neuroscience : the official journal of the Society for
   Neuroscience, vol.~25, no.~41, pages 9479--87, October 2005.
+
+\bibitem[Topel~2011]{Topel2011}
+Spencer Topel and Michael Casey.
+\newblock {\em {ELEMENTARY SOURCES: LATENT COMPONENT ANALYSIS FOR MUSIC
+  COMPOSITION}}.
+\newblock International Symposium on Music Information Retrieval 2011,
+  no.~Ismir, pages 579--584, 2011.
 
 \bibitem[Torralba~2006]{Torralba2006}
 Antonio Torralba, Aude Oliva, Monica~S Castelhano and John~M Henderson.
