@@ -2776,7 +2776,16 @@ A number of issues could be addressed in future versions.  For instance, synthes
 
 An interesting case of ``Memory Mosaicing'' is when a participant can actively explore a visual scene.  By using augmented reality goggles, we allowed participants to explore their environment through the our proposed stylization process during an exhibition called ``Augmented Reality Hallucinations'' held at the Victoria and Albert Museum in London.  Participants were invited to wear the Vuzix Wrap920AR goggles where two small CRT screens presented the same output of a ``Memory Mosaicing'' of a single camera mounted on the goggles right eye that faced the scene in front of them (see Figure \ref{fig:vam}).  The Vuzix goggles have two front-facing mounted cameras.  Ideally, we would synthesize the images coming from both of these cameras and present them to each eye.  However, the processing power required for visual memory As the only user interaction was in exploring a scene, a single preset was defined based on large region sizes and low number of timesteps.  
 
+An example of one of the more interesting outputs demonstrating its potential is shown in Figure \ref{fig:augmented-reality-keys}.  As the learning process for learning proto-objects is restrictive, not every proto-object detected is learned.  Rather, only ones with a great enough distance in shape and color are learned.  In this example, the keyboard letters have been detected, only 1 has been learned, and all have been synthesized by a single keyboard letter.  
+
 Participants were also invited to give quantitative and qualitative feedback on their experience (see Appendix \ref{ap:vam-form} for the original forms and Appendix \ref{ap:vam-results} for fully detailed responses).  The summary of the quantitative feedback is shown in Figure \ref{fig:vam-graphics-bar}.  On the feedback form, when participants were asked, ``Did this experience make you think of anything you had seen or heard before?'', three participants made references to their experiences on hallucinogens and two to dreams.  Also of note in the qualitative feedback was references to art styles such as, ``It reminded me of Francis Bacon's Figurative style'' and ``The movement was Impressionistic, almost painterly''.  When asked, ``What did you dislike most about the experience?'', of note were the responses, ``Would have liked more depth in colour'', ``Not sure what I was seeing at first with the goggles'', and ``Hard to understand how it works.''  The lack of understanding of the process may also be revealed in the quantitative analysis in the second bar of the graph.  However, on average, this number is still quite high across participants, though there is also no baseline to compare to.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{images/augmented-reality-mosaic.png}
+\caption{An example of what happened inside of the augmented reality goggles when looking at the computer keyboard.  As the learning algorithm restricts learning of similar shapes and colors, only one keyboard letter was learned and used for the resulting synthesis of all keyboard letters.}
+\label{fig:augmented-reality-keys}
+\end{figure}
 
 \hl{Discuss responses to making them think about perception}.
 
@@ -2889,7 +2898,21 @@ The number 1 video of the week is to be synthesized after learning the content f
 
 For audio, we must be able to perform a similar feat as in the visual synthesis, learning from the number 2 - 10 video's audio content, and using this information alone to decode the audio of the number 1 video.  In order to do so, we must extend our auditory scene synthesis work developed in Chapters \ref{ch:analysis-audio} and \ref{ch:synthesis-audio} by incorporating event detection.  We have seen how this works for a real-time setting in Chapter \ref{ch:memory-mosaic}.  In the first 3 weeks of YouTube Smash Up, this real-time model was applied for producing the auditory scene syntheses.  It however became apparent that more powerful processing could take place given that the processing did not need to happen in real-time.  In particular, sequence matching, previously employed in \cite{CaseyICMC2007} appeared to provide a more rigorous template matching than the single frame of information our algorithm employed.  This technique attempts to incorporate all the information of an event rather than only the event's first frame.  
 
-Looking at Figure \ref{fig:memory-mosaic-matching}, we can see how template matching worked for a real-time setting.  In this case, only the beginning of the event was used for matching to an arbitrary length segment of sound.  However, as we do not require the algorithm to work in real-time, we can also wait until the end of the event and use the entire event's content for finding the best match, rather than just the onset of the event.  In order to do this, \cite{CaseyICMC2007} designed a matched filter sequence match called audio shingling.  However, this technique penalizes matches which may have different temporal characteristics.  For instance, consider a hypothetical situation in which a database contains two segments: one producing the sound ``appetizer'' and another producing the sound ``aaahhhppplllleee'' (i.e. the word `apple' pronounced very slowly).  The target to match to is the sound ``apple'' (i.e. the word `apple' pronounced very quickly), similar to the second item in the database, but at a different speed.  In the shingling approach, ``appetizer'' will have a closer match, as the first part of it is an exact match to the target.  However, if we could shrink the second item in the database, this would be an even better match.  
+\begin{figure}
+\centering
+\begin{adjustwidth}{-12em}{-12em}
+\centering
+\includegraphics[width=1.4\textwidth]{images/learning-comparison.png}
+\end{adjustwidth}
+\caption{A comparison of the learning techniques for real-time (top) and non-real-time (bottom).  On the top we can see the real-time technique only stores the first audio frame's features.  On the bottom, the entire event's features are stored.  However, as the segment may be of variable length, the number of features stored will also vary.}
+\label{fig:learning-comparison}
+\end{figure}
+
+Previously in Figure \ref{fig:memory-mosaic-matching}, we developed template matching for a real-time setting.  In this case, only the beginning of the event was used for matching to an arbitrary length segment of sound.  However, as we do not require the algorithm to work in real-time, we can also wait until the end of the event and use the entire event's content for finding the best match, rather than just the onset of the event.  In Figure \ref{fig:learning-comparison}, we contrast these two methods visually.  On the top, the original method as employed in a real-time setting is shown.  Only the first frame's content of a segment is learned.  However, we could store the features of the entire segment as shown in the bottom of this Figure.  
+
+Taking up this design, one problem arises during the matching process.  If the segments are of different sizes, we will end up storing different sizes of features.  In this case, our normal distance measures of L1 or L2 norm no longer apply, as they require both sets of features to be the exact same length.
+
+In order to match against arbitrary length feature sequences, \cite{CaseyICMC2007} designed a matched filter sequence match called audio shingling.  However, this technique penalizes matches which may have different temporal characteristics.  For instance, consider a hypothetical situation in which a database contains two segments: one producing the sound ``appetizer'' and another producing the sound ``aaahhhppplllleee'' (i.e. the word `apple' pronounced very slowly).  The target to match to is the sound ``apple'' (i.e. the word `apple' pronounced very quickly), similar to the second item in the database, but at a different speed.  In the shingling approach, ``appetizer'' will have a closer match, as the first part of it is an exact match to the target.  However, if we could shrink the second item in the database, this would be an even better match.  
 
 In order to find better matches by also considering how candidates could be shrunk or expanded, we employed dynamic time warping.  Dynamic Time Warping describes a technique for finding the best match through a warping path among a set of possible candidates.  It has previously been employed for aligning MIDI scores \cite{Schwarz2003a}, is a well studied technique for aligning speech fragments for performing speech recognition \cite{Rabiner1993a}, and has even recently been used for decoding speech from the human brain \cite{Pasley2012}.  We incorporated this technique and used it for matching in Weeks 5 and 6.  My source code for it is freely available online\footnote{\url{https://github.com/pkmital/pkmMatrix/blob/master/pkmDTW.h}} and has been vectorized using Apple's Accelerate Framework.  It also incorporates recent algorithmic improvements that make the process much faster to compute (optimization details of early abandoning, keogh, and sakoe-chiba bounds can be found here \cite{Rakthanmanon2012}).
 
@@ -2947,13 +2970,10 @@ After uploading week 4's video, I received an e-mail from YouTube stating that m
 
 \singlespacing
 \begin{quotationb}	
-Dear pkmital,
-
-Your video, "11 Month Old Twins Dancing to Daddy's Guitar (YouTube Smash Up)", may have content that is owned or licensed by Rightster. As a result, the video has been blocked on YouTube.
-
-This claim is penalising your account status. Visit your Copyright Notice page for more details on the policy applied to your video.
-
-Yours sincerely,
+\noindent Dear pkmital, \\ \\
+Your video, "11 Month Old Twins Dancing to Daddy's Guitar (YouTube Smash Up)", may have content that is owned or licensed by Rightster. As a result, the video has been blocked on YouTube. \\ \\
+This claim is penalising your account status. Visit your Copyright Notice page for more details on the policy applied to your video. \\ \\
+Yours sincerely, \\ 
 - The YouTube Team
 \end{quotationb}
 \doublespacing
@@ -2964,31 +2984,42 @@ Feeling slightly worried by the possible legal battles that I may have faced had
 
 \begin{figure}
 \centering
-\begin{subfigure}{0.32\textwidth}
+\begin{adjustwidth}{-7em}{-7em}
+\centering
+\begin{subfigure}{0.6\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/week4-copyright-1.png}
+\caption{}
 \end{subfigure}
-\begin{subfigure}{0.32\textwidth}
+\begin{subfigure}{0.6\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/week4-copyright-2.png}
+\caption{}
 \end{subfigure}
-\begin{subfigure}{0.32\textwidth}
+
+\begin{subfigure}{0.6\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/week4-copyright-4.png}
+\caption{}
 \end{subfigure}
-\begin{subfigure}{0.32\textwidth}
+\begin{subfigure}{0.6\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/week4-copyright-5.png}
+\caption{}
 \end{subfigure}
-\begin{subfigure}{0.32\textwidth}
+
+\begin{subfigure}{0.6\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/week4-copyright-6.png}
+\caption{}
 \end{subfigure}
-\begin{subfigure}{0.32\textwidth}
+\begin{subfigure}{0.6\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/week4-copyright-7.png}
+\caption{}
 \end{subfigure}
-\caption{Week 4's smash up received a copyright infringement claim regarding the ``audiovisual'' content administered by Rightster.  Shown here is YouTube's online form for acknowledging or disputing a copyright infringement claim (best viewed at 800\%).  After submitting a dispute, the copyright holders have 1 month to respond, or else the claim is automatically released.  Before acknowledging or disputing a claim, the video is not publicly available on YouTube.  After submitting either the dispute or acknowledgement, the video is made public again.}
+\end{adjustwidth}
+\caption{Week 4's smash up received a copyright infringement claim regarding the ``audiovisual'' content administered by Rightster.  Shown here is YouTube's online form for acknowledging or disputing a copyright infringement claim (best viewed at 300\%).  After submitting a dispute, the copyright holders have 1 month to respond, or else the claim is automatically released.  Before acknowledging or disputing a claim, the video is not publicly available on YouTube.  After submitting either the dispute or acknowledgement, the video is made public again.}
 \label{fig:week4-copyright}
 \end{figure}
 
@@ -3055,7 +3086,7 @@ Smitelli's reverse engineering of YouTube's Content ID system also revealed a nu
 
 ContentID has had its setbacks.  One month after the 2012 fall democratic convention speech featuring first lady Michelle Obama was aired and subsequently taken down due to copyright infringement \cite{Singel2012}.  YouTube released a statement saying they would enforce manual reviewing of more of their copyright claims by the content owners in an effort to reduce erroneous claims \cite{Alfishawi2012}.  Despite this claim, it is apparent given the claims I have received after this statement that an automated system is likely responsible for sending me the infringement notices.
 
-Their slogan ``Block, track, monetize'' neatly summarizes the advantages of using ContentID.  Rather than just purely find offending material, the content holders are given three options, as per their slogan.  
+Their slogan ``Block, track, monetize'' neatly summarizes the advantages of using ContentID.  Rather than just purely find offending material, the content holders are given three options, as per their slogan.  \hl{Discuss how different options have been applied to my copyrighted videos}.
 
 \subsection{YouTube Copyright School}
 
@@ -3099,7 +3130,7 @@ Happy Tree Friends is, according to Wikipedia, ``extremely violent, with almost 
 
 \section{Discussion}
 
-Though it is difficult to describe an artwork's result, as may be necessary within the context of a practice-based PhD, some result may be described by the work being sought out by curators.  However, a true result may be described by fooling an automated copyright detection software into thinking the content was a duplicate.  
+Though it is difficult to describe an artwork's result, as may be necessary within the context of a practice-based PhD, some result may be described by the work being sought out by curators.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3128,11 +3159,15 @@ Though it is difficult to describe an artwork's result, as may be necessary with
 
 \section{Summary}
 
-The work presented here details a computational arts practice exploring a specific type of collage called scene synthesis.  Scene synthesis explores the power of collage to produce new meanings, as well as explore the meaning making process itself.  It attempts to do so by placing emphasis on the units of representation within the collage process.  For audio, events defined by temporal irregularities in the ongoing auditory scene gave rise to streams.  For video, blob-like regions denoted as proto-objects were encoded with higher resolution at points of a scene likely to fixated, while lower resolution was used for proto-objects outside of these points.  
+This thesis investigates a computational arts practice exploring a specific type of collage called scene synthesis.  Scene synthesis explores the power of collage to produce new meanings, as well as explore the meaning making process itself.  It attempts to do so by placing emphasis on the units of representation within the collage process.  For audio, the units are defined by temporal irregularities in the ongoing auditory scene.  For video, blob-like regions denoted as proto-objects are encoded with a high resolution at points of a scene likely to fixated, while low resolution proto-objects are encoded outside of these points.  
 
-Developing these frameworks, we saw how they could be applied in online and offline settings.  For an online scene synthesis, ...
+Developing these frameworks, we saw how scene synthesis could be applied in online and offline setting.  For an online setting, we developed scene synthesis within an augmented reality allowing a user to be entirely immersed within the scene synthesis.  
 
-offline scene synthesis
+For an offline scene synthesis, we explored YouTube videos as an experimental setting.  The number 1 video of the week was synthesized using material from the number 2 - 10 videos.  This process resulted in some interesting developments in copyright infringement, where YouTube's automated copyright detection software found my synthesized videos as duplicates of the original videos.  Strangely, these synthesized videos did not use the content of the original videos, and were instead attempting to resynthesize them from fragments of other videos.  
+
+Along the way to these outputs, we also saw a number of other practical developments.  Within vision, we saw how scene synthesis could be applied for artistically stylizing an image or entire video.  A number of simple parameters allowed one to synthesize aesthetics associated with Impressionism or Abstract Expressionism styles.  A simpler version of this app was also released on the iOS App Store in an application called PhotoSynthesizer.  This app allowed one to apply visual scene synthesis with the photos from their mobile device.  With audio, we also saw how scene synthesis could be developed for higher level scene recognition tasks, allowing one to label events of sound using a known dictionary.  Auditory scene synthesis was also applied in an interactive visualization of a large audio corpus of the electronic musician Daphne Oram.  Researchers of this archive were invited to explore her work as a 3D visualization where the position of fragments of the archive were clustered based on their templated descriptions. 
+
+Underlying each of these developments were conceptual frameworks in both audio and vision.  These frameworks were motivated by presiding theories in cognitive neuroscience and experimental psychology and helped to establish a basic framework for computation.  
 
 motivations, each chapter, what i did, and how i used them in practice,
 
@@ -3141,6 +3176,11 @@ effort into combining audio/visual...
 good to ask questions, with some answers, and future directions for the remaining questions... 
 
 \section{Contribution}
+
+The contribution of this thesis can be seen in a variety of angles.  As an empirical psychologist or cognitive neuroscientist, a review of the state-of-the-art in early to mid-level perception of auditory and visual scenes has been presented and conceptualized into a coherent framework in Chapters \ref{ch:conceptual-audio} and \ref{ch:conceptual-vision}.  This framework, while not a complete model of perception, does offer theoretical foundations for anyone pursuing computational models of perception.  Significant contributions have also been made towards implementing this framework.  In Chapter \ref{ch:analysis-audio}, we saw how this framework when built using MFCC or PLCA can be used for classifying auditory scenes.  The PLCA model has to date been untested on mixtures of scenes in such a wide variety.  This chapter highlights the performance gain achieved by using PLCA instead of MFCC based features when used in scenes containing many different auditory classes.  PLCA's performance over MFCCs was again demonstrated in terms of visualization purposes in Chapter \ref{ch:synthesis-audio}.  This chapter tackled the problem of 3D visualization in a performative browser of the Daphne Oram Archive.  This approach made the content of the archive more accessible and fun to explore, as reported by researchers of the archive.
+
+
+
 ...Err...?
 
 \section{Limitations}
@@ -3161,7 +3201,14 @@ Lossless versus Lossy compression.
 \section{Future Work}
 Shocking the mind, adding noise to the stored representations, exploring really massive data sets, better model selection, sparse coding, stochastic sampling.
 
-Similar to the browser developed for the Daphne Oram archive, it would be interesting to create a similar tool for visual representations.  This would allow one to organize the objects within an archive based on their similarity in shape/color metric space, i.e. in terms of how similar they are represented in the brain.  This tool could be used to further interrogate the representation.  Further, the mapping of the proto-objects into a lower dimensional space for visualization purposes would likely reveal interesting patterns.  
+Similar to the browser developed for the Daphne Oram archive, it would be interesting to create a similar tool for visual representations.  This would allow one to organize the objects within an archive based on their similarity in shape/color metric space, i.e. in terms of how similar they are represented in the brain.  This tool could be used to further interrogate the representation or for performative or interactive applications (e.g. paint by browsing).  Further, the mapping of the proto-objects into a lower dimensional space for visualization purposes may be able to reveal interesting patterns associated with higher level semantics (e.g. object categories, scene categories).  An initial investigation of this was produced and is shown in Figure \ref{fig:mds-miley}.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/mds-miley.png}
+\caption{An example of running MDS on the proto-object features extracted from the target video for Week 6's YouTube Smash Up, Miley Cyrus' ``Wrecking Ball''}
+\label{fig:mds-miley}
+\end{figure}
 
 Ideally, the representations here of a simple shape and color vector could be extended.  These could be incorporated to include co-occurrences, or how proto-objects are likely to occur with other proto-objects.  This would likely be a histogram based vector, and would require some pre-training in order to build a vocabulary.  Such a measure would likely bring the representation closer to a semantic object-ness and afford very interesting applications in collage-based applications using similar objects rather than proto-objects.
 
