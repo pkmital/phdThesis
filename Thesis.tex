@@ -2268,7 +2268,9 @@ The iTunes App Store has become an ideal place for testing prototypes of researc
 The application interface is shown in Figure \ref{fig:photosynthesizer-layout}.  The user is first presented a screen welcoming them to the application, and briefly describing what will happen: 
 
 \begin{quotationb}
-Welcome to PhotoSynthesizer.  This app will turn your existing photos into crazy new ones.  To begin, we need to select an image to resynthesize.  You can either use your camera to take a new picture, or select an existing one from your photo library.
+Welcome to PhotoSynthesizer.  
+
+This app will turn your existing photos into crazy new ones.  To begin, we need to select an image to resynthesize.  You can either use your camera to take a new picture, or select an existing one from your photo library.
 
 We'll then select few images to use for our resynthesis.  These images will become our palette of ``paint''.  The program will learn parts of these pictures and use them for the resynthesis. 
 
@@ -2416,7 +2418,7 @@ This chapter has applied the computational framework for visual scene synthesis 
 
 \section{Introduction}
 
-This chapter develops our previously developed synthesis frameworks for real-time scenarios.  We discuss extensions for making both auditory and visual memory mosaicing work in real-time individually in Sections \ref{sec:auditory-memory-mosaicing} and \ref{sec:visual-memory-mosaicing} before combining them within an augmented reality in Section \ref{sec:audiovisual}.   The final combination within an augmented reality setting, \textit{Augmented Reality Hallucinations}, has been invited for exhibition twice, once in the Victoria \& Albert Museum's Digital Design Weekend curated by Irini Papadimitrou in London, U.K. (part of the London Design Festival) and once during Breaking Convention in Greenwich University, a psychedelic research conference curated by David Luke in London U.K.
+This chapter develops visual scene synthesis for real-time scenarios.  We discuss extensions for making both auditory and visual memory mosaicing work in real-time individually in Sections \ref{sec:auditory-memory-mosaicing} and \ref{sec:visual-memory-mosaicing} before combining them within an augmented reality in Section \ref{sec:audiovisual}.   The final combination within an augmented reality setting, \textit{Augmented Reality Hallucinations}, has been invited for exhibition twice, once in the Victoria \& Albert Museum's Digital Design Weekend curated by Irini Papadimitrou in London, U.K. (part of the London Design Festival) and once during Breaking Convention in Greenwich University, a psychedelic research conference curated by David Luke in London U.K.
 
 \section{Auditory Memory Mosaicing}
 \label{sec:auditory-memory-mosaicing}
@@ -2859,23 +2861,29 @@ Using the collected identifiers, the video can be downloaded using an existing s
 
 \subsection{Video developments}
 
-The number 1 video of the week is to be synthesized after learning the content from the number 2 - 10 videos.  The framework for video synthesis as developed in Section \ref{sec:artistic-stylization} is applied directly in this work, training the number 2 - 10 videos and synthesizing the number 1 video.  In the outputs for weeks 1 - 3, the proto-objects were synthesized using spatial blending.  The feedback sent to me through personal communication by some people described the result as ``disco balls''\footnote{Personal communication with Atau Tanaka in September, 2012}.  To seek a different aesthetic, after week 3, all syntheses were done without spatial blending.  This appeared to remove the ``disco ball'' effect.  Finally, the integration of the visual acuity map manipulation was incorporated in week 7.  Before week 7, the attention map was still used as a threshold for encoding objects.  The algorithm for learning the proto-objects of the 2 - 10 videos can be summarized as such:
+The number 1 video of the week is to be synthesized after learning the content from the number 2 - 10 videos.  The framework for video synthesis as developed in Section \ref{sec:artistic-stylization} is applied directly in this work, training the number 2 - 10 videos and synthesizing the number 1 video.  In the outputs for weeks 1 - 3, the proto-objects were synthesized using spatial blending.  The feedback sent to me through personal communication by some people described the result as ``disco balls''\footnote{Personal communication with Atau Tanaka in September, 2012}.  To seek a different aesthetic, after week 3, all syntheses were done without spatial blending.  This appeared to remove the ``disco ball'' effect.  Finally, the integration of the visual acuity map manipulation was incorporated in week 7.  Before week 7, the attention map was still used as a threshold for encoding objects.  The algorithm for learning the proto-objects of the 2 - 10 videos and synthesizing the number 1 video can be summarized as such:
 
-\begin{itemizeb}
-\item For all candidate video frames in the number 2 - 10 videos
-\item Detect attention map using the magnitude of the optical flow (see Section \ref{} for details)
-\item Detect proto-objects in the candidate video frames (using the original image for Weeks 1 - 6; using the filtered image from the visual acuity map for Week 7+)
-\item Encode objects higher than threshold by storing a descriptor of its shape, color, and original video content (see Section \ref{} for details}
-\end{itemizeb}
-
-and then for synthesizing:
-
-\begin{itemizeb}
-\item For all target video frames in the number 1 video
-\item Detect attention map using the magnitude of the optical flow (see Section \ref{} for details)
-\item Detect proto-objects in the target video frames (using the original image for Weeks 1 - 6; using the filtered image from the visual acuity map for Week 7+)
-\item Decode objects higher than threshold using the closest matching descriptor of its shape and color, transforming the matched candidate video frame's proto-object to the target video frame's proto-object (see Section \ref{} for details)
-\end{itemizeb}
+\begin{adjustwidth}{-2em}{-2em}
+\centering
+\noindent\begin{minipage}[t]{0.5\linewidth}
+    Learning:
+    \begin{itemize}
+    \item{For all candidate video frames in the number 2 - 10 videos}
+    \item{Detect attention map using the magnitude of the optical flow (see Section \ref{} for details)}
+    \item{Detect proto-objects in the candidate video frames (using the original image for Weeks 1 - 6; using the filtered image from the visual acuity map for Week 7+)}
+    \item{Encode objects higher than threshold by storing a descriptor of its shape, color, and original video content (see Section \ref{} for details}
+    \end{itemize}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\linewidth}
+    Synthesizing:
+    \begin{itemize}
+    \item{For all target video frames in the number 1 video}
+    \item{Detect attention map using the magnitude of the optical flow (see Section \ref{} for details)}
+    \item{Detect proto-objects in the target video frames (using the original image for Weeks 1 - 6; using the filtered image from the visual acuity map for Week 7+)}
+    \item{Decode objects higher than threshold using the closest matching descriptor of its shape and color, transforming the matched candidate video frame's proto-object to the target video frame's proto-object (see Section \ref{} for details)}
+    \end{itemize}
+\end{minipage}\par\bigskip
+\end{adjustwidth}
 
 \subsection{Audio developments}
 
@@ -2883,9 +2891,9 @@ For audio, we must be able to perform a similar feat as in the visual synthesis,
 
 Looking at Figure \ref{fig:memory-mosaic-matching}, we can see how template matching worked for a real-time setting.  In this case, only the beginning of the event was used for matching to an arbitrary length segment of sound.  However, as we do not require the algorithm to work in real-time, we can also wait until the end of the event and use the entire event's content for finding the best match, rather than just the onset of the event.  In order to do this, \cite{CaseyICMC2007} designed a matched filter sequence match called audio shingling.  However, this technique penalizes matches which may have different temporal characteristics.  For instance, consider a hypothetical situation in which a database contains two segments: one producing the sound ``appetizer'' and another producing the sound ``aaahhhppplllleee'' (i.e. the word `apple' pronounced very slowly).  The target to match to is the sound ``apple'' (i.e. the word `apple' pronounced very quickly), similar to the second item in the database, but at a different speed.  In the shingling approach, ``appetizer'' will have a closer match, as the first part of it is an exact match to the target.  However, if we could shrink the second item in the database, this would be an even better match.  
 
-In order to achieve this shrinking or expanding feat, we employ dynamic time warping.  Dynamic Time Warping describes a technique for finding the best match through a warping path among a set of possible candidates.  It has previously been employed for aligning MIDI scores \cite{Schwarz2003a}, and is a well studied technique for aligning speech fragments for performing speech recognition \cite{Rabiner1993a} and has even recently been used for decoding speech from the human brain \cite{Pasley2012}.  We incorporated this technique and used it for matching in Weeks 5 and 6.  My source code for it is freely available online\footnote{\url{https://github.com/pkmital/pkmMatrix/blob/master/pkmDTW.h}} and has been vectorized using Apple's Accelerate Framework, and it incorporates recent algorithmic improvements that make the process much faster to compute.
+In order to find better matches by also considering how candidates could be shrunk or expanded, we employed dynamic time warping.  Dynamic Time Warping describes a technique for finding the best match through a warping path among a set of possible candidates.  It has previously been employed for aligning MIDI scores \cite{Schwarz2003a}, is a well studied technique for aligning speech fragments for performing speech recognition \cite{Rabiner1993a}, and has even recently been used for decoding speech from the human brain \cite{Pasley2012}.  We incorporated this technique and used it for matching in Weeks 5 and 6.  My source code for it is freely available online\footnote{\url{https://github.com/pkmital/pkmMatrix/blob/master/pkmDTW.h}} and has been vectorized using Apple's Accelerate Framework.  It also incorporates recent algorithmic improvements that make the process much faster to compute (optimization details of early abandoning, keogh, and sakoe-chiba bounds can be found here \cite{Rakthanmanon2012}).
 
-For week 7, we began to investigate how the path extracted by DTW could offer a more interesting synthesis.  In a similar vein to the affine transformation we use in visual synthesis (i.e. stretching a candidate proto-object to the target proto-object), we can also warp a candidate audio segment to the target audio segment.  Thus, rather than just find the best match, we also stretch the best match in the synthesis process.  For week 7, we used the Maximilian time stretcher\footnote{Available at \url{http://maximilian.strangeloop.co.uk}}.  This produced some undesirable effects which made the reconstruction sound as though a DJ was scratching a record player.  For week 8, we therefore employed a different time stretching algorithm which did not have this side-effect, DIRAC 3 LE\footnote{Available at \url{http://dirac.dspdimension.com/}}.  
+For week 7, we began to investigate how the path extracted by DTW could offer a more interesting synthesis rather than just better matches.  In a similar vein to the affine transformation we use in visual synthesis (i.e. stretching a candidate proto-object to the target proto-object), we can also warp a candidate audio segment to the target audio segment.  Thus, rather than just find the best match, we also stretch the best match in the synthesis process.  For week 7, we used the Maximilian time stretcher\footnote{\url{http://maximilian.strangeloop.co.uk}}.  This produced some undesirable effects which made the reconstruction sound as though a DJ was scratching a record player.  For week 8, we therefore employed a different time stretching algorithm which did not have this side-effect, DIRAC 3 LE\footnote{\url{http://dirac.dspdimension.com/}}.  
 
 \begin{figure}[!ht]
 \centering
@@ -2901,8 +2909,7 @@ For week 7, we began to investigate how the path extracted by DTW could offer a 
 \label{fig:week5}
 \end{figure}
 
-
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \begin{subfigure}{0.49\textwidth}
 \centering
@@ -2916,7 +2923,7 @@ For week 7, we began to investigate how the path extracted by DTW could offer a 
 \label{fig:week6}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \begin{subfigure}{\textwidth}
 \centering
@@ -2933,6 +2940,126 @@ For week 7, we began to investigate how the path extracted by DTW could offer a 
 \label{fig:week7-audio}
 \end{figure}
 
+
+\section{Copyright Issues}
+
+After uploading week 4's video, I received an e-mail from YouTube stating that my smash up of a home video of two baby twins dancing to their father's guitar had been blocked due to a copyright infringement claim from ``Rightster'':
+
+\singlespacing
+\begin{quotationb}	
+Dear pkmital,
+
+Your video, "11 Month Old Twins Dancing to Daddy's Guitar (YouTube Smash Up)", may have content that is owned or licensed by Rightster. As a result, the video has been blocked on YouTube.
+
+This claim is penalising your account status. Visit your Copyright Notice page for more details on the policy applied to your video.
+
+Yours sincerely,
+- The YouTube Team
+\end{quotationb}
+\doublespacing
+
+Visiting my ``video manager'' on YouTube.com, I could enter YouTube's automated copyright infringement response form.   After submitting my response, as shown in Figure \ref{fig:week4-copyright}, I uploaded week 5's video.  Within minutes, I received another e-mail from YouTube.  This time, my smash up for Psy's Gangnam Style had violated the rights of UMPG Publishing and Sony ATV Publishing.  In response, I attached a letter describing my process and claimed fair use of the content that was actually used (see Appendix \ref{ap:copyright-letter} for a copy of this letter).   I never received any formal response and, after 1 month, the claim was released.  However, after almost 1 year, the video matched the content of Gangnam Style as held by other publishers.  I continue to dispute these claims.
+
+Feeling slightly worried by the possible legal battles that I may have faced had the publishers not agreed with my PhD, I stopped the process of YouTube Smash Up temporarily after week 5.  I began again after writing the thesis in September 2013, 1 year after starting the project.  At this time, Miley Cyrus' ``Wrecking Ball'' was the number 1 video.  I show some example stills of the smash up in Figure \ref{fig:week6}.  Minutes after uploading this video on the 18th of September, the video was matched to the original video.  I filed a dispute with the same letter as in week 5 (see Figure \ref{fig:week6-copyright}).   1 month later, 2 of the 4 publishers rejected by dispute.  I subsequently appealed my dispute, sending in the same letter.  The publishers have until the 18th of November to respond.
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/week4-copyright-1.png}
+\end{subfigure}
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/week4-copyright-2.png}
+\end{subfigure}
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/week4-copyright-4.png}
+\end{subfigure}
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/week4-copyright-5.png}
+\end{subfigure}
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/week4-copyright-6.png}
+\end{subfigure}
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/week4-copyright-7.png}
+\end{subfigure}
+\caption{Week 4's smash up received a copyright infringement claim regarding the ``audiovisual'' content administered by Rightster.  Shown here is YouTube's online form for acknowledging or disputing a copyright infringement claim (best viewed at 800\%).  After submitting a dispute, the copyright holders have 1 month to respond, or else the claim is automatically released.  Before acknowledging or disputing a claim, the video is not publicly available on YouTube.  After submitting either the dispute or acknowledgement, the video is made public again.}
+\label{fig:week4-copyright}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/copyright-claim-1.png}
+\caption{Week 5's smash up received a copyright infringement claim regarding the ``musical composition'' from multiple publishers.}
+\label{fig:week5-copyright}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/week5-copyright-again.png}
+\caption{Week 5's smash up received another copyright infringement claim after nearly 1 year, this time from multiple publishers regarding the ``musical composition'' from multiple publishers and the ``sound recording'' from one publisher.}
+\label{fig:week5-copyright-again}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/week6-copyright.png}
+\caption{Week 6's smash up received a copyright infringement notice nearly 2 minutes after uploading the video.  After 1 month, 2 of the 4 publishers rejected by dispute.  I subsequently appealed the rejection.  These publishers have 1 more month to respond.}
+\label{fig:week6-copyright}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/content-id-1.png}
+\end{subfigure}
+\hspace*{2pt}
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/content-id-2.png}
+\end{subfigure}
+\caption{Application process of YouTube's Content ID system (best viewed at 400\%).}
+\end{figure}
+
+
+\subsection{YouTube Content ID}
+\label{sec:content-id}
+
+After looking into the issue more, it became obvious that YouTube's automated copyright detection service, ContentID was finding my smash ups and informing the content administrators of them.  ContentID was originally introduced in October 2007 as a content management tool named Video ID in order to help content owners find infringing material.  Their technology is likely in part based on Audible Magic's patented technology of audio fingerprinting (acquired by Google in 2007), which likely is in part based on technology of Muscle Fish (acquired by Audible Magic in 2000) \footnote{Numerous patents can be seen here: \url{http://www.audiblemagic.com/technology-patents.php}} \cite{WaynePort2007}.  Though YouTube has not revealed much about how it works, Margaret Gould Stewart, YouTube's head of content demonstrated in a TED talk an impressive visualization of all of YouTube's archive and described how they find infringing material \cite{Stewart2010}:
+
+\singlespacing
+\begin{quotationb}
+Here we can see the reference file being compared to the user generated content. The system compares every moment of one to the other to see if there's a match. This means we can identify a match even if the copy uses just a portion of the original file, plays it in slow motion, and has degraded audio or video.  The scale and speed of this system is truly breathtaking -- we're not just talking about a few videos, we're talking about over 100 years of video every day between new uploads and the legacy scans we regularly do across all of the content on the site. And when we compare those 100 years of video, we're comparing it against millions of reference files in our database. It'd be like 36,000 people staring at 36,000 monitors each and every day without as much as a coffee break.
+\end{quotationb}
+\doublespacing
+
+Smitelli's reverse engineering of YouTube's Content ID system also revealed a number of parameters which could and could not be detected by their system \cite{Smitelli2009}.  In a methodical reverse engineering of YouTube's Content ID system, Smitelli investigated whether his modified uploads of a 1982 song, ``I Know What Boys Like'', would be removed by YouTube.  He states on his website that the choice for this song comes from it being the first song identified and removed by YouTube.  Amongst the modifications he investigates are removing any textual description, raised/lowered pitch, compress/expand time, up/down resampling, adding noise, amplification, chunk (size of segment it can detect), and stereo phase offset.  His results demonstrated that YouTube will still detect duplicates even if you: 
+
+\singlespacing
+\begin{itemizeb}
+\item Remove the description; 
+\item Lower or raise the pitch by < 5\%;
+\item Alter the time by < 5\%;
+\item Resample to < 3\% speed change;
+\item Mix with <= 44\% white noise and >= 56\% song;
+\item	 Alter the amplitude;
+\item Use >= 30s chunk from the start of the song.
+\end{itemizeb}
+\doublespacing
+
+ContentID has had its setbacks.  One month after the 2012 fall democratic convention speech featuring first lady Michelle Obama was aired and subsequently taken down due to copyright infringement \cite{Singel2012}.  YouTube released a statement saying they would enforce manual reviewing of more of their copyright claims by the content owners in an effort to reduce erroneous claims \cite{Alfishawi2012}.  Despite this claim, it is apparent given the claims I have received after this statement that an automated system is likely responsible for sending me the infringement notices.
+
+Their slogan ``Block, track, monetize'' neatly summarizes the advantages of using ContentID.  Rather than just purely find offending material, the content holders are given three options, as per their slogan.  
+
+\subsection{YouTube Copyright School}
+
+In another interesting turn of developments, after attempting to browse to \url{www.youtube.com}, I was redirected to \url{www.youtube.com/copyright_school}.  On this page, titled, ``YouTube Copyright School'', I was presented a video animation of \textit{Happy Tree Friends} where the main character Russel was dressed up as an actual Pirate (shown in Figure \ref{fig:copyright-school}).  In the animation, Russel commits various copyright violations only to be scolded by the voiceover narrator.  Accompanying the animation on the same page is a quiz testing my knowledge of copyright.  Assumedly, I am to watch the animation and gather my knowledge of copyright before continuing to complete the quiz (see Figure \ref{fig:copyright-school} for what this page looks like).
 
 \begin{figure}[!ht]
 \begin{adjustwidth}{-12em}{-12em}
@@ -2968,54 +3095,11 @@ For week 7, we began to investigate how the path extracted by DTW could offer a 
 \label{fig:youtube-copyright-school-smashup}
 \end{figure}
 
-
-\section{YouTube Content ID}
-\label{sec:content-id}
-
-I had been redirected to the copyright school since each one of my videos were claimed to infringe on the rights of the copyright holders.  
-
-In response, I attached a letter describing my process and claimed fair use of the content that was actually used (see Appendix \ref{ap:copyright-letter}).
-
-
-
-\begin{figure}[!ht]
-\centering
-\begin{subfigure}{0.48\textwidth}
-\centering
-\includegraphics[width=\textwidth]{images/content-id-1.png}
-\end{subfigure}
-\hspace*{2pt}
-\begin{subfigure}{0.48\textwidth}
-\centering
-\includegraphics[width=\textwidth]{images/content-id-2.png}
-\end{subfigure}
-\caption{Application process of YouTube's Content ID system (best viewed at 400\%).}
-\end{figure}
-
-
-\hl{In October 2007, YouTube introduced a content management tool, Video ID, to help content owners find infringing material.  Block, track, monetize.}
-
-Margaret Gould Stewart, YouTube's head of content revealed in a TED talk \cite{Stewart2010}
-
-\singlespacing
-\begin{quotationb}
-Here we can see the reference file being compared to the user generated content. The system compares every moment of one to the other to see if there's a match. This means we can identify a match even if the copy uses just a portion of the original file, plays it in slow motion, and has degraded audio or video.  The scale and speed of this system is truly breathtaking -- we're not just talking about a few videos, we're talking about over 100 years of video every day between new uploads and the legacy scans we regularly do across all of the content on the site. And when we compare those 100 years of video, we're comparing it against millions of reference files in our database. It'd be like 36,000 people staring at 36,000 monitors each and every day without as much as a coffee break.
-\end{quotationb}
-\doublespacing
-
-Smitelli's reverse engineering of YouTube's Content ID system revealed a number of parameters which could and could not be detected by their system \cite{Smitelli2009}.
-
-Though one month after the 2012 fall democratic convention speech featuring first lady Michelle Obama was aired and subsequently taken down due to copyright infringement \cite{Singel2012}, YouTube released a statement saying they would enforce manual reviewing of more of their copyright claims by the content owners in an effort to reduce erroneous claims \cite{Alfishawi2012}. 
-
-
-
-\subsection{YouTube Copyright School}
-
-Happy Tree Friends is, according to Wikipedia, ``extremely violent, with almost every episode featuring blood, pain, and gruesome deaths [...] depicting bloodshed and dismemberment in a vivid manner.''  
+Happy Tree Friends is, according to Wikipedia, ``extremely violent, with almost every episode featuring blood, pain, and gruesome deaths [...] depicting bloodshed and dismemberment in a vivid manner'' \cite{htf2013}.  In November 2012, YouTube hosted 89 different episodes of Happy Tree Friends.  I downloaded these and used them to create another YouTube Smash Up.  Some stills can be seen in Figure \ref{fig:youtube-copyright-school-smashup}.  To this date, the video never received any copyright infringement violation notices.
 
 \section{Discussion}
 
-Though it is difficult to describe an artwork's result, as may be necessary within the context of a practice-based PhD, some result may be described by the work being sought out by curators.  
+Though it is difficult to describe an artwork's result, as may be necessary within the context of a practice-based PhD, some result may be described by the work being sought out by curators.  However, a true result may be described by fooling an automated copyright detection software into thinking the content was a duplicate.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

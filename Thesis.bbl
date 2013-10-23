@@ -231,6 +231,12 @@ Nick Collins.
   categorisation as a compositional effect}}.
 \newblock In Perception. Citeseer, 2004.
 
+\bibitem[Collins~2006]{Collins2006}
+Nicholas~M Collins.
+\newblock {\em {Towards Autonomous Agents for Live Computer Music : Realtime
+  Machine Listening and Interactive Music Systems}}.
+\newblock PhD thesis, University of Cambridge, 2006.
+
 \bibitem[Collins~2011]{Collins2011}
 Nick Collins and B~Sturm.
 \newblock {\em {Sound cross-synthesis and morphing using dictionary-based
@@ -382,6 +388,10 @@ P.E. Forss\'{e}n and D.G. Lowe.
 Per-Erik Forss\'{e}n.
 \newblock {\em {Maximally stable colour regions for recognition and matching}}.
 \newblock Computer Vision and Pattern Recognition 2007, (CVPR07)., 2007.
+
+\bibitem[Franke~2013]{Franke2013}
+Daniel Franke, John Mckiernan and Rosa Menkman.
+\newblock {\em {Glitch Art Genealogies}}, 2013.
 
 \bibitem[Furht~1995]{Furht1995}
 Borko Furht.
@@ -1041,6 +1051,12 @@ Elias Pampalk.
   patterns}}.
 \newblock International Symposium on Music Information Retrieval, 2006.
 
+\bibitem[Pasley~2012]{Pasley2012}
+Brian~N. Pasley, Stephen~V. David, Nima Mesgarani, Adeen Flinker, Shihab~a.
+  Shamma, Nathan~E. Crone, Robert~T. Knight and Edward~F. Chang.
+\newblock {\em {Reconstructing Speech from Human Auditory Cortex}}.
+\newblock PLoS Biology, vol.~10, no.~1, page e1001251, January 2012.
+
 \bibitem[Piazza~2013]{Piazza2013}
 Elise~a Piazza, Timothy~D Sweeny, David Wessel, Michael~a Silver and David
   Whitney.
@@ -1075,6 +1091,11 @@ M~C Potter.
 Zenon~W Pylyshyn.
 \newblock {\em {Visual indexes, preconceptual objects, and situated vision}}.
 \newblock Cognition, vol.~80, pages 127--158, 2001.
+
+\bibitem[Rabiner~1993]{Rabiner1993a}
+L~Rabiner and BH~Juang.
+\newblock {Fundamentals of speech recognition}.
+\newblock Prentice Hall International, Inc., 1993.
 
 \bibitem[Raj~2010]{Raj2010}
 Bhiksha Raj, Tuomas Virtanen, Sourish Chaudhuri and Rita Singh.
@@ -1176,6 +1197,13 @@ D~Schwarz.
 \newblock {\em {A System for Data-Driven Concatenative Sound Synthesis}}.
 \newblock In Proc. COST G-6 Conf. on Digital Audio Effects, Verona, Italy,
   2000.
+
+\bibitem[Schwarz~2003]{Schwarz2003a}
+D~Schwarz.
+\newblock {\em {The caterpillar system for data-driven concatenative sound
+  synthesis}}.
+\newblock In Proceedings of the 6th International Conference on Digital Audio
+  Effects (DAFx-03), London, U.K., 2003.
 
 \bibitem[Schwarz~2006]{Schwarz2006}
 D~Schwarz.
