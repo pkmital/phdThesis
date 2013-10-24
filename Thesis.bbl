@@ -578,6 +578,9 @@ BKP Horn and BG~Schunck.
 \newblock {\em {Determining optical flow}}.
 \newblock Artificial intelligence, vol.~17, pages 185--203, 1981.
 
+\bibitem[htf~]{htf2013}
+{\em {Happy Tree Friends}}.
+
 \bibitem[Huang~2011]{Huang2011a}
 Hua Huang, Lei Zhang and Hong-Chao Zhang.
 \newblock {\em {Arcimboldo-like collage using internet images}}.
@@ -1063,6 +1066,11 @@ Elise~a Piazza, Timothy~D Sweeny, David Wessel, Michael~a Silver and David
 \newblock {\em {Humans Use Summary Statistics to Perceive Auditory Sequences.}}
 \newblock Psychological science, June 2013.
 
+\bibitem[Porter~2007]{WaynePort2007}
+Wayne Porter.
+\newblock {\em {GOOG to Outsource YouTube Filtering to AudibleMagic |
+  ReveNewsReveNews}}, 2007.
+
 \bibitem[Posner~1984]{Posner1984}
 MI~Posner and Y~Cohen.
 \newblock {\em {Components of visual orienting}}.
@@ -1103,6 +1111,14 @@ Bhiksha Raj, Tuomas Virtanen, Sourish Chaudhuri and Rita Singh.
   for automatic speech recognition}}.
 \newblock Proceedings of the 11th Annual Conference of the International Speech
   Communication Association, pages 717--720, 2010.
+
+\bibitem[Rakthanmanon~2012]{Rakthanmanon2012}
+Thanawin Rakthanmanon, Bilson Campana, Abdullah Mueen, Gustavo Batista, Brandon
+  Westover, Qiang Zhu, Jesin Zakaria and Eamonn Keogh.
+\newblock {\em {Searching and mining trillions of time series subsequences
+  under dynamic time warping}}.
+\newblock Proceedings of the 18th ACM SIGKDD international conference on
+  Knowledge discovery and data mining - KDD '12, page 262, 2012.
 
 \bibitem[Rao~1999a]{Rao1999}
 B~D Rao and K~Kreutz-Delgado.
