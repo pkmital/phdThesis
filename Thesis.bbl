@@ -1,19 +1,19 @@
 \begin{thebibliography}{xxxx}
 
-\bibitem[Ahlberg~1995]{Ahlberg1995}
+\bibitem[Ahlberg \& Wistrand~1995]{Ahlberg1995}
 Christopher Ahlberg and Erik Wistrand.
 \newblock {\em {IVEE: An Information Visualization \& Exploration Environment
   Exploration Environment}}.
 \newblock Proceedings of IEEE Viz'95, 1995.
 
-\bibitem[Alain~2001]{Alain2001}
+\bibitem[Alain \textit{et~al.}~2001]{Alain2001}
 C~Alain, SR~Arnott and TW~Picton.
 \newblock {\em {Bottom–up and top–down influences on auditory scene
   analysis: Evidence from event-related brain potentials.}}
 \newblock Journal of Experimental Psychology: Human Perception and Performance,
   vol.~27, no.~5, pages 1072--1089, 2001.
 
-\bibitem[Alain~2002]{Alain2002}
+\bibitem[Alain \textit{et~al.}~2002]{Alain2002}
 Claude Alain, Benjamin~M. Schuler and Kelly~L. McDonald.
 \newblock {\em {Neural activity associated with distinguishing concurrent
   auditory objects}}.
@@ -24,58 +24,58 @@ Claude Alain, Benjamin~M. Schuler and Kelly~L. McDonald.
 Thabet Alfishawi.
 \newblock {\em {Improving Content ID}}, 2012.
 
-\bibitem[Allamanche~2001]{Allamanche2001}
+\bibitem[Allamanche \textit{et~al.}~2001]{Allamanche2001}
 Eric Allamanche, J~Herre and Oliver Hellmuth.
 \newblock {\em {Content-based identification of audio material using MPEG-7 low
   level description}}.
 \newblock Proceedings of the International Symposium on Music Information
   Retrieval, 2001.
 
-\bibitem[Aucouturier~2007]{Aucouturier2007a}
+\bibitem[Aucouturier \textit{et~al.}~2007]{Aucouturier2007a}
 Jean-Julien Aucouturier, Boris Defreville and Fran\c{c}ois Pachet.
 \newblock {\em {The bag-of-frames approach to audio pattern recognition: a
   sufficient model for urban soundscapes but not for polyphonic music.}}
 \newblock Journal of the Acoustical Society of America, vol.~122, no.~2, pages
   881--91, 2007.
 
-\bibitem[Augoyard~2006]{Augoyard2006}
+\bibitem[Augoyard \& Torgue~2006]{Augoyard2006}
 Jean-Francois Augoyard and Henry Torgue.
 \newblock {Sonic Experience: A Guide To Everyday Sounds}.
 \newblock Mcgill Queens Univ Pr, 2006.
 
-\bibitem[Azzopardi~2012]{Azzopardi2012}
+\bibitem[Azzopardi \& Petkov~2012]{Azzopardi2012}
 George Azzopardi and Nicolai Petkov.
 \newblock {\em {A CORF computational model of a simple cell that relies on LGN
   input outperforms the Gabor function model.}}
 \newblock Biological cybernetics, vol.~106, no.~3, pages 177--89, March 2012.
 
-\bibitem[Barnard~2003]{Barnard2003}
+\bibitem[Barnard \textit{et~al.}~2003]{Barnard2003}
 Kobus Barnard, P~Duygulu, David Forsyth, Nando de~Freitas, David Blei and
   Michael Jordan.
 \newblock {\em {Matching words and pictures}}.
 \newblock The Journal of Machine Learning Research, vol.~3, pages 1107--1135,
   2003.
 
-\bibitem[Bartsch~2001]{Bartsch2001}
+\bibitem[Bartsch \& Wakefield~2001]{Bartsch2001}
 Mark~A. Bartsch and Gregory~H Wakefield.
 \newblock {\em {To Catch a Chorus: Using Chroma-based Representations for Audio
   Thumbnailing}}.
 \newblock In IEEE Workshop on Applications of Signal Processing to Audio and
   Acoustics, 2001.
 
-\bibitem[Benetos~2011]{Benetos2011}
+\bibitem[Benetos \& Dixon~2011]{Benetos2011}
 Emmanouil Benetos and Simon Dixon.
 \newblock {\em {Multiple-instrument polyphonic music transcription using a
   convolutive probabilistic model}}.
 \newblock 8th Sound and Music Computing Conference, 2011.
 
-\bibitem[Bertin-Mahieux~2011]{Bertin-Mahieux2011}
+\bibitem[Bertin-Mahieux \textit{et~al.}~2011]{Bertin-Mahieux2011}
 Thierry Bertin-Mahieux, Daniel P.~W. Ellis, Brian Whitman and Paul Lamere.
 \newblock {\em {The million song dataset}}.
 \newblock In Proceedings of the 12th International Society for Music
   Information Retrieval Conference (ISMIR 2011), 2011.
 
-\bibitem[Biederman~1974]{Biederman1974}
+\bibitem[Biederman \textit{et~al.}~1974]{Biederman1974}
 I~Biederman, J~C Rabinowitz, A~L Glass and E~W Stacy.
 \newblock {\em {On the information extracted from a glance at a scene}}.
 \newblock Journal of Experimental Psychology, vol.~103, no.~3, pages 597--600,
@@ -92,24 +92,24 @@ CM~Bishop.
 \newblock {Pattern recognition and machine learning}.
 \newblock 2006.
 
-\bibitem[Blei~2003]{Blei2003}
+\bibitem[Blei \textit{et~al.}~2003]{Blei2003}
 D.M. Blei, A.Y. Ng and M.I. Jordan.
 \newblock {\em {Latent dirichlet allocation}}.
 \newblock The Journal of Machine Learning Research, vol.~3, pages 993--1022,
   2003.
 
-\bibitem[Bogart~2013]{Bogart2013}
+\bibitem[Bogart \& Pasquier~2013]{Bogart2013}
 Benjamin David~Robert Bogart and Philippe Pasquier.
 \newblock {\em {Context Machines: A Series of Situated and Self-Organizing
   Artworks}}.
 \newblock Leonardo, vol.~46, no.~2, pages 114--122, April 2013.
 
-\bibitem[Bosch~2006]{Bosch2006}
+\bibitem[Bosch \textit{et~al.}~2006]{Bosch2006}
 Anna Bosch, Andrew Zisserman and Xavier Mu\~{n}oz.
 \newblock {\em {Scene Classification via pLSA}}.
 \newblock Lecture Notes in Computer Science, vol.~3954, pages 517--530, 2006.
 
-\bibitem[Bousseau~2007]{Bousseau2007}
+\bibitem[Bousseau \textit{et~al.}~2007]{Bousseau2007}
 Adrien Bousseau, Fabrice Neyret, Jo\"{e}lle Thollot and David Salesin.
 \newblock {\em {Video watercolorization using bidirectional texture
   advection}}.
@@ -137,7 +137,7 @@ GT~Buswell.
 \newblock {\em {How people look at pictures}}.
 \newblock 1935.
 
-\bibitem[Campbell~2007]{Campbell2007}
+\bibitem[Campbell \textit{et~al.}~2007]{Campbell2007}
 Tom Campbell, Istv\'{a}n Winkler and Teija Kujala.
 \newblock {\em {N1 and the mismatch negativity are spatiotemporally distinct
   ERP components: disruption of immediate memory by auditory distraction can be
@@ -150,41 +150,41 @@ J~Canny.
 \newblock IEEE transactions on pattern analysis and machine intelligence,
   vol.~8, no.~6, pages 679--98, June 1986.
 
-\bibitem[Carmi~2006]{Carmi2006}
+\bibitem[Carmi \& Itti~2006]{Carmi2006}
 Ran Carmi and Laurent Itti.
 \newblock {\em {Visual causes versus correlates of attentional selection in
   dynamic scenes.}}
 \newblock Vision research, vol.~46, no.~26, pages 4333--45, December 2006.
 
-\bibitem[Cartwright~2011]{Cartwright}
+\bibitem[Cartwright \textit{et~al.}~2011]{Cartwright}
 Mark Cartwright, Zafar Rafii, Jinyu Han and Bryan Pardo.
 \newblock {\em {Making searchable melodies: Human vs. machine}}.
 \newblock In Proceedings of the 2011 AAAI Workshop on Human Computation, San
   Francisco, USA., 2011.
 
-\bibitem[Casey~2001]{Casey2001a}
-Michael Casey.
-\newblock {\em {General sound classification and similarity in MPEG-7}}.
-\newblock Organised Sound, vol.~6, no.~02, pages 153--164, 2001.
-
-\bibitem[Casey~2007]{CaseyICMC2007}
+\bibitem[Casey \& Grierson~2007]{CaseyICMC2007}
 Michael Casey and Mick Grierson.
 \newblock {\em {Soundspotter/Remix-TV: fast approximate matching for audio and
   video performance}}.
 \newblock Proceedings of the International Computer Music Conference, 2007.
 
-\bibitem[Casey~2008a]{Casey2008b}
+\bibitem[Casey \textit{et~al.}~2008a]{Casey2008b}
 MA~Casey, Remco Veltkamp and Masataka Goto.
 \newblock {\em {Content-based music information retrieval: current directions
   and future challenges}}.
 \newblock Proceedings of the IEEE, vol.~96, no.~4, 2008.
 
-\bibitem[Casey~2008b]{Casey2008c}
+\bibitem[Casey \textit{et~al.}~2008b]{Casey2008c}
 Michael~A Casey, Remco Veltkamp, Masataka Goto, Marc Leman, Christophe Rhodes
   and Malcolm Slaney.
 \newblock {\em {Content-Based Music Information Retrieval : Current Directions
   and Future Challenges}}.
 \newblock Proceedings of the IEEE, vol.~96, no.~4, 2008.
+
+\bibitem[Casey~2001]{Casey2001a}
+Michael Casey.
+\newblock {\em {General sound classification and similarity in MPEG-7}}.
+\newblock Organised Sound, vol.~6, no.~02, pages 153--164, 2001.
 
 \bibitem[Casey~2009]{Casey2009}
 Michael Casey.
@@ -193,7 +193,7 @@ Michael Casey.
   Digital Sound Culture, pages 421--453. Oxford University Press, New York,
   2009.
 
-\bibitem[Celsis~1999]{Celsis1999}
+\bibitem[Celsis \textit{et~al.}~1999]{Celsis1999}
 P~Celsis, K~Boulanouar, B~Doyon, J~P Ranjeva, I~Berry, J~L Nespoulous and
   F~Chollet.
 \newblock {\em {Differential fMRI responses in the left posterior superior
@@ -201,29 +201,35 @@ P~Celsis, K~Boulanouar, B~Doyon, J~P Ranjeva, I~Berry, J~L Nespoulous and
   detection in syllables and tones.}}
 \newblock NeuroImage, vol.~9, no.~1, pages 135--44, January 1999.
 
-\bibitem[Chang~2010]{Chang2010}
+\bibitem[Chang \textit{et~al.}~2010]{Chang2010}
 IC~Chang, YM~Peng, YS~Chen and SC~Wang.
 \newblock {\em {Artistic Painting Style Transformation Using a Patch-based
   Sampling Method}}.
 \newblock Journal of Information Science and Engineering, vol.~26, pages
   1443--1458, 2010.
 
-\bibitem[Chen~2013]{Chen2013}
+\bibitem[Chen \textit{et~al.}~2013]{Chen2013}
 Tao Chen, Zhe Zhu, Ariel Shamir and Shi-min~Hu Daniel.
 \newblock {\em {3-Sweep: Extracting Editable Objects from a Single Photo}}.
 \newblock ACM Transactions on Graphics (TOG), vol.~32, no.~5, 2013.
 
-\bibitem[Christel~1998]{Christel1998}
+\bibitem[Christel \& Martin~1998]{Christel1998}
 Michael Christel and David Martin.
 \newblock {\em {Information visualization within a digital video library}}.
 \newblock Journal of Intelligent Information Systems, no.~June, 1998.
 
-\bibitem[Chu~2009]{Chu2009a}
+\bibitem[Chu \textit{et~al.}~2009]{Chu2009a}
 Selina Chu, Shrikanth Narayanan and C.C.J. Kuo.
 \newblock {\em {Environmental sound recognition with time–frequency audio
   features}}.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
   vol.~17, no.~6, pages 1142--1158, 2009.
+
+\bibitem[Collins \& Sturm~2011]{Collins2011}
+Nick Collins and B~Sturm.
+\newblock {\em {Sound cross-synthesis and morphing using dictionary-based
+  methods}}.
+\newblock In Proceedings of ICMC 2011, 2011.
 
 \bibitem[Collins~2004]{Collins2004}
 Nick Collins.
@@ -237,13 +243,7 @@ Nicholas~M Collins.
   Machine Listening and Interactive Music Systems}}.
 \newblock PhD thesis, University of Cambridge, 2006.
 
-\bibitem[Collins~2011]{Collins2011}
-Nick Collins and B~Sturm.
-\newblock {\em {Sound cross-synthesis and morphing using dictionary-based
-  methods}}.
-\newblock In Proceedings of ICMC 2011, 2011.
-
-\bibitem[Comaniciu~2001]{Comaniciu2001}
+\bibitem[Comaniciu \& Meer~2001]{Comaniciu2001}
 Dorin Comaniciu and Peter Meer.
 \newblock {\em {Mean Shift : A Robust Approach toward Feature Space Analysis 1
   Introduction}}.
@@ -268,45 +268,45 @@ Nelson Cowan.
   system.}}
 \newblock Psychological bulletin, vol.~104, no.~2, pages 163--191, 1988.
 
-\bibitem[Curcio~1990]{Curcio1990}
+\bibitem[Curcio \& Allen~1990]{Curcio1990}
 CA~Curcio and KA~Allen.
 \newblock {\em {Topography of ganglion cells in human retina}}.
 \newblock Journal of Comparative Neurology, vol.~300, pages 5--25, 1990.
 
-\bibitem[Dalal~2005]{Dalal2005}
+\bibitem[Dalal \& Triggs~2005]{Dalal2005}
 N.~Dalal and B.~Triggs.
 \newblock {\em {Histograms of Oriented Gradients for Human Detection}}.
 \newblock 2005 IEEE Computer Society Conference on Computer Vision and Pattern
   Recognition (CVPR'05), vol.~1, pages 886--893, 2005.
 
-\bibitem[{Danielle O'Steen}~2007]{DanielleOSteen2007}
+\bibitem[{Danielle O'Steen} \& O'Steen~2007]{DanielleOSteen2007}
 {Danielle O'Steen} and Danielle O'Steen.
 \newblock {Artist Dossier: Joseph Cornell}.
 \newblock ART+AUCTION, 2007.
 
-\bibitem[Davis~1939]{Davis1939}
-P.~A. Davis.
-\newblock {\em {Effects of Acoustic Stimuli on the Waking Human Brain}}.
-\newblock Journal of Neurophysiology, vol.~2, November 1939.
-
-\bibitem[Davis~1980]{Davis1980}
+\bibitem[Davis \& Mermelstein~1980]{Davis1980}
 S~Davis and Paul Mermelstein.
 \newblock {\em {Comparison of parametric representations for monosyllabic word
   recognition in continuously spoken sentences}}.
 \newblock IEEE Transactions on Acoustics, Speech and Signal Processing,
   vol.~ASSP-28, no.~4, pages 357--366, 1980.
 
-\bibitem[DeCarlo~2002]{DeCarlo2002}
+\bibitem[Davis~1939]{Davis1939}
+P.~A. Davis.
+\newblock {\em {Effects of Acoustic Stimuli on the Waking Human Brain}}.
+\newblock Journal of Neurophysiology, vol.~2, November 1939.
+
+\bibitem[DeCarlo \& Santella~2002]{DeCarlo2002}
 Doug DeCarlo and Anthony Santella.
 \newblock {\em {Stylization and abstraction of photographs}}.
 \newblock ACM Transactions on Graphics, vol.~21, no.~3, pages 1--8, July 2002.
 
-\bibitem[DiCarlo~2012]{DiCarlo2012}
+\bibitem[DiCarlo \textit{et~al.}~2012]{DiCarlo2012}
 James~J DiCarlo, Davide Zoccolan and Nicole~C Rust.
 \newblock {\em {How does the brain solve visual object recognition?}}
 \newblock Neuron, vol.~73, no.~3, pages 415--34, February 2012.
 
-\bibitem[Dominik~2009]{Dominik2009}
+\bibitem[Dominik \& Jarke~2009]{Dominik2009}
 L~Dominik and Matthias Jarke.
 \newblock {\em {Adaptive multimodal exploration of music collections}}.
 \newblock Proceedings of the 10th International Society for Music Information
@@ -318,19 +318,19 @@ DL~Donoho.
 \newblock IEEE Transactions on Information Theory, vol.~52, no.~4, pages 1289
   -- 1306, 2006.
 
-\bibitem[Duan~2012]{Duan2012}
+\bibitem[Duan \textit{et~al.}~2012]{Duan2012}
 Zhiyao Duan, Gautham~J Mysore and Paris Smaragdis.
 \newblock {\em {Online PLCA for Real-time Semi-supervised Source Separation}}.
 \newblock Proceedings of the international conference on Latent Variable
   Analysis / Independent Component Analysis, pages 1--8, 2012.
 
-\bibitem[Efros~2001]{Efros2001}
+\bibitem[Efros \& Freeman~2001]{Efros2001}
 AA~Efros and WT~Freeman.
 \newblock {\em {Image quilting for texture synthesis and transfer}}.
 \newblock SIGGRAPH 2001: Proceedings of the 28th annual conference on Computer
   graphics and interactive techniques., 2001.
 
-\bibitem[Eronen~2006]{Eronen2006}
+\bibitem[Eronen \textit{et~al.}~2006]{Eronen2006}
 AJ~Eronen, VT~Peltonen and JT~Tuomi.
 \newblock {\em {Audio-based context recognition}}.
 \newblock Audio, Speech, and Language Processing, IEEE Transactions on,
@@ -341,7 +341,7 @@ Joe Fassler.
 \newblock {\em {How Copyright Law Hurts Music, From Chuck D to Girl Talk}},
   April 2011.
 
-\bibitem[Fei-Fei~2005]{FeiFei2005}
+\bibitem[Fei-Fei \& Perona~2005]{FeiFei2005}
 L~Fei-Fei and P.~Perona.
 \newblock {\em {A bayesian hierarchical model for learning natural scene
   categories}}.
@@ -354,19 +354,19 @@ PL~Feuerstein.
   processo creativo}}.
 \newblock International Conference on Generative Art, 1998.
 
-\bibitem[Filipe~2013]{Filipe2013}
+\bibitem[Filipe \& Alexandre~2013]{Filipe2013}
 S\'{\i}lvio Filipe and Lu\'{\i}s~a. Alexandre.
 \newblock {\em {From the human visual system to the computational models of
   visual attention: a survey}}.
 \newblock Artificial Intelligence Review, January 2013.
 
-\bibitem[Findlay~2003a]{Findlay2003}
+\bibitem[Findlay \& Gilchrist~2003a]{Findlay2003}
 John~M. Findlay and Iain~D. Gilchrist.
 \newblock {Active Vision: The Psychology of Looking and Seeing (Oxford
   Psychology)}.
 \newblock Oxford University Press, USA, 2003.
 
-\bibitem[Findlay~2003b]{Findlay2003a}
+\bibitem[Findlay \& Gilchrist~2003b]{Findlay2003a}
 John~M Findlay and Iain~D Gilchrist.
 \newblock {\em {Eye Guidance and Visual Search}}.
 \newblock In Geoffrey Underwood, editeur, Cognitive Processes in Eye Guidance,
@@ -378,45 +378,61 @@ Harvey Fletcher.
 \newblock Reviews of Modern Physics, vol.~12, no.~1, pages 47--65, January
   1940.
 
-\bibitem[Forss\'{e}n~2007a]{Forssen2007a}
+\bibitem[Forss\'{e}n \& Lowe~2007]{Forssen2007a}
 P.E. Forss\'{e}n and D.G. Lowe.
 \newblock {\em {Shape descriptors for maximally stable extremal regions}}.
 \newblock In 11th IEEE International Conference on Computer Vision, 2007. ICCV
   2007., pages 1--8. Ieee, 2007.
 
-\bibitem[Forss\'{e}n~2007b]{Forssen2007}
+\bibitem[Forss\'{e}n~2007]{Forssen2007}
 Per-Erik Forss\'{e}n.
 \newblock {\em {Maximally stable colour regions for recognition and matching}}.
 \newblock Computer Vision and Pattern Recognition 2007, (CVPR07)., 2007.
 
-\bibitem[Franke~2013]{Franke2013}
+\bibitem[Franke \textit{et~al.}~2013]{Franke2013}
 Daniel Franke, John Mckiernan and Rosa Menkman.
 \newblock {\em {Glitch Art Genealogies}}, 2013.
+
+\bibitem[Fried \& Fiebrink~2013]{Fried2013}
+Ohad Fried and Rebecca Fiebrink.
+\newblock {\em {Cross-modal Sound Mapping Using Deep Learning}}.
+\newblock Proceedings of the 2013 New Interfaces for Musical Expression
+  Conference (NIME2013), 2013.
+
+\bibitem[Fujiwara \textit{et~al.}~2009]{Fujiwara2009}
+Yusuke Fujiwara, Yoichi Miyawaki and Yukiyasu Kamitani.
+\newblock {\em {Estimating image bases for visual image reconstruction from
+  human brain activity}}.
+\newblock Advances in Neural Information Processing Systems, 2009.
 
 \bibitem[Furht~1995]{Furht1995}
 Borko Furht.
 \newblock {\em {A Survery of Multimedia Compression Techniques and Standards}}.
 \newblock Real-Time Imaging, vol.~1, pages 49--67, 1995.
 
-\bibitem[Garrido~2009]{Garrido2009}
+\bibitem[Garrido \textit{et~al.}~2009]{Garrido2009}
 Marta~I Garrido, James~M Kilner, Klaas~E Stephan and Karl~J Friston.
 \newblock {\em {The mismatch negativity: a review of underlying mechanisms.}}
 \newblock Clinical neurophysiology : official journal of the International
   Federation of Clinical Neurophysiology, vol.~120, no.~3, pages 453--63, March
   2009.
 
-\bibitem[Gooch~2002]{Gooch2002}
+\bibitem[Gooch \textit{et~al.}~2002]{Gooch2002}
 Bruce Gooch, Greg Coombe and Peter Shirley.
 \newblock {\em {Artistic vision: painterly rendering using computer vision
   techniques}}.
 \newblock In NPAR '02 Proceedings of the 2nd international symposium on
   Non-photorealistic animation and rendering, page~83, 2002.
 
-\bibitem[Gottlieb~1998]{Gottlieb1998}
+\bibitem[Gottlieb \textit{et~al.}~1998]{Gottlieb1998}
 J~P Gottlieb, M~Kusunoki and M~E Goldberg.
 \newblock {\em {The representation of visual salience in monkey parietal
   cortex.}}
 \newblock Nature, vol.~391, no.~6666, pages 481--4, January 1998.
+
+\bibitem[Grierson \& Kiefer~2013]{MickGrierson2013}
+Mick Grierson and Chris Kiefer.
+\newblock {\em {Maximilian}}, 2013.
 
 \bibitem[Grierson~2005]{Grierson2005}
 Mick Grierson.
@@ -429,23 +445,19 @@ Mick Grierson.
   Audiovisual Analysis, Composition and Performance}}.
 \newblock In EVA 2009 London Conference, pages 276--284, 2009.
 
-\bibitem[Grierson~2013]{MickGrierson2013}
-Mick Grierson and Chris Kiefer.
-\newblock {\em {Maximilian}}, 2013.
-
-\bibitem[Griffiths~2004]{Griffiths2004}
+\bibitem[Griffiths \& Warren~2004]{Griffiths2004}
 Timothy~D Griffiths and Jason~D Warren.
 \newblock {\em {What is an auditory object?}}
 \newblock Nature reviews. Neuroscience, vol.~5, no.~11, pages 887--92, November
   2004.
 
-\bibitem[Guo~2003]{Guo2003a}
+\bibitem[Guo \& Li~2003]{Guo2003a}
 G~Guo and S~Z Li.
 \newblock {\em {Content-Based Audio Classification and Retrieval by Support
   Vector Machines}}.
 \newblock IEEE Trans. Neural Networks, vol.~14, no.~1, pages 209--215, 2003.
 
-\bibitem[Guo~2006]{Guo2006}
+\bibitem[Guo \textit{et~al.}~2006]{Guo2006}
 Yan-wen Guo, Jin-hui Yu, Xiao-dong Xu, Jin Wang and Qun-sheng Peng.
 \newblock {\em {Example based painting generation}}.
 \newblock Journal of Zhejiang University SCIENCE A, vol.~7, no.~7, pages
@@ -457,7 +469,7 @@ Paul Haeberli.
 \newblock ACM SIGGRAPH Computer Graphics, vol.~24, no.~4, pages 207--214,
   September 1990.
 
-\bibitem[Hari~1984]{Hari1984}
+\bibitem[Hari \textit{et~al.}~1984]{Hari1984}
 R~Hari, M~H\"{a}m\"{a}l\"{a}inen, R~Ilmoniemi, E~Kaukoranta, K~Reinikainen,
   J~Salminen, K~Alho, R~N\"{a}\"{a}t\"{a}nen and M~Sams.
 \newblock {\em {Responses of the primary auditory cortex to pitch changes in a
@@ -465,7 +477,7 @@ R~Hari, M~H\"{a}m\"{a}l\"{a}inen, R~Ilmoniemi, E~Kaukoranta, K~Reinikainen,
 \newblock Neuroscience letters, vol.~50, no.~1-3, pages 127--32, September
   1984.
 
-\bibitem[Harma~2005]{Harma2005}
+\bibitem[Harma \& McKinney~2005]{Harma2005}
 A~Harma and MF~McKinney.
 \newblock {\em {Automatic surveillance of the acoustic activity in our living
   environment}}.
@@ -478,25 +490,25 @@ Christine Harold.
 \newblock Critical Studies in Media Communication, vol.~21, no.~3, pages
   189--211, September 2004.
 
-\bibitem[Harris~1988]{Harris1988}
+\bibitem[Harris \& Stephens~1988]{Harris1988}
 C.~Harris and M.~Stephens.
 \newblock {\em {A Combined Corner and Edge Detector}}.
 \newblock Procedings of the Alvey Vision Conference 1988, pages 23.1--23.6,
   1988.
 
-\bibitem[Healey~2004]{Healey2004}
+\bibitem[Healey \textit{et~al.}~2004]{Healey2004}
 Christopher~G. Healey, Laura Tateosian, James~T. Enns and Mark Remple.
 \newblock {\em {Perceptually based brush strokes for nonphotorealistic
   visualization}}.
 \newblock ACM Transactions on Graphics, vol.~23, no.~1, pages 64--96, January
   2004.
 
-\bibitem[Heise~2012]{Heise2012}
+\bibitem[Heise \textit{et~al.}~2012]{Heise2012}
 S~Heise, M~Hlatky and J~Loviscach.
 \newblock {\em {Soundtorch: Quick browsing in large audio collections}}.
 \newblock Audio Engineering Society Convention 125, 2012.
 
-\bibitem[Henderson~1999]{Henderson1999}
+\bibitem[Henderson \& Hollingworth~1999]{Henderson1999}
 J~M Henderson and a~Hollingworth.
 \newblock {\em {High-level scene perception.}}
 \newblock Annual review of psychology, vol.~50, pages 243--71, January 1999.
@@ -507,6 +519,25 @@ J~Henderson.
 \newblock Trends in Cognitive Sciences, vol.~7, no.~11, pages 498--504,
   November 2003.
 
+\bibitem[Hertzmann \& Perlin~2000]{Hertzmann2000}
+Aaron Hertzmann and Ken Perlin.
+\newblock {\em {Painterly rendering for video and interaction}}.
+\newblock Proceedings of the first international symposium on
+  Non-photorealistic animation and rendering - NPAR '00, pages 7--12, 2000.
+
+\bibitem[Hertzmann \textit{et~al.}~2001]{Hertzmann2001}
+Aaron Hertzmann, Charles~E. Jacobs, Nuria Oliver, Brian Curless and David~H.
+  Salesin.
+\newblock {\em {Image analogies}}.
+\newblock Proceedings of the 28th annual conference on Computer graphics and
+  interactive techniques - SIGGRAPH '01, pages 327--340, 2001.
+
+\bibitem[Hertzmann \textit{et~al.}~2002]{Hertzmann2002}
+Aaron Hertzmann, Nuria Oliver, Brian Curless and Steven~M. Seitz.
+\newblock {\em {Curve analogies}}.
+\newblock In EGRW '02 Proceedings of the 13th Eurographics workshop on
+  Rendering, pages 233--246, 2002.
+
 \bibitem[Hertzmann~1998]{Hertzmann1998}
 Aaron Hertzmann.
 \newblock {\em {Painterly rendering with curved brush strokes of multiple
@@ -514,43 +545,24 @@ Aaron Hertzmann.
 \newblock Proceedings of the 25th annual conference on Computer graphics and
   interactive techniques - SIGGRAPH '98, pages 453--460, 1998.
 
-\bibitem[Hertzmann~2000]{Hertzmann2000}
-Aaron Hertzmann and Ken Perlin.
-\newblock {\em {Painterly rendering for video and interaction}}.
-\newblock Proceedings of the first international symposium on
-  Non-photorealistic animation and rendering - NPAR '00, pages 7--12, 2000.
-
-\bibitem[Hertzmann~2001]{Hertzmann2001}
-Aaron Hertzmann, Charles~E. Jacobs, Nuria Oliver, Brian Curless and David~H.
-  Salesin.
-\newblock {\em {Image analogies}}.
-\newblock Proceedings of the 28th annual conference on Computer graphics and
-  interactive techniques - SIGGRAPH '01, pages 327--340, 2001.
-
-\bibitem[Hertzmann~2002]{Hertzmann2002}
-Aaron Hertzmann, Nuria Oliver, Brian Curless and Steven~M. Seitz.
-\newblock {\em {Curve analogies}}.
-\newblock In EGRW '02 Proceedings of the 13th Eurographics workshop on
-  Rendering, pages 233--246, 2002.
-
-\bibitem[Hillyard~1973]{Hillyard1973}
-SA~Hillyard, RF~Hink, VL~Schwent and TW~Picton.
-\newblock {\em {Electrical signs of selective attention in the human brain}}.
-\newblock Science, vol.~182, no.~4108, pages 177--180, 1973.
-
-\bibitem[Hillyard~1983]{Hillyard1983}
+\bibitem[Hillyard \& Kutas~1983]{Hillyard1983}
 S~a Hillyard and M~Kutas.
 \newblock {\em {Electrophysiology of cognitive processing.}}
 \newblock Annual review of psychology, vol.~34, no.~Haber 1974, pages 33--61,
   January 1983.
 
-\bibitem[Himmel~1998]{Himmel1998}
+\bibitem[Hillyard \textit{et~al.}~1973]{Hillyard1973}
+SA~Hillyard, RF~Hink, VL~Schwent and TW~Picton.
+\newblock {\em {Electrical signs of selective attention in the human brain}}.
+\newblock Science, vol.~182, no.~4108, pages 177--180, 1973.
+
+\bibitem[Himmel \textit{et~al.}~1998]{Himmel1998}
 Dave Himmel, Mark Greaves, Anne Kao and Steve Poteet.
 \newblock {\em {Visualization for large collections of multimedia
   information}}.
 \newblock Content Visualization and Intermedia Representations, 1998.
 
-\bibitem[Hochman~2013]{Hochman2013}
+\bibitem[Hochman \& Manovich~2013]{Hochman2013}
 Nadav Hochman and Lev Manovich.
 \newblock {\em {Zooming into an Instagram City: Reading the local through
   social media}}, June 2013.
@@ -567,33 +579,38 @@ Thomas Hofmann.
   analysis}}.
 \newblock Machine Learning, pages 177--196, 2001.
 
-\bibitem[Hollingworth~2001]{Hollingworth2001a}
+\bibitem[Hollingworth \textit{et~al.}~2001]{Hollingworth2001a}
 a~Hollingworth, G~Schrock and J~M Henderson.
 \newblock {\em {Change detection in the flicker paradigm: the role of fixation
   position within the scene.}}
 \newblock Memory \& cognition, vol.~29, no.~2, pages 296--304, March 2001.
 
-\bibitem[Horn~1981]{Horn1981}
+\bibitem[Hopkins~1997]{Hopkins1997}
+Budd Hopkins.
+\newblock {\em {Modernism and the Collage Aesthetic}}.
+\newblock New England Review, vol.~18, no.~2, pages 5--12, 1997.
+
+\bibitem[Horn \& Schunck~1981]{Horn1981}
 BKP Horn and BG~Schunck.
 \newblock {\em {Determining optical flow}}.
 \newblock Artificial intelligence, vol.~17, pages 185--203, 1981.
 
-\bibitem[htf~]{htf2013}
-{\em {Happy Tree Friends}}.
+\bibitem[htf~2013]{htf2013}
+{\em {Happy Tree Friends}}, 2013.
 
-\bibitem[Huang~2011]{Huang2011a}
+\bibitem[Huang \textit{et~al.}~2011]{Huang2011a}
 Hua Huang, Lei Zhang and Hong-Chao Zhang.
 \newblock {\em {Arcimboldo-like collage using internet images}}.
 \newblock Proceedings of the 2011 SIGGRAPH Asia Conference on - SA '11,
   vol.~30, no.~6, page~1, 2011.
 
-\bibitem[Hubel~1962]{Hubel1962}
+\bibitem[Hubel \& Wiesel~1962]{Hubel1962}
 DH~Hubel and T.~N. Wiesel.
 \newblock {\em {Receptive fields, binocular interaction and functional
   architecture in the cat's visual cortex}}.
 \newblock The Journal of physiology, vol.~160, pages 106--154, 1962.
 
-\bibitem[Hubel~1968]{Hubel1968}
+\bibitem[Hubel \& Wiesel~1968]{Hubel1968}
 DH~Hubel and TN~Wiesel.
 \newblock {\em {Receptive fields and functional architecture of monkey striate
   cortex}}.
@@ -604,35 +621,35 @@ Robert Hughes.
 \newblock {Shock of the New}.
 \newblock 1991.
 
-\bibitem[Itti~1998]{Itti1998}
-Laurent Itti, Christof Koch and Ernst Niebur.
-\newblock {\em {A model of saliency-based visual attention for rapid scene
-  analysis}}.
-\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 1998.
-
-\bibitem[Itti~2001]{Itti2001}
-L~Itti and C~Koch.
-\newblock {\em {Computational modelling of visual attention.}}
-\newblock Nature reviews. Neuroscience, vol.~2, no.~3, pages 194--203, March
-  2001.
-
-\bibitem[Itti~2005a]{Itti2005}
-Laurent Itti.
-\newblock {\em {Quantifying the contribution of low‐level saliency to human
-  eye movements in dynamic scenes}}.
-\newblock Visual Cognition, vol.~12, no.~6, pages 1093--1123, August 2005.
-
-\bibitem[Itti~2005b]{Itti2005b}
+\bibitem[Itti \& Baldi~2005]{Itti2005b}
 Laurent Itti and Pierre Baldi.
 \newblock {\em {A Principled Approach to Detecting Surprising Events in
   Video}}.
 \newblock Proceedings of the IEEE International Conference on Computer Vision
   and Pattern Recognition, no.~June, 2005.
 
-\bibitem[Itti~2009]{Itti2009}
+\bibitem[Itti \& Baldi~2009]{Itti2009}
 Laurent Itti and Pierre Baldi.
 \newblock {\em {Bayesian surprise attracts human attention.}}
 \newblock Vision research, vol.~49, no.~10, pages 1295--306, June 2009.
+
+\bibitem[Itti \& Koch~2001]{Itti2001}
+L~Itti and C~Koch.
+\newblock {\em {Computational modelling of visual attention.}}
+\newblock Nature reviews. Neuroscience, vol.~2, no.~3, pages 194--203, March
+  2001.
+
+\bibitem[Itti \textit{et~al.}~1998]{Itti1998}
+Laurent Itti, Christof Koch and Ernst Niebur.
+\newblock {\em {A model of saliency-based visual attention for rapid scene
+  analysis}}.
+\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 1998.
+
+\bibitem[Itti~2005]{Itti2005}
+Laurent Itti.
+\newblock {\em {Quantifying the contribution of low‐level saliency to human
+  eye movements in dynamic scenes}}.
+\newblock Visual Cognition, vol.~12, no.~6, pages 1093--1123, August 2005.
 
 \bibitem[Jaeger~2006]{Jaeger2006}
 Timothy Jaeger.
@@ -649,17 +666,17 @@ Douglas Kahn.
 \newblock {Wireless Imagination: Sound, Radio, and the Avant-Garde}.
 \newblock The MIT Press, 1994.
 
-\bibitem[Kahneman~1984]{Kahneman1984}
+\bibitem[Kahneman \& Treisman~1984]{Kahneman1984}
 D.~Kahneman and A.~Treisman.
 \newblock {\em {Changing views of attention and automaticity}}.
 \newblock In R.~Parasuraman and R.~Davies, editeurs, Varieties of Attention,
   pages 29--61. New York: Academic Press, 1984.
 
-\bibitem[Kalloniatis~2007]{Kalloniatis2007}
+\bibitem[Kalloniatis \& Luu~2007]{Kalloniatis2007}
 Michael Kalloniatis and Charles Luu.
 \newblock {\em {Visual Acuity}}, 2007.
 
-\bibitem[Kanoh~2001]{Kanoh2001}
+\bibitem[Kanoh \textit{et~al.}~2001]{Kanoh2001}
 S~Kanoh, Toshinori Arai, R.~Futami and N.~Hoshimiya.
 \newblock {\em {Properties of auditory temporal integration revealed by
   mismatch negativity}}.
@@ -670,16 +687,16 @@ S~Kanoh, Toshinori Arai, R.~Futami and N.~Hoshimiya.
 James Kerr.
 \newblock {\em scorpion dagger}.
 
-\bibitem[Kim~2002]{Kim2002}
-Junhwan Kim and Fabio Pellacini.
-\newblock {\em {Jigsaw image mosaics}}.
-\newblock ACM Transactions on Graphics, vol.~21, no.~3, July 2002.
-
-\bibitem[Kim~2004]{Kim2004}
+\bibitem[Kim \& Moreau~2004]{Kim2004}
 HG~Kim and Nicolas Moreau.
 \newblock {\em {Audio classification based on MPEG-7 spectral basis
   representations}}.
 \newblock Circuits and Systems for Video, vol.~14, no.~5, pages 716--725, 2004.
+
+\bibitem[Kim \& Pellacini~2002]{Kim2002}
+Junhwan Kim and Fabio Pellacini.
+\newblock {\em {Jigsaw image mosaics}}.
+\newblock ACM Transactions on Graphics, vol.~21, no.~3, July 2002.
 
 \bibitem[Kirn~2009]{Kirn2009}
 Peter Kirn.
@@ -692,19 +709,19 @@ RM~Klein.
 \newblock Trends in cognitive sciences, vol.~72, no.~1, pages 76--85, January
   2000.
 
-\bibitem[Klier~2001]{Klier2001}
+\bibitem[Klier \textit{et~al.}~2001]{Klier2001}
 EM~Klier, Hongying Wang and JD~Crawford.
 \newblock {\em {The superior colliculus encodes gaze commands in retinal
   coordinates}}.
 \newblock Nature neuroscience, pages 627--632, 2001.
 
-\bibitem[Knees~2006]{Knees2006}
+\bibitem[Knees \textit{et~al.}~2006]{Knees2006}
 Peter Knees, Markus Schedl and Tim Pohle.
 \newblock {\em {An innovative three-dimensional user interface for exploring
   music collections enriched with meta-information from the web}}.
 \newblock Proceedings of the ACM, 2006.
 
-\bibitem[Koch~1985]{Koch1985}
+\bibitem[Koch \& Ullman~1985]{Koch1985}
 C~Koch and S~Ullman.
 \newblock {\em {Shifts in selective visual attention: towards the underlying
   neural circuitry.}}
@@ -721,19 +738,19 @@ Wolfgang K\"{o}hler.
   Psychology}.
 \newblock Liveright, 1947.
 
-\bibitem[Kusunoki~2000]{Kusunoki2000}
+\bibitem[Kusunoki \textit{et~al.}~2000]{Kusunoki2000}
 M~Kusunoki, J~Gottlieb and M~E Goldberg.
 \newblock {\em {The lateral intraparietal area as a salience map: the
   representation of abrupt onset, stimulus motion, and task relevance.}}
 \newblock Vision research, vol.~40, no.~10-12, pages 1459--68, January 2000.
 
-\bibitem[Kyprianidis~2012]{Kyprianidis2012}
+\bibitem[Kyprianidis \textit{et~al.}~2012]{Kyprianidis2012}
 J~Kyprianidis, John Collomosse, Tinghuai Wang and Tobias Isenberg.
 \newblock {\em {State of the 'Art': A Taxonomy of Artistic Stylization
   Techniques for Images and Video}}.
 \newblock IEEE transactions on Visualization and Computer Graphics, 2012.
 
-\bibitem[Lamy~2006]{Lamy2006}
+\bibitem[Lamy \textit{et~al.}~2006]{Lamy2006}
 Dominique Lamy, Hannah Segal and Lital Ruderman.
 \newblock {\em {Grouping does not require attention.}}
 \newblock Perception \& psychophysics, vol.~68, no.~1, pages 17--31, January
@@ -744,14 +761,14 @@ Ari Lazier.
 \newblock {\em {MoSievius: Interactive Audio Mosaicing}}.
 \newblock PhD thesis, 2003.
 
-\bibitem[Lee~2010]{Lee2010}
+\bibitem[Lee \textit{et~al.}~2010]{Lee2010}
 Hochang Lee, S~Seo, S~Ryoo and K~Yoon.
 \newblock {\em {Directional texture transfer}}.
 \newblock NPAR '10 Proceedings of the 8th International Symposium on
   Non-Photorealistic Animation and Rendering, vol.~1, no.~212, pages 43--50,
   2010.
 
-\bibitem[Leuba~1994]{Leuba1994}
+\bibitem[Leuba \& Kraftsik~1994]{Leuba1994}
 G.~Leuba and R.~Kraftsik.
 \newblock {\em {Changes in volume, surface estimate, three-dimensional shape
   and total number of neurons of the human primary visual cortex from
@@ -764,7 +781,7 @@ Zhaoping Li.
 \newblock Trends in Cognitive Sciences, vol.~6, no.~1, pages 9--16, January
   2002.
 
-\bibitem[Liang~2001]{Liang2001a}
+\bibitem[Liang \textit{et~al.}~2001]{Liang2001a}
 Lin Liang, Ce~Liu, Ying-Qing Xu, Baining Guo and Heung-Yeung Shum.
 \newblock {\em {Real-time texture synthesis by patch-based sampling}}.
 \newblock ACM Transactions on Graphics, vol.~20, no.~3, pages 127--150, July
@@ -786,14 +803,14 @@ David~G. Lowe.
 N3krozoft Ltd.
 \newblock {\em {// WALTER RUTTMANN}}, 2013.
 
-\bibitem[Luo~2001]{Luo2001}
+\bibitem[Luo \textit{et~al.}~2001]{Luo2001}
 M.~R. Luo, G.~Cui and B.~Rigg.
 \newblock {\em {The development of the CIE 2000 colour-difference formula:
   CIEDE2000}}.
 \newblock Color Research \& Application, vol.~26, no.~5, pages 340--350,
   October 2001.
 
-\bibitem[Macon~1996]{Macon1996}
+\bibitem[Macon \& Clements~1996]{Macon1996}
 M.W. Macon and M.a. Clements.
 \newblock {\em {Speech concatenation and synthesis using an overlap-add
   sinusoidal model}}.
@@ -803,7 +820,7 @@ M.W. Macon and M.a. Clements.
 \bibitem[Man~]{Manovich2008}
 {\em {Software Studies: Cultural Analytics}}.
 
-\bibitem[Manjunath~2002]{Manjunath2002}
+\bibitem[Manjunath \textit{et~al.}~2002]{Manjunath2002}
 BS~Manjunath, P~Salembier and Thomas Sikora, editeurs.
 \newblock {Introduction to MPEG-7: Multimedia Content Description Interface}.
 \newblock John Wiley and Sons, 2002.
@@ -817,7 +834,7 @@ Lev Manovich.
 \newblock {The language of new media}.
 \newblock MIT Press, 2001.
 
-\bibitem[Marr~1978]{Marr1978}
+\bibitem[Marr \& Nishihara~1978]{Marr1978}
 D~Marr and H~K Nishihara.
 \newblock {\em {Representation and recognition of the spatial organization of
   three-dimensional shapes.}}
@@ -831,7 +848,7 @@ David Marr.
   and Processing of Visual Information}.
 \newblock 1982.
 
-\bibitem[Matas~2002]{Matas2002}
+\bibitem[Matas \textit{et~al.}~2002]{Matas2002}
 J~Matas, O~Chum, M~Urban and T~Pajdla.
 \newblock {\em {Robust wide-baseline stereo from maximally stable extremal
   regions}}.
@@ -843,7 +860,7 @@ Josh~H McDermott.
 \newblock {\em {The cocktail party problem.}}
 \newblock Current biology : CB, vol.~19, no.~22, pages R1024--7, December 2009.
 
-\bibitem[McGurk~1976]{MCGURK1976}
+\bibitem[McGurk \& Macdonald~1976]{MCGURK1976}
 Harry McGurk and John Macdonald.
 \newblock {\em {Hearing lips and seeing voices}}.
 \newblock Nature, vol.~264, no.~5588, pages 746--748, December 1976.
@@ -852,6 +869,13 @@ Harry McGurk and John Macdonald.
 MF~McKinney.
 \newblock {\em {Features for audio and music classification}}.
 \newblock Proc. ISMIR, vol.~4, 2003.
+
+\bibitem[McLeod \& Kuenzli~2011]{McLeod2011a}
+Kembrew McLeod and Rudolf Kuenzli.
+\newblock {\em {I Collage, Therefore I Am}}.
+\newblock In Kembrew McLeod and Rudolf Kuenzli, editeurs, Cutting Across Media.
+  Appropriation Art, Interventionist Collage, and Copyright Law, pages 1--23.
+  Duke University Press, 2011.
 
 \bibitem[McLeod~2011a]{McLeod2011b}
 Kembrew McLeod.
@@ -866,32 +890,25 @@ Kembrew McLeod.
   and Copyright Law}.
 \newblock Duke University Press Books, 2011.
 
-\bibitem[McLeod~2011c]{McLeod2011a}
-Kembrew McLeod and Rudolf Kuenzli.
-\newblock {\em {I Collage, Therefore I Am}}.
-\newblock In Kembrew McLeod and Rudolf Kuenzli, editeurs, Cutting Across Media.
-  Appropriation Art, Interventionist Collage, and Copyright Law, pages 1--23.
-  Duke University Press, 2011.
-
 \bibitem[Meier~1996]{Meier1996}
 Barbara~J. Meier.
 \newblock {\em {Painterly rendering for animation}}.
 \newblock Proceedings of the 23rd annual conference on Computer graphics and
   interactive techniques - SIGGRAPH '96, pages 477--484, 1996.
 
-\bibitem[Melucci~2000]{Melucci2000}
+\bibitem[Melucci \& Orio~2000]{Melucci2000}
 Massimo Melucci and Nicola Orio.
 \newblock {\em {SMILE: A system for content-based musical information retrieval
   environments}}.
 \newblock RIAO'2000 Conference proceedings, 2000.
 
-\bibitem[Merrill~1968]{Merrill1968}
+\bibitem[Merrill \& Metcalf~1968]{Merrill1968}
 RG~Merrill and DR~Metcalf.
 \newblock {\em {COGNITIVE STYLES OF VISUAL PERCEPTION IN THE EVALUATION OF
   TELEVISION SYSTEMS}}.
 \newblock Perceptual and Motor Skills, pages 1043--1046, 1968.
 
-\bibitem[Mesaros~2010]{Mesaros2010}
+\bibitem[Mesaros \textit{et~al.}~2010]{Mesaros2010}
 Annamaria Mesaros, Toni Heittola, Antti Eronen and Tuomas Virtanen.
 \newblock {\em {Acoustic event detection in real-life recordings}}.
 \newblock In 18th European Signal Processing Conference, 2010.
@@ -901,19 +918,13 @@ Risto Mikkulainen, editeur.
 \newblock {Computational Maps in the Visual Cortex}.
 \newblock Springer, 2005.
 
-\bibitem[Miller~2012]{Miller2012}
+\bibitem[Miller \& Mould~2012]{Miller2012}
 Jordan Miller and David Mould.
 \newblock {\em {Accurate and Discernible Photocollages}}.
 \newblock Computational Aesthetics in Graphics, Visualization, and Imaging,
   pages 115--124, 2012.
 
-\bibitem[Mital~2011]{Mital2011}
-Parag~K. Mital, Tim~J. Smith, Robin~L. Hill and John~M. Henderson.
-\newblock {\em {Clustering of Gaze During Dynamic Scene Viewing is Predicted by
-  Motion}}.
-\newblock Cognitive Computation, October 2011.
-
-\bibitem[Mital~2012]{Mital2012b}
+\bibitem[Mital \& Grierson~2012]{Mital2012b}
 Parag~Kumar Mital and Mick Grierson.
 \newblock {\em {Audio Content-based Information Display: Mining Unknown
   Electronic Music Databases through Interactive Visualization of Latent
@@ -921,42 +932,55 @@ Parag~Kumar Mital and Mick Grierson.
 \newblock In International Symposium on Music Information Retrieval 2012 (In
   Review), 2012.
 
+\bibitem[Mital \textit{et~al.}~2011]{Mital2011}
+Parag~K. Mital, Tim~J. Smith, Robin~L. Hill and John~M. Henderson.
+\newblock {\em {Clustering of Gaze During Dynamic Scene Viewing is Predicted by
+  Motion}}.
+\newblock Cognitive Computation, October 2011.
+
+\bibitem[Miyawaki \textit{et~al.}~2008]{Miyawaki2008}
+Yoichi Miyawaki, Hajime Uchida, Okito Yamashita, Masa-aki Sato, Yusuke Morito,
+  Hiroki~C Tanabe, Norihiro Sadato and Yukiyasu Kamitani.
+\newblock {\em {Visual image reconstruction from human brain activity using a
+  combination of multiscale local image decoders.}}
+\newblock Neuron, vol.~60, no.~5, pages 915--29, December 2008.
+
 \bibitem[Moerel~2013]{Moerel2013}
 M~M~L Moerel.
 \newblock {\em {Encoding of natural sounds in the human brain}}.
 \newblock PhD thesis, 2013.
 
-\bibitem[Moore~2003]{Moore2003}
+\bibitem[Moore \& Armstrong~2003]{Moore2003}
 Tirin Moore and KM~Armstrong.
 \newblock {\em {Selective gating of visual signals by microstimulation of
   frontal cortex}}.
 \newblock Nature, vol.~421, no.~January, pages 370--373, 2003.
 
-\bibitem[Muja~2009]{Muja2009}
+\bibitem[Muja \& Lowe~2009]{Muja2009}
 Marius Muja and D.G. Lowe.
 \newblock {\em {Fast approximate nearest neighbors with automatic algorithm
   configuration}}.
 \newblock In International Conference on Computer Vision Theory and
   Applications (VISAPP'09), volume 340. Citeseer, 2009.
 
-\bibitem[N\"{a}\"{a}t\"{a}nen~1978]{Naatanen1978}
-R~N\"{a}\"{a}t\"{a}nen, AWK Gaillard and S~M\"{a}ntysalo.
-\newblock {\em {Early selective-attention effect on evoked potential
-  reinterpreted}}.
-\newblock Acta psychologica, vol.~42, pages 313--329, 1978.
-
-\bibitem[N\"{a}\"{a}t\"{a}nen~1987]{Naatanen1987}
+\bibitem[N\"{a}\"{a}t\"{a}nen \& Picton~1987]{Naatanen1987}
 R~N\"{a}\"{a}t\"{a}nen and T~Picton.
 \newblock {\em {The N1 Wave of the Human Electric and Magnetic Response to
   Sound: A Review and an Analysis of the Component Structure}}.
 \newblock Psychophysiology, vol.~24, no.~4, pages 375--425, 1987.
 
-\bibitem[N\"{a}\"{a}t\"{a}nen~2001]{Naatanen2001a}
+\bibitem[N\"{a}\"{a}t\"{a}nen \textit{et~al.}~1978]{Naatanen1978}
+R~N\"{a}\"{a}t\"{a}nen, AWK Gaillard and S~M\"{a}ntysalo.
+\newblock {\em {Early selective-attention effect on evoked potential
+  reinterpreted}}.
+\newblock Acta psychologica, vol.~42, pages 313--329, 1978.
+
+\bibitem[N\"{a}\"{a}t\"{a}nen \textit{et~al.}~2001]{Naatanen2001a}
 R~N\"{a}\"{a}t\"{a}nen, M~Tervaniemi, E~Sussman, P~Paavilainen and I~Winkler.
 \newblock {\em {"Primitive intelligence" in the auditory cortex.}}
 \newblock Trends in neurosciences, vol.~24, no.~5, pages 283--8, May 2001.
 
-\bibitem[N\"{a}\"{a}t\"{a}nen~2007a]{Naatanen2007}
+\bibitem[N\"{a}\"{a}t\"{a}nen \textit{et~al.}~2007a]{Naatanen2007}
 R~N\"{a}\"{a}t\"{a}nen, P~Paavilainen, T~Rinne and K~Alho.
 \newblock {\em {The mismatch negativity (MMN) in basic research of central
   auditory processing: a review.}}
@@ -964,7 +988,7 @@ R~N\"{a}\"{a}t\"{a}nen, P~Paavilainen, T~Rinne and K~Alho.
   Federation of Clinical Neurophysiology, vol.~118, no.~12, pages 2544--90,
   December 2007.
 
-\bibitem[N\"{a}\"{a}t\"{a}nen~2007b]{Naatanen2007a}
+\bibitem[N\"{a}\"{a}t\"{a}nen \textit{et~al.}~2007b]{Naatanen2007a}
 R~N\"{a}\"{a}t\"{a}nen, P~Paavilainen, T~Rinne and K~Alho.
 \newblock {\em {The mismatch negativity (MMN) in basic research of central
   auditory processing: a review.}}
@@ -972,20 +996,27 @@ R~N\"{a}\"{a}t\"{a}nen, P~Paavilainen, T~Rinne and K~Alho.
   Federation of Clinical Neurophysiology, vol.~118, no.~12, pages 2544--90,
   December 2007.
 
-\bibitem[N\"{a}\"{a}t\"{a}nen~2011]{Naatanen2011}
+\bibitem[N\"{a}\"{a}t\"{a}nen \textit{et~al.}~2011]{Naatanen2011}
 Risto N\"{a}\"{a}t\"{a}nen, Teija Kujala and Istv\'{a}n Winkler.
 \newblock {\em {Auditory processing that leads to conscious perception: a
   unique window to central auditory processing opened by the mismatch
   negativity and related responses.}}
 \newblock Psychophysiology, vol.~48, no.~1, pages 4--22, January 2011.
 
-\bibitem[Nam~2012]{Nam2012}
+\bibitem[Nam \textit{et~al.}~2012]{Nam2012}
 Juhan Nam, Gautham Mysore and Paris Smaragdis.
 \newblock {\em {Sound Recognition in Mixtures}}.
 \newblock Latent Variable Analysis and Signal, Lecture Notes in Computer
   Science, vol.~7191, pages 405--413, 2012.
 
-\bibitem[Naselaris~2011]{Naselaris2011}
+\bibitem[Naselaris \textit{et~al.}~2009]{Naselaris2009}
+Thomas Naselaris, Ryan~J Prenger, Kendrick~N Kay, Michael Oliver and Jack~L
+  Gallant.
+\newblock {\em {Bayesian reconstruction of natural images from human brain
+  activity.}}
+\newblock Neuron, vol.~63, no.~6, pages 902--15, October 2009.
+
+\bibitem[Naselaris \textit{et~al.}~2011]{Naselaris2011}
 Thomas Naselaris, Kendrick~N Kay, Shinji Nishimoto and Jack~L Gallant.
 \newblock {\em {Encoding and decoding in fMRI.}}
 \newblock NeuroImage, vol.~56, no.~2, pages 400--10, May 2011.
@@ -995,19 +1026,26 @@ Eduardo Navas.
 \newblock {Remix theory: the aesthetics of sampling}.
 \newblock Springer-Verlag/Wien, 2012.
 
-\bibitem[O'Donovan~2012]{O'Donovan2012}
+\bibitem[Nishimoto \textit{et~al.}~2011]{Nishimoto2011}
+Shinji Nishimoto, An T. Vu, Thomas Naselaris, Yuval Benjamini, Bin Yu and
+  Jack L. Gallant.
+\newblock {\em {Reconstructing Visual Experiences from Brain Activity Evoked by
+  Natural Movies}}.
+\newblock Current Biology, pages 1641--1646, September 2011.
+
+\bibitem[O'Donovan \& Hertzmann~2012]{O'Donovan2012}
 Peter O'Donovan and Aaron Hertzmann.
 \newblock {\em {AniPaint: interactive painterly animation from video.}}
 \newblock IEEE transactions on visualization and computer graphics, vol.~18,
   no.~3, pages 475--87, March 2012.
 
-\bibitem[Oliva~1997]{Oliva1997}
+\bibitem[Oliva \& Schyns~1997]{Oliva1997}
 Aude Oliva and Philippe~G Schyns.
 \newblock {\em {Coarse blobs or fine edges? Evidence that information
   diagnosticity changes the perception of complex visual stimuli}}.
 \newblock Cognitive psychology, vol.~107, pages 72--107, 1997.
 
-\bibitem[Oliva~2001]{Oliva2001}
+\bibitem[Oliva \& Torralba~2001]{Oliva2001}
 Aude Oliva and Antonio Torralba.
 \newblock {\em {Modeling the Shape of the Scene : A Holistic Representation of
   the Spatial Envelope ∗}}.
@@ -1018,12 +1056,12 @@ Aude Oliva.
 \newblock {\em {Gist of the scene}}.
 \newblock In Neurobiology of attention, pages 251--257. 2005.
 
-\bibitem[Orabona~2007]{Orabona2007}
+\bibitem[Orabona \& Metta~2007]{Orabona2007}
 Francesco Orabona and Giorgio Metta.
 \newblock {\em {A Proto-object based visual attention model}}.
 \newblock Attention in cognitive systems. Theories, 2007.
 
-\bibitem[Orchard~2008]{Orchard2008}
+\bibitem[Orchard \& Kaplan~2008]{Orchard2008}
 Jeff Orchard and CS~Kaplan.
 \newblock {\em {Cut-out image mosaics}}.
 \newblock ACM Transactions on Graphics, vol.~1, no.~212, 2008.
@@ -1054,13 +1092,13 @@ Elias Pampalk.
   patterns}}.
 \newblock International Symposium on Music Information Retrieval, 2006.
 
-\bibitem[Pasley~2012]{Pasley2012}
+\bibitem[Pasley \textit{et~al.}~2012]{Pasley2012}
 Brian~N. Pasley, Stephen~V. David, Nima Mesgarani, Adeen Flinker, Shihab~a.
   Shamma, Nathan~E. Crone, Robert~T. Knight and Edward~F. Chang.
 \newblock {\em {Reconstructing Speech from Human Auditory Cortex}}.
 \newblock PLoS Biology, vol.~10, no.~1, page e1001251, January 2012.
 
-\bibitem[Piazza~2013]{Piazza2013}
+\bibitem[Piazza \textit{et~al.}~2013]{Piazza2013}
 Elise~a Piazza, Timothy~D Sweeny, David Wessel, Michael~a Silver and David
   Whitney.
 \newblock {\em {Humans Use Summary Statistics to Perceive Auditory Sequences.}}
@@ -1071,19 +1109,19 @@ Wayne Porter.
 \newblock {\em {GOOG to Outsource YouTube Filtering to AudibleMagic |
   ReveNewsReveNews}}, 2007.
 
-\bibitem[Posner~1984]{Posner1984}
+\bibitem[Posner \& Cohen~1984]{Posner1984}
 MI~Posner and Y~Cohen.
 \newblock {\em {Components of visual orienting}}.
 \newblock In Attention and Performance X: Control of Language Processes., pages
   551--556. 1984.
 
-\bibitem[Posner~1985]{Posner1985}
+\bibitem[Posner \textit{et~al.}~1985]{Posner1985}
 Michael~I. Posner, Robert~D. Rafal, Lisa~S. Choate and Jonathan Vaughan.
 \newblock {\em {Inhibition of return: Neural basis and function}}.
 \newblock Cognitive Neuropsychology, vol.~2, no.~3, pages 211--228, August
   1985.
 
-\bibitem[Potter~1969]{Potter1969}
+\bibitem[Potter \& Levy~1969]{Potter1969}
 Mary~C Potter and Ellen~I Levy.
 \newblock {\em {Recognition memory for a rapid sequence of pictures}}.
 \newblock Journal of Experimental Psychology, vol.~81, no.~1, pages 10--15,
@@ -1100,19 +1138,19 @@ Zenon~W Pylyshyn.
 \newblock {\em {Visual indexes, preconceptual objects, and situated vision}}.
 \newblock Cognition, vol.~80, pages 127--158, 2001.
 
-\bibitem[Rabiner~1993]{Rabiner1993a}
+\bibitem[Rabiner \& Juang~1993]{Rabiner1993a}
 L~Rabiner and BH~Juang.
 \newblock {Fundamentals of speech recognition}.
 \newblock Prentice Hall International, Inc., 1993.
 
-\bibitem[Raj~2010]{Raj2010}
+\bibitem[Raj \textit{et~al.}~2010]{Raj2010}
 Bhiksha Raj, Tuomas Virtanen, Sourish Chaudhuri and Rita Singh.
 \newblock {\em {Non-negative matrix factorization based compensation of music
   for automatic speech recognition}}.
 \newblock Proceedings of the 11th Annual Conference of the International Speech
   Communication Association, pages 717--720, 2010.
 
-\bibitem[Rakthanmanon~2012]{Rakthanmanon2012}
+\bibitem[Rakthanmanon \textit{et~al.}~2012]{Rakthanmanon2012}
 Thanawin Rakthanmanon, Bilson Campana, Abdullah Mueen, Gustavo Batista, Brandon
   Westover, Qiang Zhu, Jesin Zakaria and Eamonn Keogh.
 \newblock {\em {Searching and mining trillions of time series subsequences
@@ -1120,18 +1158,18 @@ Thanawin Rakthanmanon, Bilson Campana, Abdullah Mueen, Gustavo Batista, Brandon
 \newblock Proceedings of the 18th ACM SIGKDD international conference on
   Knowledge discovery and data mining - KDD '12, page 262, 2012.
 
-\bibitem[Rao~1999a]{Rao1999}
-B~D Rao and K~Kreutz-Delgado.
-\newblock {\em {An affine scaling methodology for best basis selection}}.
-\newblock IEEE Trans. Signal Process., vol.~47, no.~1, pages 187--200, 1999.
-
-\bibitem[Rao~1999b]{Rao1999a}
+\bibitem[Rao \& Ballard~1999]{Rao1999a}
 R~P Rao and D~H Ballard.
 \newblock {\em {Predictive coding in the visual cortex: a functional
   interpretation of some extra-classical receptive-field effects.}}
 \newblock Nature neuroscience, vol.~2, no.~1, pages 79--87, January 1999.
 
-\bibitem[Rauss~2011]{Rauss2011}
+\bibitem[Rao \& Kreutz-Delgado~1999]{Rao1999}
+B~D Rao and K~Kreutz-Delgado.
+\newblock {\em {An affine scaling methodology for best basis selection}}.
+\newblock IEEE Trans. Signal Process., vol.~47, no.~1, pages 187--200, 1999.
+
+\bibitem[Rauss \textit{et~al.}~2011]{Rauss2011}
 Karsten Rauss, Sophie Schwartz and Gilles Pourtois.
 \newblock {\em {Top-down effects on early visual processing in humans: a
   predictive coding framework.}}
@@ -1154,27 +1192,27 @@ RA~Rensink.
 \newblock {\em {Change detection}}.
 \newblock Annual review of psychology, vol.~53, pages 245--77, January 2002.
 
-\bibitem[Rhodes~1967]{Rhodes1967}
-Richard Rhodes.
-\newblock {\em {Cutting-Up}}, June 1967.
-
-\bibitem[Rhodes~2010]{Rhodes2010}
+\bibitem[Rhodes \textit{et~al.}~2010]{Rhodes2010}
 Christophe Rhodes, Tim Crawford and Michael Casey.
 \newblock {\em {Investigating music collections at different scales with
   AudioDB}}.
 \newblock Journal of New Music, pages 1--19, 2010.
+
+\bibitem[Rhodes~1967]{Rhodes1967}
+Richard Rhodes.
+\newblock {\em {Cutting-Up}}, June 1967.
 
 \bibitem[Richardson~2010]{Richardson2010}
 Iain~E Richardson.
 \newblock {The H.264 Advanced Video Compression Standard}.
 \newblock John Wiley and Sons, 2nd editio \'edition, 2010.
 
-\bibitem[Riesenhuber~1999]{Riesenhuber1999}
+\bibitem[Riesenhuber \& Poggio~1999]{Riesenhuber1999}
 M~Riesenhuber and T~Poggio.
 \newblock {\em {Hierarchical models of object recognition in cortex.}}
 \newblock Nature neuroscience, vol.~2, no.~11, pages 1019--25, November 1999.
 
-\bibitem[Rinne~1999]{Rinne1999}
+\bibitem[Rinne \textit{et~al.}~1999]{Rinne1999}
 T~Rinne, G~Gratton, M~Fabiani, N~Cowan, E~Maclin, a~Stinard, J~Sinkkonen,
   K~Alho and R~N\"{a}\"{a}t\"{a}nen.
 \newblock {\em {Scalp-recorded optical signals make sound processing in the
@@ -1197,16 +1235,27 @@ Edgar 1886-1951 Rubin.
 \newblock {\em {Synsoplevede figurer: studier i psykologisk analyse}}.
 \newblock PhD thesis, K\o benhavn og Kristiania, Gyldendal, 1915.
 
-\bibitem[Sams~1983]{Sams1983}
+\bibitem[Sams \textit{et~al.}~1983]{Sams1983}
 M~Sams, K~Alho and R~N\"{a}\"{a}t\"{a}nen.
 \newblock {\em {Sequential effects on the ERP in discriminating two stimuli.}}
 \newblock Biological psychology, vol.~17, no.~1, pages 41--58, August 1983.
 
-\bibitem[Samson~2010]{Samson2010}
+\bibitem[Samson \textit{et~al.}~2010]{Samson2010}
 Fabienne Samson, Thomas~a Zeffiro, Alain Toussaint and Pascal Belin.
 \newblock {\em {Stimulus complexity and categorical effects in human auditory
   cortex: an activation likelihood estimation meta-analysis.}}
 \newblock Frontiers in psychology, vol.~1, no.~January, page 241, January 2010.
+
+\bibitem[Schwarz \& Schnell~2010]{Schwarz2010}
+Diemo Schwarz and Norbert Schnell.
+\newblock {\em {Descriptor-based sound texture sampling}}.
+\newblock Proceedings of SMC Conference 2010, no.~July, 2010.
+
+\bibitem[Schwarz \textit{et~al.}~2008]{Schwarz2008}
+Diemo Schwarz, Roland Cahen and Sam Britton.
+\newblock {\em {Principles and applications of interactive corpus-based
+  concatenative synthesis}}.
+\newblock Journ\'{e}es d'Informatique Musicale (JIM), GMEA, Albi, France, 2008.
 
 \bibitem[Schwarz~2000]{Schwarz2000}
 D~Schwarz.
@@ -1226,24 +1275,13 @@ D~Schwarz.
 \newblock {\em {Concatenative Sound Synthesis: The Early Years}}.
 \newblock J. New Music Research, vol.~35, no.~1, 2006.
 
-\bibitem[Schwarz~2008]{Schwarz2008}
-Diemo Schwarz, Roland Cahen and Sam Britton.
-\newblock {\em {Principles and applications of interactive corpus-based
-  concatenative synthesis}}.
-\newblock Journ\'{e}es d'Informatique Musicale (JIM), GMEA, Albi, France, 2008.
-
-\bibitem[Schwarz~2010]{Schwarz2010}
-Diemo Schwarz and Norbert Schnell.
-\newblock {\em {Descriptor-based sound texture sampling}}.
-\newblock Proceedings of SMC Conference 2010, no.~July, 2010.
-
 \bibitem[Schwarz~2011]{Schwarz2011}
 Diemo Schwarz.
 \newblock {\em {State of the Art in Sound Texture Synthesis}}.
 \newblock International Conference on Digital Audio Effects (DAFx) 2011, pages
   1--10, 2011.
 
-\bibitem[Schyns~1994]{Schyns1994}
+\bibitem[Schyns \& Oliva~1994]{Schyns1994}
 Philippe~G Schyns and Aude Oliva.
 \newblock {\em {From Blobs to Boundary Edges: Evidence for Time- and
   Spatial-Scale-Dependent Scene Recognition}}.
@@ -1255,32 +1293,32 @@ Nova Scotia.
   search}}.
 \newblock vol.~72, no.~1, pages 76--85, 2010.
 
-\bibitem[Seo~2010]{Seo2010}
+\bibitem[Seo \& Yoon~2010]{Seo2010}
 SangHyun Seo and KyungHyun Yoon.
 \newblock {\em {Color juxtaposition for pointillism based on an artistic color
   model and a statistical analysis}}.
 \newblock The Visual Computer: International Journal of Computer Graphics,
   vol.~26, no.~6-8, pages 421--431, April 2010.
 
-\bibitem[Serre~2007]{Serre2007}
+\bibitem[Serre \textit{et~al.}~2007]{Serre2007}
 Thomas Serre, Lior Wolf, Stanley Bileschi, Maximilian Riesenhuber and Tomaso
   Poggio.
 \newblock {\em {Robust object recognition with cortex-like mechanisms.}}
 \newblock IEEE transactions on pattern analysis and machine intelligence,
   vol.~29, no.~3, pages 411--26, March 2007.
 
-\bibitem[Shamma~2010]{Shamma2010}
+\bibitem[Shamma \& Micheyl~2010]{Shamma2010}
 SA~Shamma and Christophe Micheyl.
 \newblock {\em {Behind the scenes of auditory perception}}.
 \newblock Current opinion in neurobiology, vol.~20, no.~3, pages 361--366,
   2010.
 
-\bibitem[Shamma~2011]{Shamma2011}
+\bibitem[Shamma \textit{et~al.}~2011]{Shamma2011}
 Shihab~a Shamma, Mounya Elhilali and Christophe Micheyl.
 \newblock {\em {Temporal coherence and attention in auditory scene analysis.}}
 \newblock Trends in neurosciences, vol.~34, no.~3, pages 114--23, March 2011.
 
-\bibitem[Shams~2002]{Shams2002}
+\bibitem[Shams \textit{et~al.}~2002]{Shams2002}
 Ladan Shams, Yukiyasu Kamitani and Shinsuke Shimojo.
 \newblock {\em {Visual illusion induced by sound.}}
 \newblock Brain research. Cognitive brain research, vol.~14, no.~1, pages
@@ -1291,46 +1329,46 @@ Sir Charles~Scott Sherrington.
 \newblock {The Integrative action of the nervous system}.
 \newblock Yale University Press, 1906.
 
-\bibitem[Simons~1997]{Simons1997}
-Daniel~J Simons and Daniel~T Levin.
-\newblock {\em {Change Blindness}}.
-\newblock Trends in Cognitive Sciences, vol.~1, no.~7, pages 261--267, 1997.
-
-\bibitem[Simons~1998]{Simons1998}
-Daniel~J Simons and Daniel~T Levin.
-\newblock {\em {Failure to detect changes to people during a real-world
-  interaction}}.
-\newblock Psychonomic Bulletin \& Review, vol.~5, no.~4, pages 644--649, 1998.
-
-\bibitem[Simons~1999]{Simons1999}
+\bibitem[Simons \& Chabris~1999]{Simons1999}
 D~J Simons and C~F Chabris.
 \newblock {\em {Gorillas in our midst: sustained inattentional blindness for
   dynamic events.}}
 \newblock Perception, vol.~28, no.~9, pages 1059--74, January 1999.
+
+\bibitem[Simons \& Levin~1997]{Simons1997}
+Daniel~J Simons and Daniel~T Levin.
+\newblock {\em {Change Blindness}}.
+\newblock Trends in Cognitive Sciences, vol.~1, no.~7, pages 261--267, 1997.
+
+\bibitem[Simons \& Levin~1998]{Simons1998}
+Daniel~J Simons and Daniel~T Levin.
+\newblock {\em {Failure to detect changes to people during a real-world
+  interaction}}.
+\newblock Psychonomic Bulletin \& Review, vol.~5, no.~4, pages 644--649, 1998.
 
 \bibitem[Singel~2012]{Singel2012}
 Ryan Singel.
 \newblock {\em {YouTube Flags Democrats’ Convention Video on Copyright
   Grounds}}, 2012.
 
-\bibitem[Sivic~2005]{Sivic2005}
+\bibitem[Sivic \textit{et~al.}~2005]{Sivic2005}
 J.~Sivic, B.C. Russell, a.a. Efros, a.~Zisserman and W.T. Freeman.
 \newblock {\em {Discovering objects and their location in images}}.
 \newblock Tenth IEEE International Conference on Computer Vision (ICCV'05)
   Volume 1, pages 370--377 Vol. 1, 2005.
 
-\bibitem[Smaragdis~2006]{SmaragdisRajShashanka}
+\bibitem[Smaragdis \& Raj~2007]{Smaragdis2007}
+Paris Smaragdis and B.~Raj.
+\newblock {\em {Shift-invariant probabilistic latent component analysis}}.
+\newblock Journal of Machine Learning Research, no.~5, 2007.
+
+\bibitem[Smaragdis \textit{et~al.}~2006]{SmaragdisRajShashanka}
 Paris Smaragdis, Bhiksha Raj and Madhusudana Shashanka.
 \newblock {\em {A Probabilistic Latent Variable Model for Acoustic Modeling}}.
 \newblock In In Workshop on Advances in Models for Acoustic Processing at NIPS,
   num\'ero~1, 2006.
 
-\bibitem[Smaragdis~2007a]{Smaragdis2007}
-Paris Smaragdis and B.~Raj.
-\newblock {\em {Shift-invariant probabilistic latent component analysis}}.
-\newblock Journal of Machine Learning Research, no.~5, 2007.
-
-\bibitem[Smaragdis~2007b]{Smaragdis2007a}
+\bibitem[Smaragdis \textit{et~al.}~2007]{Smaragdis2007a}
 Paris Smaragdis, Bhiksha Raj and Madhusudana Shashanka.
 \newblock {\em {Supervised and semi-supervised separation of sounds from
   single-channel mixtures}}.
@@ -1341,49 +1379,62 @@ Paris Smaragdis, Bhiksha Raj and Madhusudana Shashanka.
 Scott Smitelli.
 \newblock {\em {Fun with YouTube's Audio Content ID System}}, 2009.
 
-\bibitem[Smith~2009]{Smith2009a}
+\bibitem[Smith \& Henderson~2009]{Smith2009a}
 Tim~J. Smith and John~M. Henderson.
 \newblock {\em {Facilitation of return during scene viewing}}.
 \newblock Visual Cognition, vol.~17, no.~6-7, pages 1083--1108, August 2009.
 
-\bibitem[Smith~2011]{Smith2011a}
+\bibitem[Smith \& Mital~2011]{Smith2011a}
 Tim Smith and Parag~Kumar Mital.
 \newblock {\em {Watching the world go by: Attentional prioritization of social
   motion during dynamic scene viewing}}.
 \newblock In Vision Sciences Society (abstract), 2011.
 
-\bibitem[Smith~2013]{Smith2013}
+\bibitem[Smith \& Mital~2013]{Smith2013}
 Tim~J Smith and Parag~K Mital.
 \newblock {\em {Attentional synchrony and the influence of viewing task on gaze
   behavior in static and dynamic scenes}}.
 \newblock Journal of Vision, vol.~13, no.~June, pages 1--25, 2013.
 
-\bibitem[Snyder~1976]{Snyder1976}
+\bibitem[Snyder \& Hillyard~1976]{Snyder1976}
 Elaine Snyder and Steven~A. Hillyard.
 \newblock {\em {Long-latency evoked potentials to irrelevant, deviant
   stimuli}}.
 \newblock Behavioral Biology, vol.~16, no.~3, pages 319--331, March 1976.
 
-\bibitem[Soltani~2010a]{Soltani2010}
+\bibitem[Soltani \& Koch~2010a]{Soltani2010}
 Alireza Soltani and Christof Koch.
 \newblock {\em {Visual saliency computations: mechanisms, constraints, and the
   effect of feedback.}}
 \newblock The Journal of neuroscience : the official journal of the Society for
   Neuroscience, vol.~30, no.~38, pages 12831--43, September 2010.
 
-\bibitem[Soltani~2010b]{Soltani2010a}
+\bibitem[Soltani \& Koch~2010b]{Soltani2010a}
 Alireza Soltani and Christof Koch.
 \newblock {\em {Visual saliency computations: mechanisms, constraints, and the
   effect of feedback.}}
 \newblock The Journal of neuroscience : the official journal of the Society for
   Neuroscience, vol.~30, no.~38, pages 12831--43, September 2010.
+
+\bibitem[Spevak \& Favreau~2002]{Spevak2002}
+Christian Spevak and E~Favreau.
+\newblock {\em {Soundspotter-a prototype system for content-based audio
+  retrieval}}.
+\newblock Proceedings of the 5th International Conference on Digital Audio
+  Effects (DAFx-02), pages 27--32, 2002.
+
+\bibitem[Spevak \& Polfreman~2001]{Spevak2001}
+Christian Spevak and Richard Polfreman.
+\newblock {\em {Sound spotting--A frame-based approach}}.
+\newblock In Proceedings of the Second International Symposium of Music
+  Information Retrieval, 2001.
 
 \bibitem[Steenhuisen~2005]{Steenhuisen2005}
 Paul Steenhuisen.
 \newblock {Sonic Mosaics: Conversations with Composers}.
 \newblock University of Alberta Press, 2005.
 
-\bibitem[Stewart~2008]{Stewart2008}
+\bibitem[Stewart \& Levy~2008]{Stewart2008}
 R~Stewart and M~Levy.
 \newblock {\em {3D interactive environment for music collection navigation}}.
 \newblock Proc. DAFx-08, pages 1--5, 2008.
@@ -1392,13 +1443,13 @@ R~Stewart and M~Levy.
 Margaret~Gould Stewart.
 \newblock {\em {How YouTube thinks about copyright | Video on TED.com}}, 2010.
 
-\bibitem[Su~2011]{Su2011}
+\bibitem[Su \textit{et~al.}~2011]{Su2011}
 F~Su, L~Yang and Tong Lu.
 \newblock {\em {Environmental sound classification for scene recognition using
   local discriminant bases and HMM}}.
 \newblock Proceedings of the 19th ACM international, pages 1389--1392, 2011.
 
-\bibitem[Sudderth~2007]{Sudderth2007}
+\bibitem[Sudderth \textit{et~al.}~2007]{Sudderth2007}
 Erik~B. Sudderth, Antonio Torralba, William~T. Freeman and Alan~S. Willsky.
 \newblock {\em {Describing Visual Scenes Using Transformed Objects and Parts}}.
 \newblock International Journal of Computer Vision, vol.~77, no.~1-3, pages
@@ -1410,7 +1461,7 @@ Elyse~S. Sussman.
 \newblock The Journal of the Acoustical Society of America, vol.~117, no.~3,
   page 1285, 2005.
 
-\bibitem[Sutton~1965]{Sutton1965}
+\bibitem[Sutton \textit{et~al.}~1965]{Sutton1965}
 S~Sutton, M~Braren, Joseph Zubin and ER~John.
 \newblock {\em {Evoked-potential correlates of stimulus uncertainty}}.
 \newblock Science, 1965.
@@ -1426,22 +1477,22 @@ George Sziklai.
 \newblock IEEE Transactions on Information Theory, vol.~2, no.~3, pages
   125--128, 1956.
 
-\bibitem[Tatler~2009a]{Tatler2009a}
-Benjamin Tatler.
-\newblock {\em {Current understanding of eye guidance}}.
-\newblock Visual Cognition, vol.~17, no.~6, pages 777--789, August 2009.
-
-\bibitem[Tatler~2009b]{Tatler2009}
+\bibitem[Tatler \& Vincent~2009]{Tatler2009}
 Benjamin Tatler and Benjamin Vincent.
 \newblock {\em {The prominence of behavioural biases in eye guidance}}.
 \newblock Visual Cognition, vol.~17, no.~6, pages 1029--1054, August 2009.
 
-\bibitem[Tatler~2011]{Tatler2011}
+\bibitem[Tatler \textit{et~al.}~2011]{Tatler2011}
 Benjamin~W Tatler, Mary~M Hayhoe, Michael~F Land and Dana~H Ballard.
 \newblock {\em {Eye guidance in natural vision : Reinterpreting salience}}.
 \newblock Journal of Vision, vol.~11, pages 1--23, 2011.
 
-\bibitem[Teki~2011]{Teki2011a}
+\bibitem[Tatler~2009]{Tatler2009a}
+Benjamin Tatler.
+\newblock {\em {Current understanding of eye guidance}}.
+\newblock Visual Cognition, vol.~17, no.~6, pages 777--789, August 2009.
+
+\bibitem[Teki \textit{et~al.}~2011]{Teki2011a}
 Sundeep Teki, Maria Chait, Sukhbinder Kumar, Katharina von Kriegstein and
   Timothy~D Griffiths.
 \newblock {\em {Brain bases for auditory stimulus-driven figure-ground
@@ -1449,14 +1500,14 @@ Sundeep Teki, Maria Chait, Sukhbinder Kumar, Katharina von Kriegstein and
 \newblock The Journal of neuroscience : the official journal of the Society for
   Neuroscience, vol.~31, no.~1, pages 164--71, January 2011.
 
-\bibitem[Teki~2013]{Teki2013}
+\bibitem[Teki \textit{et~al.}~2013]{Teki2013}
 Sundeep Teki, Maria Chait, Sukhbinder Kumar, Shihab Shamma and Timothy~D
   Griffiths.
 \newblock {\em {Segregation of complex acoustic scenes based on temporal
   coherence.}}
 \newblock eLife, vol.~2, page e00699, January 2013.
 
-\bibitem[Temko~2007]{Temko2007}
+\bibitem[Temko \textit{et~al.}~2007]{Temko2007}
 Andrey Temko, Robert Malkin, Christian Zieger, Dusan Macho, Climent Nadeu and
   Maurizio Omologo.
 \newblock {\em {CLEAR evaluation of acoustic event detection and classification
@@ -1464,26 +1515,26 @@ Andrey Temko, Robert Malkin, Christian Zieger, Dusan Macho, Climent Nadeu and
 \newblock Multimodal Technologies for Perception of Humans, pages 311--322,
   2007.
 
-\bibitem[Tervaniemi~1994]{Tervaniemi1994}
+\bibitem[Tervaniemi \textit{et~al.}~1994]{Tervaniemi1994}
 M.~Tervaniemi, J.~Saarinen, P.~Paavilainen, N.~Danilova and
   R.~N\"{a}\"{a}t\"{a}nen.
 \newblock {\em {Temporal integration of auditory information in sensory memory
   as reflected by the mismatch negativity}}.
 \newblock Biological Psychology, vol.~38, no.~2-3, pages 157--167, 1994.
 
-\bibitem[Tervaniemi~1997a]{Tervaniemi1997}
+\bibitem[Tervaniemi \textit{et~al.}~1997a]{Tervaniemi1997}
 M~Tervaniemi, E~Schr\"{o}ger and R~N\"{a}\"{a}t\"{a}nen.
 \newblock {\em {Pre-attentive processing of spectrally complex sounds with
   asynchronous onsets: an event-related potential study with human subjects.}}
 \newblock Neuroscience letters, vol.~227, no.~3, pages 197--200, May 1997.
 
-\bibitem[Tervaniemi~1997b]{Tervaniemi1997a}
+\bibitem[Tervaniemi \textit{et~al.}~1997b]{Tervaniemi1997a}
 M~Tervaniemi, I~Winkler and R~N\"{a}\"{a}t\"{a}nen.
 \newblock {\em {Pre-attentive categorization of sounds by timbre as revealed by
   event-related potentials.}}
 \newblock Neuroreport, vol.~8, no.~11, pages 2571--4, July 1997.
 
-\bibitem[Tervaniemi~2000]{Tervaniemi2000}
+\bibitem[Tervaniemi \textit{et~al.}~2000]{Tervaniemi2000}
 M~Tervaniemi, S~V Medvedev, K~Alho, S~V Pakhomov, M~S Roudas, T~L {Van Zuijen}
   and R~N\"{a}\"{a}t\"{a}nen.
 \newblock {\em {Lateralized automatic auditory processing of phonetic versus
@@ -1495,34 +1546,34 @@ Andrew Tholl.
 \newblock {\em {Plunderphonics: A Literature Review}}.
 \newblock 2010.
 
-\bibitem[Thompson~2005]{Thompson2005}
+\bibitem[Thompson \textit{et~al.}~2005]{Thompson2005}
 Kirk~G Thompson, Keri~L Biscoe and Takashi~R Sato.
 \newblock {\em {Neuronal basis of covert spatial attention in the frontal eye
   field.}}
 \newblock The Journal of neuroscience : the official journal of the Society for
   Neuroscience, vol.~25, no.~41, pages 9479--87, October 2005.
 
-\bibitem[Topel~2011]{Topel2011}
+\bibitem[Topel \& Casey~2011]{Topel2011}
 Spencer Topel and Michael Casey.
 \newblock {\em {ELEMENTARY SOURCES: LATENT COMPONENT ANALYSIS FOR MUSIC
   COMPOSITION}}.
 \newblock International Symposium on Music Information Retrieval 2011,
   no.~Ismir, pages 579--584, 2011.
 
-\bibitem[Torralba~2006]{Torralba2006}
+\bibitem[Torralba \textit{et~al.}~2006]{Torralba2006}
 Antonio Torralba, Aude Oliva, Monica~S Castelhano and John~M Henderson.
 \newblock {\em {Contextual guidance of eye movements and attention in
   real-world scenes: the role of global features in object search.}}
 \newblock Psychological review, vol.~113, no.~4, pages 766--86, October 2006.
 
-\bibitem[Torralba~2008]{Torralba2008}
+\bibitem[Torralba \textit{et~al.}~2008]{Torralba2008}
 Antonio Torralba, Rob Fergus and William~T Freeman.
 \newblock {\em {80 Million Tiny Images: a Large Data Set for Nonparametric
   Object and Scene Recognition.}}
 \newblock IEEE transactions on pattern analysis and machine intelligence,
   vol.~30, no.~11, pages 1958--70, November 2008.
 
-\bibitem[Treisman~1980]{Treisman1980}
+\bibitem[Treisman \& Gelade~1980]{Treisman1980}
 AM~Treisman and Garry Gelade.
 \newblock {\em {A feature-integration theory of attention}}.
 \newblock Cognitive psychology, vol.~12, pages 97--136, 1980.
@@ -1537,37 +1588,37 @@ LPAS van Noorden.
 \newblock {\em {Temporal coherence in the perception of tone sequences}}.
 \newblock PhD thesis, 1975.
 
-\bibitem[Walther~2006]{Walther2006a}
+\bibitem[Walther \& Koch~2006]{Walther2006a}
 Dirk Walther and Christof Koch.
 \newblock {\em {Modeling attention to salient proto-objects.}}
 \newblock Neural networks : the official journal of the International Neural
   Network Society, vol.~19, no.~9, pages 1395--407, November 2006.
 
-\bibitem[Wang~2004a]{Wang2004a}
+\bibitem[Wang \textit{et~al.}~2004a]{Wang2004a}
 Bin Wang, Wenping Wang, Huaiping Yang and Jiaguang Sun.
 \newblock {\em {Efficient example-based painting and synthesis of 2D
   directional texture.}}
 \newblock IEEE transactions on visualization and computer graphics, vol.~10,
   no.~3, pages 266--77, 2004.
 
-\bibitem[Wang~2004b]{Wang2004}
+\bibitem[Wang \textit{et~al.}~2004b]{Wang2004}
 Jue Wang, Yingqing Xu, Heung-Yeung Shum and Michael~F. Cohen.
 \newblock {\em {Video tooning}}.
 \newblock In SIGGRAPH '04 ACM SIGGRAPH 2004 Papers, pages 574--583, New York,
   New York, USA, 2004. ACM Press.
+
+\bibitem[Wang \textit{et~al.}~2011]{Wang2011}
+JC~Wang, HS~Lee and HM~Wang.
+\newblock {\em {Learning the Similarity of Audio Music in Bag-of-Frames
+  Representation from Tagged Music Data}}.
+\newblock International Symposium on Music Information Retrieval, 2011.
 
 \bibitem[Wang~2006]{Wang2006a}
 Avery Wang.
 \newblock {\em {The Shazam Music Recognition Service}}.
 \newblock Communications of the ACM, vol.~49, no.~8, 2006.
 
-\bibitem[Wang~2011]{Wang2011}
-JC~Wang, HS~Lee and HM~Wang.
-\newblock {\em {Learning the Similarity of Audio Music in Bag-of-Frames
-  Representation from Tagged Music Data}}.
-\newblock International Symposium on Music Information Retrieval, 2011.
-
-\bibitem[Weiss~2011]{Weiss2011}
+\bibitem[Weiss \& Bello~2011]{Weiss2011}
 Ron~J. Weiss and Juan~Pablo Bello.
 \newblock {\em {Unsupervised Discovery of Temporal Structure in Music}}.
 \newblock IEEE Journal of Selected Topics in Signal Processing, vol.~5, no.~6,
@@ -1579,7 +1630,7 @@ Norbert Wiener.
   machine.}
 \newblock 1948.
 
-\bibitem[Winkler~2009]{Winkler2009a}
+\bibitem[Winkler \textit{et~al.}~2009]{Winkler2009a}
 Istv\'{a}n Winkler, Susan~L Denham and Israel Nelken.
 \newblock {\em {Modeling the auditory scene: predictive regularity
   representations and perceptual objects.}}
@@ -1593,27 +1644,27 @@ Istv\'{a}n Winkler.
   mechanisms in the brain (Advances in Consciousness Research), pages 71--106.
   John Benjamins Publishing Company, 2010.
 
-\bibitem[Wischnewski~2010]{Wischnewski2010}
+\bibitem[Wischnewski \textit{et~al.}~2010]{Wischnewski2010}
 Marco Wischnewski, Anna Belardinelli, Werner~X. Schneider and Jochen~J. Steil.
 \newblock {\em {Where to Look Next? Combining Static and Dynamic Proto-objects
   in a TVA-based Model of Visual Attention}}.
 \newblock Cognitive Computation, vol.~2, no.~4, pages 326--343, November 2010.
 
-\bibitem[Wolfe~1989]{Wolfe1989}
+\bibitem[Wolfe \textit{et~al.}~1989]{Wolfe1989}
 J~M Wolfe, K~R Cave and S~L Franzel.
 \newblock {\em {Guided search: an alternative to the feature integration model
   for visual search.}}
 \newblock Journal of Experimental Psychology: Human Perception and Performance,
   vol.~15, no.~3, pages 419--433, 1989.
 
-\bibitem[Xiong~2003]{Xiong2003}
+\bibitem[Xiong \& Radhakrishnan~2003]{Xiong2003}
 Ziyou Xiong and Regunathan Radhakrishnan.
 \newblock {\em {Comparing MFCC and MPEG-7 audio features for feature
   extraction, maximum likelihood HMM and entropic prior HMM for sports audio
   classification}}.
 \newblock , Speech, and Signal, 2003.
 
-\bibitem[Yang~2006]{Yang2006}
+\bibitem[Yang \& Yang~2006]{Yang2006}
 HL~Yang and CK~Yang.
 \newblock {\em {A Non-Photorealistic Rendering of Seurat's Pointillism}}.
 \newblock Advances in Visual Computing, pages 760--769, 2006.
@@ -1623,29 +1674,29 @@ Alfred Yarbus.
 \newblock {Eye movements and vision}.
 \newblock 1967.
 
-\bibitem[Young~2008]{Young2008}
+\bibitem[Young \textit{et~al.}~2008]{Young2008}
 MW~Young, JL~Drever, Mick Grierson and Ian Stonehouse.
 \newblock {\em {Goldsmiths Electronic Music Studios: 40 Years}}.
 \newblock In Proceedings of the 2008 International Computer Music Conference,
   pages 8--11, 2008.
 
-\bibitem[Zeng~2009]{Zeng2009}
+\bibitem[Zeng \textit{et~al.}~2009]{Zeng2009}
 K~Zeng, M~Zhao, C~Xiong and SC~Zhu.
 \newblock {\em {From image parsing to painterly rendering}}.
 \newblock ACM Transactions on Graphics (TOG), vol.~29, no.~1, 2009.
 
-\bibitem[Zhang~2008]{Zhang2008}
+\bibitem[Zhang \textit{et~al.}~2008]{Zhang2008}
 Lingyun Zhang, Matthew~H Tong, Tim~K Marks and Garrison~W Cottrell.
 \newblock {\em {SUN : A Bayesian framework for saliency using natural
   statistics}}.
 \newblock Journal of Vision, vol.~8, pages 1--20, 2008.
 
-\bibitem[Zhang~2012]{Zhang2012a}
+\bibitem[Zhang \textit{et~al.}~2012]{Zhang2012a}
 Xilin Zhang, Li~Zhaoping, Tiangang Zhou and Fang Fang.
 \newblock {\em {Neural activities in v1 create a bottom-up saliency map.}}
 \newblock Neuron, vol.~73, no.~1, pages 183--92, January 2012.
 
-\bibitem[Zils~2001]{Zils2001}
+\bibitem[Zils \& Pachet~2001]{Zils2001}
 A~Zils and F~Pachet.
 \newblock {\em {Musical Mosaicing}}.
 \newblock In Proc. COST G-6 Conf. Digital Audio Effects, Limerick, Ireland,

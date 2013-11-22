@@ -227,7 +227,8 @@ urlcolor=linkcol %couleur des liens pour les url
 \usepackage{algorithmic}
 \usepackage{float}
 \usepackage{hyperref}
-\usepackage[authoryear,round]{natbib}
+\usepackage{natbib}
+%\usepackage[authoryear,round]{natbib}
 \usepackage{epigraph}
 \usepackage{graphicx}
 \usepackage{subcaption}
@@ -252,11 +253,11 @@ urlcolor=linkcol %couleur des liens pour les url
 }%
 {\endMakeFramed}%
 \newenvironment{quotationb}%
-{\begin{leftbar}\begin{quotation}}%
-{\end{quotation}\end{leftbar}}%
+{\begin{samepage}\begin{leftbar}\begin{quotation}}%
+{\end{quotation}\end{leftbar}\end{samepage}}%
 \newenvironment{verseb}%
-{\begin{leftbar}\begin{verse}}%
-{\end{verse}\end{leftbar}}%
+{\begin{samepage}\begin{leftbar}\begin{verse}}%
+{\end{verse}\end{leftbar}\end{samepage}}%
 \newenvironment{equationb}%
 {\begin{leftbar}\begin{equation}}%
 {\end{equation}\end{leftbar}}%
@@ -264,11 +265,11 @@ urlcolor=linkcol %couleur des liens pour les url
 {\begin{leftbar}\begin{eqnarray}}%
 {\end{eqnarray}\end{leftbar}}%
 \newenvironment{enumerateb}%
-{\begin{leftbar}\begin{enumerate}\vspace{5pt}}%
-{\end{enumerate}\end{leftbar}}%
+{\begin{samepage}\begin{leftbar}\begin{enumerate}\vspace{5pt}}%
+{\end{enumerate}\end{leftbar}\end{samepage}}%
 \newenvironment{itemizeb}%
-{\begin{leftbar}\begin{itemize}}%
-{\end{itemize}\end{leftbar}}%
+{\begin{samepage}\begin{leftbar}\begin{itemize}}%
+{\end{itemize}\end{leftbar}\end{samepage}}%
 
 %\usepackage[raggedright]{titlesec}
 %\newlength\mylen
@@ -326,7 +327,7 @@ urlcolor=linkcol %couleur des liens pour les url
   %labelfont={color=mybluecolor,bf},
 }
 \captionsetup[subfigure]{singlelinecheck=on,format=plain}
-
+\usepackage{flafter}
 \usepackage[bottom]{footmisc}
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
