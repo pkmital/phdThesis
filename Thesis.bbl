@@ -683,9 +683,9 @@ S~Kanoh, Toshinori Arai, R.~Futami and N.~Hoshimiya.
 \newblock Engineering in Medicine and Biology Society, 2001. Proceedings of the
   23rd Annual International Conference of the IEEE, vol.~1, 2001.
 
-\bibitem[Kerr~]{Kerr2013}
+\bibitem[Kerr~2013]{Kerr2013}
 James Kerr.
-\newblock {\em scorpion dagger}.
+\newblock {\em scorpion dagger}, 2013.
 
 \bibitem[Kim \& Moreau~2004]{Kim2004}
 HG~Kim and Nicolas Moreau.
@@ -799,10 +799,6 @@ David~G. Lowe.
 \newblock International Journal of Computer Vision, vol.~60, no.~2, pages
   91--110, November 2004.
 
-\bibitem[Ltd.~2013]{Ltd}
-N3krozoft Ltd.
-\newblock {\em {// WALTER RUTTMANN}}, 2013.
-
 \bibitem[Luo \textit{et~al.}~2001]{Luo2001}
 M.~R. Luo, G.~Cui and B.~Rigg.
 \newblock {\em {The development of the CIE 2000 colour-difference formula:
@@ -817,9 +813,6 @@ M.W. Macon and M.a. Clements.
 \newblock 1996 IEEE International Conference on Acoustics, Speech, and Signal
   Processing Conference Proceedings, pages 361--364, 1996.
 
-\bibitem[Man~]{Manovich2008}
-{\em {Software Studies: Cultural Analytics}}.
-
 \bibitem[Manjunath \textit{et~al.}~2002]{Manjunath2002}
 BS~Manjunath, P~Salembier and Thomas Sikora, editeurs.
 \newblock {Introduction to MPEG-7: Multimedia Content Description Interface}.
@@ -833,6 +826,10 @@ Lev Manovich.
 Lev Manovich.
 \newblock {The language of new media}.
 \newblock MIT Press, 2001.
+
+\bibitem[Manovich~2008]{Manovich2008}
+Lev Manovich.
+\newblock {\em {Software Studies: Cultural Analytics}}, 2008.
 
 \bibitem[Marr \& Nishihara~1978]{Marr1978}
 D~Marr and H~K Nishihara.
@@ -1207,6 +1204,11 @@ Iain~E Richardson.
 \newblock {The H.264 Advanced Video Compression Standard}.
 \newblock John Wiley and Sons, 2nd editio \'edition, 2010.
 
+\bibitem[Richter~1949]{Richter1949}
+Hans Richter.
+\newblock {\em {Experiments with Celluloid}}.
+\newblock The Penguin Film Review, vol.~9, page 114, 1949.
+
 \bibitem[Riesenhuber \& Poggio~1999]{Riesenhuber1999}
 M~Riesenhuber and T~Poggio.
 \newblock {\em {Hierarchical models of object recognition in cortex.}}
@@ -1223,6 +1225,11 @@ T~Rinne, G~Gratton, M~Fabiani, N~Cowan, E~Maclin, a~Stinard, J~Sinkkonen,
 C~Roads.
 \newblock {Computer Music Tutorial}.
 \newblock The MIT Press, 1996.
+
+\bibitem[Rogers~2013]{Rogers2013}
+Holly Rogers.
+\newblock {Sounding the Gallery: Video and the Rise of Art-Music}.
+\newblock Oxford University Press, 2013.
 
 \bibitem[Rosenholtz~1999]{Rosenholtz1999}
 Ruth Rosenholtz.
